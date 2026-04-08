@@ -112,8 +112,8 @@ hosts:
   localhost: 127.0.0.1
 proxy-providers:
   cocoduck:
-    type: http
-    url: https://sub.cocoduck.cc/sub/f931c32eb11c51a7/clash
+    type: http  
+    url: https://sub.cocoduck.cc/link/f931c32eb11c51a7?sip002=1
     path: ./providers/cocoduck.yaml
     interval: 3600
     health-check:
