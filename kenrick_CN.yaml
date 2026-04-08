@@ -40,6 +40,30 @@ stun-response-ip = 1.1.1.1
 stun-response-ipv6 = ::1
 update-url = https://raw.githubusercontent.com/kenrickxu/SR/refs/heads/main/kenrick_CN.yaml
 
+proxy-providers:
+  cocoduck:
+    type: http
+    url: "https://sub.cocoduck.cc/sub/f931c32eb11c51a7/clash"
+    path: ./providers/cocoduck.yaml
+    interval: 3600
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 600
+
+proxy-groups:
+  - name: 节点选择
+    type: select
+    proxies: [自动选择, 🇭🇰 HK, 🇨🇳 TW, 🇺🇸 US, 🇰🇷 KR, 🇷🇺 RU, 🇬🇧 UK, 🇯🇵 JP, 🇸🇬 SG, 🇮🇳 IN, 🇩🇪 GE, 🇨🇦 CA, DIRECT]
+
+  - name: 自动选择
+    type: url-test
+    use: [cocoduck]
+    filter: "^(?!.*(国内|限速|试用)).*$"
+    url: http://www.gstatic.com/generate_204
+    interval: 600
+    tolerance: 100
+    
 [Proxy Group]
 节点选择 = select,自动选择,🇭🇰 HK,🇨🇳 TW,🇺🇸 US,🇰🇷 KR,🇷🇺 RU,🇬🇧 UK,🇯🇵 JP,🇸🇬 SG,🇮🇳 IN,🇩🇪 GE,🇨🇦 CA,DIRECT
 自动选择 = url-test,cocoduck,use=true,policy-regex-filter=^(?!.*(国内|限速|试用)).*$
