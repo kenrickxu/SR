@@ -52,7 +52,7 @@ proxy-groups:
   - name: 自动选择
     type: url-test
     use: [cocoduck]
-    filter: "(?i)^(?=.*(日本|jp|japan))(?!.*(香港|hk|hong|台湾|tw|taiwan|新加坡|sg|singapore|美国|us|韩国|kr|korea|狮城)).*$"
+    filter: 日本
     url: http://www.gstatic.com/generate_204
     interval: 600
     tolerance: 100
