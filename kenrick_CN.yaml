@@ -47,7 +47,7 @@ proxy-providers:
 proxy-groups:
   - name: 节点选择
     type: select
-    proxies: [自动选择, 🇭🇰 HK, 🇨🇳 TW, 🇺🇸 US, 🇰🇷 KR, 🇷🇺 RU, 🇬🇧 UK, 🇯🇵 JP, 🇸🇬 SG, 🇮🇳 IN, 🇩🇪 GE, 🇨🇦 CA, DIRECT]
+    proxies: [🇯🇵 JP]
 
   - name: 自动选择
     type: url-test
