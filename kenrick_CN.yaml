@@ -32,7 +32,7 @@ dns:
 
 hosts:
   localhost: 127.0.0.1
-update-url = https://raw.githubusercontent.com/kenrickxu/SR/refs/heads/main/kenrick_CN.yaml
+
 proxy-providers:
   cocoduck:
     type: http
