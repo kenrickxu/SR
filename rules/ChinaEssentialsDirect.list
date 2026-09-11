@@ -1,0 +1,18 @@
+# Mainland banking and frequently used services that must match before proxy lists.
+DOMAIN-SUFFIX,163.com
+DOMAIN-SUFFIX,abchina.com.cn
+DOMAIN-SUFFIX,baidu.com
+DOMAIN-SUFFIX,c-ctrip.com
+DOMAIN-SUFFIX,ccb.com
+DOMAIN-SUFFIX,csair.com
+DOMAIN-SUFFIX,itopsdk.com
+DOMAIN-SUFFIX,meituan.com
+DOMAIN-SUFFIX,meituan.net
+DOMAIN-SUFFIX,psbc.com
+DOMAIN-SUFFIX,qq.com
+DOMAIN-SUFFIX,tdatamaster.com
+DOMAIN-SUFFIX,tencent-cloud.net
+DOMAIN-SUFFIX,tencent.com
+DOMAIN-SUFFIX,ts.net
+DOMAIN-SUFFIX,wechat.com
+DOMAIN-SUFFIX,ys7.com
