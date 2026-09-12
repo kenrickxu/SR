@@ -37,6 +37,8 @@ reviewed before publication.
   they remain in the earlier ChinaMedia list.
 - Removed the foreign `.ms` country-code suffix from the China DIRECT list and
   removed six narrower CIDRs already fully covered by broader DIRECT CIDRs.
+- Removed the malformed `origin-a.akamaihd.ne` exact-domain entry while
+  retaining the valid `origin-a.akamaihd.net` entry.
 - Removed `USER-AGENT,hearthstone*` from the later Proxy list because the
   earlier China list already intentionally resolves it to DIRECT.
 - Removed `snssdk.com` from the later TikTok list because the earlier DouYin
