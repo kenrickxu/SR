@@ -2,6 +2,7 @@
 # Source snapshot: https://github.com/deezertidal/shadowrocket-rules/blob/b395bcd38c5163b30712ebb1213f0501fb435222/rule/ChinaMedia.list
 # Cross-checked: https://github.com/blackmatrix7/ios_rule_script/tree/0087bb74e91b335e17a79fd07a8514277f7d77b4/rule/Shadowrocket/ChinaMedia
 # Reviewed: 2026-09-12. Updates are manual and reviewed; never auto-pulled.
+# Local CN dedup 2026-09-19: 22 entries covered by earlier DIRECT suffixes omitted.
 DOMAIN,0gr4uqmtt8y41hcjsgrzdrc31.ourdvsss.com
 DOMAIN,0gr4uqmtt8y41hcjsgrzdrc3s.ourdvsss.com
 DOMAIN,0gr4uqmtt8y41hcjsgrzdrc3z.ourdvsss.com
@@ -53,21 +54,7 @@ DOMAIN,3geauymtsgrzdrcbzfahuk.ourdvsss.com
 DOMAIN,4go41hcjtgazdoctqge4o.ourdvsss.com
 DOMAIN,00713915daab0be43def5c338c02c80b.dlied1.cdntips.net
 DOMAIN,17caa75e77d31e1f5a7841e0b3374569.dlied1.cdntips.net
-DOMAIN,apd-pcdnvodstat.teg.tencent-cloud.net
-DOMAIN,api.iplay.163.com
-DOMAIN,aqqmusic.tc.qq.com
-DOMAIN,dldir1.qq.com
-DOMAIN,iacc.qq.com
-DOMAIN,ins-eeww7kom.ias.tencent-cloud.net
-DOMAIN,ios.video.mpush.qq.com
 DOMAIN,mam.netease.com
-DOMAIN,moo.qq.com
-DOMAIN,rdelivery.qq.com
-DOMAIN,ts.qq.com
-DOMAIN,v.streaming.qq.com
-DOMAIN,video-public-1258344701.shiply-cdn.qq.com
-DOMAIN,video-search-1258344701.shiply-cdn.qq.com
-DOMAIN,video-vip-1258344701.shiply-cdn.qq.com
 DOMAIN,yoo.gtimg.com
 DOMAIN-SUFFIX,acg.tv
 DOMAIN-SUFFIX,acgvideo.com
@@ -220,7 +207,6 @@ DOMAIN-SUFFIX,hifuntv.com
 DOMAIN-SUFFIX,hitv.com
 DOMAIN-SUFFIX,hunaniptv.com
 DOMAIN-SUFFIX,hunantv.com
-DOMAIN-SUFFIX,i.qq.com
 DOMAIN-SUFFIX,ibkstore.com
 DOMAIN-SUFFIX,imgo.tv
 DOMAIN-SUFFIX,iq.com
@@ -249,9 +235,6 @@ DOMAIN-SUFFIX,migu.cn
 DOMAIN-SUFFIX,miguvideo.com
 DOMAIN-SUFFIX,mmstat.com
 DOMAIN-SUFFIX,music.126.net
-DOMAIN-SUFFIX,music.163.com
-DOMAIN-SUFFIX,music.qq.com
-DOMAIN-SUFFIX,music.tc.qq.com
 DOMAIN-SUFFIX,music.xiaomi.com
 DOMAIN-SUFFIX,noxagile.duapp.com
 DOMAIN-SUFFIX,ns6mitkxo.cn
@@ -272,7 +255,6 @@ DOMAIN-SUFFIX,qianqian.com
 DOMAIN-SUFFIX,qiyi.cn
 DOMAIN-SUFFIX,qiyi.com
 DOMAIN-SUFFIX,qiyipic.com
-DOMAIN-SUFFIX,qqmusic.qq.com
 DOMAIN-SUFFIX,qqvideo.gtimg.com
 DOMAIN-SUFFIX,qy.com
 DOMAIN-SUFFIX,qy.net
@@ -292,17 +274,14 @@ DOMAIN-SUFFIX,ukoo.com.cn
 DOMAIN-SUFFIX,upos-bstar-mirrorakam.akamaized.net
 DOMAIN-SUFFIX,upos-bstar1-mirrorakam.akamaized.net
 DOMAIN-SUFFIX,v-56.com
-DOMAIN-SUFFIX,v.qq.com
 DOMAIN-SUFFIX,v.smtcdns.com
 DOMAIN-SUFFIX,v1d.szbdyd.com
-DOMAIN-SUFFIX,video.qq.com
 DOMAIN-SUFFIX,videojj.com
 DOMAIN-SUFFIX,wenyupages.com
 DOMAIN-SUFFIX,wingsmobiletek.cn
 DOMAIN-SUFFIX,wwc.alicdn.com
 DOMAIN-SUFFIX,xiami.com
 DOMAIN-SUFFIX,xiami.net
-DOMAIN-SUFFIX,y.qq.com
 DOMAIN-SUFFIX,ykimg.com
 DOMAIN-SUFFIX,yodou.com
 DOMAIN-SUFFIX,yoku.net.cn

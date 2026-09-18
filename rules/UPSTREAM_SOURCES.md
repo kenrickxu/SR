@@ -24,7 +24,14 @@ reviewed before publication.
 
 ## Review decisions
 
-- Added the missing paired China domain set (3,689 current entries). The
+- On 2026-09-19, omitted 22 later `ChinaMedia.list` entries and 108 later
+  `ChinaDomain.list` suffixes that were fully covered by earlier CN `DIRECT`
+  suffix rules (107 exact hosts and 23 child domains). The first-match policy
+  and rule order are unchanged. Upstream metadata in `ChinaDomain.list` still
+  describes the original snapshot; future upstream reviews must compare against
+  that source before reapplying the local dedup filter.
+- Added the missing paired China domain set (3,580 current entries after the
+  2026-09-19 local dedup filter). The
   yfamilys China.list contains only mixed non-domain rules; using DOMAIN-SET
   restores the maintained mainland-domain half without expanding each domain
   into an individual top-level rule.
