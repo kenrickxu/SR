@@ -7,3 +7,14 @@ DOMAIN-SUFFIX,netflix.com
 DOMAIN-SUFFIX,oaistatic.com
 DOMAIN-SUFFIX,oaiusercontent.com
 DOMAIN-SUFFIX,openai.com
+
+# Hong Kong apps using the existing JP REA group in CN.
+DOMAIN-SUFFIX,openrice.com
+DOMAIN-SUFFIX,hsbc.com.hk
+DOMAIN-SUFFIX,za.group
+DOMAIN-SUFFIX,zafinsvc.com
+DOMAIN-SUFFIX,zainvest.group
+DOMAIN-SUFFIX,zajourney.com
+DOMAIN-SUFFIX,zaticdn.com
+DOMAIN-SUFFIX,welab.bank
+DOMAIN-SUFFIX,fusionbank.com
