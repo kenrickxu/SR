@@ -24,6 +24,15 @@ reviewed before publication.
 
 ## Review decisions
 
+- On 2026-09-20, promoted the six WeChat domains not otherwise covered by the
+  CN DIRECT domain sets (`slife.xy-asia.com`, `iot-tencent.com`,
+  `wechatlegal.net`, `wechatos.net`, `wechatpay.com`, `weixinsxy.com`) and the
+  missing DouYin video suffix `idouyinvod.com` into the early
+  `ChinaEssentialsDirect.list`. This makes both routing and DIRECT system-DNS
+  selection explicit without adding another top-level rule set. The same audit
+  found complete existing CN DIRECT coverage for the maintained TencentVideo,
+  iQIYI, Youku, HunanTV and BiliBili sets: 209/209 domains and 62/62 explicit
+  IP ranges, so no duplicate media rules were added.
 - On 2026-09-19, omitted 22 later `ChinaMedia.list` entries and 108 later
   `ChinaDomain.list` suffixes that were fully covered by earlier CN `DIRECT`
   suffix rules (107 exact hosts and 23 child domains). The first-match policy
