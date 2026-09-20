@@ -24,6 +24,14 @@ reviewed before publication.
 
 ## Review decisions
 
+- On 2026-09-20, classified nine observed CN-profile DNS roots without changing
+  the profile DNS policy. Added `ndcpp.com`, `yingt.fun`, `puata.info`,
+  `qiezibenpao.com` and `rtcxyz.com` to the early CN DIRECT provider so all
+  subdomains use the existing DIRECT/system-DNS path. Added `ggpht.com`,
+  `app-analytics-services.com`, `sentry.io` and `revenuecat.com` to the early
+  JP provider so all subdomains avoid GEOIP/final-rule ambiguity. These are
+  intentionally `DOMAIN-SUFFIX` entries; Ali DoH, General, proxy groups and
+  protected MITM remain unchanged.
 - On 2026-09-20, promoted the six WeChat domains not otherwise covered by the
   CN DIRECT domain sets (`slife.xy-asia.com`, `iot-tencent.com`,
   `wechatlegal.net`, `wechatos.net`, `wechatpay.com`, `weixinsxy.com`) and the

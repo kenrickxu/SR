@@ -11,8 +11,12 @@ DOMAIN-SUFFIX,iot-tencent.com
 DOMAIN-SUFFIX,itopsdk.com
 DOMAIN-SUFFIX,meituan.com
 DOMAIN-SUFFIX,meituan.net
+DOMAIN-SUFFIX,ndcpp.com
 DOMAIN-SUFFIX,psbc.com
+DOMAIN-SUFFIX,puata.info
+DOMAIN-SUFFIX,qiezibenpao.com
 DOMAIN-SUFFIX,qq.com
+DOMAIN-SUFFIX,rtcxyz.com
 DOMAIN-SUFFIX,tdatamaster.com
 DOMAIN-SUFFIX,tencent-cloud.net
 DOMAIN-SUFFIX,tencent.com
@@ -22,4 +26,5 @@ DOMAIN-SUFFIX,wechatlegal.net
 DOMAIN-SUFFIX,wechatos.net
 DOMAIN-SUFFIX,wechatpay.com
 DOMAIN-SUFFIX,weixinsxy.com
+DOMAIN-SUFFIX,yingt.fun
 DOMAIN-SUFFIX,ys7.com
