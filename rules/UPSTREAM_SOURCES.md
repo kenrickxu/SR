@@ -16,8 +16,8 @@ reviewed before publication.
 | China.list | CN DIRECT | deezertidal/shadowrocket-rules | blackmatrix7/ios_rule_script |
 | Proxy.list | CN JP REA | deezertidal/shadowrocket-rules | blackmatrix7/ios_rule_script |
 | ByteDanceGlobal.list | CN JP REA / OS DIRECT | reviewed shared subset | DouYin / TikTok snapshots |
-| DouYin.list | OS DIRECT | deezertidal/shadowrocket-rules | blackmatrix7/ios_rule_script |
-| TikTok.list | OS DIRECT | deezertidal/shadowrocket-rules | blackmatrix7/ios_rule_script |
+| DouYin.list | CN DIRECT / OS DIRECT | reviewed domestic-first subset | DouYin / ChinaDomain snapshots |
+| TikTok.list | CN JP REA / OS DIRECT | reviewed international subset | TikTok snapshots |
 | TencentVideo.list | OS CN | deezertidal/shadowrocket-rules | blackmatrix7/ios_rule_script |
 | WeChatCore.list | CN DIRECT / OS DIRECT | reviewed shared subset | WeChat snapshots |
 | WeChat.list | OS DIRECT | deezertidal/shadowrocket-rules | blackmatrix7/ios_rule_script |
@@ -26,6 +26,13 @@ reviewed before publication.
 
 ## Review decisions
 
+- On 2026-09-22, made the Douyin/TikTok split explicit. `DouYin.list` owns the
+  unambiguous Douyin roots plus shared `bytedapm.com`/`ibytedapm.com`; those
+  roots were removed from `ChinaDomain` and `TikTok` so domestic app traffic
+  matches the early DIRECT list once. CN imports the remaining international
+  `TikTok.list` through `JP REA`, while OS imports DouYin, ByteDanceGlobal and
+  TikTok as DIRECT. The owner prioritizes domestic Douyin when a ByteDance
+  infrastructure suffix is shared by both apps.
 - On 2026-09-22, removed all 151 exact cross-file rule duplicates across the
   original 17 owner lists. Canonical ownership is now service-specific: DouYin,
   TencentVideo, iQIYI, Youku and EZVIZ retain their own rules, while
