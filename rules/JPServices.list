@@ -1,11 +1,9 @@
 # Services that use the JP group in CN.
 DOMAIN-SUFFIX,anthropic.com
 DOMAIN-SUFFIX,app-analytics-services.com
-DOMAIN-SUFFIX,byteoversea.com
 DOMAIN-SUFFIX,chatgpt.com
 DOMAIN-SUFFIX,coinmarketcap.com
 DOMAIN-SUFFIX,ggpht.com
-DOMAIN-SUFFIX,ibytedtos.com
 DOMAIN-SUFFIX,netflix.com
 DOMAIN-SUFFIX,oaistatic.com
 DOMAIN-SUFFIX,oaiusercontent.com

@@ -1,0 +1,14 @@
+# Shared WeChat essentials. CN and OS both assign DIRECT.
+DOMAIN,slife.xy-asia.com
+DOMAIN-SUFFIX,iot-tencent.com
+DOMAIN-SUFFIX,servicewechat.com
+DOMAIN-SUFFIX,tenpay.com
+DOMAIN-SUFFIX,wechat.com
+DOMAIN-SUFFIX,wechatlegal.net
+DOMAIN-SUFFIX,wechatos.net
+DOMAIN-SUFFIX,wechatpay.com
+DOMAIN-SUFFIX,weixin.com
+DOMAIN-SUFFIX,weixinbridge.com
+DOMAIN-SUFFIX,weixinsxy.com
+USER-AGENT,MicroMessenger*
+USER-AGENT,WeChat*

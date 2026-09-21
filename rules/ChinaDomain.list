@@ -2,6 +2,8 @@
 # Source snapshot: https://github.com/blackmatrix7/ios_rule_script/blob/0087bb74e91b335e17a79fd07a8514277f7d77b4/rule/Shadowrocket/China/China_Domain.list
 # Reviewed: 2026-09-12. Updates are manual and reviewed; never auto-pulled.
 # Local CN dedup 2026-09-19: 108 entries covered by earlier DIRECT suffixes omitted.
+# Canonical-list dedup 2026-09-22: 13 later domains covered by earlier owner
+# DIRECT suffixes omitted after CN began importing the service-specific lists.
 # The counts below are metadata from the original upstream snapshot, not this local list.
 # NAME: China
 # AUTHOR: blackmatrix7
@@ -406,7 +408,6 @@
 .amap.com
 .amapauto.com
 .amd.com
-.amemv.com
 .ams.org
 .andfx.net
 .anfensi.com
@@ -1139,11 +1140,7 @@
 .doubanio.com
 .douxie.com
 .douyin.com
-.douyincdn.com
 .douyinliving.com
-.douyinpic.com
-.douyinstatic.com
-.douyinvod.com
 .douyu.com
 .douyu.tv
 .douyuscdn.com
@@ -1236,7 +1233,6 @@
 .eudic.net
 .everbright.com
 .ewqcxz.com
-.ex.puata.info
 .excelhome.net
 .exmailgz.com
 .expreview.com
@@ -1748,7 +1744,6 @@
 .ivweb.io
 .ixdzs.com
 .ixgvideo.com
-.ixiguavideo.com
 .iyingdi.com
 .iyiou.com
 .iyunxiao.com
@@ -2487,7 +2482,6 @@
 .privatehd.to
 .proquest.com
 .proximabeta.com
-.pstatp.com
 .pterclub.com
 .pubghelper.com
 .pubgtool.com
@@ -2671,7 +2665,6 @@
 .sencdn.com
 .seniverse.com
 .senlinjimore.com
-.servicewechat.com
 .sf-airlines.com
 .sf-cityrush.com
 .sf-express.com
@@ -2928,7 +2921,6 @@
 .tencentyun.com
 .tendbcluster.com
 .tendis.net
-.tenpay.com
 .tenxcloud.com
 .test-cignacmb.com
 .testwaf.com
@@ -2994,7 +2986,6 @@
 .totheglory.im
 .touqikan.com
 .toursbms.com
-.toutiao.com
 .toutiaoapi.com
 .toutiaocdn.com
 .toutiaocloud.com
@@ -3193,7 +3184,6 @@
 .weilaiyunxiao.com
 .weiphone.com
 .weiphone.net
-.weixinbridge.com
 .weiyangx.com
 .weiyun.com
 .welltrend-edu.com
@@ -3590,6 +3580,5 @@ ntservicepack.microsoft.com
 origin-a.akamaihd.net
 sms.imagetasks.com
 steamcommunity-a.akamaihd.net
-weixin.com
 www.libvideo.com
 www.yxssp.com

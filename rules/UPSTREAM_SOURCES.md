@@ -15,15 +15,30 @@ reviewed before publication.
 | ChinaDomain.list | CN DIRECT domain set | not published by yfamilys | blackmatrix7/ios_rule_script |
 | China.list | CN DIRECT | deezertidal/shadowrocket-rules | blackmatrix7/ios_rule_script |
 | Proxy.list | CN JP REA | deezertidal/shadowrocket-rules | blackmatrix7/ios_rule_script |
+| ByteDanceGlobal.list | CN JP REA / OS DIRECT | reviewed shared subset | DouYin / TikTok snapshots |
 | DouYin.list | OS DIRECT | deezertidal/shadowrocket-rules | blackmatrix7/ios_rule_script |
 | TikTok.list | OS DIRECT | deezertidal/shadowrocket-rules | blackmatrix7/ios_rule_script |
 | TencentVideo.list | OS CN | deezertidal/shadowrocket-rules | blackmatrix7/ios_rule_script |
+| WeChatCore.list | CN DIRECT / OS DIRECT | reviewed shared subset | WeChat snapshots |
 | WeChat.list | OS DIRECT | deezertidal/shadowrocket-rules | blackmatrix7/ios_rule_script |
 | iQIYI.list | OS CN | deezertidal/shadowrocket-rules | blackmatrix7/ios_rule_script |
 | Youku.list | OS CN | deezertidal/shadowrocket-rules | blackmatrix7/ios_rule_script |
 
 ## Review decisions
 
+- On 2026-09-22, removed all 151 exact cross-file rule duplicates across the
+  original 17 owner lists. Canonical ownership is now service-specific: DouYin,
+  TencentVideo, iQIYI, Youku and EZVIZ retain their own rules, while
+  `ChinaMedia`, `ChinaEssentialsDirect`, `JPServices` and `China` no longer
+  repeat them. The two shared ByteDance domains now live only in
+  `ByteDanceGlobal.list`, which CN assigns to `JP REA` and OS assigns to
+  `DIRECT`; TikTok remains profile-specific without a copied domain. The 13
+  shared WeChat entries now live only in `WeChatCore.list`, so CN avoids loading
+  the full 318-entry OS WeChat IP-prefix list. CN imports the remaining five
+  mainland service lists directly as `DIRECT`. This preserves OS
+  policy differences without duplicating rule definitions. Broader parent/
+  child matches such as `qq.com` and `weixin.qq.com` remain where profiles need
+  different application scopes; they are not identical duplicate rules.
 - On 2026-09-20, classified nine observed CN-profile DNS roots without changing
   the profile DNS policy. Added `ndcpp.com`, `yingt.fun`, `puata.info`,
   `qiezibenpao.com` and `rtcxyz.com` to the early CN DIRECT provider so all
@@ -47,8 +62,8 @@ reviewed before publication.
   and rule order are unchanged. Upstream metadata in `ChinaDomain.list` still
   describes the original snapshot; future upstream reviews must compare against
   that source before reapplying the local dedup filter.
-- Added the missing paired China domain set (3,580 current entries after the
-  2026-09-19 local dedup filter). The
+- Added the missing paired China domain set (3,567 current entries after the
+  2026-09-19 and 2026-09-22 local dedup filters). The
   yfamilys China.list contains only mixed non-domain rules; using DOMAIN-SET
   restores the maintained mainland-domain half without expanding each domain
   into an individual top-level rule.
