@@ -26,11 +26,10 @@ def normalize(raw: str) -> str | None:
 
 
 def cn_domain_set_overlaps() -> list[str]:
-    """Find later CN DOMAIN-SET entries covered by earlier DIRECT suffixes."""
+    """Find later CN DOMAIN-SET entries shadowed by any earlier domain rule."""
     config = (ROOT / "CN.conf").read_text(encoding="utf-8")
     in_rules = False
-    suffixes: list[tuple[str, str]] = []
-    exact: list[tuple[str, str]] = []
+    selectors: list[tuple[str, str, str, str]] = []
     overlaps: list[str] = []
 
     for raw in config.splitlines():
@@ -43,9 +42,9 @@ def cn_domain_set_overlaps() -> list[str]:
         if not in_rules or not line or line.startswith("#"):
             continue
         fields = [item.strip() for item in line.split(",")]
-        if len(fields) < 3 or fields[2] != "DIRECT":
+        if len(fields) < 3:
             continue
-        kind, value = fields[:2]
+        kind, value, policy = fields[:3]
         if kind == "RULE-SET" and "/kenrickxu/SR/main/rules/" in value:
             name = Path(urlsplit(value).path).name
             path = RULES / name
@@ -56,10 +55,15 @@ def cn_domain_set_overlaps() -> list[str]:
                 if provider is None:
                     continue
                 provider_fields = provider.split(",")
-                if provider_fields[0] == "DOMAIN-SUFFIX":
-                    suffixes.append((provider_fields[1], f"{name}:{number}"))
-                elif provider_fields[0] == "DOMAIN":
-                    exact.append((provider_fields[1], f"{name}:{number}"))
+                if provider_fields[0] in DOMAIN_RULES:
+                    selectors.append(
+                        (
+                            provider_fields[0],
+                            provider_fields[1],
+                            policy,
+                            f"{name}:{number}",
+                        )
+                    )
         elif kind == "DOMAIN-SET" and "/kenrickxu/SR/main/rules/" in value:
             name = Path(urlsplit(value).path).name
             path = RULES / name
@@ -71,19 +75,33 @@ def cn_domain_set_overlaps() -> list[str]:
                     continue
                 owner = next(
                     (
-                        location
-                        for suffix, location in suffixes
-                        if domain == suffix or domain.endswith("." + suffix)
+                        f"{location} ({selector_policy})"
+                        for selector_kind, selector, selector_policy, location in selectors
+                        if (
+                            selector_kind == "DOMAIN"
+                            and domain == selector
+                        )
+                        or (
+                            selector_kind == "DOMAIN-SUFFIX"
+                            and (
+                                domain == selector
+                                or domain.endswith("." + selector)
+                            )
+                        )
+                        or (
+                            selector_kind == "DOMAIN-KEYWORD"
+                            and selector in domain
+                        )
                     ),
                     None,
                 )
-                if owner is None:
-                    owner = next(
-                        (location for host, location in exact if domain == host), None
-                    )
                 if owner is not None:
-                    overlaps.append(f"{name}:{number} {domain} <= {owner}")
+                    overlaps.append(
+                        f"{name}:{number} {domain} ({policy}) <= {owner}"
+                    )
             break
+        elif kind in DOMAIN_RULES:
+            selectors.append((kind, value.lower().rstrip("."), policy, "CN.conf"))
     return overlaps
 
 
