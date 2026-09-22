@@ -18,6 +18,7 @@ reviewed before publication.
 | ByteDanceGlobal.list | CN JP REA / OS DIRECT | reviewed shared subset | DouYin / TikTok snapshots |
 | DouYin.list | CN DIRECT / OS DIRECT | reviewed domestic-first subset | DouYin / ChinaDomain snapshots |
 | TikTok.list | CN JP REA / OS DIRECT | reviewed international subset | TikTok snapshots |
+| TencentMeeting.list | CN DIRECT / OS DIRECT | owner connection-log evidence | Tencent Meeting firewall guide |
 | TencentVideo.list | OS CN | deezertidal/shadowrocket-rules | blackmatrix7/ios_rule_script |
 | WeChatCore.list | CN DIRECT / OS DIRECT | reviewed shared subset | WeChat snapshots |
 | WeChat.list | OS DIRECT | deezertidal/shadowrocket-rules | blackmatrix7/ios_rule_script |
@@ -26,6 +27,18 @@ reviewed before publication.
 
 ## Review decisions
 
+- On 2026-09-22, created the shared `TencentMeeting.list` after the latest CN
+  export showed 116/117 named meeting connections DIRECT but
+  `report.voovmeeting.com` falling to JP. Tencent's current firewall guide
+  identifies the whole `*.voovmeeting.com` root as required VooV signaling,
+  proxy, resource and reporting traffic. Seven raw Aceville/Tencent media IPs
+  were also observed at the same meeting startup; two matching published media
+  ranges use their official /24, while the remaining addresses stay exact /32
+  to avoid routing unrelated Tencent Cloud space DIRECT. CN and OS import this
+  narrow list before regional/broad rules. The same export exposed eight raw
+  IPv6 connections as JP, but their qqlive user agents prove Tencent Video
+  rather than Meeting; exact /128 entries were added to `TencentVideo.list` so
+  CN remains DIRECT and OS preserves its existing CN-media policy.
 - On 2026-09-22, added the two observed Tencent/Aceville WeChat HTTPDNS ranges
   `43.160.156.0/23` and `101.32.133.0/24` to `WeChatCore`. Recent CN connection
   logs showed 65 raw TCP requests to these ranges interleaved with WeChat

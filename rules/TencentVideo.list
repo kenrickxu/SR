@@ -53,3 +53,14 @@ IP-CIDR6,::ffff:58.58.0.90/128,no-resolve
 IP-CIDR6,::ffff:60.171.183.161/128,no-resolve
 IP-CIDR6,::ffff:60.171.183.186/128,no-resolve
 IP-CIDR6,::ffff:60.171.183.98/128,no-resolve
+# Observed qqlive4iphone/live4iphone HTTPDNS endpoints on 2026-09-22. Keep
+# exact /128 ownership here so CN remains DIRECT while OS retains its CN-media
+# policy without broadening unrelated China Telecom IPv6 space.
+IP-CIDR6,240e:97c:2f:1::8a/128,no-resolve
+IP-CIDR6,240e:97c:2f:1000::1e/128,no-resolve
+IP-CIDR6,240e:97c:2f:1002::20/128,no-resolve
+IP-CIDR6,240e:97c:2f:201d::8e/128,no-resolve
+IP-CIDR6,240e:e9:6003:211::a7/128,no-resolve
+IP-CIDR6,240e:e9:6003:211::c3/128,no-resolve
+IP-CIDR6,240e:e9:6003:211::e0/128,no-resolve
+IP-CIDR6,240e:e9:6003:211::e3/128,no-resolve
