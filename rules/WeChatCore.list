@@ -10,5 +10,9 @@ DOMAIN-SUFFIX,wechatpay.com
 DOMAIN-SUFFIX,weixin.com
 DOMAIN-SUFFIX,weixinbridge.com
 DOMAIN-SUFFIX,weixinsxy.com
+# WeChat HTTPDNS can return these Tencent/Aceville IPs directly, without a
+# hostname for later rule matching. Keep the observed contiguous ranges DIRECT.
+IP-CIDR,43.160.156.0/23,no-resolve
+IP-CIDR,101.32.133.0/24,no-resolve
 USER-AGENT,MicroMessenger*
 USER-AGENT,WeChat*

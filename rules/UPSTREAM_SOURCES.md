@@ -26,6 +26,13 @@ reviewed before publication.
 
 ## Review decisions
 
+- On 2026-09-22, added the two observed Tencent/Aceville WeChat HTTPDNS ranges
+  `43.160.156.0/23` and `101.32.133.0/24` to `WeChatCore`. Recent CN connection
+  logs showed 65 raw TCP requests to these ranges interleaved with WeChat
+  traffic; because those requests exposed only an IP, they previously missed
+  the domain rules and fell through to the JP final policy. Both ranges now use
+  the existing shared DIRECT provider in CN and OS without loading the broad
+  318-entry `WeChat.list` into CN or changing DNS.
 - On 2026-09-22, made the Douyin/TikTok split explicit. `DouYin.list` owns the
   unambiguous Douyin roots plus shared `bytedapm.com`/`ibytedapm.com`; those
   roots were removed from `ChinaDomain` and `TikTok` so domestic app traffic
