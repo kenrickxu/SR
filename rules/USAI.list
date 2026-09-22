@@ -1,4 +1,4 @@
-# OpenAI / ChatGPT / Codex and Anthropic / Claude use the US line in CN.
+# OpenAI / ChatGPT / Codex and Anthropic / Claude: CN uses US; OS uses DIRECT.
 DOMAIN-SUFFIX,anthropic.com
 DOMAIN-SUFFIX,claude.ai
 DOMAIN-SUFFIX,claudeusercontent.com

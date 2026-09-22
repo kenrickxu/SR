@@ -18,7 +18,7 @@ reviewed before publication.
 | ByteDanceGlobal.list | CN JP REA / OS DIRECT | reviewed shared subset | DouYin / TikTok snapshots |
 | DouYin.list | CN DIRECT / OS DIRECT | reviewed domestic-first subset | DouYin / ChinaDomain snapshots |
 | TikTok.list | CN JP REA / OS DIRECT | reviewed international subset | TikTok snapshots |
-| USAI.list | CN US | owner-maintained AI service roots | current CN routing audit |
+| USAI.list | CN US / OS DIRECT | owner-maintained AI service roots | current CN and OS routing audit |
 | TencentMeeting.list | CN DIRECT / OS DIRECT | owner connection-log evidence | Tencent Meeting firewall guide |
 | TencentVideo.list | OS CN | deezertidal/shadowrocket-rules | blackmatrix7/ios_rule_script |
 | WeChatCore.list | CN DIRECT / OS DIRECT | reviewed shared subset | WeChat snapshots |
@@ -28,6 +28,10 @@ reviewed before publication.
 
 ## Review decisions
 
+- On 2026-09-23, OS imported the same owner-maintained `USAI.list` as DIRECT
+  and removed its older Anthropic/Claude JP exceptions. OpenAI, ChatGPT, Codex,
+  Anthropic and Claude therefore stay DIRECT in OS without copying service
+  roots into the profile. CN continues to assign this list to US.
 - On 2026-09-23, moved the OpenAI/ChatGPT/Codex and Anthropic/Claude roots
   from `JPServices` into the dedicated `USAI.list`. CN imports this provider
   immediately after `USDownloads`, before `JPServices`, and the redundant
