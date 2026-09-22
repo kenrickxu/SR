@@ -1,6 +1,6 @@
 # Reviewed upstream rule sources
 
-Reviewed: 2026-09-12
+Reviewed: 2026-09-23
 
 - yfamilys source repository snapshot: `b395bcd38c5163b30712ebb1213f0501fb435222`
 - blackmatrix7 cross-check snapshot: `0087bb74e91b335e17a79fd07a8514277f7d77b4`
@@ -18,6 +18,7 @@ reviewed before publication.
 | ByteDanceGlobal.list | CN JP REA / OS DIRECT | reviewed shared subset | DouYin / TikTok snapshots |
 | DouYin.list | CN DIRECT / OS DIRECT | reviewed domestic-first subset | DouYin / ChinaDomain snapshots |
 | TikTok.list | CN JP REA / OS DIRECT | reviewed international subset | TikTok snapshots |
+| USAI.list | CN US | owner-maintained AI service roots | current CN routing audit |
 | TencentMeeting.list | CN DIRECT / OS DIRECT | owner connection-log evidence | Tencent Meeting firewall guide |
 | TencentVideo.list | OS CN | deezertidal/shadowrocket-rules | blackmatrix7/ios_rule_script |
 | WeChatCore.list | CN DIRECT / OS DIRECT | reviewed shared subset | WeChat snapshots |
@@ -27,6 +28,12 @@ reviewed before publication.
 
 ## Review decisions
 
+- On 2026-09-23, moved the OpenAI/ChatGPT/Codex and Anthropic/Claude roots
+  from `JPServices` into the dedicated `USAI.list`. CN imports this provider
+  immediately after `USDownloads`, before `JPServices`, and the redundant
+  `DOMAIN-KEYWORD,claude` JP rule was removed. This preserves a single owner
+  for each AI suffix and makes the same policy translatable to canonical
+  Clash without copying individual domain rules.
 - On 2026-09-22, created the shared `TencentMeeting.list` after the latest CN
   export showed 116/117 named meeting connections DIRECT but
   `report.voovmeeting.com` falling to JP. Tencent's current firewall guide
