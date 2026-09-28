@@ -8,6 +8,10 @@ DOMAIN-SUFFIX,sentry.io
 DOMAIN-SUFFIX,tradingview.com
 DOMAIN-SUFFIX,tradingview-widget.com
 
+# Ascott first-party app/booking domains; do not pin shared cloud/CDN IPs.
+DOMAIN-SUFFIX,discoverasr.com
+DOMAIN-SUFFIX,the-ascott.com
+
 # Hong Kong apps using the existing JP REA group in CN.
 DOMAIN-SUFFIX,openrice.com
 DOMAIN-SUFFIX,hsbc.com.hk
