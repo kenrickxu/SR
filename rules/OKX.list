@@ -1,0 +1,13 @@
+# Owner-maintained OKX service domains, reviewed 2026-10-21.
+# CN/Clash: US Reality. Crypto.com, Binance, OS and CNR are unchanged.
+# Suffixes include website, app APIs, WebSocket, Web3 and static subdomains.
+# Sources: https://www.okx.com/docs-v5/en/
+# https://www.okx.com/zh-hans/learn/okx-cn
+# https://www.okx.com/es-ar/help/wallet-transfer-problems
+DOMAIN-SUFFIX,okx.com
+DOMAIN-SUFFIX,okex.com
+DOMAIN-SUFFIX,oklink.com
+# Narrow aliases: current www.okx.com CNAME and previously observed SR hostname.
+# Do not route all okpool.top, cloudflare.net or shared CDN IPs as OKX.
+DOMAIN,awscn.okpool.top
+DOMAIN,www.okx.com.cdn.cloudflare.net

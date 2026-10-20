@@ -28,6 +28,18 @@ reviewed before publication.
 
 ## Review decisions
 
+- On 2026-10-21, created owner-maintained `OKX.list` for CN and canonical
+  Clash, routed to the existing USP US Reality node before broad lists.
+  Official OKX API docs cover `okx.com` (including regional APIs, WebSocket,
+  Web3 and static subdomains); the official rename announcement establishes
+  legacy `okex.com`; OKX Wallet help links `oklink.com` for transaction lookup.
+  Current DNS resolves `www.okx.com` via `awscn.okpool.top`; the owner's earlier
+  SR log also exposed `www.okx.com.cdn.cloudflare.net`. Only those exact CDN
+  aliases are included, never shared CDN roots or address ranges.
+  Removed CN's broad `okx` keyword JP rule. Canonical Clash removes its stale
+  keyword/third-party OKX JP route and reuses this owner list at US Reality.
+  Crypto.com explicitly remains JP; OS, CNR and all other routing are unchanged.
+
 - On 2026-09-23, OS imported the same owner-maintained `USAI.list` as DIRECT
   and removed its older Anthropic/Claude JP exceptions. OpenAI, ChatGPT, Codex,
   Anthropic and Claude therefore stay DIRECT in OS without copying service
