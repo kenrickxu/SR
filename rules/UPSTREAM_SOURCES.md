@@ -28,6 +28,16 @@ reviewed before publication.
 
 ## Review decisions
 
+- Final owner override on 2026-10-25 supersedes the ASN exclusion and
+  CNR-unchanged decisions below: CN and CNR now explicitly import
+  `IP-ASN,132203,DIRECT,no-resolve` after the reviewed WeChat IP supplement.
+  CNR now also imports `WeChatIPDirectCN.list` as DIRECT; its USP-only
+  routing, six removed infrastructure exceptions, DNS and MITM stay intact.
+  Canonical Clash imports the same explicit top-level ASN rule after Proxy
+  and WeChatIPDirectCN. This intentionally covers other Tencent services in
+  AS132203; it is not a claim that the ASN is WeChat-exclusive. Mihomo uses
+  ASN.mmdb for this rule. Unreviewed third-party ASN rows stay filtered.
+
 - Additional owner-requested cross-check on 2026-10-25:
   `https://raw.githubusercontent.com/LceAn/proxy-filter-rules/main/rules/WeChat.qx.list`
   (SHA256 `7d5349fecabf5d1289b92e3ebd60103bb54569715291b58e7dd6cdfb317d5ce4`).

@@ -1,7 +1,7 @@
-# CN-only WeChat IP supplement; reviewed 2026-10-25.
+# CN/CNR WeChat IP supplement; reviewed 2026-10-25.
 # Source: https://yfamilys.com/rule/WeChat.list
 # Snapshot SHA256: 5beb9891d017ceb6ccbd23dddd7d16bb96c64cb84c6af6749aeb4f1dbd53fa3c
-# Numeric domain keywords normalized to CIDRs; no whole Tencent ASN.
+# Numeric domain keywords normalized to CIDRs; ASN is a separate top-level rule.
 # Includes log-supported 43.160.144.0/24 and 43.156.255.0/24.
 # Exact union only: 207 IPv4 + 64 IPv6; earlier CN DIRECT coverage omitted.
 # Import after explicit service/proxy rules, before GEOIP/FINAL.
