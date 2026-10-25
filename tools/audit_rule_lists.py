@@ -13,6 +13,22 @@ RULES = ROOT / "rules"
 DOMAIN_RULES = {"DOMAIN", "DOMAIN-SUFFIX", "DOMAIN-KEYWORD"}
 
 
+def profile_separated_wechat(locations: list[str]) -> bool:
+    """The frozen OS list and reviewed CN IP list must never be co-loaded."""
+    names = {item.split(":", 1)[0] for item in locations}
+    if names != {"WeChat.list", "WeChatIPDirectCN.list"}:
+        return False
+    for profile in ROOT.glob("*.conf"):
+        imports = {
+            Path(urlsplit(line.split(",")[1]).path).name
+            for raw in profile.read_text(encoding="utf-8").splitlines()
+            if (line := raw.strip()).startswith(("RULE-SET,", "DOMAIN-SET,"))
+        }
+        if names <= imports:
+            return False
+    return True
+
+
 def normalize(raw: str) -> str | None:
     line = raw.strip()
     if not line or line.startswith(("#", ";", "//")):
@@ -120,6 +136,7 @@ def main() -> int:
         rule: locations
         for rule, locations in occurrences.items()
         if len({item.split(":", 1)[0] for item in locations}) > 1
+        and not profile_separated_wechat(locations)
     }
     if duplicates:
         for rule, locations in sorted(duplicates.items()):
@@ -139,7 +156,7 @@ def main() -> int:
 
     print(
         f"PASS lists={len(list(RULES.glob('*.list')))} "
-        f"rules={effective} exact_cross_file_duplicates=0 "
+        f"rules={effective} unapproved_cross_file_duplicates=0 "
         "cn_domain_set_overlaps=0"
     )
     return 0

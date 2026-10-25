@@ -28,6 +28,20 @@ reviewed before publication.
 
 ## Review decisions
 
+- On 2026-10-25, CN adds `WeChatIPDirectCN.list` after Proxy and before
+  GEOIP/FINAL: 207 IPv4 and 64 IPv6 rules, converted from the reviewed
+  [WeChat snapshot](https://yfamilys.com/rule/WeChat.list), SHA256
+  `5beb9891d017ceb6ccbd23dddd7d16bb96c64cb84c6af6749aeb4f1dbd53fa3c`.
+  Numeric domain keywords become /24 CIDRs; exact-union aggregation does not
+  widen them. Fourteen ranges already covered by CN DIRECT are omitted.
+  Owner connection/DNS evidence adds 43.160.144.0/24 and 43.156.255.0/24.
+  AS132203 is excluded because Tencent Cloud is broader than WeChat. Shared
+  domains remain in existing lists. OS/CNR and their WeChat lists are unchanged.
+  The separate CN snapshot intentionally shares some CIDRs with the OS-only
+  legacy WeChat list; neither profile loads both IP lists. Canonical Mihomo
+  removes the legacy WeChat provider, uses this new list via the filtered
+  owner endpoint, and retains WeChatCore with unique translated process rules.
+
 - On 2026-10-21, created owner-maintained `OKX.list` for CN and canonical
   Clash, routed to the existing USP US Reality node before broad lists.
   Official OKX API docs cover `okx.com` (including regional APIs, WebSocket,
