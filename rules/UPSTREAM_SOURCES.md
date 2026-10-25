@@ -28,6 +28,15 @@ reviewed before publication.
 
 ## Review decisions
 
+- Additional owner-requested cross-check on 2026-10-25:
+  `https://raw.githubusercontent.com/LceAn/proxy-filter-rules/main/rules/WeChat.qx.list`
+  (SHA256 `7d5349fecabf5d1289b92e3ebd60103bb54569715291b58e7dd6cdfb317d5ce4`).
+  All 40 domain entries and 9 IPv4 /32 entries already match DIRECT; both
+  WeChat USER-AGENT patterns are covered by WeChatCore. No new addresses
+  are needed. Its AS132203 entry remains excluded as broad Tencent coverage.
+  Quantumult X HOST/HOST-SUFFIX and trailing policy labels are not copied
+  into SR or Mihomo provider syntax.
+
 - On 2026-10-25, CN adds `WeChatIPDirectCN.list` after Proxy and before
   GEOIP/FINAL: 207 IPv4 and 64 IPv6 rules, converted from the reviewed
   [WeChat snapshot](https://yfamilys.com/rule/WeChat.list), SHA256
