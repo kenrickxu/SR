@@ -28,6 +28,40 @@ reviewed before publication.
 
 ## Review decisions
 
+- Follow-up 2026-10-26 media/certificate and four-profile precedence review:
+  15 mainland video site TLS handshakes passed using direct TCP from Windows
+  with TUN disabled; issuer/AIA/OCSP/CRL endpoints were read from the real leaf
+  certificates. 25 direct endpoint probes returned HTTP 200; all 11 issuer/root
+  files parsed as X509. Six real OCSP requests returned signed, verified GOOD
+  responses (42-699ms). Root-path OCSP HTTP 200 alone was not counted as a
+  valid certificate-status response. These are service probes, not playback
+  or download-throughput measurements.
+  ChinaEssentialsDirect gains 11 exact CA host exceptions: RapidSSL issuer,
+  CRL/status, GlobalSign CRL/OCSP, Sectigo China CRL/OCSP, and the separately
+  logged DigiCert/Sectigo OCSP, USERTrust issuer and Certum repository hosts.
+  The two existing exact CA hosts remain. DigiCert .cn endpoints already use
+  DIRECT via China.list; no broad CA/CDN/IP suffix or trustd-wide DIRECT rule
+  is introduced. Public CA service references:
+  https://www.sectigo.com/knowledge-base/detail/OCSP-and-CRL-access-information
+  https://www.alibabacloud.com/help/en/ssl-certificate/download-a-root-certificate-and-an-intermediate-certificate
+  CN/CNR place ChinaMedia with explicit domestic service sets, before generic
+  keywords/proxy lists; DNS, node groups, MITM and service policies are intact.
+  Canonical Clash must remove the obsolete DOUYIN canary's nine domain
+  overrides, route its four domestic app processes DIRECT, and restore
+  DouYin/TikTok/ChinaMedia provider precedence relative to imported owner
+  rules. iCloud DIRECT must precede Microsoft shared-CDN proxy matching for
+  www-cdn.icloud.com.akadns.net. Keep TikTok/international routes proxied and WeChat IP/ASN fallback
+  after explicit proxy choices. Windows-specific groups are retained.
+  OS remains an overseas DIRECT-default profile: Tencent Video/iQIYI/Youku
+  and EZVIZ keep their explicit CN routes and extended matching, grouped
+  before the broader WeChat DIRECT set. Five Tencent-video /128 exceptions
+  precede overlapping WeChat prefixes by design. No mainland-wide OS catch-all
+  or new media relay policy is introduced. Existing default DIRECT already
+  covers the audited CA hosts; importing ChinaEssentials there would override
+  its explicit Baidu/airline CN choices and is intentionally avoided.
+  This supersedes only the earlier instruction to leave OS ordering unchanged.
+
+
 - On 2026-10-26, audited 5,711 connection and 1,721 DNS records from the
   owner's 23:51 export (records continue through 09:33 the next morning).
   All 583 identifiable iQIYI connections, including 69 OFFLINE requests,

@@ -1,8 +1,21 @@
 # Mainland banking and frequently used services that must match before proxy lists.
-# Exact certificate-download endpoints observed behind Proxy's trustd UA rule.
-# Mainland direct fetch verified 2026-10-26; do not bypass all CA/CDN domains.
+# Certificate services: exact hosts from owner logs and 15 verified media TLS chains.
+# Mainland DIRECT fetches checked 2026-10-26; see UPSTREAM_SOURCES.md.
+# These cover CA issuer downloads, OCSP status and CRLs; no trust-store/MITM change.
+# DigiCert .cn endpoints are already DIRECT through the later China rules.
+DOMAIN,cacerts.rapidssl.com
+DOMAIN,cdp.rapidssl.com
+DOMAIN,crl.globalsign.com
+DOMAIN,crl.sectigochina.com
 DOMAIN,crt.sectigochina.com
+DOMAIN,crt.usertrust.com
+DOMAIN,ocsp.digicert.com
+DOMAIN,ocsp.globalsign.com
+DOMAIN,ocsp.sectigo.com
+DOMAIN,ocsp.sectigochina.com
 DOMAIN,secure.globalsign.com
+DOMAIN,status.rapidssl.com
+DOMAIN,trustasia.repository.certum.pl
 DOMAIN-SUFFIX,163.com
 DOMAIN-SUFFIX,abchina.com.cn
 DOMAIN-SUFFIX,baidu.com
