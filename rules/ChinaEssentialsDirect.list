@@ -21,8 +21,6 @@ DOMAIN-SUFFIX,c-ctrip.com
 DOMAIN-SUFFIX,ccb.com
 DOMAIN-SUFFIX,csair.com
 DOMAIN-SUFFIX,itopsdk.com
-# Tencent Meeting official wildcard media endpoint; mainland profiles only.
-DOMAIN-SUFFIX,media.tencentmeeting.com
 DOMAIN-SUFFIX,meituan.com
 DOMAIN-SUFFIX,meituan.net
 DOMAIN-SUFFIX,ndcpp.com
@@ -35,5 +33,7 @@ DOMAIN-SUFFIX,sectigochina.com
 DOMAIN-SUFFIX,tdatamaster.com
 DOMAIN-SUFFIX,tencent-cloud.net
 DOMAIN-SUFFIX,tencent.com
+# Owner-approved Tencent Meeting parent suffix; CN/CNR/Clash only.
+DOMAIN-SUFFIX,tencentmeeting.com
 DOMAIN-SUFFIX,ts.net
 DOMAIN-SUFFIX,yingt.fun

@@ -28,6 +28,15 @@ reviewed before publication.
 
 ## Review decisions
 
+- Follow-up 2026-10-26, owner approved widening the Tencent Meeting DIRECT
+  domain scope from media.tencentmeeting.com to tencentmeeting.com. Replace
+  the narrower suffix in ChinaEssentialsDirect, already consumed before Proxy
+  by CN/CNR and canonical Clash; do not duplicate the child suffix. This covers
+  the apex and every descendant, including future subdomains, but does not
+  imply all servers are mainland or cover other roots/raw-IP connections.
+  Retain the official Meeting IP supplement and existing Tencent/QQ routes.
+  Provider entries remain 32; General/DNS/nodes/OS and generator unchanged.
+
 - On 2026-10-26, audit domestic Tencent Meeting against official firewall JSON
   v1.14 dated 2026-07-10 (SHA256
   0391adf2e082f78baea2a8e56bca51f2939b03298bd7d1623bdcf72d6250c54e):
