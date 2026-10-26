@@ -28,6 +28,25 @@ reviewed before publication.
 
 ## Review decisions
 
+- Follow-up 2026-10-26 final iQIYI download audit (new export through 10:18):
+  9,823 connections / 2,290 DNS records. All 1,461 identifiable iQIYI-related
+  connections are DIRECT, including 172 OFFLINE and 139 video-file requests
+  (overlapping subsets). Existing 34 iQIYI suffixes cover first-party services;
+  the observed alikunlun.com CNAME is also covered by ChinaDomain's suffix.
+  No video route leak was found. Two empty DNS answers belong to one masked
+  afdback.ppsimg.com host, not an identified download CDN. Logs contain no
+  throughput or transfer duration and cannot establish maximum download speed.
+  Owner explicitly requested broader domestic suffix coverage: replace the
+  three exact crt/crl/ocsp.sectigochina.com rows with DOMAIN-SUFFIX for
+  sectigochina.com in ChinaEssentialsDirect. All its current and future child
+  endpoints match DIRECT before Proxy trustd in CN, CNR and canonical Clash.
+  This supersedes the exact-host-only restriction below for this one suffix.
+  Remaining international CA hosts stay exact. No shared CDN/carrier IP expansion,
+  no iQIYI shared-list change, and no OS change (including its imported lists).
+  Refresh the filtered Clash provider cache as well as the managed source receipt;
+  installed clients remain owner-refreshed. The 10:15:20 phone OCSP request still
+  matched old trustd routing, so publication is not proof of client refresh.
+
 - Follow-up 2026-10-26 media/certificate and four-profile precedence review:
   15 mainland video site TLS handshakes passed using direct TCP from Windows
   with TUN disabled; issuer/AIA/OCSP/CRL endpoints were read from the real leaf
