@@ -21,6 +21,8 @@ DOMAIN-SUFFIX,c-ctrip.com
 DOMAIN-SUFFIX,ccb.com
 DOMAIN-SUFFIX,csair.com
 DOMAIN-SUFFIX,itopsdk.com
+# Tencent Meeting official wildcard media endpoint; mainland profiles only.
+DOMAIN-SUFFIX,media.tencentmeeting.com
 DOMAIN-SUFFIX,meituan.com
 DOMAIN-SUFFIX,meituan.net
 DOMAIN-SUFFIX,ndcpp.com

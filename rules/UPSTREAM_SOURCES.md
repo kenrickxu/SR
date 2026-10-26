@@ -28,6 +28,29 @@ reviewed before publication.
 
 ## Review decisions
 
+- On 2026-10-26, audit domestic Tencent Meeting against official firewall JSON
+  v1.14 dated 2026-07-10 (SHA256
+  0391adf2e082f78baea2a8e56bca51f2939b03298bd7d1623bdcf72d6250c54e):
+  https://meeting.tencent.com/support/topic/1929/index.html
+  https://cdn.meeting.tencent.com/upload/firewall/domain_ip.json
+  Of 238 distinct listed domains, only sso.media.tencentmeeting.com lacks an
+  explicit DIRECT domain match in CN/CNR/canonical Clash. Add the published
+  media.tencentmeeting.com suffix to ChinaEssentialsDirect. This is a coverage
+  gap, not a claimed observed proxy connection: supplied logs contain only one
+  identifiable Meeting connection (DIRECT) repeated across overlapping exports.
+  Add TencentMeetingIPDirectCN with 160 explicit IP entries: 123 official /24s,
+  32 IPv4 /32s and 5 IPv6 /128s. Select mainland-labelled media/whiteboard plus
+  unlabelled common login/HTTPDNS/IM/MRA/disaster-recovery endpoints; common
+  endpoints are not assumed geographically mainland. 174 unique selected
+  networks minus 14 already covered by literal DIRECT CIDRs leaves 160.
+  Exclude 68 region-labelled non-mainland rows. Preserve original prefix widths,
+  no DNS-derived CDN IP pinning, no broader ASN expansion. Many selected IPs
+  already use GEOIP/AS132203; these additions make their DIRECT intent explicit,
+  not 160 demonstrated misroutes. Keep explicit Proxy ahead of this supplement,
+  then WeChat IP/AS132203/GEOIP. Canonical Clash must restore this boundary after
+  managed-rule injection. Shared TencentMeeting.list and OS stay unchanged.
+  General/DNS/IPv6/real-IP/node/MITM settings are outside this change.
+
 - Follow-up 2026-10-26 final iQIYI download audit (new export through 10:18):
   9,823 connections / 2,290 DNS records. All 1,461 identifiable iQIYI-related
   connections are DIRECT, including 172 OFFLINE and 139 video-file requests
