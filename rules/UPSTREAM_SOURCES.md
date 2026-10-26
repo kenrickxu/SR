@@ -28,6 +28,14 @@ reviewed before publication.
 
 ## Review decisions
 
+- Follow-up 2026-10-26: owner explicitly requested the entire kt7766.org
+  domain through VPN in CN/CNR/Clash, superseding the exact-host decision
+  below. Remove DOMAIN-SUFFIX,kt7766.org from BusinessDirect and replace the
+  exact t.kt7766.org rule with one parent DOMAIN-SUFFIX rule: CN/Clash JP REA,
+  CNR US. No retained child duplicate or opposite DIRECT entry. OS does not
+  import BusinessDirect, so OS and its providers remain unchanged. Node
+  connection parameters and credentials are unchanged.
+
 - On 2026-10-26, owner reported Tiffany SR update failures while Kenrick
   worked and approved proxying subscription downloads. Existing BusinessDirect
   DOMAIN-SUFFIX,kt7766.org forces all account URLs DIRECT. Add exact
