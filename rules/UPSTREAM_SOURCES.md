@@ -28,6 +28,21 @@ reviewed before publication.
 
 ## Review decisions
 
+- On 2026-10-26, audited 5,711 connection and 1,721 DNS records from the
+  owner's 23:51 export (records continue through 09:33 the next morning).
+  All 583 identifiable iQIYI connections, including 69 OFFLINE requests,
+  already use DIRECT; 82 related DNS queries succeeded. Do not add broad
+  carrier/CDN ranges or call this a proven video-throughput repair.
+  ChinaEssentialsDirect adds only exact `crt.sectigochina.com` and
+  `secure.globalsign.com`: three observed certificate fetches hit Proxy's
+  `com.apple.trustd*` USER-AGENT rule despite mainland CDN availability.
+  Native Windows curl with proxies bypassed and TUN disabled fetched the
+  public certificates successfully from mainland CDN addresses. The same
+  existing provider is DIRECT in CN, CNR and canonical Clash; OS does not
+  import it. Preserve the remaining trustd policy, video rules, DNS, nodes,
+  MITM and broad ASN policy. Client refresh and download-speed acceptance
+  remain separate from source and native-core validation.
+
 - Final owner override on 2026-10-25 supersedes the ASN exclusion and
   CNR-unchanged decisions below: CN and CNR now explicitly import
   `IP-ASN,132203,DIRECT,no-resolve` after the reviewed WeChat IP supplement.

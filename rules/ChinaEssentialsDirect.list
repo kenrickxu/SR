@@ -1,4 +1,8 @@
 # Mainland banking and frequently used services that must match before proxy lists.
+# Exact certificate-download endpoints observed behind Proxy's trustd UA rule.
+# Mainland direct fetch verified 2026-10-26; do not bypass all CA/CDN domains.
+DOMAIN,crt.sectigochina.com
+DOMAIN,secure.globalsign.com
 DOMAIN-SUFFIX,163.com
 DOMAIN-SUFFIX,abchina.com.cn
 DOMAIN-SUFFIX,baidu.com
