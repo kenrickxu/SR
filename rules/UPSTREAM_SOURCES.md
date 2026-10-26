@@ -28,6 +28,17 @@ reviewed before publication.
 
 ## Review decisions
 
+- On 2026-10-26, owner reported Tiffany SR update failures while Kenrick
+  worked and approved proxying subscription downloads. Existing BusinessDirect
+  DOMAIN-SUFFIX,kt7766.org forces all account URLs DIRECT. Add exact
+  DOMAIN,t.kt7766.org before service sets in CN (JP REA) and CNR (US);
+  canonical Clash imports the CN JP exception. Preserve the broad DIRECT
+  suffix for other subdomains and OS. All nine ordinary account payloads
+  validate from origin/public; this is a confirmed routing weakness, not proof
+  that China Unicom caused the reported failure. Account tokens/credentials,
+  General/DNS/IPv6 and node configuration remain unchanged. Client must first
+  load the new profile and enable a working node before retrying subscription.
+
 - Follow-up 2026-10-26, owner approved widening the Tencent Meeting DIRECT
   domain scope from media.tencentmeeting.com to tencentmeeting.com. Replace
   the narrower suffix in ChinaEssentialsDirect, already consumed before Proxy
