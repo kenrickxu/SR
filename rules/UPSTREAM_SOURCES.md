@@ -28,6 +28,18 @@ reviewed before publication.
 
 ## Review decisions
 
+- On 2026-10-28, owner supplied iPhone DNS/connection exports while watching
+  domestic Douyin live. All229 identified douyincdn.com/douyinliving.com stream
+  connections were already DIRECT. Two auxiliary hosts, exact
+  lf-leads-fe-scm.bytecdn.com and lf3-effect-aweme.byteeffecttos.com, appeared
+  DIRECT only through GEOIP,CN. Add these two exact DOMAIN rows to the existing
+  ChinaEssentialsDirect consumed by CN/CNR and canonical filtered Clash, so
+  their policy does not depend on a future DNS address's country. Preserve
+  shared root/CDN and TikTok/ByteDanceGlobal routing; OS does not import this
+  list and remains unchanged. No IP-range, DNS, node, MITM or global-mode change.
+  This is coverage hardening, not evidence that VPN routing caused the observed
+  playback lag or that a client refresh has already improved throughput.
+
 - Follow-up 2026-10-26: owner explicitly requested the entire kt7766.org
   domain through VPN in CN/CNR/Clash, superseding the exact-host decision
   below. Remove DOMAIN-SUFFIX,kt7766.org from BusinessDirect and replace the

@@ -4,6 +4,10 @@
 # Mainland DIRECT fetches checked 2026-10-26; see UPSTREAM_SOURCES.md.
 # These cover CA issuer downloads, OCSP status and CRLs; no trust-store/MITM change.
 # DigiCert .cn endpoints are already DIRECT through the later China rules.
+# Exact domestic Douyin auxiliary hosts observed DIRECT via GEOIP on 2026-10-28.
+# Keep shared bytecdn.com/byteeffecttos.com roots out of wholesale DIRECT rules.
+DOMAIN,lf-leads-fe-scm.bytecdn.com
+DOMAIN,lf3-effect-aweme.byteeffecttos.com
 DOMAIN,cacerts.rapidssl.com
 DOMAIN,cdp.rapidssl.com
 DOMAIN,crl.globalsign.com
