@@ -28,6 +28,21 @@ reviewed before publication.
 
 ## Review decisions
 
+- Follow-up 2026-10-29: owner requested whole-domain DIRECT instead of the two
+  exact auxiliary hosts below. Replace them with DOMAIN-SUFFIX,bytecdn.com and
+  DOMAIN-SUFFIX,byteeffecttos.com in ChinaEssentialsDirect, keeping one rule per
+  root and no child duplicates. CN/CNR/Clash now route the apex and all children
+  DIRECT; OS does not import this provider. This supersedes the previous narrow
+  scope for these two roots only. V2Fly's domain-list-community classifies
+  bytecdn.com under ByteDance, and SukkaW/Surge lists byteeffecttos.com in its
+  domestic ByteDance resource group. These are community routing references,
+  not ByteDance guarantees that every service/node under either root is located
+  in China or dedicated to Douyin. The policy also applies to any other service
+  using either root. Preserve independent TikTok/ByteDanceGlobal roots, DNS,
+  IP ranges, nodes, protected MITM and existing rule order. Sources:
+  https://github.com/v2fly/domain-list-community/blob/master/data/bytedance
+  https://github.com/SukkaW/Surge/blob/master/Source/non_ip/domestic.ts
+
 - On 2026-10-28, owner supplied iPhone DNS/connection exports while watching
   domestic Douyin live. All229 identified douyincdn.com/douyinliving.com stream
   connections were already DIRECT. Two auxiliary hosts, exact
