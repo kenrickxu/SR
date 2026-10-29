@@ -22,3 +22,10 @@ locked-screen push and national-server gameplay separately from syntax tests.
 
 Sources: https://support.apple.com/en-us/102266 and
 https://github.com/v2fly/domain-list-community/tree/333d8a1810d04600bcb00870155a369954ed37f5/data
+
+CN US routes use the new US TUIC selector, with US-TUIC first and the
+correctly spelled US-Reality as a manual backup. A new group name avoids
+restoring the old cached Reality selection. CNR keeps its US Reality policy.
+TencentVideoCN is the CN/CNR mirror excluding three benchmark/fake mapped
+addresses; the shared OS list remains independent. Canonical Clash respects
+the same ordering, including model downloads, AI, OKX and infrastructure IPs.
