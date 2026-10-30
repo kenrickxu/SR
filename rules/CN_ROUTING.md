@@ -13,8 +13,19 @@ this changes the Apple push transport for all apps, not just Telegram.
 
 Canonical Clash imports the CN compatible owner lists through filtered
 /sr-rules/ endpoints. CNR is the separate Shadowrocket profile; no CNR Clash
-output is changed. DNS, node identities and MITM settings are unchanged in
-CN.conf and CNR.conf. OS is separate.
+output is changed. Primary DNS, node identities and MITM settings are retained
+in CN.conf and CNR.conf. OS is separate.
+
+DNS fallback clarification (owner-tested Shadowrocket 2.2.93, 2026-10-30):
+CN and CNR explicitly set dns-fallback = false for the Enable Fallback switch.
+Keep dns-fallback-system = false as a compatibility guard and leave
+fallback-dns-server = empty: this is an address list, not a boolean. It does
+not need AliDNS or system added while fallback is disabled. DIRECT still uses
+system DNS; the primary DNS pool remains 223.5.5.5,223.6.6.6. This supersedes
+the earlier assumption that dns-fallback-system alone controlled the UI.
+These Shadowrocket keys must not be copied into Clash YAML; canonical Clash
+already has no fallback or fallback-filter. Refresh both remote profiles;
+route policies, providers, node identities and MITM are unaffected.
 
 After publishing, refresh both the profile and its rule sets; reconnect the
 VPN once to replace old persistent APNs connections. Check actual iPhone
