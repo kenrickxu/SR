@@ -1,78 +1,75 @@
-# CN / CNR routing priorities
+# CN standalone routing policy — 2026-10-31
 
-Mainland games use ChinaGamesDirect before the broad Proxy list. It contains
-263 reviewed domain entries from pinned V2Fly category-games-cn and observed
-Delta Force China endpoints. International game editions, global SDK roots and
-shared cloud address ranges are excluded. ChinaDomain/China/GEOIP CN remain
-DIRECT fallbacks; unknown future games still require evidence-based review.
+CN.conf is now the single-file runtime rule authority. It has no RULE-SET,
+DOMAIN-SET or exact DOMAIN entries. Complete domain names use DOMAIN-SUFFIX;
+shared CDN/cloud namespaces retain necessary business-level boundaries rather
+than being widened to the whole provider. Do not strip the public suffix with
+naive last-two-label parsing or broaden OKX's Cloudflare alias to
+com.cdn.cloudflare.net/cloudflare.net. Public Suffix List parsing is a boundary
+check, not proof that a provider tenant owns every sibling.
 
-ApplePushProxy precedes AppleDirect: CN uses JP REA; CNR uses US. It includes
-push.apple.com and Apple's published APNs-specific IPv4/IPv6 ranges. Other
-Apple services keep their existing DIRECT policy. APNs is shared by apps, so
-this changes the Apple push transport for all apps, not just Telegram.
+Current reviewed output: 4,779 rules, including 4,000 DOMAIN-SUFFIX entries and
+646 IP rows; the previous expanded profile had 5,088 logical rows. Forty-three
+legacy keyword safeguards and existing app/process/media-port compatibility
+selectors are retained. They are patterns, not exact DOMAIN entries; deleting
+them could lose unknown service variants or raw-IP app handling. This is not
+an all-domain throughput or phone latency benchmark.
 
-Canonical Clash imports the CN compatible owner lists through filtered
-/sr-rules/ endpoints. CNR is the separate Shadowrocket profile; no CNR Clash
-output is changed. Primary DNS, node identities and MITM settings are retained
-in CN.conf and CNR.conf. OS is separate.
+Order:
+1. Existing remote-access process exceptions.
+2. Necessary domain exceptions such as Apple push before Apple DIRECT.
+3. Core national games and SDK parents DIRECT (Delta/Honor of Kings/Peacekeeper).
+4. Apple APNs and official Telegram IP exceptions, before media-port fallbacks.
+5. Explicit US and JP service parents; ZA/HSBC and other JP apps never rely on
+   FINAL. Named service rules precede broad domestic IP/ASN/GeoIP fallbacks.
+6. Remaining games and domestic/approved DIRECT parents.
+7. Existing keyword/app compatibility and FaceTime media-port fallbacks.
+8. Other explicit IP policies, specific prefixes before parent networks.
+9. Existing Tencent ASN, GEOIP CN DIRECT, FINAL JP.
 
-DNS fallback clarification (owner-tested Shadowrocket 2.2.93, 2026-10-30):
-CN and CNR explicitly set dns-fallback = false for the Enable Fallback switch.
-Keep dns-fallback-system = false as a compatibility guard and leave
-fallback-dns-server = empty: this is an address list, not a boolean. It does
-not need AliDNS or system added while fallback is disabled. DIRECT still uses
-system DNS; the primary DNS pool remains 223.5.5.5,223.6.6.6. This supersedes
-the earlier assumption that dns-fallback-system alone controlled the UI.
-These Shadowrocket keys must not be copied into Clash YAML; canonical Clash
-already has no fallback or fallback-filter. Refresh both remote profiles;
-route policies, providers, node identities and MITM are unaffected.
+Parent policies retain CN's existing QQ/Tencent/TCDNOS and domestic game scope.
+Tencent's community game list mixes domestic and global SDKs; do not import all
+of it as new DIRECT coverage. Observed project-specific gcloudsvcs/gcloudgbs
+business parents and CN SDK endpoints are covered without forcing additional
+shared global roots DIRECT. The original 263 game entries and three explicitly
+reviewed resource endpoints are covered. No ephemeral game IP /32 pins or new
+public tun-excluded-routes are introduced; dynamic domestic IPs retain the
+reviewed IP/ASN/GEOIP fallbacks.
 
-After publishing, refresh both the profile and its rule sets; reconnect the
-VPN once to replace old persistent APNs connections. Check actual iPhone
-locked-screen push and national-server gameplay separately from syntax tests.
+General has host/glob address lists, not DOMAIN-SUFFIX directives. Use parent
+and *.parent pairs where apex and subdomains both need real IP; preserve local
+and complex native patterns. Existing main DNS stays223.5.5.5/223.6.6.6,
+DIRECT uses system DNS, fallback master/system flags remainfalse and the
+fallback address list empty. IPv6, hijack DNS, node references and protected
+MITM/Hosts remain unchanged. skip-proxy retains local/private/router scope;
+it chooses proxy versus TUN handling, not a UDP bypass around Shadowrocket.
 
-Sources: https://support.apple.com/en-us/102266 and
-https://github.com/v2fly/domain-list-community/tree/333d8a1810d04600bcb00870155a369954ed37f5/data
+Telegram official14prefixes are explicitJP before generic UDP-port DIRECT;
+this avoids treating Telegram traffic as FaceTime purely by port. Apple push
+keeps its domain and published APNs-specific IP priority. Google's observed
+gstatic domestic-direct behavior is retained; do not blindly pin all its static
+assets to JP. Existing US routing uses the single-member US REA/US-Reality
+selection and TUIC provisioning remains untouched.
 
-Owner 2026-10-30 supersedes the US-TUIC default: CN and canonical Clash US
-routes use US REA with US-Reality as the only regional group member. TUIC
-nodes remain in the subscription and the separate TUIC game selector remains
-available. A new regional group name avoids restoring a cached TUIC choice.
-CNR keeps its separate US Reality policy.
-TencentVideoCN is the CN/CNR mirror excluding three benchmark/fake mapped
-addresses; the shared OS list remains independent. Canonical Clash respects
-the same ordering, including model downloads, AI, OKX and infrastructure IPs.
+Scope is CN ONLY. CNR.conf, OS.conf and all shared *.list files are unchanged.
+Canonical CN Clash remains pinned to SR41d90d1 by the owner's explicit request;
+do not sync this SR-only format/order into Clash without a later request and
+its normal native-provider verification. No server/client restart is needed.
 
-Owner-approved game compatibility follow-up (2026-10-31): pvp.qq.com,
-gp.qq.com and smoba.qq.com explicitly join the early DIRECT game list. The
-observed download.2.1212338883.wz.gcloudgbs.com host is also early DIRECT
-after a same-LAN DNS comparison; dir.1212338883-2-1.gcloudsvcs.com retains
-its existing GEOIP CN DIRECT fallback because its cold system sample was
-slower. CN/CNR add fourteen exact observed non-qq game/SDK hosts to
-always-real-ip; canonical Clash maps these to native fake-ip-filter entries.
-Existing *.qq.com coverage, skip-proxy, DNS pools/system-direct/no-fallback,
-IPv6, APNs routing, nodes and protected MITM stay intact. These entries
-reduce address compatibility uncertainty; they do not prove a latency gain
-or that the original logs misrouted gameplay. Device gameplay acceptance
-requires a separate same-iPhone Wi-Fi/5G comparison.
+Refresh the CN remote configuration, then reconnect. CN no longer consumes
+external rule-set refreshes. Actual same-phone game ping, locked-screen push,
+bank use and network-switch acceptance are separate from source/selector tests.
+No claim that this profile has eliminated Wi-Fi ping spikes or is fastest on
+all networks. Source/report proof and the one-time reviewed builder are under
+Genesis projects/infrastructure/jp-vpn-new/audits/20261031-cn-standalone.
+The archived builder is tied to the old source hashes; it is not an updater.
+Future CN edits go directly to this standalone file, with backup/regression
+checks; never overwrite later edits by blindly rebuilding old list snapshots.
 
-CN-only inline game trial (owner request, 2026-10-31): CN.conf replaces the
-ChinaGamesDirect RULE-SET reference with a local snapshot at the same
-priority. From the reviewed263 game entries, the owner explicitly replaces
-10 tcdnos.com child rules with one DOMAIN-SUFFIX,tcdnos.com,DIRECT.
-The resulting local game block has254 rows; apex and all descendants
-use DIRECT. always-real-ip contains tcdnos.com and *.tcdnos.com, replacing
-covered exact children. Other services under that parent also follow this
-owner policy; it is not a guarantee of mainland-only server locations.
-Inline removes one remote-list dependency, not routing decisions, and is not
-a measured packet-speed improvement. Keep its base source hash; future shared
-game-list changes require explicit CN snapshot reconciliation. Other rule sets,
-IP/ASN/GEOIP fallbacks, DNS, nodes, protected MITM and skip-proxy stay intact.
-skip-proxy chooses HTTP-proxy versus TUN handling; it is not a UDP TUN bypass.
-Do not add ephemeral game IP pins or public TUN exclusions without evidence.
-The new connection log has105 UDP entries allDIRECT; the DNS database is empty.
-The owner reports Wi-Fi ping30->70/100ms; same-phone SR-off/on and network
-comparison is still required for causal diagnosis. Desktop ICMP is not game RTT.
-CNR, its shared game provider and canonical Clash are unchanged by explicit
-owner scope; Clash stays pinned to SR41d90d1. Do not apply this CN-only trial
-to Clash without a later owner request.
+Sources:
+- https://publicsuffix.org/list/
+- https://core.telegram.org/resources/cidr.txt
+- https://support.apple.com/en-us/102266
+- https://github.com/v2fly/domain-list-community/tree/1daade8c4bb957d21d1f5c09c2b050d699e8e96c/data
+- https://bank.za.group/
+- https://www.hsbc.com.hk/
