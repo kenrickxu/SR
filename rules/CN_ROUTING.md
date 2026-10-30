@@ -55,3 +55,24 @@ IPv6, APNs routing, nodes and protected MITM stay intact. These entries
 reduce address compatibility uncertainty; they do not prove a latency gain
 or that the original logs misrouted gameplay. Device gameplay acceptance
 requires a separate same-iPhone Wi-Fi/5G comparison.
+
+CN-only inline game trial (owner request, 2026-10-31): CN.conf replaces the
+ChinaGamesDirect RULE-SET reference with a local snapshot at the same
+priority. From the reviewed263 game entries, the owner explicitly replaces
+10 tcdnos.com child rules with one DOMAIN-SUFFIX,tcdnos.com,DIRECT.
+The resulting local game block has254 rows; apex and all descendants
+use DIRECT. always-real-ip contains tcdnos.com and *.tcdnos.com, replacing
+covered exact children. Other services under that parent also follow this
+owner policy; it is not a guarantee of mainland-only server locations.
+Inline removes one remote-list dependency, not routing decisions, and is not
+a measured packet-speed improvement. Keep its base source hash; future shared
+game-list changes require explicit CN snapshot reconciliation. Other rule sets,
+IP/ASN/GEOIP fallbacks, DNS, nodes, protected MITM and skip-proxy stay intact.
+skip-proxy chooses HTTP-proxy versus TUN handling; it is not a UDP TUN bypass.
+Do not add ephemeral game IP pins or public TUN exclusions without evidence.
+The new connection log has105 UDP entries allDIRECT; the DNS database is empty.
+The owner reports Wi-Fi ping30->70/100ms; same-phone SR-off/on and network
+comparison is still required for causal diagnosis. Desktop ICMP is not game RTT.
+CNR, its shared game provider and canonical Clash are unchanged by explicit
+owner scope; Clash stays pinned to SR41d90d1. Do not apply this CN-only trial
+to Clash without a later owner request.
