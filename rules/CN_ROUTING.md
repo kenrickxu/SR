@@ -1,7 +1,7 @@
 # CN / CNR routing priorities
 
 Mainland games use ChinaGamesDirect before the broad Proxy list. It contains
-259 reviewed domain entries from pinned V2Fly category-games-cn and observed
+263 reviewed domain entries from pinned V2Fly category-games-cn and observed
 Delta Force China endpoints. International game editions, global SDK roots and
 shared cloud address ranges are excluded. ChinaDomain/China/GEOIP CN remain
 DIRECT fallbacks; unknown future games still require evidence-based review.
@@ -42,3 +42,16 @@ CNR keeps its separate US Reality policy.
 TencentVideoCN is the CN/CNR mirror excluding three benchmark/fake mapped
 addresses; the shared OS list remains independent. Canonical Clash respects
 the same ordering, including model downloads, AI, OKX and infrastructure IPs.
+
+Owner-approved game compatibility follow-up (2026-10-31): pvp.qq.com,
+gp.qq.com and smoba.qq.com explicitly join the early DIRECT game list. The
+observed download.2.1212338883.wz.gcloudgbs.com host is also early DIRECT
+after a same-LAN DNS comparison; dir.1212338883-2-1.gcloudsvcs.com retains
+its existing GEOIP CN DIRECT fallback because its cold system sample was
+slower. CN/CNR add fourteen exact observed non-qq game/SDK hosts to
+always-real-ip; canonical Clash maps these to native fake-ip-filter entries.
+Existing *.qq.com coverage, skip-proxy, DNS pools/system-direct/no-fallback,
+IPv6, APNs routing, nodes and protected MITM stay intact. These entries
+reduce address compatibility uncertainty; they do not prove a latency gain
+or that the original logs misrouted gameplay. Device gameplay acceptance
+requires a separate same-iPhone Wi-Fi/5G comparison.
