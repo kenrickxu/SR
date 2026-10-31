@@ -1,3 +1,14 @@
+## Owner update: all Real IP exceptions removed — 2026-10-31
+
+CN explicitly keeps `always-real-ip =` empty, clearing all 212 previous entries.
+Canonical Clash uses native `dns.fake-ip-filter: []`; the explicit complete-CN
+replacement mode clears both template defaults and managed additions, 110 to 0.
+The future Windows enhancement also clears the list and cannot append old entries.
+This supersedes the earlier real-IP preservation notes below. Existing skip-proxy,
+all routing/providers, other General flags, upstream DNS, Hosts, groups and MITM
+remain unchanged. CNR/OS are separate. Preserve the entire Clash TUN section and
+local switches; do not enable TUN or synchronize CN TUN routes.
+
 # CN Rule Set routing policy — 2026-10-31
 
 Owner instruction supersedes the standalone-only / Clash-pin trial. CN.conf
