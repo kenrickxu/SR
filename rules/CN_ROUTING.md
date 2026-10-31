@@ -1,3 +1,23 @@
+## Jump Desktop routing audit — 2026-10-31
+
+Jump cloud coordination and the currently verified TURN endpoint use JP after
+same-destination tests from two China home computers. jumpdesktop.com moves from
+CNMainlandDirect to CNServiceJP. The verified turn.jumpdesktop.com IPv4 address
+172.105.221.210/32 is also in CNServiceJP before generic UDP-media DIRECT, so raw
+UDP TURN packets do not take a different route from the domain. Recheck that
+single endpoint if official TURN DNS changes; no cloud ASN or broad subnet bypass.
+Remove blanket Jump Desktop/JumpConnect process DIRECT rules so they do not
+silently override service routing. Domestic peer IPs still use existing China
+DIRECT fallbacks; LAN/private paths are not sent to JP. Other app policies,
+General, empty real-IP lists and Clash TUN are unchanged. CNR/OS are separate.
+
+Tests measure coordination HTTPS and TURN/STUN RTT, not Fluid screen throughput.
+The iPhone export DBs were empty. Host logs show a recent UDP relayed session
+with both JP and native-cellular peer candidates, not a complete iPhone 5G A/B.
+Windows Jump Connect is a system service with a native direct TCP connection;
+with Clash TUN off, subscription rules cannot force unproxied service sockets
+through Clash. No Jump host proxy, Windows client or firewall setting is changed.
+
 ## Owner update: remove STUN response spoofing — 2026-10-31
 
 Remove `stun-response-ip` and `stun-response-ipv6` from CN General. No custom

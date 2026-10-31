@@ -86,3 +86,9 @@ DOMAIN-SUFFIX,zafinsvc.com
 DOMAIN-SUFFIX,zainvest.group
 DOMAIN-SUFFIX,zajourney.com
 DOMAIN-SUFFIX,zaticdn.com
+
+# Jump cloud / TURN: same-target China tests favor JP. Domestic peers retain CN DIRECT fallback.
+DOMAIN-SUFFIX,jumpdesktop.com
+# Current official TURN DNS address (verified 2026-10-31); needed before generic UDP-media DIRECT.
+# Recheck against turn.jumpdesktop.com when its DNS changes; never widen this to cloud-provider ranges.
+IP-CIDR,172.105.221.210/32,no-resolve
