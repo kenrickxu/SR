@@ -1,3 +1,18 @@
+## Local/router skip-proxy alignment — 2026-10-31
+
+CN and CNR use one deduplicated 17-entry skip-proxy list: private IPv4 CIDRs,
+local names, router-management hosts, then existing business exceptions.
+localhost and *.local were already present; add *.lan and the five exact
+router hostnames as requested, without widening them to entire parent domains.
+All other General values, TUN exclusions, rules, nodes and MITM are preserved.
+
+Canonical Clash translates these to native DIRECT rules using the existing
+manager; add the missing local lan suffix rule and five exact router-domain
+rules, while retaining one localhost/local rule each. Do not write skip-proxy into Mihomo
+YAML. Verge's separate Windows system_proxy_bypass is client-local, cannot be
+set by the subscription, and remains unchanged under manual client management.
+The entire Clash TUN and DNS real-IP filter remain unchanged.
+
 ## Standing CN to CNR synchronization — 2026-10-31
 
 Owner requests future CN routing/general optimizations to also update CNR unless
