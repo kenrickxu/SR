@@ -27,9 +27,29 @@ available; the owner cannot test now. No module/MITM/certificate change.
 
 General uses native host/glob lists, not DOMAIN-SUFFIX directives. Main DNS
 223.5.5.5/223.6.6.6, system DNS for DIRECT, both fallback flags false and empty
-fallback address list remain unchanged, as do groups, Hosts, MITM and other
-General bytes. skip-proxy is proxy/TUN compatibility, not a UDP TUN bypass.
-No ephemeral game IP pins, broad public TUN exclusions or guessed MTU settings.
+fallback address list remain unchanged, as do groups, Hosts, MITM and routing.
+Owner General update 2026-10-31: replace tun-excluded-routes with the supplied
+14 special/local IPv4/IPv6 entries and skip-proxy with the supplied 11 entries;
+ipv6=true, prefer-ipv6=false, always-reject-url-rewrite=false,
+stun-response-ip=1.1.1.1 and stun-response-ipv6=::1. Existing icmp-auto-reply
+and private-ip-answer remain true. Commented example options are not applied;
+existing use-local-host-item-for-proxy=true stays unchanged. STUN spoofing can
+affect game/call NAT traversal and is not a complete WebRTC leak guarantee.
+skip-proxy is proxy/TUN compatibility, not a UDP TUN bypass; modern SR is not
+TCP-only. No ephemeral public game-IP bypass or guessed MTU settings.
+
+Permanent owner compatibility requirement: translate only settings and rules
+supported natively by the installed target Clash/Mihomo version. Skip and report
+unsupported settings; never paste SR keys or accept silent unknown-key parsing
+as proof. The managed General allowlist currently maps only ipv6 to global and
+DNS ipv6. Owner's persistent exception: leave the whole Clash TUN section and
+client switches unchanged; do not synchronize CN TUN exclusions or enable TUN
+unless the owner explicitly requests a TUN change later. Existing native
+DIRECT translation of skip-proxy is routing intent, not OS HTTP-proxy bypass.
+SR-only STUN/rewrite/private-IP/ICMP switches and prefer-ipv6 are not copied.
+CN TUN route exclusions are not synchronized to Clash. Windows client global
+IPv6/TUN controls can override subscription values; manual refresh is distinct
+from local control changes and actual game/video acceptance.
 
 Canonical Clash now follows this CN authority instead of appending the old
 static routing template. Native Mihomo uses NETWORK in logical rules, retains
@@ -37,7 +57,7 @@ Windows process/eastmoney exceptions, and filters every owner Rule Set through
 /sr-rules/. Supported SR USER-AGENT patterns map to native Windows processes;
 unmapped UA/URL syntax is omitted. China GeoIP intent keeps Clash's existing
 IPs_CN CIDR provider to avoid a new GeoIP database bootstrap dependency.
-No raw SR syntax or MITM is copied into Clash. Native output has 61 rules,
+No raw SR syntax or MITM is copied into Clash. Native output now has 52 rules,
 16 referenced providers and 16,414 verified payload rows. Keep the legacy
 rendering branch for partial/recovery manifests; complete mode is explicit.
 
@@ -45,7 +65,7 @@ Source model checks: 87,377 contexts / 14,615 historical connections have no
 unexpected policy changes; no intentional transport-policy change remains. 16,032 source/native domain contexts agree. Windows Mihomo 1.19.32
 validates raw/composed/future-enhanced YAML, actually loads all 16 providers
 with exact API counts and 0 parser errors/WARN, and cold-downloads ASN.mmdb.
-Forty-four staged Python tests pass. Two physical Mac interfaces each pass
+The preceding rule restoration passed forty-four staged Python tests. Two physical Mac interfaces each pass
 YouTube/thumbnail/video-CDN public HTTPS endpoint probes checks. These are not real iPhone video playback or Wi-Fi/5G handoff tests.
 
 Refresh CN remote configuration AND its 15 Rule Sets, then reconnect. Refresh
