@@ -1,3 +1,14 @@
+## Owner update: remove STUN response spoofing — 2026-10-31
+
+Remove `stun-response-ip` and `stun-response-ipv6` from CN General. No custom
+STUN response address remains in this source. This supersedes the earlier
+owner-supplied spoof-address values below. The phone Settings > UDP > Disable
+STUN switch remains a separate local setting; turn it off manually for a normal
+STUN comparison. Do not alter other UDP options or claim a game-lag cure.
+Clash never imported these unsupported SR options. Synchronize its CN source
+revision only after proving the complete native output remains unchanged.
+Keep real-IP exceptions empty and the whole Clash TUN section unchanged.
+
 ## Owner update: all Real IP exceptions removed — 2026-10-31
 
 CN explicitly keeps `always-real-ip =` empty, clearing all 212 previous entries.
