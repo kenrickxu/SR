@@ -1,3 +1,17 @@
+## Owner rollback: original skip-proxy plus tplogin only — 2026-10-31
+
+Supersedes the local/router expansion below. Restore the exact previous
+11-item CN/CNR skip-proxy order and append only tplogin.cn, giving 12 unique
+entries. Remove the newly added *.lan, asusrouter.com, falogin.cn, miwifi.com,
+and router.asus.com. Retain the original localhost and *.local.
+Canonical Clash removes the same five native rules and retains one exact
+DOMAIN,tplogin.cn,DIRECT, giving 51 main rules; all providers stay unchanged.
+Preserve all other General, previously effective TUN exclusions, routing,
+node/account/monitor identities, protected MITM and entire Clash TUN settings.
+This is an owner-requested rollback after renewed game stutter, not proof that
+*.lan caused the stutter. Phone game acceptance remains pending after refresh.
+Windows client-local system proxy bypass remains separate and unchanged.
+
 ## Local/router skip-proxy alignment — 2026-10-31
 
 CN and CNR use one deduplicated 17-entry skip-proxy list: private IPv4 CIDRs,
