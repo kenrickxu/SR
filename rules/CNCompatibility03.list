@@ -1,0 +1,2 @@
+# CN-only reviewed parent/IP rules; policies live in CN.conf.
+DOMAIN-KEYWORD,polymarket

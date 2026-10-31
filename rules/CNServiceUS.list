@@ -1,0 +1,26 @@
+# CN-only reviewed parent/IP rules; policies live in CN.conf.
+DOMAIN-SUFFIX,anaconda.com
+DOMAIN-SUFFIX,anaconda.org
+DOMAIN-SUFFIX,anthropic.com
+DOMAIN-SUFFIX,chatgpt.com
+DOMAIN-SUFFIX,claude.ai
+DOMAIN-SUFFIX,claudeusercontent.com
+DOMAIN-SUFFIX,github.com
+DOMAIN-SUFFIX,githubassets.com
+DOMAIN-SUFFIX,githubusercontent.com
+DOMAIN-SUFFIX,gitlab.com
+DOMAIN-SUFFIX,hf.co
+DOMAIN-SUFFIX,huggingface.co
+DOMAIN-SUFFIX,lmstudio.ai
+DOMAIN-SUFFIX,oaistatic.com
+DOMAIN-SUFFIX,oaiusercontent.com
+DOMAIN-SUFFIX,okex.com
+DOMAIN-SUFFIX,oklink.com
+DOMAIN-SUFFIX,okpool.top
+DOMAIN-SUFFIX,okx.com
+DOMAIN-SUFFIX,openai.com
+DOMAIN-SUFFIX,polymarket.com
+DOMAIN-SUFFIX,pypi.org
+DOMAIN-SUFFIX,pythonhosted.org
+DOMAIN-SUFFIX,pytorch.org
+DOMAIN-SUFFIX,www.okx.com.cdn.cloudflare.net

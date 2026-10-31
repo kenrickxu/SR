@@ -1,0 +1,5 @@
+# CN-only reviewed parent/IP rules; policies live in CN.conf.
+DOMAIN-KEYWORD,musical.ly
+DOMAIN-KEYWORD,tiktok
+USER-AGENT,TikTok*
+PROCESS-NAME,com.zhiliaoapp.musically

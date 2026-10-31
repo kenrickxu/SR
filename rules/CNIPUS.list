@@ -1,0 +1,3 @@
+# CN-only reviewed parent/IP rules; policies live in CN.conf.
+IP-CIDR,192.255.130.194/32,no-resolve
+IP-CIDR,192.255.149.171/32,no-resolve

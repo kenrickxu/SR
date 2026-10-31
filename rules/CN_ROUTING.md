@@ -1,93 +1,64 @@
-# CN standalone routing policy — 2026-10-31
+# CN Rule Set routing policy — 2026-10-31
 
-CN.conf is now the single-file runtime rule authority. It has no RULE-SET,
-DOMAIN-SET or exact DOMAIN entries. Complete domain names use DOMAIN-SUFFIX;
-shared CDN/cloud namespaces retain necessary business-level boundaries rather
-than being widened to the whole provider. Do not strip the public suffix with
-naive last-two-label parsing or broaden OKX's Cloudflare alias to
-com.cdn.cloudflare.net/cloudflare.net. Public Suffix List parsing is a boundary
-check, not proof that a provider tenant owns every sibling.
+Owner instruction supersedes the standalone-only / Clash-pin trial. CN.conf
+uses 29 main rules and 15 CN-only classical Rule Sets. All 4,000 reviewed
+DOMAIN-SUFFIX conditions and 642 explicit IP rows remain covered. Expanded
+conditions are 4,776 (previous 4,775 plus one video transport compatibility
+rule). Main-file count is not the total number of matching conditions and
+is not a phone latency benchmark. CNR, OS and existing shared lists stay intact.
 
-Current reviewed output: 4,775 rules, including 4,000 DOMAIN-SUFFIX entries and
-642 IP rows; the previous expanded profile had 5,088 logical rows. Forty-three
-legacy keyword safeguards and existing app/process/media-port compatibility
-selectors are retained. They are patterns, not exact DOMAIN entries; deleting
-them could lose unknown service variants or raw-IP app handling. This is not
-an all-domain throughput or phone latency benchmark.
+Order: existing remote processes; Googlevideo transport exception; Apple push
+domain exception; core domestic games DIRECT; APNs/official Telegram IPs JP;
+other domestic games DIRECT; explicit US business/downloads; explicit JP banks,
+apps and video; other domestic DIRECT parents; legacy app/keyword compatibility;
+UDP media fallbacks; JP/US/DIRECT IP supplements; Tencent ASN, China GeoIP,
+FINAL JP. Broad domestic IP/ASN fallback must not capture explicit JP/US apps.
+ZA/HSBC remain explicit JP. US uses the single-member US REA/US-Reality group;
+TUIC provisioning is retained. Do not broaden shared GCloud or CDN tenant roots.
 
-Order:
-1. Existing remote-access process exceptions.
-2. Necessary domain exceptions such as Apple push before Apple DIRECT.
-3. Core national games and SDK parents DIRECT (Delta/Honor of Kings/Peacekeeper).
-4. Apple APNs and official Telegram IP exceptions, before media-port fallbacks.
-5. Explicit US and JP service parents; ZA/HSBC and other JP apps never rely on
-   FINAL. Named service rules precede broad domestic IP/ASN/GeoIP fallbacks.
-6. Remaining games and domestic/approved DIRECT parents.
-7. Existing keyword/app compatibility and FaceTime media-port fallbacks.
-8. Other explicit IP policies, specific prefixes before parent networks.
-9. Existing Tencent ASN, GEOIP CN DIRECT, FINAL JP.
+Wi-Fi/5G switching can leave a video session unusable even while the app feed
+refreshes; the owner reports restarting SR restores video and a YouTube ad
+module is enabled. Add only:
+AND,((PROTOCOL,UDP),(DST-PORT,443),(DOMAIN-SUFFIX,googlevideo.com)),REJECT
+This is a bounded compatibility mitigation that lets video retry TCP through
+JP; it is not proof that QUIC was the root cause or phone handoff is cured.
+Other UDP/443 traffic, national games and node TUIC transport are not globally
+blocked. The local ad module is not present in CN.conf and remains a separate
+possible cause. No protected MITM/certificate change or local module edit.
 
-Parent policies retain CN's existing QQ/Tencent/TCDNOS and domestic game scope.
-Tencent's community game list mixes domestic and global SDKs; do not import all
-of it as new DIRECT coverage. Observed project-specific gcloudsvcs/gcloudgbs
-business parents and CN SDK endpoints are covered without forcing additional
-shared global roots DIRECT. The original 263 game entries and three explicitly
-reviewed resource endpoints are covered. No ephemeral game IP /32 pins or new
-public tun-excluded-routes are introduced; dynamic domestic IPs retain the
-reviewed IP/ASN/GEOIP fallbacks.
+General uses native host/glob lists, not DOMAIN-SUFFIX directives. Main DNS
+223.5.5.5/223.6.6.6, system DNS for DIRECT, both fallback flags false and empty
+fallback address list remain unchanged, as do groups, Hosts, MITM and other
+General bytes. skip-proxy is proxy/TUN compatibility, not a UDP TUN bypass.
+No ephemeral game IP pins, broad public TUN exclusions or guessed MTU settings.
 
-General has host/glob address lists, not DOMAIN-SUFFIX directives. Use parent
-and *.parent pairs where apex and subdomains both need real IP; preserve local
-and complex native patterns. Existing main DNS stays223.5.5.5/223.6.6.6,
-DIRECT uses system DNS, fallback master/system flags remainfalse and the
-fallback address list empty. IPv6, hijack DNS, node references and protected
-MITM/Hosts remain unchanged. skip-proxy retains local/private/router scope;
-it chooses proxy versus TUN handling, not a UDP bypass around Shadowrocket.
+Canonical Clash now follows this CN authority instead of appending the old
+static routing template. Native Mihomo uses NETWORK in logical rules, retains
+Windows process/eastmoney exceptions, and filters every owner Rule Set through
+/sr-rules/. Supported SR USER-AGENT patterns map to native Windows processes;
+unmapped UA/URL syntax is omitted. China GeoIP intent keeps Clash's existing
+IPs_CN CIDR provider to avoid a new GeoIP database bootstrap dependency.
+No raw SR syntax or MITM is copied into Clash. Native output has 62 rules,
+16 referenced providers and 16,414 verified payload rows. Keep the legacy
+rendering branch for partial/recovery manifests; complete mode is explicit.
 
-Telegram official14prefixes are explicitJP before generic UDP-port DIRECT;
-this avoids treating Telegram traffic as FaceTime purely by port. Apple push
-keeps its domain and published APNs-specific IP priority. Google's observed
-gstatic domestic-direct behavior is retained; do not blindly pin all its static
-assets to JP. Existing US routing uses the single-member US REA/US-Reality
-selection and TUIC provisioning remains untouched.
+Source model checks: 87,377 contexts / 14,615 historical connections have no
+unexpected policy changes; two synthetic video UDP/443 cases intentionally
+reject. 16,032 source/native domain contexts agree. Windows Mihomo 1.19.32
+validates raw/composed/future-enhanced YAML, actually loads all 16 providers
+with exact API counts and 0 parser errors/WARN, and cold-downloads ASN.mmdb.
+Forty-four staged Python tests pass. Two physical Mac interfaces each pass
+YouTube/thumbnail/video-CDN public HTTPS endpoint probes and native video-UDP
+rejection. These are not real iPhone video playback or Wi-Fi/5G handoff tests.
 
-Scope is CN ONLY. CNR.conf, OS.conf and all shared *.list files are unchanged.
-Canonical CN Clash remains pinned to SR41d90d1 by the owner's explicit request;
-do not sync this SR-only format/order into Clash without a later request and
-its normal native-provider verification. No server/client restart is needed.
+Refresh CN remote configuration AND its 15 Rule Sets, then reconnect. Refresh
+canonical Clash subscription and providers manually; the agent does not reload
+active clients. Confirm actual phone video behavior after Wi-Fi/5G switching.
+If still affected, test only the YouTube ad module separately; this update
+does not remove a locally installed module. Delta Force lag in SR global DIRECT
+also remains a distinct unlocalized issue, not a routing-count success claim.
 
-Refresh the CN remote configuration, then reconnect. CN no longer consumes
-external rule-set refreshes. Actual same-phone game ping, locked-screen push,
-bank use and network-switch acceptance are separate from source/selector tests.
-No claim that this profile has eliminated Wi-Fi ping spikes or is fastest on
-all networks. Source/report proof and the one-time reviewed builder are under
-Genesis projects/infrastructure/jp-vpn-new/audits/20261031-cn-standalone.
-The archived builder is tied to the old source hashes; it is not an updater.
-Future CN edits go directly to this standalone file, with backup/regression
-checks; never overwrite later edits by blindly rebuilding old list snapshots.
-
-2026-10-31 follow-up: the owner reports Delta Force is smooth with SR OFF, but
-lags with both CN routing and SR global DIRECT. Treat this as evidence against
-JP/US rule selection being the sole cause; investigate the common SR-enabled
-DNS/PacketTunnel/direct-UDP path and phone-wide UDP options. It does not prove
-which of those components fails. Old connection tags are not RTT/loss evidence.
-Do not claim that rule deletion cures this symptom or publish guessed MTU,
-STUN/ICMP values, game-server IP pins or broad Tencent TUN exclusions.
-
-Four additional IP rows were removed without changing any address or policy:
-three exact adjacent-prefix merges in the uninterrupted JP priority block and
-one later IPv6 row already fully covered by that block. All 4,000 domain rows
-are unchanged and have no same-policy parent redundancy. Do not delete the
-remaining independent roots merely to reduce the displayed rule count.
-Observed gcloudsvcs/gcloudgbs project parents retain their boundaries; the whole
-roots are shared SDK namespaces, not proven mainland-only game endpoints.
-General, groups, Hosts and MITM bytes stay identical. Equivalence checks and
-the still-open phone diagnosis are in Genesis audits/20261031-cn-tun-followup.
-
-Sources:
-- https://publicsuffix.org/list/
-- https://core.telegram.org/resources/cidr.txt
-- https://support.apple.com/en-us/102266
-- https://github.com/v2fly/domain-list-community/tree/1daade8c4bb957d21d1f5c09c2b050d699e8e96c/data
-- https://bank.za.group/
-- https://www.hsbc.com.hk/
+Source/runtime/rollback receipts: Genesis
+projects/infrastructure/jp-vpn-new/audits/20261031-cn-rulesets-youtube.
+Rollback uses a new SR revert to 13f9857 and the joint JP code/manifest/cache
+backup. Never force-push or run the old standalone builder over this layout.

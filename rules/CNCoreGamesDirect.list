@@ -1,0 +1,14 @@
+# CN-only reviewed parent/IP rules; policies live in CN.conf.
+DOMAIN-SUFFIX,qq.com
+DOMAIN-SUFFIX,tcdnos.com
+DOMAIN-SUFFIX,gtimg.com
+DOMAIN-SUFFIX,anticheatexpert.com
+DOMAIN-SUFFIX,tencent.com
+DOMAIN-SUFFIX,itopsdk.com
+DOMAIN-SUFFIX,tdatamaster.com
+DOMAIN-SUFFIX,tencent-cloud.net
+DOMAIN-SUFFIX,gcloudsdk.com
+DOMAIN-SUFFIX,gcloudcs.com
+DOMAIN-SUFFIX,1212338883-2-1.gcloudsvcs.com
+DOMAIN-SUFFIX,1212338883.wz.gcloudgbs.com
+DOMAIN-SUFFIX,500638030-11-1.gcloudsvcs.com

@@ -1,0 +1,4 @@
+# CN-only reviewed parent/IP rules; policies live in CN.conf.
+DOMAIN-KEYWORD,binance
+DOMAIN-KEYWORD,discord
+DOMAIN-KEYWORD,nflx
