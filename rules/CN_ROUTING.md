@@ -1,3 +1,27 @@
+## Standing CN to CNR synchronization — 2026-10-31
+
+Owner requests future CN routing/general optimizations to also update CNR unless
+an explicit later task scope excludes it. Derive from current published CN,
+including General and ordered Rule Sets, with CNR's own update-url and existing
+US-only node/group/monitor identity. Map both CN JP and US targets to CNR US;
+CNR remains a Shadowrocket subscription, not a separate Clash profile. Never
+copy CN's protected MITM CA or embedded credentials to CNR.
+
+Exclude exactly the six owner infrastructure IP match keys declared in
+ops/usp_guest_subscription/build_cnr.py. They currently occur inside CNIPJP,
+CNIPUS and CNIPDirect, so filtering only CNR's main file is insufficient.
+CNRIPJP and CNRIPDirect are dedicated filtered lists; the owner-only CNIPUS
+reference is omitted. Reuse all other CN lists, preserve their order and do not
+remove these IP rules from CN/Clash. Exclusion removes explicit matches, not
+access permission or all broader routes containing those addresses.
+
+General now matches CN except its CNR update-url: empty Always Real IP,
+fallback off, system DIRECT DNS / Ali proxy DNS, IPv6 true / prefer false,
+current skip-proxy/TUN exclusions, and no STUN response spoofing. Jump's cloud
+and current TURN exception precede media UDP DIRECT in CNR as well, targeting
+its existing US node; no claim of JP performance measurements for CNR US.
+The complete Clash TUN settings and existing CN/Clash remain unchanged here.
+
 ## Jump Desktop routing audit — 2026-10-31
 
 Jump cloud coordination and the currently verified TURN endpoint use JP after
