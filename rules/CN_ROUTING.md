@@ -8,8 +8,8 @@ naive last-two-label parsing or broaden OKX's Cloudflare alias to
 com.cdn.cloudflare.net/cloudflare.net. Public Suffix List parsing is a boundary
 check, not proof that a provider tenant owns every sibling.
 
-Current reviewed output: 4,779 rules, including 4,000 DOMAIN-SUFFIX entries and
-646 IP rows; the previous expanded profile had 5,088 logical rows. Forty-three
+Current reviewed output: 4,775 rules, including 4,000 DOMAIN-SUFFIX entries and
+642 IP rows; the previous expanded profile had 5,088 logical rows. Forty-three
 legacy keyword safeguards and existing app/process/media-port compatibility
 selectors are retained. They are patterns, not exact DOMAIN entries; deleting
 them could lose unknown service variants or raw-IP app handling. This is not
@@ -65,6 +65,24 @@ Genesis projects/infrastructure/jp-vpn-new/audits/20261031-cn-standalone.
 The archived builder is tied to the old source hashes; it is not an updater.
 Future CN edits go directly to this standalone file, with backup/regression
 checks; never overwrite later edits by blindly rebuilding old list snapshots.
+
+2026-10-31 follow-up: the owner reports Delta Force is smooth with SR OFF, but
+lags with both CN routing and SR global DIRECT. Treat this as evidence against
+JP/US rule selection being the sole cause; investigate the common SR-enabled
+DNS/PacketTunnel/direct-UDP path and phone-wide UDP options. It does not prove
+which of those components fails. Old connection tags are not RTT/loss evidence.
+Do not claim that rule deletion cures this symptom or publish guessed MTU,
+STUN/ICMP values, game-server IP pins or broad Tencent TUN exclusions.
+
+Four additional IP rows were removed without changing any address or policy:
+three exact adjacent-prefix merges in the uninterrupted JP priority block and
+one later IPv6 row already fully covered by that block. All 4,000 domain rows
+are unchanged and have no same-policy parent redundancy. Do not delete the
+remaining independent roots merely to reduce the displayed rule count.
+Observed gcloudsvcs/gcloudgbs project parents retain their boundaries; the whole
+roots are shared SDK namespaces, not proven mainland-only game endpoints.
+General, groups, Hosts and MITM bytes stay identical. Equivalence checks and
+the still-open phone diagnosis are in Genesis audits/20261031-cn-tun-followup.
 
 Sources:
 - https://publicsuffix.org/list/
