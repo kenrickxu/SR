@@ -108,6 +108,7 @@ DOMAIN-SUFFIX,360kan.com
 DOMAIN-SUFFIX,360kuai.com
 DOMAIN-SUFFIX,360os.com
 DOMAIN-SUFFIX,360safe.com
+DOMAIN-SUFFIX,360scdn.com
 DOMAIN-SUFFIX,360shouji.com
 DOMAIN-SUFFIX,360taojin.com
 DOMAIN-SUFFIX,360top.com
@@ -1246,6 +1247,7 @@ DOMAIN-SUFFIX,ele.me
 DOMAIN-SUFFIX,elecfans.com
 DOMAIN-SUFFIX,elemecdn.com
 DOMAIN-SUFFIX,elong.com
+DOMAIN-SUFFIX,elongstatic.com
 DOMAIN-SUFFIX,emarbox.com
 DOMAIN-SUFFIX,emas-poc.com
 DOMAIN-SUFFIX,emerald.com
@@ -1334,6 +1336,7 @@ DOMAIN-SUFFIX,foxmail.com
 DOMAIN-SUFFIX,fqjob.net
 DOMAIN-SUFFIX,fqnovel.com
 DOMAIN-SUFFIX,fqnovelpic.com
+DOMAIN-SUFFIX,fqnovelstatic.com
 DOMAIN-SUFFIX,fqnovelvod.com
 DOMAIN-SUFFIX,frdic.com
 DOMAIN-SUFFIX,freebuf.com
@@ -1545,8 +1548,13 @@ DOMAIN-SUFFIX,hifuntv.com
 DOMAIN-SUFFIX,hihocoder.com
 DOMAIN-SUFFIX,hihonor.com
 DOMAIN-SUFFIX,hiido.com
+DOMAIN-SUFFIX,hik-cloud.com
+DOMAIN-SUFFIX,hikiot.com
+DOMAIN-SUFFIX,hikmall.com
 DOMAIN-SUFFIX,hikunpeng.com
 DOMAIN-SUFFIX,hikunpeng.net
+DOMAIN-SUFFIX,hikvision.com
+DOMAIN-SUFFIX,hikvisionmall.com
 DOMAIN-SUFFIX,hisilicon.com
 DOMAIN-SUFFIX,hitv.com
 DOMAIN-SUFFIX,hiyd.com
@@ -1568,6 +1576,7 @@ DOMAIN-SUFFIX,homekoo.com
 DOMAIN-SUFFIX,hongbo100.com
 DOMAIN-SUFFIX,hongdefund.com
 DOMAIN-SUFFIX,hongen.com
+DOMAIN-SUFFIX,hongguoduanju.com
 DOMAIN-SUFFIX,hongsanban.com
 DOMAIN-SUFFIX,hongtastock.com
 DOMAIN-SUFFIX,hongxiu.com
@@ -1707,6 +1716,7 @@ DOMAIN-SUFFIX,icloud-content.com
 DOMAIN-SUFFIX,icloud.com
 DOMAIN-SUFFIX,icourse163.org
 DOMAIN-SUFFIX,ics.design
+DOMAIN-SUFFIX,id6.me
 DOMAIN-SUFFIX,idcgcloudcs.com
 DOMAIN-SUFFIX,idcquan.com
 DOMAIN-SUFFIX,idongdong.com
@@ -1913,6 +1923,7 @@ DOMAIN-SUFFIX,jianguoyun.com
 DOMAIN-SUFFIX,jianshu.com
 DOMAIN-SUFFIX,jianshu.io
 DOMAIN-SUFFIX,jianshuapi.com
+DOMAIN-SUFFIX,jianying.com
 DOMAIN-SUFFIX,jianyuweb.com
 DOMAIN-SUFFIX,jianzhi8.com
 DOMAIN-SUFFIX,jiaodong.net
@@ -2276,6 +2287,7 @@ DOMAIN-SUFFIX,meituan.com
 DOMAIN-SUFFIX,meituan.net
 DOMAIN-SUFFIX,meitudata.com
 DOMAIN-SUFFIX,meitustat.com
+DOMAIN-SUFFIX,meituxiuxiu.com
 DOMAIN-SUFFIX,meixincdn.com
 DOMAIN-SUFFIX,meizu.com
 DOMAIN-SUFFIX,mengtuoshi.wang
@@ -2780,6 +2792,7 @@ DOMAIN-SUFFIX,shelterdome.net
 DOMAIN-SUFFIX,shengdaosoft.com
 DOMAIN-SUFFIX,shenjing.com
 DOMAIN-SUFFIX,shenmayouxi.com
+DOMAIN-SUFFIX,shenzhenair.com
 DOMAIN-SUFFIX,sheui.com
 DOMAIN-SUFFIX,shgsec.com
 DOMAIN-SUFFIX,shhxzq.com
@@ -2869,6 +2882,7 @@ DOMAIN-SUFFIX,speedws.info
 DOMAIN-SUFFIX,speedws.org
 DOMAIN-SUFFIX,speiyou.com
 DOMAIN-SUFFIX,spiedigitallibrary.org
+DOMAIN-SUFFIX,springairlines.com
 DOMAIN-SUFFIX,springer.com
 DOMAIN-SUFFIX,springerlink.com
 DOMAIN-SUFFIX,springsunday.net
@@ -3240,6 +3254,7 @@ DOMAIN-SUFFIX,vipexam.org
 DOMAIN-SUFFIX,vipmro.com
 DOMAIN-SUFFIX,vipmro.net
 DOMAIN-SUFFIX,visualstudio.com
+DOMAIN-SUFFIX,vlabstatic.com
 DOMAIN-SUFFIX,vmall.com
 DOMAIN-SUFFIX,vmallres.com
 DOMAIN-SUFFIX,vmiss.com
@@ -3383,6 +3398,7 @@ DOMAIN-SUFFIX,xhaiwai.com
 DOMAIN-SUFFIX,xhostfire.com
 DOMAIN-SUFFIX,xhscdn.com
 DOMAIN-SUFFIX,xhscdn.net
+DOMAIN-SUFFIX,xhslink.com
 DOMAIN-SUFFIX,xiachufang.com
 DOMAIN-SUFFIX,xiamenair.com
 DOMAIN-SUFFIX,xiami.com

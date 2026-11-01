@@ -1,3 +1,47 @@
+## Domestic app coverage completion - 2026-11-01
+
+Owner-approved completion of the audited domestic service/app list. This
+supersedes the prior118-family count, without removing its coverage. CN/CNR
+now have 211 real-IP domain families (422 SR apex/wildcard patterns).
+The existing DIRECT and explicit JP/US rules remain. Add only
+16 previously missing DOMAIN-SUFFIX entries to CNMainlandDirect:
+360scdn.com, elongstatic.com, fqnovelstatic.com, hik-cloud.com, hikiot.com, hikmall.com, hikvision.com, hikvisionmall.com, hongguoduanju.com, id6.me, jianying.com, meituxiuxiu.com, shenzhenair.com, springairlines.com, vlabstatic.com, xhslink.com.
+The provider has 3710 rows; all original rows and their order are preserved.
+Do not delete routing rules because General has a DNS or IP bypass exception.
+
+Coverage includes the requested mainland portals/apps, airlines/travel,
+carrier authentication, official short links, domestic Hikvision platforms,
+and narrow documented resource tenants. Biliapi aliases were corroborated
+with identical first-party API/download payloads and official redirects.
+The domestic Hikvision category does not identify the actual installed App
+or prove that all camera/P2P/media sessions use the documented website domains.
+Keep international WPS/CapCut/Hik-Connect separate. Do not widen shared public
+cloud parents (bcebos, aliyuncs, qcloud, myqcloud) from one tenant's evidence.
+
+TUN exclusions are 979 entries: original14 special/local ranges plus
+879 IPv4 and 86 IPv6 safe domestic subnets. All prior963 exclusions
+remain covered. The16 additions cover50 historical DNS-address gaps;13 are
+supported by Oct28-Nov01 observations and3 only by older September exports.
+Every addition is inside the frozen CN dataset, with all explicit foreign-IP
+exceptions subtracted. Three additions are carved subnets, not raw MMDB rows.
+Protect17 Google exceptions/1293 addresses and every explicit JP/US IP rule.
+This is partial country coverage (~95.49% IPv4 addresses), not a traffic ratio,
+complete China IPv6 coverage, or proof of improved phone latency.
+
+Skip Proxy remains12 entries. It changes the system HTTP proxy entrance,
+not the DIRECT rule or TUN bypass by itself. DNS resolvers/fallback, groups,
+private CN sections, game/push/JP-bank/US priorities remain unchanged. CNR
+retains its own US-only account/monitor/update identity, no MITM, and six
+owner-management IP exclusions via build_cnr.py. Native Clash receives the
+supported domain-rule and real-IP-filter changes; its whole TUN section and
+client-local switches are preserved. The owner refreshes clients manually.
+
+Rollback only these two General keys and the16 added provider rows using
+the a709a538 baseline, preserving unrelated later edits and private sections.
+Audit: Genesis projects/infrastructure/jp-vpn-new/audits/20261101-cn-app-completion.
+No phone loading, full native App session, game ping or SR-off-equivalence
+acceptance is inferred from source/native-core/server tests.
+
 ## Domestic shopping, banking, video and games — 2026-11-01
 
 The owner expanded the real-IP/TUN audit to Dianping, Meituan, Ele.me, Alipay,
