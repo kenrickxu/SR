@@ -1,3 +1,52 @@
+## Compact domestic real-IP and TUN bypass trial — 2026-11-01
+
+Supersedes the narrow /29 trial and earlier empty Always Real IP instruction.
+Owner now requests real addresses for habitual domestic DIRECT services plus
+compact domestic IP bypass, retaining all 17 legacy Google proxy IP exceptions.
+CN/CNR use 52 reviewed domain families (104 native SR apex and wildcard entries)
+for Tencent games/video, WeChat, NetEase, Douyin/Toutiao/Xigua and Youku assets.
+Do not collapse tenant-specific gcloud names to a shared cloud parent.
+General lists are not DOMAIN-SUFFIX rules or remote RULE-SET references.
+
+TUN exclusions comprise the original 14 local/special entries, 857 exact-subset
+mainland IPv4 ranges and 81 IPv6 ranges. Select IPv4 prefixes <= /16 and IPv6
+prefixes <= /30, supplement with the exact country parents of observed habitual
+app and historical game/QoS IPs. Never fill foreign or unknown holes to reduce
+the count. The selected IPv4 addresses cover 95.42% of the safe frozen country
+set; this is address coverage, not traffic coverage or complete mainland bypass.
+Unselected domestic addresses retain normal DIRECT handling through SR.
+
+IPv4 provenance: Hackl0us/GeoIP2-CN release
+e169e29f2c3d88af5695b210b91ea7d97cf86dda, Country.mmdb SHA256
+4c1a58204dfd5afcb67d42db16235c7ccab4c7024db83ce58cc0074cd4377efc.
+IPv6 provenance: original GeoLite2 Country from Loyalsoldier/geoip release
+33824131927ddbc19c540f2a301cc4ef4e123478, built 2026-10-28.
+This product includes GeoLite2 data created by MaxMind, available from
+https://www.maxmind.com. Geolocation is evidence, not a physical-location guarantee.
+Sources: https://github.com/Hackl0us/GeoIP2-CN and
+https://github.com/Loyalsoldier/geoip/tree/33824131927ddbc19c540f2a301cc4ef4e123478.
+
+Subtract every current explicit foreign-proxy IP rule before selecting ranges;
+the 17 overlapping historical Google rules protect 1,293 IPv4 addresses.
+Keep explicit JP banking/APNs, US businesses, provider order and all other
+General fields unchanged. Preserve protected CN sections and CNR's US-only
+identity, monitoring, update URL, owner-IP exclusions and absence of MITM.
+
+Real DNS answers and IP exclusion are separate steps; neither DNS DIRECT nor
+skip-proxy alone proves that packets avoid the tunnel. HTTP proxy paths can
+still enter SR. Future foreign-policy domains resolving inside an excluded range
+can bypass those domain rules, so retain the explicit-IP conflict audit.
+Never exclude the Fake-IP range 198.18.0.0/15.
+
+Clash receives only native +.domain fake-ip-filter entries from this list.
+The entire Clash TUN and installed client-local switches stay untouched.
+The source enhancement must preserve the canonical filter, including empty lists.
+No unattended updater is added. Refresh subscriptions/configurations manually;
+phone route loading, actual game bypass and latency improvement require device
+verification. No SR-off-equivalent latency guarantee is made.
+Rollback only these two General keys/comments to the backed-up bb223807 version,
+and restore the preceding managed Clash manifest; preserve unrelated later edits.
+
 ## Minimal-supernet Delta TUN-bypass trial — 2026-11-01
 
 At the owner's request, CN and CNR replace the two observed /32 exclusions
