@@ -1,3 +1,41 @@
+## Domestic shopping, banking, video and games — 2026-11-01
+
+The owner expanded the real-IP/TUN audit to Dianping, Meituan, Ele.me, Alipay,
+Taobao, Didi, JD, mainland NetEase/Tencent games, domestic live/video platforms,
+mainland personal/corporate banking and government services. CN/CNR now contain
+118 reviewed real-IP domain families (236 native SR apex/wildcard patterns).
+Every added family already matches DIRECT; routing providers/order/nodes and
+upstream DNS remain unchanged. Known explicit JP/US domains are not broadened.
+Treat observed SDK/background hosts as connections, not proof of app use.
+
+Only dedicated service/asset domains and narrow shared-cloud tenant names are
+eligible. Never add all aliyuncs.com, qcloud.com, myqcloud.com or cloud ASNs.
+Keep HSBC Hong Kong/ZA and other explicit proxy policies separate from mainland
+banking; boc.cn is the verified mainland Bank of China scope, not boc.com.
+gov.cn covers that namespace, not every government-related app or third party.
+
+The preceding compact country sources and exception-subtraction method remain
+authoritative. TUN exclusions total 963: original14 + 865 mainland IPv4 +
+84 IPv6 prefixes. Preserve every previously excluded country address and add
+only exact safe country parents of newly observed public addresses, if missing.
+All17 legacy Google proxy exceptions (1293 IPv4 addresses) remain protected.
+This is still partial country coverage; dynamic/foreign CDN addresses outside
+the selected ranges retain existing routing. No full-China or no-latency claim.
+
+Skip Proxy stays at its reviewed12 entries. It bypasses the system HTTP proxy
+entry, not by itself the TUN. HTTP apps can still enter SR's local proxy even
+when real-IP DNS and destination exclusions exist. Adding Skip Proxy is a
+separate path/compatibility decision, not an established UDP-game ping cure.
+The owner has not supplied a new phone path/latency acceptance measurement.
+
+CNR keeps US identity/monitoring/update URL/no MITM and the six management-IP
+rule exclusions. Native Clash receives only its supported DNS filter changes;
+keep its entire TUN and installed client-local switches unchanged. Preserve the
+canonical filter in any future Windows enhancement, including empty lists.
+Phone loading, game/app path and speed require manual refresh and device tests.
+Rollback only changed General values/comments to5f97d39 and the preceding managed
+Clash manifest, preserving later unrelated edits and the prior52-family trial.
+
 ## Compact domestic real-IP and TUN bypass trial — 2026-11-01
 
 Supersedes the narrow /29 trial and earlier empty Always Real IP instruction.
