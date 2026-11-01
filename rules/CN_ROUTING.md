@@ -1,18 +1,29 @@
-## Bounded Delta UDP TUN-bypass trial — 2026-11-01
+## Minimal-supernet Delta TUN-bypass trial — 2026-11-01
 
-CN and CNR append only 58.217.180.242/32 and 58.217.180.246/32 to
-tun-excluded-routes. PacketTunnel evidence shows each as a DIRECT UDP relay
+At the owner's request, CN and CNR replace the two observed /32 exclusions
+with 58.217.180.240/29, covering .240–.247 (eight addresses, six unobserved).
+This is the smallest single CIDR containing .242 and .246. It is an intentional
+trial expansion, not equivalent deduplication or a verified game server pool.
+APNIC registers the addresses to CHINANET-JS (China Telecom Jiangsu);
+RIPE routing data reports 58.217.176.0/21 originated by AS134756, whose APNIC
+name is ChinaNet-NANJING-JISHAN-IDC. ISP allocation is not game ownership.
+Do not substitute that /21, the registered /12, or a /24 without new evidence.
+
+PacketTunnel evidence shows each of .242 and .246 as a DIRECT UDP relay
 lasting 16–19 minutes with megabytes in both directions during Delta sessions.
 These are observed match candidates, not a permanent or complete game subnet.
 Keep the original 14 exclusions and every other General/routing value unchanged.
 Do not add the 650xx QoS probe fleet, broad Tencent ranges, extra real-IP rules,
 or unsupported profile versions of phone-global logging/Tunnel settings.
 
-This changes the local handling of matching literal destination IP traffic,
+This changes the local handling of all matching destination IP traffic,
 not its prior DIRECT egress. Future matches can use different IPs; no matching
 target means the test cannot validate or reject the local-TUN hypothesis.
+All ports and protocols to the six additional addresses bypass SR too,
+including future domain-based JP/US policies pointing into this subnet.
+There are no overlaps with current explicit provider IP rules.
 Verify actual bypass and phone game behavior before calling this a fix.
-Rollback removes these two /32 entries only, retaining subsequent unrelated edits.
+Rollback replaces the /29 with the earlier two /32s, retaining unrelated edits.
 Native Clash TUN is a standing exception and remains untouched; no compatible
 Clash policy/provider/node/DNS change is required by this SR-only trial.
 CNR keeps its US-only identity/monitoring and owner-IP exclusions.
