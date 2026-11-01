@@ -1,3 +1,41 @@
+## GCloud parent coverage and exclusion cleanup - 2026-11-02
+
+Owner authorized broader game-service parent matching after the Nov01 game
+capture showed three tconnd hosts still receiving fake IPv6 addresses.
+Use gcloudsvcs.com and gcloudgbs.com as explicit early DIRECT and real-IP
+families, replacing three narrow tenants. Core rules13->12; CN/CNR real-IP
+families211->210, native SR apex/wildcard patterns422->420. Preserve both
+apex and wildcard: they are not duplicate matching semantics.
+
+This is a deliberate user routing preference, not a claim that all endpoints
+under these parents are physically in mainland China. Independent resolver
+answers vary; China-located answers already fit existing CN exclusions.
+Never add foreign cloud ranges or broaden 43/8 or129/8 from these domain rules.
+Retain system DNS for DIRECT and all existing JP-bank/APNs/US priorities.
+Future proven foreign-service exceptions require a specific host policy review.
+
+TUN exclusions979->977: remove the127.0.0.0/8 entry rejected by the phone,
+and redundant239.255.255.250/32 already covered by224.0.0.0/4. Every public
+address previously excluded remains covered. No new IP space is bypassed;
+all116 explicit foreign IP rules remain disjoint from exclusions. Existing
+APNs/domain and IP precedence overlaps are intentional, not duplicates.
+
+Preserve Skip Proxy12, other General values, rule-set order, nodes, CN private
+sections, and CNR US-only identity/monitoring/six owner-IP exclusions.
+Native Clash synchronizes the two parent filters and core provider only;
+its entire TUN section and local client switches stay unchanged.
+
+The23:53:49 iOS interface notification caused an in-process network settings
+rebuild; no evidence establishes a CN setting error. Do not invent a network
+handover fix, disable IPv6, disable UDP relay, or enable Include All Networks
+to claim success. This repair closes routing coverage, not measured ping.
+
+Rollback: restore only the two General keys and core provider from8330a714,
+preserving later unrelated changes. Audit and release receipts live under
+Genesis projects/infrastructure/jp-vpn-new/audits/20261102-cn-gcloud-bypass.
+The owner refreshes subscribed clients; source/native-core validation does
+not prove phone loading, physical bypass of every packet, or zero jitter.
+
 ## Domestic app coverage completion - 2026-11-01
 
 Owner-approved completion of the audited domestic service/app list. This
