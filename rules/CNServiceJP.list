@@ -107,6 +107,12 @@ DOMAIN-SUFFIX,bytick.com
 DOMAIN-SUFFIX,stream.manepa.jp
 DOMAIN-SUFFIX,stream.spark-fintech.com
 
+# Verified official Bybit alias and login device-risk dependencies (2026-11-03).
+# Keep Turing scoped to this SDK host; do not proxy its entire shared parent or ASN.
+DOMAIN-SUFFIX,bybit-global.com
+DOMAIN-SUFFIX,ffbbbdc6d3c353211fe2ba39c9f744cd.com
+DOMAIN-SUFFIX,www.turingfraud.net
+
 # Jump cloud / TURN: same-target China tests favor JP. Domestic peers retain CN DIRECT fallback.
 DOMAIN-SUFFIX,jumpdesktop.com
 # Current official TURN DNS address (verified 2026-10-31); needed before generic UDP-media DIRECT.

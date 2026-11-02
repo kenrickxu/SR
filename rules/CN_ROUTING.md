@@ -1,3 +1,42 @@
+## Bybit login dependency routing - 2026-11-03
+
+Add three verified selectors to the existing CNServiceJP provider (105->108):
+bybit-global.com, ffbbbdc6d3c353211fe2ba39c9f744cd.com, and the narrow SDK host
+www.turingfraud.net. CN/canonical Clash use JP; CNR retains US under the
+standing US-only instruction, pending any explicit owner change.
+
+The official login page loads chunk16 d1a42468f8b43fc6dad9.js, SHA256
+26fbefea43828164cf0a8b92291c2496eb48b6e1bd7940c569045dd00dec2d97.
+Its login component invokes ByFingerPrintReport/getTxId. Production report
+POST uses api.ffbbbdc6d3c353211fe2ba39c9f744cd.com; token initialization uses
+https://www.turingfraud.net:30016. The SDK host's current resolved addresses
+are AS132203, which the existing late IP-ASN rule sends DIRECT when a real
+destination IP is available. Explicit domain coverage closes that conditional
+fall-through without changing the whole ASN, TUN exclusions or STUN settings.
+The alias with a hyphen is corroborated by an official announcement and auth
+allowlist; it is distinct from the existing bybitglobal.com.
+
+This is a verified coverage repair, not proof that the pictured iPhone request
+used this Web SDK or that native login is fixed. A connection without hostname
+information can still use the IP-based policy; phone capture and a fresh app
+test remain necessary. Every app using www.turingfraud.net or its subdomains
+shares this host exception; do not describe it as per-app routing. Do not widen
+to turingfraud.net, shared CDN parents, whole cloud ASNs, or a guessed IP block.
+
+Preserve all original entries/order, General/profile/node/DNS/TUN/real-IP and
+domestic-game/bank/APNs/US boundaries. Current SDK sample destinations do not
+overlap the977TUN exclusions. The address in the owner's screenshot is a
+reported client egress IP, not a server destination to add or subtract.
+Use native filtered Clash providers and preserve whole TUN/local switches and
+the Windows-only IPv4/startup-isolation repair. Do not disable game STUN/voice.
+
+Unauthenticated tests of https://api2.bybit.com/register/permission_v2 from
+the Mac network path and JP VPS both returned JP/45.153.247.160 and no IP
+restriction. They are neither iPhone path proof nor account eligibility.
+Bybit restricts US/mainland-China API sources; CNR-US is not a usability
+promise. Source and test evidence: Genesis audits/20261103-bybit-egress.
+Rollback only these three selectors, preserving the preceding9UA cleanup.
+
 ## CN / CNR minimal equivalent cleanup - 2026-11-03
 
 Remove only 9 USER-AGENT rows from CNCompatibility01 (7) and
