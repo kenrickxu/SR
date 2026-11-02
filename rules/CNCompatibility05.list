@@ -17,7 +17,6 @@ USER-AGENT,AdBlock*
 USER-AGENT,Best%20Trace*
 USER-AGENT,MegaWerewolf*
 USER-AGENT,MicroMessenger%20Client
-USER-AGENT,MicroMessengerClient*
 USER-AGENT,Microsoft*
 USER-AGENT,Moke*
 USER-AGENT,QQ*
@@ -28,7 +27,6 @@ USER-AGENT,WebTorrent*
 USER-AGENT,arrowio*
 USER-AGENT,balls*
 USER-AGENT,cmb*
-USER-AGENT,cmblife*
 USER-AGENT,eusoft_ting_en_iphone
 USER-AGENT,hearthstone*
 USER-AGENT,hide*

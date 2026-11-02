@@ -1,3 +1,35 @@
+## CN / CNR minimal equivalent cleanup - 2026-11-03
+
+Remove only 9 USER-AGENT rows from CNCompatibility01 (7) and
+CNCompatibility05 (2) that are covered by retained same-DIRECT wildcard
+patterns. Both profiles already reference these shared lists. Keep every
+remaining rule in its original position; no new wildcard or broader policy
+is introduced. CN expands from 4805 to 4796 rules and CNR from 4799 to 4790.
+This is a 0.19 percent rule cleanup, not a measured speed improvement.
+Retain Bilibili* and MicroMessenger%20Client: the installed Clash adapter
+uses these aliases to emit Windows process rules; removing all SR-redundant
+aliases would change native Clash payloads.
+
+Keep the 977 exact TUN CIDRs, 210 real-IP domain families (420 apex/wildcard
+patterns), 12 Skip Proxy entries, all DNS settings and profile bytes. Exact
+CIDR collapse and domain-parent audit found no safe further reduction.
+Preserve game DIRECT, explicit CN JP banks/APNs/Bybit, US business rules,
+CNR US-only identity/monitoring and its six owner-management-IP exclusions.
+Never widen cloud/IP ranges or delete required proxy exceptions to meet a
+rule-count target. General lists and routing rules serve different purposes.
+
+These USER-AGENT rows are SR-only. The canonical Clash provider filter must
+produce identical native payload bytes before and after this cleanup; no
+Clash TUN/local switch, DNS, node, group or rule synchronization is needed
+for unsupported source rows. Retain Windows-only IPv4 repair and native
+desktop/backup-core isolation. Do not feed raw SR compatibility lists to
+Mihomo. Profile and rule-set refresh on the phone is distinct from source
+publication; no new iPhone A/B latency or CPU measurement was performed.
+
+Rollback restores only the 9 removed rows from d7899346, preserving any
+later edits. Evidence and exact deleted rows:
+Genesis projects/infrastructure/jp-vpn-new/audits/20261103-cn-cnr-lightweight.
+
 ## Explicit Bybit routing - 2026-11-02
 
 Add 16 DOMAIN-SUFFIX rows to the existing CNServiceJP.list: ten verified
