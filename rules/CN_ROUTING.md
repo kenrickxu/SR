@@ -1,3 +1,38 @@
+## Explicit Bybit routing - 2026-11-02
+
+Add 16 DOMAIN-SUFFIX rows to the existing CNServiceJP.list: ten verified
+Bybit parent domains (web, app assets, API and regional services) and six
+narrow, officially documented regional API/WebSocket subtrees. CN and
+canonical Clash use JP REA; CNR retains its US group and monitoring identity.
+CN/CNR already share this provider, so their profile bytes/order are unchanged.
+
+Previously no explicit Bybit domain rule existed. Unmatched connections still
+passed IP/ASN/GeoIP rules before FINAL JP; omission does not prove every
+request went DIRECT or explain the supplied Passkey failure. The owner reports
+success with global JP, but a current failed-session connection capture is
+not available. This change makes the verified Bybit destinations explicit
+before broad domestic/IP fallback and is not authenticated-login acceptance.
+
+Sources: https://bybit-exchange.github.io/docs/v5/guide,
+https://bybit-exchange.github.io/docs/v5/ws/connect,
+https://www.bybit.com/en/login and its directly loaded public service scripts.
+The login page references s1.bycsi.com/fh-static.bycsi.com; its service config
+includes bybitglobal.com. Regional documentation is endpoint ownership evidence,
+not a request to change the account region or assurance of access eligibility.
+
+Preserve geetest.com and Apple/iCloud routing: shared authentication services
+are not Bybit-exclusive, and this phone's Passkey dependency is unconfirmed.
+Do not add guessed brand aliases, shared-cloud IP ranges or global CDN parents.
+No changes to General, domestic game/bank priorities, private credentials,
+CNR management-IP exclusions or the entire Clash TUN section/local switches.
+Use the native filtered CNServiceJP provider in Clash; validate provider load
+and rule selection independently of phone/login success. Refresh both the
+profile and its rule-set/provider cache before the owner retries the app.
+
+Rollback only these 16 added provider rows, preserving subsequent edits;
+retain the prior canonical provider/managed-manifest backup in the audit.
+Evidence: Genesis projects/infrastructure/jp-vpn-new/audits/20261102-bybit-routing.
+
 ## GCloud parent coverage and exclusion cleanup - 2026-11-02
 
 Owner authorized broader game-service parent matching after the Nov01 game

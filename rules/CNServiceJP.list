@@ -87,6 +87,26 @@ DOMAIN-SUFFIX,zainvest.group
 DOMAIN-SUFFIX,zajourney.com
 DOMAIN-SUFFIX,zaticdn.com
 
+# Bybit: official web/app assets, API/WS and documented regional endpoints.
+# CN/Clash use JP; CNR maps this shared provider to its existing US exit.
+# Keep shared CAPTCHA/Apple/CDN parents on their existing policies.
+DOMAIN-SUFFIX,api-testnet.manepa.jp
+DOMAIN-SUFFIX,api-testnet.spark-fintech.com
+DOMAIN-SUFFIX,api.manepa.jp
+DOMAIN-SUFFIX,api.spark-fintech.com
+DOMAIN-SUFFIX,bybit.ae
+DOMAIN-SUFFIX,bybit.com
+DOMAIN-SUFFIX,bybit.eu
+DOMAIN-SUFFIX,bybit.id
+DOMAIN-SUFFIX,bybit.kz
+DOMAIN-SUFFIX,bybit.tr
+DOMAIN-SUFFIX,bybitgeorgia.ge
+DOMAIN-SUFFIX,bybitglobal.com
+DOMAIN-SUFFIX,bycsi.com
+DOMAIN-SUFFIX,bytick.com
+DOMAIN-SUFFIX,stream.manepa.jp
+DOMAIN-SUFFIX,stream.spark-fintech.com
+
 # Jump cloud / TURN: same-target China tests favor JP. Domestic peers retain CN DIRECT fallback.
 DOMAIN-SUFFIX,jumpdesktop.com
 # Current official TURN DNS address (verified 2026-10-31); needed before generic UDP-media DIRECT.
