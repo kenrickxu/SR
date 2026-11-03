@@ -1,3 +1,14 @@
+## CN/CNR IPv6 disabled by owner request - 2026-11-03
+
+Set General `ipv6 = false` in CN.conf and CNR.conf. Keep `prefer-ipv6 = false`.
+This scoped change only disables the two Shadowrocket profiles' IPv6 support;
+it does not change any domain/IP policy, DNS resolver, TUN exclusion, real-IP
+pattern, node, or CNR US-only identity. Existing IPv6 rule/exclusion data is
+retained. Clash and OS are outside this request; no client or server restart.
+Refresh the selected CN/CNR configuration and reconnect Shadowrocket to load
+the change. Source publication does not establish that the phone has refreshed,
+nor prove a latency improvement. Rollback only the two `ipv6` values.
+
 ## Bybit iPhone API routing correction - 2026-11-03
 
 Add bybit.biz, ng-dex.com and bybitx.global to CNServiceJP (108->111).
