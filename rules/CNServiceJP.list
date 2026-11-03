@@ -113,6 +113,12 @@ DOMAIN-SUFFIX,bybit-global.com
 DOMAIN-SUFFIX,ffbbbdc6d3c353211fe2ba39c9f744cd.com
 DOMAIN-SUFFIX,www.turingfraud.net
 
+# iPhone Bybit launch capture (2026-11-03): API aliases must precede GEOIP DIRECT.
+# ng-dex coverage follows observed app traffic, not a domain-ownership assertion.
+DOMAIN-SUFFIX,bybit.biz
+DOMAIN-SUFFIX,ng-dex.com
+DOMAIN-SUFFIX,bybitx.global
+
 # Jump cloud / TURN: same-target China tests favor JP. Domestic peers retain CN DIRECT fallback.
 DOMAIN-SUFFIX,jumpdesktop.com
 # Current official TURN DNS address (verified 2026-10-31); needed before generic UDP-media DIRECT.

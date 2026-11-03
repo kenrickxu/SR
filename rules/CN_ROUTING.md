@@ -1,3 +1,35 @@
+## Bybit iPhone API routing correction - 2026-11-03
+
+Add bybit.biz, ng-dex.com and bybitx.global to CNServiceJP (108->111).
+During the owner's controlled iPhone Bybit reproduction at 09:14:57-09:15:02,
+api3.bybit.biz made 8 successful DIRECT connections and api3.ng-dex.com made
+73. Both explicitly matched GEOIP,CN,DIRECT. The main www.bybit.com and the
+previously added fingerprint SDK hosts already used JP, proving that the
+earlier rule update was loaded but did not cover the app's API aliases.
+
+Use parent suffixes to cover API/WS siblings before generic GeoIP routing.
+bybit.biz and bybitx.global are also present in the official login allowlist.
+ng-dex.com routing is justified by observed traffic during the controlled app
+launch, not by an assertion of legal ownership. www.bybitx.global already
+used FINAL JP; make that observed alias explicit to avoid future GeoIP drift.
+Keep unrelated shared CDN/analytics parents unchanged. No IP keyword rules.
+
+The two observed API destination addresses fall within the existing
+43.168.0.0/14 TUN exclusion. Captured TCP flows nevertheless entered SR via
+the local proxy or Fake-IP hostname mapping, then matched GEOIP DIRECT.
+This patch fixes that observed decision; it does not guarantee interception
+of future IP-only traffic that bypasses SR. Do not proxy the whole cloud
+prefix or change game bypass routes without evidence of an IP-only leak.
+General, DNS, Always Real IP, Skip Proxy, STUN and all TUN bytes stay unchanged.
+
+CN and canonical native Clash use JP; CNR keeps its explicitly requested US
+exit. Preserve node/monitoring identities, owner-IP exclusions and Windows
+IPv4/TUN/core-isolation settings. Refresh the rule set and reconnect before
+device acceptance; verify actual API connections use JP in a new phone log.
+Source/candidate validation alone is not evidence of a successful login.
+Raw phone logs remain private. See Genesis audits/20261103-bybit-phone-routing.
+Rollback only these three added suffixes and their managed provider version.
+
 ## Bybit login dependency routing - 2026-11-03
 
 Add three verified selectors to the existing CNServiceJP provider (105->108):
