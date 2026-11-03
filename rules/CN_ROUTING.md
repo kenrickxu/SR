@@ -1,3 +1,20 @@
+## CN/CNR and native Clash IPv6 address cleanup - 2026-11-03
+
+Owner requested removal of explicit IPv6 addresses because these clients use
+IPv4. Remove 87 IPv6 entries from each SR tun-excluded-routes value; preserve
+all 890 IPv4 entries in their original order. Remove eight IPv6 rules from
+CNPushTelegramJP and 102 from CNIPDirect; derive the same 102 removals for
+CNRIPDirect. All other rule rows, ordering and policy bindings remain unchanged.
+CN and CNR keep ipv6=false and prefer-ipv6=false. Native canonical Clash must
+also emit ipv6=false and dns.ipv6=false, closing the gap with Windows' existing
+local IPv4 overrides; publish filtered providers without the 110 IPv6 rows.
+Do not change Clash TUN or client switches. Leave OS and its separate providers
+intact. Keep IPv4 rules, Bybit JP coverage, CNR US-only identity and management
+IP exclusions. These are explicit address/rule removals, not modifications to
+shared GeoIP/ASN binary databases. No latency or memory saving is measured.
+Refresh both configurations and rule sets, then reconnect to load the changes.
+Rollback only the reviewed IPv6 delta using source 1544ad7, preserving later edits.
+
 ## CN/CNR IPv6 disabled by owner request - 2026-11-03
 
 Set General `ipv6 = false` in CN.conf and CNR.conf. Keep `prefer-ipv6 = false`.
