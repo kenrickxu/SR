@@ -1,3 +1,31 @@
+## ICBC enterprise iPhone HTTP-proxy compatibility trial — 2026-11-04
+
+Owner reported the enterprise banking app displaying its own -1005 message,
+"cannot resolve server address", with the iPhone CN profile enabled. No failing
+hostname, phone DNS/connection log or off/on A/B result was provided yet.
+Do not interpret this app code as a proven native iOS DNS error or claim a
+confirmed root cause. Public AliDNS A queries for corporbank.icbc.com.cn,
+corporwap.icbc.com.cn, corporbank-simp.icbc.com.cn, wap.icbc.com.cn and
+m.icbc.com.cn returned answers during the investigation; that is not a test
+of the phone's Wi-Fi/system DNS or proof of the app's actual endpoint.
+
+CN already keeps icbc.com.cn and its wildcard in always-real-ip and routes
+its .cn namespace DIRECT. Recent expanded real-IP/TUN exclusions did not add
+an ICBC HTTP-proxy bypass. Add only icbc.com.cn and *.icbc.com.cn to CN's
+native skip-proxy list, following the existing narrow CCB/ABC/PSBC pattern.
+This is a scoped compatibility trial to avoid the system HTTP proxy entry,
+not a guarantee to bypass TUN or cure every DNS failure. Do not broaden it
+to all banks, change global resolvers/fallback/IPv6/TUN, remove real-IP, or
+modify protected MITM. Existing regional/owner IP policies stay unchanged.
+CNR, OS and native Clash are not changed for this iPhone-only report.
+
+Refresh the CN configuration (not just the node subscription), reconnect
+Shadowrocket, fully reopen the banking app and retry without transactions.
+Phone acceptance remains pending; if still failing, obtain a short sanitized
+DNS/connection excerpt with the failing hostname and a same-network SR off/on
+comparison before further edits. Rollback removes only these two skip-proxy
+entries against the then-current source; never restore an old entire profile.
+
 ## CN/CNR and native Clash IPv6 address cleanup - 2026-11-03
 
 Owner requested removal of explicit IPv6 addresses because these clients use
