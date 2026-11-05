@@ -1,3 +1,24 @@
+## GreenCloud CN-only exact-host DIRECT trial — 2026-11-05
+
+Owner approved aligning the observed cp.green.cloud and chat.green.cloud
+hosts with greencloudvps.com's existing DIRECT policy. Add only these two
+exact DOMAIN rules in CN before service sets; do not widen to green.cloud
+or Cloudflare shared parents. PacketTunnel showed the two hosts using JP
+FINAL while the main site and challenge apex used DIRECT. This change
+makes these observed site routes consistent; it does not establish that
+route mixing caused the challenge delay or that DIRECT will be faster.
+
+Keep DNS/fallback, real-IP, skip-proxy, TUN, IPv6, nodes, game/bank rules,
+protected MITM and shared challenge domains byte-for-byte unchanged.
+CNR, OS and the JP canonical Clash generator/managed profile are outside
+this CN-only phone trial and are not synchronized by this publication.
+Do not infer that a changed CN hash has already been imported into Clash.
+
+Refresh the CN configuration, reconnect and reopen the site for acceptance.
+No actual browser challenge/login/transaction is performed by publishing.
+If performance regresses, remove only these two exact DOMAIN rows and their
+comment against then-current CN; do not restore an old entire configuration.
+
 ## ICBC enterprise iPhone HTTP-proxy compatibility trial — 2026-11-04
 
 Owner reported the enterprise banking app displaying its own -1005 message,
