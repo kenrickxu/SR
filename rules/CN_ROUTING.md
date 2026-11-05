@@ -1,3 +1,36 @@
+## Slow verification resource path: scoped JP exception — 2026-11-05
+
+Mac CN runtime cache contains cloudflare.com in CNMainlandDirect and no
+earlier challenge exception. The owner reports 20–30 second verification
+waits on Mac/home Wi-Fi and iPhone. Three interleaved downloads of the same
+public Turnstile api.js on the Mac took 2.296/1.417/9.217 seconds via current
+SR routing, versus 0.461/0.427/0.424 seconds through a temporary SSH SOCKS
+tunnel to the existing JP host. Both paths followed the same redirect and
+returned HTTP 200 with 86,756 bytes. SSH is not the Reality transport and
+these measurements do not establish full browser challenge completion time.
+
+Add DOMAIN-SUFFIX,challenges.cloudflare.com and DOMAIN-SUFFIX,twilio.com
+to the existing CNServiceJP list, which precedes CNMainlandDirect. This
+overrides only the challenge subtree of the broad cloudflare.com DIRECT
+entry and explicitly keeps Twilio on JP before later IP/GEOIP fallbacks.
+CNR consumes the same provider with its existing US exit. Native Clash
+consumes its filtered classical provider, preserving its existing TUN and
+all native configuration/client switches. No new provider is necessary.
+
+Do not remove the existing Cloudflare parent DIRECT policy, broaden to
+Cloudflare address ranges, change real-IP/DNS/TUN, or alter GreenCloud's
+recent exact-host DIRECT routes and the CN-only ICBC compatibility trial.
+A shared verification endpoint cannot automatically follow every embedding
+site's policy. GreenCloud remains DIRECT while the challenge subtree now
+uses the proxy; actual browser acceptance for each site is still required.
+Do not claim IP splitting alone proves the entire reported wait, or that
+this change bypasses Cloudflare validation. No CAPTCHA/login is automated.
+
+Refresh the selected CN/CNR rule sets, reconnect, reopen the affected page,
+and measure the verification delay. Source/native provider acceptance does
+not prove devices have refreshed. Rollback removes only these two rows and
+the accompanying comment, then republishes/refilters this one provider.
+
 ## GreenCloud confirmed working; consolidate exact hosts into DIRECT rule set — 2026-11-05
 
 Owner reports the site now works and no obvious challenge is needed, then

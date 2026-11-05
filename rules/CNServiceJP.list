@@ -1,4 +1,9 @@
 # CN-only reviewed parent/IP rules; policies live in CN.conf.
+# Cloudflare verification resources use the proxy route ahead of the broad
+# cloudflare.com DIRECT rule. Keep this scoped to the challenge namespace.
+# CN/Clash: JP; CNR: its existing US exit. Other Cloudflare sites stay unchanged.
+DOMAIN-SUFFIX,challenges.cloudflare.com
+DOMAIN-SUFFIX,twilio.com
 DOMAIN-SUFFIX,1drv.ms
 DOMAIN-SUFFIX,app-analytics-services.com
 DOMAIN-SUFFIX,binance.com
