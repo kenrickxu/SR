@@ -1,3 +1,27 @@
+## GreenCloud confirmed working; consolidate exact hosts into DIRECT rule set — 2026-11-05
+
+Owner reports the site now works and no obvious challenge is needed, then
+requests a concise rule-set layout. Move the two exact DOMAIN rows for
+cp.green.cloud and chat.green.cloud from CN.conf into the existing
+CNMainlandDirect.list beside greencloudvps.com. Keep both exact matches;
+do not widen to green.cloud or claim all verification delay was diagnosed.
+CN references this provider with DIRECT and no earlier domain selector
+matches the two hosts, preserving the CN policy while removing inline rules.
+
+The existing DIRECT provider is also consumed by CNR and native Clash,
+so their provider refreshes inherit these two approved DIRECT entries;
+CNR proxy identity, management-IP isolation and OS sources remain unchanged.
+Clash serves compatible classical DOMAIN rows, but its existing 24-hour
+source/client caches may delay uptake. Publication does not prove a cached
+Clash provider or any phone has refreshed. No generator changes or service
+restarts are required for this source consolidation.
+
+General, DNS, real-IP/TUN/skip-proxy, IPv6, nodes, game/bank priorities and
+protected MITM are unchanged. Earlier CN-only trial notes below are history;
+this shared rule-set placement supersedes their scope for these two hosts.
+Rollback only these two provider rows plus the reviewed inline relocation,
+never restore entire old profiles or unrelated rule-set contents.
+
 ## GreenCloud CN-only exact-host DIRECT trial — 2026-11-05
 
 Owner approved aligning the observed cp.green.cloud and chat.green.cloud
