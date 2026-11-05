@@ -1,0 +1,16 @@
+{
+  "repository": "blackmatrix7/ios_rule_script",
+  "file": "rule/Shadowrocket/Lan/Lan.list",
+  "revision": "f9e403a75bbc4bee939c6d8dd766cf78f1b512f3",
+  "upstream_sha256": "79c3b96f8064bf1b53678fb0dc7d9e92d74c729869fe8dc494afa2e9b12e2856",
+  "sr_sha256": "62fa4ebc130948c91d068a752ec76ad7e59c02bc2528ba89d28c5f6737101061",
+  "clash_sha256": "46daa552825457ebefe869269c257afbe76a4fd633363ace4c769685d09fc1f6",
+  "rows": 142,
+  "types": {
+    "DOMAIN": 9,
+    "DOMAIN-SUFFIX": 115,
+    "IP-CIDR": 18
+  },
+  "ipv6_rows": 4,
+  "refresh": "manual on Ken request, compare additions and removals"
+}
