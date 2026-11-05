@@ -1,3 +1,52 @@
+## Lightweight explicit proxy rules, default DIRECT — 2026-11-05
+
+Owner explicitly replaces the earlier rule-set/real-IP/TUN-exclusion layout
+with `CN_LIGHTWEIGHT_PROXY_V1`. CN now contains 280 explicit domain/IPv4
+proxy selectors plus `GEOIP,CN,DIRECT` and `FINAL,DIRECT` (282 rules). CNR
+contains the same policy mapped to US, with the five retained owner-address
+selectors omitted under its existing infrastructure isolation (277 rules).
+The sixth excluded owner range was not present in the retained proxy set.
+No RULE-SET, DOMAIN-SET, IP-ASN, DIRECT process/domain/IP rule or REJECT rule
+remains. CN/Clash retain existing JP versus US assignments; CNR uses US only.
+All targets not explicitly listed, including foreign sites, now use DIRECT.
+GEOIP still relies on the client's normal geographic database.
+
+The owner separately confirmed removing all eight proxy USER-AGENT rows and
+the TikTok PROCESS-NAME row to keep domain/IP rules only. Existing TikTok,
+OneDrive, PayPal and WhatsApp domain/keyword selectors remain; arbitrary
+app-only destinations no longer receive an app-identity proxy override.
+No Duolingo, Roam, battleroyale or trustd domain mapping is guessed.
+The existing native Clash JP targets capitaland.com and ascottchina.com are
+made explicit in shared CN (US in CNR) before removing enhancement additions.
+
+Remove the entire General always-real-ip and tun-excluded-routes fields.
+Preserve all other General values, including DNS, IPv4, each profile's own
+update URL and HTTP skip-proxy exceptions, plus native node groups and Host.
+CN's existing protected MITM bytes stay unchanged; no MITM material is copied
+to CNR. The canonical Clash translator follows only native supported syntax;
+Windows and phone clients refresh manually. OS and shared legacy rule-list
+files are not edited or deleted by this conversion.
+
+Rules follow the owner's usage order: AI/development, trading, Google/YouTube,
+communications, banks/services, remaining explicit domains, broad keywords,
+then IPv4 and the DIRECT tail. Cross-policy overlap dependencies retain the
+old host-only and IP-only first-match decisions; 5,786 constructed host cases
+and 397 IPv4 boundary cases are checked (actual counts in the build report).
+Do not remove an earlier suffix merely because a later keyword has the same
+policy: tiktok.polymarket.com must retain its earlier US suffix decision.
+The earlier Telegram CIDRs now move behind explicit domains as requested;
+requests with both a hostname and a matching IP deliberately prefer their
+explicit domain policy. Mixed host-plus-IP behavior is not claimed identical.
+Removing the old DIRECT exceptions intentionally exposes empornium.me to
+the retained JP porn keyword. This is an explicit-rule policy consequence,
+not proof of a network, DNS or livestream performance improvement.
+
+The reproducible builder, tests and validation live in Genesis
+ops/cn_lightweight_profiles/. Publication, canonical Clash composition/native
+loading and actual client refresh remain separate acceptance stages. This
+entry supersedes earlier instructions to retain rule-set layout, real-IP,
+TUN exclusion fields, app identification and an implicit proxy FINAL.
+
 ## Slow verification resource path: scoped JP exception — 2026-11-05
 
 Mac CN runtime cache contains cloudflare.com in CNMainlandDirect and no
