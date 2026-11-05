@@ -1,0 +1,192 @@
+{
+  "resolution": "Keep full upstream; owner explicit proxy rules precede direct provider in CN/CNR/Clash. Keyword overlap count is illustrative, not exhaustive for all possible subdomains.",
+  "overlapping_owner_selectors": [
+    {
+      "owner_selector": "DOMAIN-SUFFIX,trae-api-sg.mchost.guru,🇯🇵 JP REA",
+      "upstream_overlaps": 1,
+      "examples": [
+        "mchost.guru"
+      ]
+    },
+    {
+      "owner_selector": "DOMAIN-SUFFIX,oklink.com,🇺🇸 US REA",
+      "upstream_overlaps": 1,
+      "examples": [
+        "oklink.com"
+      ]
+    },
+    {
+      "owner_selector": "DOMAIN-SUFFIX,www.turingfraud.net,🇯🇵 JP REA",
+      "upstream_overlaps": 1,
+      "examples": [
+        "turingfraud.net"
+      ]
+    },
+    {
+      "owner_selector": "DOMAIN-SUFFIX,google.com,🇯🇵 JP REA",
+      "upstream_overlaps": 21,
+      "examples": [
+        "adservice.google.com",
+        "c.android.clients.google.com",
+        "cache-management-prod.google.com"
+      ]
+    },
+    {
+      "owner_selector": "DOMAIN-SUFFIX,googleapis.com,🇯🇵 JP REA",
+      "upstream_overlaps": 10,
+      "examples": [
+        "clientservices.googleapis.com",
+        "crashlyticsreports-pa.googleapis.com",
+        "fontfiles.googleapis.com"
+      ]
+    },
+    {
+      "owner_selector": "DOMAIN-SUFFIX,push.apple.com,🇯🇵 JP REA",
+      "upstream_overlaps": 2,
+      "examples": [
+        "init-p01st.push.apple.com",
+        "init-s01st.push.apple.com"
+      ]
+    },
+    {
+      "owner_selector": "DOMAIN-SUFFIX,openrice.com,🇯🇵 JP REA",
+      "upstream_overlaps": 1,
+      "examples": [
+        "openrice.com"
+      ]
+    },
+    {
+      "owner_selector": "DOMAIN-SUFFIX,zafinsvc.com,🇯🇵 JP REA",
+      "upstream_overlaps": 1,
+      "examples": [
+        "zafinsvc.com"
+      ]
+    },
+    {
+      "owner_selector": "DOMAIN-SUFFIX,zainvest.group,🇯🇵 JP REA",
+      "upstream_overlaps": 1,
+      "examples": [
+        "zainvest.group"
+      ]
+    },
+    {
+      "owner_selector": "DOMAIN-SUFFIX,zajourney.com,🇯🇵 JP REA",
+      "upstream_overlaps": 1,
+      "examples": [
+        "zajourney.com"
+      ]
+    },
+    {
+      "owner_selector": "DOMAIN-SUFFIX,zaticdn.com,🇯🇵 JP REA",
+      "upstream_overlaps": 1,
+      "examples": [
+        "zaticdn.com"
+      ]
+    },
+    {
+      "owner_selector": "DOMAIN-SUFFIX,app-analytics-services.com,🇯🇵 JP REA",
+      "upstream_overlaps": 1,
+      "examples": [
+        "app-analytics-services.com"
+      ]
+    },
+    {
+      "owner_selector": "DOMAIN-SUFFIX,tik-tokapi.com,🇯🇵 JP REA",
+      "upstream_overlaps": 1,
+      "examples": [
+        "tik-tokapi.com"
+      ]
+    },
+    {
+      "owner_selector": "DOMAIN-SUFFIX,ttwebview.com,🇯🇵 JP REA",
+      "upstream_overlaps": 1,
+      "examples": [
+        "ttwebview.com"
+      ]
+    },
+    {
+      "owner_selector": "DOMAIN-KEYWORD,tiktok,🇯🇵 JP REA",
+      "upstream_overlaps": 2,
+      "examples": [
+        "tiktoknewaccount.com",
+        "tiktokrow-cdn.com"
+      ]
+    },
+    {
+      "owner_selector": "DOMAIN-KEYWORD,binance,🇯🇵 JP REA",
+      "upstream_overlaps": 2,
+      "examples": [
+        "binancezh.kim",
+        "binancezh.link"
+      ]
+    },
+    {
+      "owner_selector": "DOMAIN-KEYWORD,1drv,🇯🇵 JP REA",
+      "upstream_overlaps": 1,
+      "examples": [
+        "51drv.com"
+      ]
+    },
+    {
+      "owner_selector": "DOMAIN-KEYWORD,avtb,🇯🇵 JP REA",
+      "upstream_overlaps": 1,
+      "examples": [
+        "eqoavtbu.com"
+      ]
+    },
+    {
+      "owner_selector": "DOMAIN-KEYWORD,facebook,🇯🇵 JP REA",
+      "upstream_overlaps": 1,
+      "examples": [
+        "facebooksx.com"
+      ]
+    },
+    {
+      "owner_selector": "DOMAIN-KEYWORD,gmail,🇯🇵 JP REA",
+      "upstream_overlaps": 2,
+      "examples": [
+        "qingmail.com",
+        "suningmail.com"
+      ]
+    },
+    {
+      "owner_selector": "DOMAIN-KEYWORD,google,🇯🇵 JP REA",
+      "upstream_overlaps": 64,
+      "examples": [
+        "adservice.google.com",
+        "avail.googleflights.net",
+        "c.android.clients.google.com"
+      ]
+    },
+    {
+      "owner_selector": "DOMAIN-KEYWORD,sci-hub,🇯🇵 JP REA",
+      "upstream_overlaps": 2,
+      "examples": [
+        "sci-hub.ee",
+        "sci-hub.shop"
+      ]
+    },
+    {
+      "owner_selector": "DOMAIN-KEYWORD,telegram,🇯🇵 JP REA",
+      "upstream_overlaps": 1,
+      "examples": [
+        "telegramtoke.com"
+      ]
+    },
+    {
+      "owner_selector": "DOMAIN-KEYWORD,whatsapp,🇯🇵 JP REA",
+      "upstream_overlaps": 1,
+      "examples": [
+        "tb-whatsapp.com"
+      ]
+    },
+    {
+      "owner_selector": "DOMAIN-KEYWORD,youtube,🇯🇵 JP REA",
+      "upstream_overlaps": 2,
+      "examples": [
+        "redirector.c.youtubeeducation.com",
+        "youtube-dubbing.com"
+      ]
+    }
+  ]
+}

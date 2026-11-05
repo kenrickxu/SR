@@ -1,0 +1,12 @@
+{
+  "source_repository": "Loyalsoldier/clash-rules",
+  "source_revision": "9d654da5e1dfd7bc7e155072b6be85e13f831ecf",
+  "source_file": "direct.txt",
+  "source_sha256": "2ff0b806e1ba3f302ea14f2297230eb46bfb279412748db5c31cf6593013a5f3",
+  "generated_sha256": "904416f93dc50a448049d6a84aaeb7b8910c2aa7bae6cc795910ac640ba23392",
+  "entries": 110189,
+  "exact": 558,
+  "suffix": 109631,
+  "license": "GPL-3.0",
+  "refresh": "manual on Ken request; review additions AND removals, then publish all consumers"
+}
