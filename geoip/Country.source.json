@@ -1,0 +1,14 @@
+{
+  "repository": "Hackl0us/GeoIP2-CN",
+  "branch": "release",
+  "revision": "75a7f6f00ed11fea91d6dee20772a3ccf192949b",
+  "file": "Country.mmdb",
+  "source_url": "https://raw.githubusercontent.com/Hackl0us/GeoIP2-CN/75a7f6f00ed11fea91d6dee20772a3ccf192949b/Country.mmdb",
+  "sha256": "aaa073acfcfc62727a8aa7aad4def69849e948d5b07d472176cff83b47693753",
+  "bytes": 133022,
+  "license": "GPL-3.0",
+  "database_type": "GeoIP2-Country",
+  "ip_version": 6,
+  "build_epoch": 1793758501,
+  "mirror_policy": "manual reviewed snapshot; update on Ken maintenance request, no automatic scheduler"
+}
