@@ -1,0 +1,3 @@
+# Owner-approved additions; not upstream geolocation claims.
+# Ken SR Topic194 message1365, 2026-11-06: shared/Tailscale range DIRECT.
+IP-CIDR,100.64.0.0/10,no-resolve

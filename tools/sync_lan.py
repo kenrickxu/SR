@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Manual owner-hosted blackmatrix7 LAN mirror; never deploys or schedules."""
+"""Generate reviewed owner-hosted blackmatrix7 LAN rules; never deploys or schedules."""
 import argparse,urllib.request,json,re,hashlib,ipaddress
 from pathlib import Path
 REPO="blackmatrix7/ios_rule_script"
@@ -26,7 +26,7 @@ def generate(body,revision):
     header=("# Owner mirror of https://github.com/"+REPO+"\n# Source revision: "+revision+"\n# License: GPL-2.0; see Lan.LICENSE\n").encode()
     sr=header+body
     clash=header+b"# Native Mihomo conversion: IPv6 IP-CIDR -> IP-CIDR6; no IPv6 enable switch.\n"+("\n".join(native)+"\n").encode()
-    meta={"repository":REPO,"file":SOURCE,"revision":revision,"upstream_sha256":hashlib.sha256(body).hexdigest(),"sr_sha256":hashlib.sha256(sr).hexdigest(),"clash_sha256":hashlib.sha256(clash).hexdigest(),"rows":len(rows),"types":counts,"ipv6_rows":sum(x.startswith("IP-CIDR6,") for x in native),"refresh":"manual on Ken request, compare additions and removals"}
+    meta={"repository":REPO,"file":SOURCE,"revision":revision,"upstream_sha256":hashlib.sha256(body).hexdigest(),"sr_sha256":hashlib.sha256(sr).hexdigest(),"clash_sha256":hashlib.sha256(clash).hexdigest(),"rows":len(rows),"types":counts,"ipv6_rows":sum(x.startswith("IP-CIDR6,") for x in native),"refresh":"daily 03:00 Asia/Hong_Kong; compare additions/removals; see rules/MAINTENANCE.md"}
     return sr,clash,meta
 
 def main():

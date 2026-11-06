@@ -1,5 +1,9 @@
 # Owner LAN mirror and maintenance
 
+> Maintenance policy update (Ken message1365, 2026-11-06): daily at 03:00 Asia/Hong_Kong,
+> review/deduplicate real changes before publishing; see rules/MAINTENANCE.md.
+> This supersedes earlier manual-only/no-scheduler wording below. Clients still refresh manually.
+
 ## Owner-hosted LAN list — 2026-11-06
 
 Ken SR Topic194 message1297 requests analysis and owner hosting of

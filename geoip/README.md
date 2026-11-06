@@ -1,5 +1,9 @@
 # Ken GeoIP2-CN snapshot
 
+> Maintenance policy update (Ken message1365, 2026-11-06): daily at 03:00 Asia/Hong_Kong,
+> review/deduplicate real changes before publishing; see rules/MAINTENANCE.md.
+> This supersedes earlier manual-only/no-scheduler wording below. Clients still refresh manually.
+
 Owner-requested mirror of [Hackl0us/GeoIP2-CN](https://github.com/Hackl0us/GeoIP2-CN), release Country.mmdb. Bytes are copied unchanged, not merged with a global database. See Country.source.json for the exact source revision, SHA256, byte size and database build metadata; Country.LICENSE preserves the upstream GPL-3.0 license. Upstream credits JMVoid/ipip2mmdb, 17mon/china_ip_list and metowolf/iplist; GeoIP is a MaxMind trademark.
 
 Download: https://raw.githubusercontent.com/kenrickxu/SR/main/geoip/Country.mmdb

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Manually refresh owner-hosted direct domains; never publish or schedule by itself."""
+"""Generate reviewed owner-hosted direct rules; never publish or schedule by itself."""
 import argparse,hashlib,json,re,urllib.request
 from pathlib import Path
 REPO="Loyalsoldier/clash-rules"
@@ -26,11 +26,26 @@ def main():
     if not re.fullmatch("[0-9a-f]{40}",rev):raise ValueError("invalid source revision")
     url="https://raw.githubusercontent.com/"+REPO+"/"+rev+"/direct.txt"
     body=args.input.read_bytes() if args.input else fetch(url);rows=convert(body)
+    upstream_entries=len(rows)
+    local_file=args.root/"rules"/"ChinaDirectDomains.local.list"
+    local_rows=[]
+    if local_file.exists():
+        for line in local_file.read_text().splitlines():
+            row=line.strip()
+            if not row or row.startswith("#"):continue
+            fields=row.split(",")
+            if row=="IP-CIDR,100.64.0.0/10,no-resolve":pass
+            elif len(fields)==2 and fields[0] in {"DOMAIN","DOMAIN-SUFFIX"} and re.fullmatch(r"[A-Za-z0-9_-]+(?:\.[A-Za-z0-9_-]+)*",fields[1]):pass
+            else:raise ValueError("unreviewed local rule syntax")
+            if row not in local_rows:local_rows.append(row)
+    # Local domain rows are reviewed inputs, not a blanket union of candidates.
+    # Preserve upstream host granularity and append only missing local rules.
+    rows.extend(row for row in local_rows if row not in rows)
     target=args.root/"rules"/"ChinaDirectDomains.list";old=[]
     if target.exists():old=[x for x in target.read_text().splitlines() if x and not x.startswith("#")]
     header="# Source: "+url+"\n# License: GPL-3.0; see ChinaDirectDomains.LICENSE\n# Full reviewed snapshot; explicit owner proxy rules take priority.\n"
     output=(header+"\n".join(rows)+"\n").encode();target.parent.mkdir(parents=True,exist_ok=True);target.write_bytes(output)
-    meta={"source_repository":REPO,"source_revision":rev,"source_file":"direct.txt","source_sha256":hashlib.sha256(body).hexdigest(),"generated_sha256":hashlib.sha256(output).hexdigest(),"entries":len(rows),"exact":sum(x.startswith("DOMAIN,") for x in rows),"suffix":sum(x.startswith("DOMAIN-SUFFIX,") for x in rows),"license":"GPL-3.0","refresh":"manual on Ken request; review additions AND removals, then publish all consumers"}
+    meta={"source_repository":REPO,"source_revision":rev,"source_file":"direct.txt","source_sha256":hashlib.sha256(body).hexdigest(),"generated_sha256":hashlib.sha256(output).hexdigest(),"entries":len(rows),"exact":sum(x.startswith("DOMAIN,") for x in rows),"suffix":sum(x.startswith("DOMAIN-SUFFIX,") for x in rows),"license":"GPL-3.0","upstream_entries":upstream_entries,"local_entries":len(local_rows),"local_file":"rules/ChinaDirectDomains.local.list","local_sha256":hashlib.sha256(local_file.read_bytes()).hexdigest() if local_file.exists() else None,"ip_cidr":sum(x.startswith("IP-CIDR,") for x in rows),"refresh":"daily 03:00 Asia/Hong_Kong; reviewed changes only; see rules/MAINTENANCE.md"}
     (target.parent/"ChinaDirectDomains.source.json").write_text(json.dumps(meta,indent=2,ensure_ascii=False)+"\n")
     print(json.dumps({"revision":rev,"entries":len(rows),"added":len(set(rows)-set(old)),"removed":len(set(old)-set(rows))}))
 if __name__=="__main__":main()

@@ -1,0 +1,67 @@
+{
+  "schema": "ken-sr-maintenance-sources/v1",
+  "schedule": {
+    "expr": "0 3 * * *",
+    "tz": "Asia/Hong_Kong"
+  },
+  "primary": [
+    {
+      "family": "mainland-ip",
+      "repo": "Hackl0us/GeoIP2-CN",
+      "branch": "release",
+      "file": "Country.mmdb",
+      "target": "geoip/Country.mmdb"
+    },
+    {
+      "family": "mainland-domains",
+      "repo": "Loyalsoldier/clash-rules",
+      "branch": "release",
+      "file": "direct.txt",
+      "target": "rules/ChinaDirectDomains.list"
+    },
+    {
+      "family": "lan",
+      "repo": "blackmatrix7/ios_rule_script",
+      "branch": "master",
+      "file": "rule/Shadowrocket/Lan/Lan.list",
+      "targets": [
+        "rules/Lan.list",
+        "rules/LanClash.list"
+      ]
+    }
+  ],
+  "comparisons": [
+    {
+      "family": "mainland-ip",
+      "repo": "gaoyifan/china-operator-ip",
+      "branch": "ip-lists",
+      "file": "china.txt"
+    },
+    {
+      "family": "mainland-ip",
+      "repo": "misakaio/chnroutes2",
+      "branch": "master",
+      "file": "chnroutes.txt"
+    },
+    {
+      "family": "mainland-domains",
+      "repo": "MetaCubeX/meta-rules-dat",
+      "branch": "meta",
+      "file": "geo/geosite/cn.list",
+      "lineage": "Includes blackmatrix7 ChinaMax; not independent"
+    },
+    {
+      "family": "lan",
+      "repo": "Loyalsoldier/clash-rules",
+      "branch": "release",
+      "file": "private.txt"
+    },
+    {
+      "family": "lan",
+      "repo": "Loyalsoldier/clash-rules",
+      "branch": "release",
+      "file": "lancidr.txt"
+    }
+  ],
+  "policy": "Review actual semantic benefit and coverage; no blind union. Preserve owner overrides; see MAINTENANCE.md."
+}

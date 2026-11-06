@@ -1,5 +1,9 @@
 ## Owner-hosted LAN list — 2026-11-06
 
+> Maintenance policy update (Ken message1365, 2026-11-06): daily at 03:00 Asia/Hong_Kong,
+> review/deduplicate real changes before publishing; see rules/MAINTENANCE.md.
+> This supersedes earlier manual-only/no-scheduler wording below. Clients still refresh manually.
+
 Ken SR Topic194 message1297 requests analysis and owner hosting of
 blackmatrix7/ios_rule_script rule/Shadowrocket/Lan/Lan.list. Lan.list keeps
 the full reviewed 142 rows:9 exact domains,115 suffixes,18 IP rows including

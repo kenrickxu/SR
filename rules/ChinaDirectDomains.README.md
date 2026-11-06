@@ -1,5 +1,13 @@
 # Owner-hosted mainland/direct domain snapshot
 
+> Maintenance policy update (Ken message1365, 2026-11-06): daily at 03:00 Asia/Hong_Kong,
+> review/deduplicate real changes before publishing; see rules/MAINTENANCE.md.
+> This supersedes earlier manual-only/no-scheduler wording below. Clients still refresh manually.
+> The historical filename now includes exactly one owner IPv4 DIRECT exception:
+> IP-CIDR,100.64.0.0/10,no-resolve. It is shared/Tailscale space, NOT a claim of mainland geography.
+> Persist it via rules/ChinaDirectDomains.local.list when rebuilding upstream domains.
+> It also overlaps the earlier LAN DIRECT provider by owner request; effective policy remains DIRECT.
+
 ## Mainland DIRECT, owner exceptions, default proxy — 2026-11-06
 
 Ken approved this design in SR Topic194 message1251. It supersedes
