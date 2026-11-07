@@ -2,6 +2,10 @@
 
 Authorized by Ken, SR Topic194 message1365, 2026-11-06. Supersedes earlier manual-only/no-scheduler notes for these three data families only.
 
+## LAN subscriptions removed — owner instruction 2026-11-07, Topic194 msg2252
+
+CN.conf and CNR.conf no longer reference Lan.list. The managed Clash subscription must omit LanDirect and its LanClash.list provider. Do not reattach them during maintenance. Keep the existing Skip Proxy/TUN settings, CNR management DIRECT exceptions, US/JP/mainland ordering, and the pre-existing native local-name/private-CIDR compatibility protections. LAN mirror files and provenance may remain as standalone source artifacts, not active subscriptions. Existing daily source checks and failure monitoring are unchanged; a mirror refresh must never restore the removed profile references. This overrides older instructions below that describe LAN as an attached provider. CN Skip Proxy follows the exact 12-entry list corrected to star wildcards in msg2092; do not restore old *.lan/ICBC extras.
+
 ## Schedule and scope
 
 OpenClaw native automation: every day `0 3 * * *`, `Asia/Hong_Kong` (UTC+8, not the host's Tokyo timezone). Sources and review roles are in `MaintenanceSources.json`. Inspect actual data-file commits and content, not repository pushed_at. Clients always use Ken-hosted URLs and Ken refreshes them manually.
