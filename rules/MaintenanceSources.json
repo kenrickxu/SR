@@ -10,24 +10,16 @@
       "repo": "Hackl0us/GeoIP2-CN",
       "branch": "release",
       "file": "Country.mmdb",
-      "target": "geoip/Country.mmdb"
+      "target": "geoip/Country.mmdb",
+      "id": "geoip_hackl0us"
     },
     {
       "family": "mainland-domains",
       "repo": "Loyalsoldier/clash-rules",
       "branch": "release",
       "file": "direct.txt",
-      "target": "rules/ChinaDirectDomains.list"
-    },
-    {
-      "family": "lan",
-      "repo": "blackmatrix7/ios_rule_script",
-      "branch": "master",
-      "file": "rule/Shadowrocket/Lan/Lan.list",
-      "targets": [
-        "rules/Lan.list",
-        "rules/LanClash.list"
-      ]
+      "target": "rules/ChinaDirectDomains.list",
+      "id": "domains_loyalsoldier"
     }
   ],
   "comparisons": [
@@ -35,32 +27,69 @@
       "family": "mainland-ip",
       "repo": "gaoyifan/china-operator-ip",
       "branch": "ip-lists",
-      "file": "china.txt"
+      "file": "china.txt",
+      "id": "ip_gaoyifan"
     },
     {
       "family": "mainland-ip",
       "repo": "misakaio/chnroutes2",
       "branch": "master",
-      "file": "chnroutes.txt"
+      "file": "chnroutes.txt",
+      "id": "ip_chnroutes2"
     },
     {
       "family": "mainland-domains",
       "repo": "MetaCubeX/meta-rules-dat",
       "branch": "meta",
       "file": "geo/geosite/cn.list",
-      "lineage": "Includes blackmatrix7 ChinaMax; not independent"
+      "lineage": "Includes blackmatrix7 ChinaMax; not independent",
+      "id": "domains_metacubex"
     },
     {
-      "family": "lan",
-      "repo": "Loyalsoldier/clash-rules",
-      "branch": "release",
-      "file": "private.txt"
+      "id": "domains_dnsmasq",
+      "family": "mainland-domains",
+      "repo": "felixonmars/dnsmasq-china-list",
+      "branch": "master",
+      "file": "accelerated-domains.china.conf",
+      "format": "dnsmasq-server-lines",
+      "role": "comparison",
+      "lineage": "An input lineage of Loyalsoldier direct lists; not an independent second vote. DNS acceleration does not prove mainland-only service.",
+      "policy": "Exact parser for server=/domain/resolver; domains are suffix candidates only; never install DNS config or change resolver. Dedup, protect proxy overrides, and hold unverified/shared/foreign roots.",
+      "license": "WTFPL-2.0"
     },
     {
-      "family": "lan",
-      "repo": "Loyalsoldier/clash-rules",
-      "branch": "release",
-      "file": "lancidr.txt"
+      "id": "domains_chinamax",
+      "family": "mainland-domains",
+      "repo": "blackmatrix7/ios_rule_script",
+      "branch": "master",
+      "file": "rule/Shadowrocket/ChinaMax/ChinaMax_Domain.list",
+      "format": "domain-set",
+      "role": "comparison",
+      "lineage": "Same ChinaMax lineage used by MetaCubeX CN; not independent evidence.",
+      "policy": "Leading dot means domain+subdomains, bare name means exact. Do not parse this domain-only file as arbitrary classical rules or import header type counts. Dedup and hold unverified direct expansions.",
+      "license": "GPL-2.0"
+    },
+    {
+      "id": "ip_metowolf_special",
+      "family": "mainland-ip",
+      "repo": "metowolf/iplist",
+      "branch": "master",
+      "file": "data/special/china.txt",
+      "format": "CIDR-text",
+      "role": "comparison",
+      "lineage": "OpenIPDB-based mainland-special range classification; related to current GeoIP source ecosystem, not an independent vote for physical location.",
+      "policy": "Use special/china.txt, NOT country/CN.txt. Compare exact IPv4/IPv6 address sets with current MMDB, independently verify candidate-only mainland service use, no blind union/MMDB concatenation or IPv6 enabling.",
+      "license": "Not declared/detected at repository root; comparison facts only, not a new bulk mirror."
+    },
+    {
+      "id": "ip_apnic",
+      "family": "mainland-ip",
+      "url": "https://ftp.apnic.net/stats/apnic/delegated-apnic-latest",
+      "format": "RIR-delegated",
+      "role": "registration-comparison-only",
+      "lineage": "Official first allocation/assignment registration, expressly not a physical geolocation assertion.",
+      "policy": "Filter only APNIC CN ipv4/ipv6 allocated/assigned records for comparison; decimal IPv4 counts become exact intervals, IPv6 values are prefix lengths. No ASN entries, wildcard summaries, reserved/available rows or other countries. Registration alone never authorizes DIRECT. Preserve file timezone/serial date separately from HK check time.",
+      "license": "APNIC conditions embedded in file; retain source and limitations, comparison only."
     }
   ],
   "policy": "Review actual semantic benefit and coverage; no blind union. Preserve owner overrides; see MAINTENANCE.md.",
@@ -70,14 +99,16 @@
       "service": "chatgpt",
       "url": "https://yfamilys.com/rule/ChatGPT.list",
       "target": "rules/USProxy.list",
-      "policy": "reviewed-supplement; semantic exact/suffix/keyword/CIDR dedup and cross-policy review; preserve existing owner rows; see ProxyServices.review.json"
+      "policy": "reviewed-supplement; semantic exact/suffix/keyword/CIDR dedup and cross-policy review; preserve existing owner rows; see ProxyServices.review.json",
+      "id": "yfamily_chatgpt"
     },
     {
       "family": "proxy-services",
       "service": "telegram",
       "url": "https://yfamilys.com/rule/Telegram.list",
       "target": "rules/JPProxy.list",
-      "policy": "reviewed-supplement; semantic exact/suffix/keyword/CIDR dedup and cross-policy review; preserve existing owner rows; see ProxyServices.review.json"
+      "policy": "reviewed-supplement; semantic exact/suffix/keyword/CIDR dedup and cross-policy review; preserve existing owner rows; see ProxyServices.review.json",
+      "id": "yfamily_telegram"
     },
     {
       "id": "v2fly_chatgpt",
@@ -108,17 +139,50 @@
   ],
   "receipt_contract": {
     "effective_business_date": "2026-11-09",
-    "checked_links": 12,
+    "checked_links": 13,
     "families": [
       "geoip",
-      "domains",
-      "lan"
+      "domains"
     ],
     "proxy_sources": [
       "chatgpt",
       "telegram",
       "v2fly_chatgpt",
       "dler_telegram"
-    ]
+    ],
+    "source_status_ids": [
+      "geoip_hackl0us",
+      "domains_loyalsoldier",
+      "ip_gaoyifan",
+      "ip_chnroutes2",
+      "domains_metacubex",
+      "domains_dnsmasq",
+      "domains_chinamax",
+      "ip_metowolf_special",
+      "ip_apnic",
+      "yfamily_chatgpt",
+      "yfamily_telegram",
+      "v2fly_chatgpt",
+      "dler_telegram"
+    ],
+    "daily_report_required": true
+  },
+  "retired_families": {
+    "lan": {
+      "owner_instruction": "Topic194 msg2705,2026-11-08",
+      "check_sources": false,
+      "refresh_outputs": false,
+      "reattach_to_profiles": false,
+      "retain_historical_files": true
+    }
+  },
+  "reporting": {
+    "mode": "daily-after-completion",
+    "channel": "telegram",
+    "accountId": "default",
+    "to": "-1004489828912:topic:194",
+    "include_no_change": true,
+    "style": "Compact Chinese card, a few icons, actual accepted +/− deltas, GeoIP changed/unchanged, dedup/held note, client action. No long process log or table.",
+    "failure_monitor": "Existing03:35 job retained; from effective business date require successful matching native report delivery as well as complete business receipt."
   }
 }

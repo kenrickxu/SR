@@ -1,0 +1,305 @@
+{
+  "schema": "ken-sr-mainland-comparisons-review/v1",
+  "owner_instruction": "Topic194 msg2705",
+  "reviewed_HK_date": "2026-11-08",
+  "retired_LAN_source_count": 3,
+  "new_source_count": 4,
+  "daily_active_link_count": 13,
+  "accepted_domain_or_IP_deltas": {
+    "added": 0,
+    "removed": 0
+  },
+  "source_snapshots": {
+    "domains_dnsmasq": {
+      "id": "domains_dnsmasq",
+      "repo": "felixonmars/dnsmasq-china-list",
+      "branch": "master",
+      "file": "accelerated-domains.china.conf",
+      "revision": "a8942d3ac6ebd8dcfc582d4e97fbb443a2176cb2",
+      "sha256": "3780aa1aa97dffae010998ce0f320351c4646a4bd4a66327f6f99393f1ae7e22",
+      "bytes": 4011515,
+      "commits": [
+        {
+          "sha": "a8942d3ac6ebd8dcfc582d4e97fbb443a2176cb2",
+          "date": "2026-10-30T00:08:26Z",
+          "message": "accelerated-domains: remove 0959930d71015.beer"
+        },
+        {
+          "sha": "c89069dad26125e67d91a020f31b3a34f3a84c14",
+          "date": "2026-10-30T00:03:32Z",
+          "message": "accelerated-domains: remove edu84.net"
+        },
+        {
+          "sha": "61aea4a503607befd66f3586457db9e379c7556a",
+          "date": "2026-10-30T00:03:23Z",
+          "message": "accelerated-domains: remove silukex.com"
+        }
+      ]
+    },
+    "domains_chinamax": {
+      "id": "domains_chinamax",
+      "repo": "blackmatrix7/ios_rule_script",
+      "branch": "master",
+      "file": "rule/Shadowrocket/ChinaMax/ChinaMax_Domain.list",
+      "revision": "0b6897dc17e0c513d25449c935a9694818e32f0c",
+      "sha256": "c0d54d3e4ee613e4b8cf92d81474ee94240c870864c633628104b5129b2bcc6e",
+      "bytes": 1509575,
+      "commits": [
+        {
+          "sha": "0b6897dc17e0c513d25449c935a9694818e32f0c",
+          "date": "2026-10-27T21:45:18Z",
+          "message": "2026-10-28 05:45:14"
+        },
+        {
+          "sha": "9b29c945b9164a02c7018ed333cb9b5bc1bcb417",
+          "date": "2026-10-25T20:20:30Z",
+          "message": "2026-10-26 04:20:25"
+        },
+        {
+          "sha": "00d82f6c6c374abb947fabc9c1b69f2a22e71dbc",
+          "date": "2026-10-23T21:02:32Z",
+          "message": "2026-10-24 05:02:26"
+        }
+      ]
+    },
+    "ip_metowolf_special": {
+      "id": "ip_metowolf_special",
+      "repo": "metowolf/iplist",
+      "branch": "master",
+      "file": "data/special/china.txt",
+      "revision": "b21a5335fa4ea66994b6e7746730cf4042a1d419",
+      "sha256": "0763e1bf94e4f6103462bffe1419e5f8473744cd1820c725a4afb26f57410147",
+      "bytes": 86036,
+      "commits": [
+        {
+          "sha": "b21a5335fa4ea66994b6e7746730cf4042a1d419",
+          "date": "2026-11-08T10:56:22Z",
+          "message": "[auto] 2026-11-08 18:56:22"
+        },
+        {
+          "sha": "eac23e373063985c29575baebf1af6d85b03376e",
+          "date": "2026-10-31T18:56:57Z",
+          "message": "[auto] 2026-11-01 02:56:57"
+        },
+        {
+          "sha": "0c0131352b9cad20529dde2a996cdeca596c87f4",
+          "date": "2026-10-22T21:01:14Z",
+          "message": "[auto] 2026-10-23 05:01:14"
+        }
+      ]
+    },
+    "ip_apnic": {
+      "id": "ip_apnic",
+      "url": "https://ftp.apnic.net/stats/apnic/delegated-apnic-latest",
+      "bytes": 4354156,
+      "sha256": "c8301098acb4b76ae1735b79ffb23c50b9e83f2087772d95316168620758792a",
+      "headers": {
+        "last_modified": "Sun, 08 Nov 2026 15:24:37 GMT",
+        "status": 200
+      },
+      "head": [
+        "######################################################################",
+        "#",
+        "# \tCONDITIONS OF USE",
+        "# ____________________________________________________________________",
+        "# ",
+        "# "
+      ]
+    }
+  },
+  "freshness_deltas": {
+    "domains_dnsmasq": {
+      "latest_commit": {
+        "sha": "a8942d3ac6ebd8dcfc582d4e97fbb443a2176cb2",
+        "date": "2026-10-30T00:08:26Z",
+        "message": "accelerated-domains: remove 0959930d71015.beer"
+      },
+      "previous_commit": {
+        "sha": "c89069dad26125e67d91a020f31b3a34f3a84c14",
+        "date": "2026-10-30T00:03:32Z",
+        "message": "accelerated-domains: remove edu84.net"
+      },
+      "raw_semantic_rows_added": 0,
+      "raw_semantic_rows_removed": 1
+    },
+    "domains_chinamax": {
+      "latest_commit": {
+        "sha": "0b6897dc17e0c513d25449c935a9694818e32f0c",
+        "date": "2026-10-27T21:45:18Z",
+        "message": "2026-10-28 05:45:14"
+      },
+      "previous_commit": {
+        "sha": "9b29c945b9164a02c7018ed333cb9b5bc1bcb417",
+        "date": "2026-10-25T20:20:30Z",
+        "message": "2026-10-26 04:20:25"
+      },
+      "raw_semantic_rows_added": 2,
+      "raw_semantic_rows_removed": 0
+    },
+    "ip_metowolf_special": {
+      "latest_commit": {
+        "sha": "b21a5335fa4ea66994b6e7746730cf4042a1d419",
+        "date": "2026-11-08T10:56:22Z",
+        "message": "[auto] 2026-11-08 18:56:22"
+      },
+      "previous_commit": {
+        "sha": "eac23e373063985c29575baebf1af6d85b03376e",
+        "date": "2026-10-31T18:56:57Z",
+        "message": "[auto] 2026-11-01 02:56:57"
+      },
+      "raw_semantic_rows_added": 3,
+      "raw_semantic_rows_removed": 3
+    }
+  },
+  "reviews": {
+    "domains_dnsmasq": {
+      "rows": 109455,
+      "unique_rules": 109455,
+      "exact_duplicates": 0,
+      "already_covered": 109395,
+      "proxy_overrides": 33,
+      "held_uncovered": 27,
+      "new_accepted": 0,
+      "reason": "Comparison source only: DNS acceleration/ChinaMax lineage is not mainland-service evidence; no blind union. Review changes and preserve owner proxy overrides.",
+      "samples": [
+        "DOMAIN-SUFFIX,123cha.com",
+        "DOMAIN-SUFFIX,95081.com",
+        "DOMAIN-SUFFIX,airasia.com",
+        "DOMAIN-SUFFIX,busytrade.com",
+        "DOMAIN-SUFFIX,cnbetacdn.com",
+        "DOMAIN-SUFFIX,duanzhihu.com",
+        "DOMAIN-SUFFIX,galaxymacau.com",
+        "DOMAIN-SUFFIX,galstars.net",
+        "DOMAIN-SUFFIX,itiger.com",
+        "DOMAIN-SUFFIX,longbridgeapp.com"
+      ],
+      "license": "WTFPL-2.0, inspected actual LICENSE"
+    },
+    "domains_chinamax": {
+      "rows": 110427,
+      "unique_rules": 110427,
+      "exact_duplicates": 0,
+      "already_covered": 107876,
+      "proxy_overrides": 23,
+      "held_uncovered": 2528,
+      "new_accepted": 0,
+      "reason": "Comparison source only: DNS acceleration/ChinaMax lineage is not mainland-service evidence; no blind union. Review changes and preserve owner proxy overrides.",
+      "samples": [
+        "DOMAIN,1-fss24-s0.streamhoster.com",
+        "DOMAIN,14033.live.streamtheworld.com",
+        "DOMAIN,156zy.suyunbo.tv",
+        "DOMAIN,19183.live.streamtheworld.com",
+        "DOMAIN,1hdru-hls-otcnet.cdnvideo.ru",
+        "DOMAIN,22283.live.streamtheworld.com",
+        "DOMAIN,22393.live.streamtheworld.com",
+        "DOMAIN,59ec5453559f0.streamlock.net",
+        "DOMAIN,5c3639aa99149.streamlock.net",
+        "DOMAIN,6.mms.vlog.xuite.net"
+      ],
+      "license": "GPL-2.0"
+    },
+    "ip_metowolf_special": {
+      "versions": {
+        "4": {
+          "input_networks": 5568,
+          "unique_networks": 5568,
+          "union_addresses": 348850796,
+          "overlap_addresses": 348324716,
+          "overlap_percent_of_candidate_addresses": 99.84919627358396,
+          "candidate_only_addresses_held": 526080,
+          "candidate_only_review_CIDRs": 7,
+          "geoip_only_addresses": 7240022,
+          "new_accepted": 0
+        },
+        "6": {
+          "input_networks": 0,
+          "unique_networks": 0,
+          "union_addresses": 0,
+          "overlap_addresses": 0,
+          "overlap_percent_of_candidate_addresses": null,
+          "candidate_only_addresses_held": 0,
+          "candidate_only_review_CIDRs": 0,
+          "geoip_only_addresses": 0,
+          "new_accepted": 0
+        }
+      },
+      "reason": "Comparison only; registration/CN country and set difference alone do not establish physical mainland servicing. Do not concatenate MMDB or enable IPv6.",
+      "license": "No root license declared/detected; comparison facts only."
+    },
+    "ip_apnic": {
+      "versions": {
+        "4": {
+          "input_networks": 8796,
+          "unique_networks": 8796,
+          "union_addresses": 342940416,
+          "overlap_addresses": 341558683,
+          "overlap_percent_of_candidate_addresses": 99.59709239986458,
+          "candidate_only_addresses_held": 1381733,
+          "candidate_only_review_CIDRs": 921,
+          "geoip_only_addresses": 14006055,
+          "new_accepted": 0
+        },
+        "6": {
+          "input_networks": 2046,
+          "unique_networks": 2046,
+          "union_addresses": 5430219118816748266191838565629952,
+          "overlap_addresses": 0,
+          "overlap_percent_of_candidate_addresses": 0.0,
+          "candidate_only_addresses_held": 5430219118816748266191838565629952,
+          "candidate_only_review_CIDRs": 2018,
+          "geoip_only_addresses": 0,
+          "new_accepted": 0
+        }
+      },
+      "reason": "Comparison only; registration/CN country and set difference alone do not establish physical mainland servicing. Do not concatenate MMDB or enable IPv6.",
+      "terms_header": [
+        "######################################################################",
+        "#",
+        "# \tCONDITIONS OF USE",
+        "# ____________________________________________________________________",
+        "# ",
+        "# ",
+        "# The files are freely available for download and use on the condition ",
+        "# that APNIC will not be held responsible for any loss or damage ",
+        "# arising from the use of the information contained in these reports.",
+        "# ",
+        "# APNIC endeavours to the best of its ability to ensure the accuracy ",
+        "# of these reports; however, APNIC makes no guarantee in this regard.",
+        "# ",
+        "# In particular, it should be noted that these reports seek to ",
+        "# indicate where resources were first allocated or assigned. It is not",
+        "# intended that these reports be considered as an authoritative ",
+        "# statement of the location in which any specific resource may ",
+        "# currently be in use.",
+        "# ",
+        "# For more information see: ",
+        "#",
+        "#       http://www.apnic.net/db/rir-stats-format.html",
+        "# or",
+        "#\tftp://ftp.apnic.net/pub/apnic/stats/apnic/README.TXT",
+        "#",
+        "######################################################################",
+        "#",
+        "2|apnic|20261109|89673|19830613|20261107|+1000",
+        "apnic|*|asn|*|13994|summary",
+        "apnic|*|ipv4|*|58367|summary",
+        "apnic|*|ipv6|*|17312|summary",
+        "apnic|JP|asn|173|1|20020801|allocated",
+        "apnic|NZ|asn|681|1|20020801|allocated",
+        "apnic|SG|asn|963|1|20220622|allocated",
+        "apnic|SG|asn|997|1|20220628|allocated",
+        "apnic|AU|asn|1221|1|20000131|allocated",
+        "apnic|JP|asn|1233|1|20020801|allocated",
+        "apnic|KR|asn|1237|1|20020801|allocated",
+        "apnic|SG|asn|1250|1|20020801|allocated",
+        "apnic|TW|asn|1659|1|20020801|allocated"
+      ]
+    }
+  },
+  "notes": [
+    "Comparison/source count is not independent evidence count.",
+    "No active profile, provider or MMDB content is changed in this onboarding commit.",
+    "Yfamily IPs-CN/ASN-CN remain deferred by msg2697; not added.",
+    "LAN artifacts retained without maintenance/source checks."
+  ]
+}
