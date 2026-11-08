@@ -12,6 +12,10 @@ CN update-url and its three RULE-SET download URLs now use https://sr-config.kt7
 
 The fifth Worker path /geoip/Country.mmdb serves this repository's existing GeoIP2-CN mirror byte-for-byte (mainland-only). It is an MMDB, not a rule set, and SR selects its URL in Settings -> GeoLite2 database -> Country. CN profile does not define that global client setting; the owner must manually set the new database URL. Do not invent a General key, claim client activation, or replace a global-country database without the owner's intended scope. Owner expressly requested this GitHub mirror in the msg2434 follow-up. Keep the existing daily reviewed mirror/data workflow; never restore old CN raw URLs, game routes, LAN subscriptions or extra native compatibility rows. No paid Cloudflare plan or new maintenance schedule was authorized.
 
+## CN IPv6 link-local exclusion — Ken Topic194 msg2641, 2026-11-08
+
+CN-only tun-excluded-routes now retains the exact14 owner-approved special-use entries and appends only fe80::/10 (15 total). Preserve this explicit IPv6 link-local exclusion during maintenance; it supersedes earlier14-only CN preservation wording. Keep ipv6=false, prefer-ipv6=false, Skip Proxy, DNS, Rule order, nodes, MITM and download URLs unchanged. Do not restore LAN subscriptions, add Apple-domain DIRECT rules or copy this SR-only input exception into CNR/OS/native Clash TUN/rules. The JP importer accepts the exact new15-set while retaining strict extra/subset/duplicate/broader-route rejection and prior approved rollback sets. Native Clash output does not change, so no apply/restart is required solely for this source-only exclusion. This is an owner-authorized compatibility experiment, not a proven AirDrop fix; client reload/reconnect and AirDrop testing remain necessary. No scheduler or client-global tunnel flags changed.
+
 ## Schedule and scope
 
 OpenClaw native automation: every day `0 3 * * *`, `Asia/Hong_Kong` (UTC+8, not the host's Tokyo timezone). Sources and review roles are in `MaintenanceSources.json`. Inspect actual data-file commits and content, not repository pushed_at. Clients always use Ken-hosted URLs and Ken refreshes them manually.
