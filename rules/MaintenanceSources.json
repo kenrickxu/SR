@@ -63,5 +63,34 @@
       "file": "lancidr.txt"
     }
   ],
-  "policy": "Review actual semantic benefit and coverage; no blind union. Preserve owner overrides; see MAINTENANCE.md."
+  "policy": "Review actual semantic benefit and coverage; no blind union. Preserve owner overrides; see MAINTENANCE.md.",
+  "proxy_services": [
+    {
+      "family": "proxy-services",
+      "service": "chatgpt",
+      "url": "https://yfamilys.com/rule/ChatGPT.list",
+      "target": "rules/USProxy.list",
+      "policy": "reviewed-supplement; semantic exact/suffix/keyword/CIDR dedup and cross-policy review; preserve existing owner rows; see ProxyServices.review.json"
+    },
+    {
+      "family": "proxy-services",
+      "service": "telegram",
+      "url": "https://yfamilys.com/rule/Telegram.list",
+      "target": "rules/JPProxy.list",
+      "policy": "reviewed-supplement; semantic exact/suffix/keyword/CIDR dedup and cross-policy review; preserve existing owner rows; see ProxyServices.review.json"
+    }
+  ],
+  "receipt_contract": {
+    "effective_business_date": "2026-11-09",
+    "checked_links": 10,
+    "families": [
+      "geoip",
+      "domains",
+      "lan"
+    ],
+    "proxy_sources": [
+      "chatgpt",
+      "telegram"
+    ]
+  }
 }

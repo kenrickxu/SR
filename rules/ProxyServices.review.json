@@ -1,0 +1,1213 @@
+{
+  "schema": "ken-sr-proxy-services-review/v1",
+  "reviewed_at": "2026-11-08",
+  "owner_instruction": "Topic194 msg2677",
+  "policy": "Reviewed supplemental sources; never blind overwrite/union. Preserve existing owner rows. ASN and CIDR overlap is not removed solely on current BGP because client ASN database freshness differs. IPv6 remains disabled.",
+  "references": [
+    "https://help.openai.com/en/articles/9247338-network-recommendations-for-chatgpt-errors-on-web-and-apps",
+    "https://core.telegram.org/resources/cidr.txt",
+    "https://github.com/v2fly/domain-list-community/blob/master/data/openai",
+    "https://github.com/v2fly/domain-list-community/blob/master/data/telegram",
+    "https://stat.ripe.net/"
+  ],
+  "licensing": "Yfamily pages do not expose an explicit redistribution license. Treat as candidate facts, not an unrestricted bulk mirror; corroborate accepted service endpoints with primary service docs, maintainer service lists and RIPE routing records. Do not copy site content or assume a changed license permits publication.",
+  "conflict_resolution": {
+    "sentry.io": "Keep existing broad JP suffix. Only corroborated OpenAI telemetry exact hosts precede it in USProxy."
+  },
+  "services": {
+    "ChatGPT": {
+      "url": "https://yfamilys.com/rule/ChatGPT.list",
+      "sha256": "639bc46d45ec1b4cf109a32d00eeffd9243ea48eb544d33ee0836e649c51c1c0",
+      "source_count": 46,
+      "target": "rules/USProxy.list",
+      "before_count": 28,
+      "after_count": 54,
+      "added_count": 26,
+      "source_status_counts": {
+        "held": 18,
+        "added": 24,
+        "covered": 4
+      },
+      "added_rules": [
+        "DOMAIN-SUFFIX,chat.com",
+        "DOMAIN-SUFFIX,chatgpt.livekit.cloud",
+        "DOMAIN-SUFFIX,crixet.com",
+        "DOMAIN,openaiapi-site.azureedge.net",
+        "DOMAIN,openaicom.imgix.net",
+        "DOMAIN-SUFFIX,sora.com",
+        "DOMAIN-KEYWORD,chatgpt-async-webps-prod",
+        "IP-ASN,401518,no-resolve",
+        "DOMAIN,rum.browser-intake-datadoghq.com",
+        "DOMAIN,openai-api.arkoselabs.com",
+        "DOMAIN,openaiassets.blob.core.windows.net",
+        "DOMAIN,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net",
+        "DOMAIN,openaicomproductionae4b.blob.core.windows.net",
+        "DOMAIN,production-openaicom-storage.azureedge.net",
+        "DOMAIN-SUFFIX,chatgpt.site",
+        "DOMAIN-SUFFIX,host.livekit.cloud",
+        "DOMAIN-SUFFIX,intercom.io",
+        "DOMAIN-SUFFIX,intercomcdn.com",
+        "DOMAIN-SUFFIX,oaistatsig.com",
+        "DOMAIN-SUFFIX,openai.com.cdn.cloudflare.net",
+        "DOMAIN-SUFFIX,openai.org",
+        "DOMAIN,o207216.ingest.sentry.io",
+        "DOMAIN,o33249.ingest.sentry.io",
+        "DOMAIN,o33249.ingest.us.sentry.io",
+        "DOMAIN-SUFFIX,turn.livekit.cloud",
+        "IP-CIDR,199.47.142.0/23,no-resolve"
+      ],
+      "decisions": [
+        {
+          "source_rule": "DOMAIN-SUFFIX,ai.com",
+          "status": "held",
+          "reason": "Historical redirect is not evidence of current OpenAI service use."
+        },
+        {
+          "source_rule": "DOMAIN-SUFFIX,chat.com",
+          "reviewed_rules": [
+            "DOMAIN-SUFFIX,chat.com"
+          ],
+          "status": "added",
+          "added_rules": [
+            "DOMAIN-SUFFIX,chat.com"
+          ]
+        },
+        {
+          "source_rule": "DOMAIN-SUFFIX,chatgpt.com",
+          "reviewed_rules": [
+            "DOMAIN-SUFFIX,chatgpt.com"
+          ],
+          "status": "covered",
+          "covered": [
+            {
+              "rule": "DOMAIN-SUFFIX,chatgpt.com",
+              "by": "DOMAIN-SUFFIX,chatgpt.com"
+            }
+          ],
+          "added_rules": []
+        },
+        {
+          "source_rule": "DOMAIN-SUFFIX,chatgpt.livekit.cloud",
+          "reviewed_rules": [
+            "DOMAIN-SUFFIX,chatgpt.livekit.cloud"
+          ],
+          "status": "added",
+          "added_rules": [
+            "DOMAIN-SUFFIX,chatgpt.livekit.cloud"
+          ]
+        },
+        {
+          "source_rule": "DOMAIN-SUFFIX,crixet.com",
+          "reviewed_rules": [
+            "DOMAIN-SUFFIX,crixet.com"
+          ],
+          "status": "added",
+          "added_rules": [
+            "DOMAIN-SUFFIX,crixet.com"
+          ]
+        },
+        {
+          "source_rule": "DOMAIN-SUFFIX,oaistatic.com",
+          "reviewed_rules": [
+            "DOMAIN-SUFFIX,oaistatic.com"
+          ],
+          "status": "covered",
+          "covered": [
+            {
+              "rule": "DOMAIN-SUFFIX,oaistatic.com",
+              "by": "DOMAIN-SUFFIX,oaistatic.com"
+            }
+          ],
+          "added_rules": []
+        },
+        {
+          "source_rule": "DOMAIN-SUFFIX,oaiusercontent.com",
+          "reviewed_rules": [
+            "DOMAIN-SUFFIX,oaiusercontent.com"
+          ],
+          "status": "covered",
+          "covered": [
+            {
+              "rule": "DOMAIN-SUFFIX,oaiusercontent.com",
+              "by": "DOMAIN-SUFFIX,oaiusercontent.com"
+            }
+          ],
+          "added_rules": []
+        },
+        {
+          "source_rule": "DOMAIN-SUFFIX,openai.com",
+          "reviewed_rules": [
+            "DOMAIN-SUFFIX,openai.com"
+          ],
+          "status": "covered",
+          "covered": [
+            {
+              "rule": "DOMAIN-SUFFIX,openai.com",
+              "by": "DOMAIN-SUFFIX,openai.com"
+            }
+          ],
+          "added_rules": []
+        },
+        {
+          "source_rule": "DOMAIN-SUFFIX,openaiapi-site.azureedge.net",
+          "reviewed_rules": [
+            "DOMAIN,openaiapi-site.azureedge.net"
+          ],
+          "status": "added",
+          "added_rules": [
+            "DOMAIN,openaiapi-site.azureedge.net"
+          ]
+        },
+        {
+          "source_rule": "DOMAIN-SUFFIX,openaicom.imgix.net",
+          "reviewed_rules": [
+            "DOMAIN,openaicom.imgix.net"
+          ],
+          "status": "added",
+          "added_rules": [
+            "DOMAIN,openaicom.imgix.net"
+          ]
+        },
+        {
+          "source_rule": "DOMAIN-SUFFIX,sora.com",
+          "reviewed_rules": [
+            "DOMAIN-SUFFIX,sora.com"
+          ],
+          "status": "added",
+          "added_rules": [
+            "DOMAIN-SUFFIX,sora.com"
+          ]
+        },
+        {
+          "source_rule": "DOMAIN-KEYWORD,chatgpt-async-webps-prod",
+          "reviewed_rules": [
+            "DOMAIN-KEYWORD,chatgpt-async-webps-prod"
+          ],
+          "status": "added",
+          "added_rules": [
+            "DOMAIN-KEYWORD,chatgpt-async-webps-prod"
+          ]
+        },
+        {
+          "source_rule": "DOMAIN-KEYWORD,openai",
+          "status": "held",
+          "reason": "Broad keyword matches unrelated arbitrary domains; retain scoped service suffixes/hosts."
+        },
+        {
+          "source_rule": "IP-CIDR,199.47.142.0/23,no-resolve",
+          "reviewed_rules": [
+            "IP-CIDR,199.47.142.0/23,no-resolve"
+          ],
+          "status": "added",
+          "added_rules": [
+            "IP-CIDR,199.47.142.0/23,no-resolve"
+          ]
+        },
+        {
+          "source_rule": "IP-CIDR,24.199.123.28/32,no-resolve",
+          "status": "held",
+          "reason": "Uncorroborated cloud-host/legacy or unannounced IP; not established service destination."
+        },
+        {
+          "source_rule": "IP-CIDR,64.23.132.171/32,no-resolve",
+          "status": "held",
+          "reason": "Uncorroborated cloud-host/legacy or unannounced IP; not established service destination."
+        },
+        {
+          "source_rule": "IP-CIDR6,2604:f20::/32,no-resolve",
+          "status": "held",
+          "reason": "Uncorroborated cloud-host/legacy or unannounced IP; not established service destination."
+        },
+        {
+          "source_rule": "IP-ASN,401518,no-resolve",
+          "reviewed_rules": [
+            "IP-ASN,401518,no-resolve"
+          ],
+          "status": "added",
+          "added_rules": [
+            "IP-ASN,401518,no-resolve"
+          ]
+        },
+        {
+          "source_rule": "DOMAIN,browser-intake-datadoghq.com",
+          "reviewed_rules": [
+            "DOMAIN,rum.browser-intake-datadoghq.com"
+          ],
+          "status": "added",
+          "added_rules": [
+            "DOMAIN,rum.browser-intake-datadoghq.com"
+          ]
+        },
+        {
+          "source_rule": "DOMAIN,openai-api.arkoselabs.com",
+          "reviewed_rules": [
+            "DOMAIN,openai-api.arkoselabs.com"
+          ],
+          "status": "added",
+          "added_rules": [
+            "DOMAIN,openai-api.arkoselabs.com"
+          ]
+        },
+        {
+          "source_rule": "DOMAIN,openaiassets.blob.core.windows.net",
+          "reviewed_rules": [
+            "DOMAIN,openaiassets.blob.core.windows.net"
+          ],
+          "status": "added",
+          "added_rules": [
+            "DOMAIN,openaiassets.blob.core.windows.net"
+          ]
+        },
+        {
+          "source_rule": "DOMAIN,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net",
+          "reviewed_rules": [
+            "DOMAIN,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net"
+          ],
+          "status": "added",
+          "added_rules": [
+            "DOMAIN,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net"
+          ]
+        },
+        {
+          "source_rule": "DOMAIN,openaicomproductionae4b.blob.core.windows.net",
+          "reviewed_rules": [
+            "DOMAIN,openaicomproductionae4b.blob.core.windows.net"
+          ],
+          "status": "added",
+          "added_rules": [
+            "DOMAIN,openaicomproductionae4b.blob.core.windows.net"
+          ]
+        },
+        {
+          "source_rule": "DOMAIN,production-openaicom-storage.azureedge.net",
+          "reviewed_rules": [
+            "DOMAIN,production-openaicom-storage.azureedge.net"
+          ],
+          "status": "added",
+          "added_rules": [
+            "DOMAIN,production-openaicom-storage.azureedge.net"
+          ]
+        },
+        {
+          "source_rule": "DOMAIN,static.cloudflareinsights.com",
+          "status": "held",
+          "reason": "Shared vendor root/endpoint: no current service-specific corroboration; do not redirect unrelated customers."
+        },
+        {
+          "source_rule": "DOMAIN-SUFFIX,algolia.net",
+          "status": "held",
+          "reason": "Shared vendor root/endpoint: no current service-specific corroboration; do not redirect unrelated customers."
+        },
+        {
+          "source_rule": "DOMAIN-SUFFIX,api.statsig.com",
+          "status": "held",
+          "reason": "Shared vendor root/endpoint: no current service-specific corroboration; do not redirect unrelated customers."
+        },
+        {
+          "source_rule": "DOMAIN-SUFFIX,auth0.com",
+          "status": "held",
+          "reason": "Shared vendor root/endpoint: no current service-specific corroboration; do not redirect unrelated customers."
+        },
+        {
+          "source_rule": "DOMAIN-SUFFIX,chatgpt.site",
+          "reviewed_rules": [
+            "DOMAIN-SUFFIX,chatgpt.site"
+          ],
+          "status": "added",
+          "added_rules": [
+            "DOMAIN-SUFFIX,chatgpt.site"
+          ]
+        },
+        {
+          "source_rule": "DOMAIN-SUFFIX,client-api.arkoselabs.com",
+          "status": "held",
+          "reason": "Shared vendor root/endpoint: no current service-specific corroboration; do not redirect unrelated customers."
+        },
+        {
+          "source_rule": "DOMAIN-SUFFIX,events.statsigapi.net",
+          "status": "held",
+          "reason": "Shared vendor root/endpoint: no current service-specific corroboration; do not redirect unrelated customers."
+        },
+        {
+          "source_rule": "DOMAIN-SUFFIX,featuregates.org",
+          "status": "held",
+          "reason": "Shared vendor root/endpoint: no current service-specific corroboration; do not redirect unrelated customers."
+        },
+        {
+          "source_rule": "DOMAIN-SUFFIX,host.livekit.cloud",
+          "reviewed_rules": [
+            "DOMAIN-SUFFIX,host.livekit.cloud"
+          ],
+          "status": "added",
+          "added_rules": [
+            "DOMAIN-SUFFIX,host.livekit.cloud"
+          ]
+        },
+        {
+          "source_rule": "DOMAIN-SUFFIX,identrust.com",
+          "status": "held",
+          "reason": "Shared vendor root/endpoint: no current service-specific corroboration; do not redirect unrelated customers."
+        },
+        {
+          "source_rule": "DOMAIN-SUFFIX,intercom.io",
+          "reviewed_rules": [
+            "DOMAIN-SUFFIX,intercom.io"
+          ],
+          "status": "added",
+          "added_rules": [
+            "DOMAIN-SUFFIX,intercom.io"
+          ]
+        },
+        {
+          "source_rule": "DOMAIN-SUFFIX,intercomcdn.com",
+          "reviewed_rules": [
+            "DOMAIN-SUFFIX,intercomcdn.com"
+          ],
+          "status": "added",
+          "added_rules": [
+            "DOMAIN-SUFFIX,intercomcdn.com"
+          ]
+        },
+        {
+          "source_rule": "DOMAIN-SUFFIX,launchdarkly.com",
+          "status": "held",
+          "reason": "Shared vendor root/endpoint: no current service-specific corroboration; do not redirect unrelated customers."
+        },
+        {
+          "source_rule": "DOMAIN-SUFFIX,oaistatsig.com",
+          "reviewed_rules": [
+            "DOMAIN-SUFFIX,oaistatsig.com"
+          ],
+          "status": "added",
+          "added_rules": [
+            "DOMAIN-SUFFIX,oaistatsig.com"
+          ]
+        },
+        {
+          "source_rule": "DOMAIN-SUFFIX,observeit.net",
+          "status": "held",
+          "reason": "Shared vendor root/endpoint: no current service-specific corroboration; do not redirect unrelated customers."
+        },
+        {
+          "source_rule": "DOMAIN-SUFFIX,openai.com.cdn.cloudflare.net",
+          "reviewed_rules": [
+            "DOMAIN-SUFFIX,openai.com.cdn.cloudflare.net"
+          ],
+          "status": "added",
+          "added_rules": [
+            "DOMAIN-SUFFIX,openai.com.cdn.cloudflare.net"
+          ]
+        },
+        {
+          "source_rule": "DOMAIN-SUFFIX,openai.org",
+          "reviewed_rules": [
+            "DOMAIN-SUFFIX,openai.org"
+          ],
+          "status": "added",
+          "added_rules": [
+            "DOMAIN-SUFFIX,openai.org"
+          ]
+        },
+        {
+          "source_rule": "DOMAIN-SUFFIX,segment.io",
+          "status": "held",
+          "reason": "Shared vendor root/endpoint: no current service-specific corroboration; do not redirect unrelated customers."
+        },
+        {
+          "source_rule": "DOMAIN-SUFFIX,sentry.io",
+          "reviewed_rules": [
+            "DOMAIN,o207216.ingest.sentry.io",
+            "DOMAIN,o33249.ingest.sentry.io",
+            "DOMAIN,o33249.ingest.us.sentry.io"
+          ],
+          "status": "added",
+          "added_rules": [
+            "DOMAIN,o207216.ingest.sentry.io",
+            "DOMAIN,o33249.ingest.sentry.io",
+            "DOMAIN,o33249.ingest.us.sentry.io"
+          ]
+        },
+        {
+          "source_rule": "DOMAIN-SUFFIX,statsigapi.net",
+          "status": "held",
+          "reason": "Shared vendor root/endpoint: no current service-specific corroboration; do not redirect unrelated customers."
+        },
+        {
+          "source_rule": "DOMAIN-SUFFIX,stripe.com",
+          "status": "held",
+          "reason": "Shared vendor root/endpoint: no current service-specific corroboration; do not redirect unrelated customers."
+        },
+        {
+          "source_rule": "DOMAIN-SUFFIX,turn.livekit.cloud",
+          "reviewed_rules": [
+            "DOMAIN-SUFFIX,turn.livekit.cloud"
+          ],
+          "status": "added",
+          "added_rules": [
+            "DOMAIN-SUFFIX,turn.livekit.cloud"
+          ]
+        }
+      ]
+    },
+    "Telegram": {
+      "url": "https://yfamilys.com/rule/Telegram.list",
+      "sha256": "c0b19300ed67628d6228ab0c9f9b9316caad0ef3650b3e0cbd9bcd7e8e31ad2b",
+      "source_count": 62,
+      "target": "rules/JPProxy.list",
+      "before_count": 253,
+      "after_count": 277,
+      "added_count": 24,
+      "source_status_counts": {
+        "covered": 32,
+        "added": 24,
+        "held": 6
+      },
+      "added_rules": [
+        "DOMAIN-SUFFIX,comments.app",
+        "DOMAIN-SUFFIX,contest.com",
+        "DOMAIN-SUFFIX,fragment.com",
+        "DOMAIN-SUFFIX,graph.org",
+        "DOMAIN-SUFFIX,quiz.directory",
+        "DOMAIN-SUFFIX,stel.com",
+        "DOMAIN-SUFFIX,tdesktop.com",
+        "DOMAIN-SUFFIX,telega.one",
+        "DOMAIN-SUFFIX,telesco.pe",
+        "DOMAIN-SUFFIX,tg.dev",
+        "DOMAIN-SUFFIX,ton.org",
+        "DOMAIN-SUFFIX,toncenter.com",
+        "DOMAIN-SUFFIX,tx.me",
+        "DOMAIN-SUFFIX,usercontent.dev",
+        "IP-ASN,211157,no-resolve",
+        "IP-ASN,44907,no-resolve",
+        "IP-ASN,59930,no-resolve",
+        "IP-ASN,62014,no-resolve",
+        "IP-ASN,62041,no-resolve",
+        "IP-CIDR,95.161.64.0/20,no-resolve",
+        "IP-CIDR6,2a0a:f280::/32,no-resolve",
+        "IP-CIDR6,2001:b28:f23c::/47,no-resolve",
+        "IP-CIDR6,2001:67c:4e8::/48,no-resolve",
+        "IP-CIDR6,2001:b28:f23f::/48,no-resolve"
+      ],
+      "decisions": [
+        {
+          "source_rule": "DOMAIN-SUFFIX,cdn-telegram.org",
+          "reviewed_rules": [
+            "DOMAIN-SUFFIX,cdn-telegram.org"
+          ],
+          "status": "covered",
+          "covered": [
+            {
+              "rule": "DOMAIN-SUFFIX,cdn-telegram.org",
+              "by": "DOMAIN-KEYWORD,telegram"
+            }
+          ],
+          "added_rules": []
+        },
+        {
+          "source_rule": "DOMAIN-SUFFIX,comments.app",
+          "reviewed_rules": [
+            "DOMAIN-SUFFIX,comments.app"
+          ],
+          "status": "added",
+          "added_rules": [
+            "DOMAIN-SUFFIX,comments.app"
+          ]
+        },
+        {
+          "source_rule": "DOMAIN-SUFFIX,contest.com",
+          "reviewed_rules": [
+            "DOMAIN-SUFFIX,contest.com"
+          ],
+          "status": "added",
+          "added_rules": [
+            "DOMAIN-SUFFIX,contest.com"
+          ]
+        },
+        {
+          "source_rule": "DOMAIN-SUFFIX,fragment.com",
+          "reviewed_rules": [
+            "DOMAIN-SUFFIX,fragment.com"
+          ],
+          "status": "added",
+          "added_rules": [
+            "DOMAIN-SUFFIX,fragment.com"
+          ]
+        },
+        {
+          "source_rule": "DOMAIN-SUFFIX,graph.org",
+          "reviewed_rules": [
+            "DOMAIN-SUFFIX,graph.org"
+          ],
+          "status": "added",
+          "added_rules": [
+            "DOMAIN-SUFFIX,graph.org"
+          ]
+        },
+        {
+          "source_rule": "DOMAIN-SUFFIX,legra.ph",
+          "status": "held",
+          "reason": "Source marker / service attribution not corroborated; not a Telegram delivery endpoint."
+        },
+        {
+          "source_rule": "DOMAIN-SUFFIX,quiz.directory",
+          "reviewed_rules": [
+            "DOMAIN-SUFFIX,quiz.directory"
+          ],
+          "status": "added",
+          "added_rules": [
+            "DOMAIN-SUFFIX,quiz.directory"
+          ]
+        },
+        {
+          "source_rule": "DOMAIN-SUFFIX,stel.com",
+          "reviewed_rules": [
+            "DOMAIN-SUFFIX,stel.com"
+          ],
+          "status": "added",
+          "added_rules": [
+            "DOMAIN-SUFFIX,stel.com"
+          ]
+        },
+        {
+          "source_rule": "DOMAIN-SUFFIX,t.me",
+          "reviewed_rules": [
+            "DOMAIN-SUFFIX,t.me"
+          ],
+          "status": "covered",
+          "covered": [
+            {
+              "rule": "DOMAIN-SUFFIX,t.me",
+              "by": "DOMAIN-SUFFIX,t.me"
+            }
+          ],
+          "added_rules": []
+        },
+        {
+          "source_rule": "DOMAIN-SUFFIX,tdesktop.com",
+          "reviewed_rules": [
+            "DOMAIN-SUFFIX,tdesktop.com"
+          ],
+          "status": "added",
+          "added_rules": [
+            "DOMAIN-SUFFIX,tdesktop.com"
+          ]
+        },
+        {
+          "source_rule": "DOMAIN-SUFFIX,telega.one",
+          "reviewed_rules": [
+            "DOMAIN-SUFFIX,telega.one"
+          ],
+          "status": "added",
+          "added_rules": [
+            "DOMAIN-SUFFIX,telega.one"
+          ]
+        },
+        {
+          "source_rule": "DOMAIN-SUFFIX,telegra.ph",
+          "reviewed_rules": [
+            "DOMAIN-SUFFIX,telegra.ph"
+          ],
+          "status": "covered",
+          "covered": [
+            {
+              "rule": "DOMAIN-SUFFIX,telegra.ph",
+              "by": "DOMAIN-SUFFIX,telegra.ph"
+            }
+          ],
+          "added_rules": []
+        },
+        {
+          "source_rule": "DOMAIN-SUFFIX,telegram-cdn.org",
+          "reviewed_rules": [
+            "DOMAIN-SUFFIX,telegram-cdn.org"
+          ],
+          "status": "covered",
+          "covered": [
+            {
+              "rule": "DOMAIN-SUFFIX,telegram-cdn.org",
+              "by": "DOMAIN-SUFFIX,telegram-cdn.org"
+            }
+          ],
+          "added_rules": []
+        },
+        {
+          "source_rule": "DOMAIN-SUFFIX,telegram.dog",
+          "reviewed_rules": [
+            "DOMAIN-SUFFIX,telegram.dog"
+          ],
+          "status": "covered",
+          "covered": [
+            {
+              "rule": "DOMAIN-SUFFIX,telegram.dog",
+              "by": "DOMAIN-KEYWORD,telegram"
+            }
+          ],
+          "added_rules": []
+        },
+        {
+          "source_rule": "DOMAIN-SUFFIX,telegram.me",
+          "reviewed_rules": [
+            "DOMAIN-SUFFIX,telegram.me"
+          ],
+          "status": "covered",
+          "covered": [
+            {
+              "rule": "DOMAIN-SUFFIX,telegram.me",
+              "by": "DOMAIN-SUFFIX,telegram.me"
+            }
+          ],
+          "added_rules": []
+        },
+        {
+          "source_rule": "DOMAIN-SUFFIX,telegram.org",
+          "reviewed_rules": [
+            "DOMAIN-SUFFIX,telegram.org"
+          ],
+          "status": "covered",
+          "covered": [
+            {
+              "rule": "DOMAIN-SUFFIX,telegram.org",
+              "by": "DOMAIN-SUFFIX,telegram.org"
+            }
+          ],
+          "added_rules": []
+        },
+        {
+          "source_rule": "DOMAIN-SUFFIX,telegram.space",
+          "reviewed_rules": [
+            "DOMAIN-SUFFIX,telegram.space"
+          ],
+          "status": "covered",
+          "covered": [
+            {
+              "rule": "DOMAIN-SUFFIX,telegram.space",
+              "by": "DOMAIN-KEYWORD,telegram"
+            }
+          ],
+          "added_rules": []
+        },
+        {
+          "source_rule": "DOMAIN-SUFFIX,telegramdownload.com",
+          "reviewed_rules": [
+            "DOMAIN-SUFFIX,telegramdownload.com"
+          ],
+          "status": "covered",
+          "covered": [
+            {
+              "rule": "DOMAIN-SUFFIX,telegramdownload.com",
+              "by": "DOMAIN-KEYWORD,telegram"
+            }
+          ],
+          "added_rules": []
+        },
+        {
+          "source_rule": "DOMAIN-SUFFIX,telesco.pe",
+          "reviewed_rules": [
+            "DOMAIN-SUFFIX,telesco.pe"
+          ],
+          "status": "added",
+          "added_rules": [
+            "DOMAIN-SUFFIX,telesco.pe"
+          ]
+        },
+        {
+          "source_rule": "DOMAIN-SUFFIX,tg.dev",
+          "reviewed_rules": [
+            "DOMAIN-SUFFIX,tg.dev"
+          ],
+          "status": "added",
+          "added_rules": [
+            "DOMAIN-SUFFIX,tg.dev"
+          ]
+        },
+        {
+          "source_rule": "DOMAIN-SUFFIX,ton.org",
+          "reviewed_rules": [
+            "DOMAIN-SUFFIX,ton.org"
+          ],
+          "status": "added",
+          "added_rules": [
+            "DOMAIN-SUFFIX,ton.org"
+          ]
+        },
+        {
+          "source_rule": "DOMAIN-SUFFIX,toncenter.com",
+          "reviewed_rules": [
+            "DOMAIN-SUFFIX,toncenter.com"
+          ],
+          "status": "added",
+          "added_rules": [
+            "DOMAIN-SUFFIX,toncenter.com"
+          ]
+        },
+        {
+          "source_rule": "DOMAIN-SUFFIX,tx.me",
+          "reviewed_rules": [
+            "DOMAIN-SUFFIX,tx.me"
+          ],
+          "status": "added",
+          "added_rules": [
+            "DOMAIN-SUFFIX,tx.me"
+          ]
+        },
+        {
+          "source_rule": "DOMAIN-SUFFIX,usercontent.dev",
+          "reviewed_rules": [
+            "DOMAIN-SUFFIX,usercontent.dev"
+          ],
+          "status": "added",
+          "added_rules": [
+            "DOMAIN-SUFFIX,usercontent.dev"
+          ]
+        },
+        {
+          "source_rule": "DOMAIN-KEYWORD,telegram",
+          "reviewed_rules": [
+            "DOMAIN-KEYWORD,telegram"
+          ],
+          "status": "covered",
+          "covered": [
+            {
+              "rule": "DOMAIN-KEYWORD,telegram",
+              "by": "DOMAIN-KEYWORD,telegram"
+            }
+          ],
+          "added_rules": []
+        },
+        {
+          "source_rule": "IP-CIDR,109.239.140.0/24,no-resolve",
+          "reviewed_rules": [
+            "IP-CIDR,109.239.140.0/24,no-resolve"
+          ],
+          "status": "covered",
+          "covered": [
+            {
+              "rule": "IP-CIDR,109.239.140.0/24,no-resolve",
+              "by": "IP-CIDR,109.239.140.0/24,no-resolve"
+            }
+          ],
+          "added_rules": []
+        },
+        {
+          "source_rule": "IP-CIDR,139.59.210.98/32,no-resolve",
+          "status": "held",
+          "reason": "Uncorroborated cloud-host/legacy or unannounced IP; not established service destination."
+        },
+        {
+          "source_rule": "IP-CIDR,149.154.160.0/20,no-resolve",
+          "reviewed_rules": [
+            "IP-CIDR,149.154.160.0/20,no-resolve"
+          ],
+          "status": "covered",
+          "covered": [
+            {
+              "rule": "IP-CIDR,149.154.160.0/20,no-resolve",
+              "by": "IP-CIDR,149.154.160.0/20,no-resolve"
+            }
+          ],
+          "added_rules": []
+        },
+        {
+          "source_rule": "IP-CIDR,149.154.160.0/22,no-resolve",
+          "reviewed_rules": [
+            "IP-CIDR,149.154.160.0/22,no-resolve"
+          ],
+          "status": "covered",
+          "covered": [
+            {
+              "rule": "IP-CIDR,149.154.160.0/22,no-resolve",
+              "by": "IP-CIDR,149.154.160.0/20,no-resolve"
+            }
+          ],
+          "added_rules": []
+        },
+        {
+          "source_rule": "IP-CIDR,149.154.164.0/22,no-resolve",
+          "reviewed_rules": [
+            "IP-CIDR,149.154.164.0/22,no-resolve"
+          ],
+          "status": "covered",
+          "covered": [
+            {
+              "rule": "IP-CIDR,149.154.164.0/22,no-resolve",
+              "by": "IP-CIDR,149.154.160.0/20,no-resolve"
+            }
+          ],
+          "added_rules": []
+        },
+        {
+          "source_rule": "IP-CIDR,149.154.168.0/22,no-resolve",
+          "reviewed_rules": [
+            "IP-CIDR,149.154.168.0/22,no-resolve"
+          ],
+          "status": "covered",
+          "covered": [
+            {
+              "rule": "IP-CIDR,149.154.168.0/22,no-resolve",
+              "by": "IP-CIDR,149.154.160.0/20,no-resolve"
+            }
+          ],
+          "added_rules": []
+        },
+        {
+          "source_rule": "IP-CIDR,149.154.172.0/22,no-resolve",
+          "reviewed_rules": [
+            "IP-CIDR,149.154.172.0/22,no-resolve"
+          ],
+          "status": "covered",
+          "covered": [
+            {
+              "rule": "IP-CIDR,149.154.172.0/22,no-resolve",
+              "by": "IP-CIDR,149.154.160.0/20,no-resolve"
+            }
+          ],
+          "added_rules": []
+        },
+        {
+          "source_rule": "IP-CIDR,185.76.151.0/24,no-resolve",
+          "reviewed_rules": [
+            "IP-CIDR,185.76.151.0/24,no-resolve"
+          ],
+          "status": "covered",
+          "covered": [
+            {
+              "rule": "IP-CIDR,185.76.151.0/24,no-resolve",
+              "by": "IP-CIDR,185.76.151.0/24,no-resolve"
+            }
+          ],
+          "added_rules": []
+        },
+        {
+          "source_rule": "IP-CIDR,194.221.250.50/32,no-resolve",
+          "status": "held",
+          "reason": "Uncorroborated cloud-host/legacy or unannounced IP; not established service destination."
+        },
+        {
+          "source_rule": "IP-CIDR,196.55.216.167/32,no-resolve",
+          "status": "held",
+          "reason": "Uncorroborated cloud-host/legacy or unannounced IP; not established service destination."
+        },
+        {
+          "source_rule": "IP-CIDR,5.28.195.1/32,no-resolve",
+          "status": "held",
+          "reason": "Uncorroborated cloud-host/legacy or unannounced IP; not established service destination."
+        },
+        {
+          "source_rule": "IP-CIDR,5.28.195.2/32,no-resolve",
+          "status": "held",
+          "reason": "Uncorroborated cloud-host/legacy or unannounced IP; not established service destination."
+        },
+        {
+          "source_rule": "IP-CIDR,91.105.192.0/23,no-resolve",
+          "reviewed_rules": [
+            "IP-CIDR,91.105.192.0/23,no-resolve"
+          ],
+          "status": "covered",
+          "covered": [
+            {
+              "rule": "IP-CIDR,91.105.192.0/23,no-resolve",
+              "by": "IP-CIDR,91.105.192.0/23,no-resolve"
+            }
+          ],
+          "added_rules": []
+        },
+        {
+          "source_rule": "IP-CIDR,91.108.0.0/16,no-resolve",
+          "reviewed_rules": [
+            "IP-CIDR,91.108.0.0/16,no-resolve"
+          ],
+          "status": "covered",
+          "covered": [
+            {
+              "rule": "IP-CIDR,91.108.0.0/16,no-resolve",
+              "by": "IP-CIDR,91.108.0.0/16,no-resolve"
+            }
+          ],
+          "added_rules": []
+        },
+        {
+          "source_rule": "IP-CIDR,91.108.12.0/22,no-resolve",
+          "reviewed_rules": [
+            "IP-CIDR,91.108.12.0/22,no-resolve"
+          ],
+          "status": "covered",
+          "covered": [
+            {
+              "rule": "IP-CIDR,91.108.12.0/22,no-resolve",
+              "by": "IP-CIDR,91.108.8.0/21,no-resolve"
+            }
+          ],
+          "added_rules": []
+        },
+        {
+          "source_rule": "IP-CIDR,91.108.16.0/21,no-resolve",
+          "reviewed_rules": [
+            "IP-CIDR,91.108.16.0/21,no-resolve"
+          ],
+          "status": "covered",
+          "covered": [
+            {
+              "rule": "IP-CIDR,91.108.16.0/21,no-resolve",
+              "by": "IP-CIDR,91.108.16.0/21,no-resolve"
+            }
+          ],
+          "added_rules": []
+        },
+        {
+          "source_rule": "IP-CIDR,91.108.16.0/22,no-resolve",
+          "reviewed_rules": [
+            "IP-CIDR,91.108.16.0/22,no-resolve"
+          ],
+          "status": "covered",
+          "covered": [
+            {
+              "rule": "IP-CIDR,91.108.16.0/22,no-resolve",
+              "by": "IP-CIDR,91.108.16.0/21,no-resolve"
+            }
+          ],
+          "added_rules": []
+        },
+        {
+          "source_rule": "IP-CIDR,91.108.20.0/22,no-resolve",
+          "reviewed_rules": [
+            "IP-CIDR,91.108.20.0/22,no-resolve"
+          ],
+          "status": "covered",
+          "covered": [
+            {
+              "rule": "IP-CIDR,91.108.20.0/22,no-resolve",
+              "by": "IP-CIDR,91.108.16.0/21,no-resolve"
+            }
+          ],
+          "added_rules": []
+        },
+        {
+          "source_rule": "IP-CIDR,91.108.20.0/23,no-resolve",
+          "reviewed_rules": [
+            "IP-CIDR,91.108.20.0/23,no-resolve"
+          ],
+          "status": "covered",
+          "covered": [
+            {
+              "rule": "IP-CIDR,91.108.20.0/23,no-resolve",
+              "by": "IP-CIDR,91.108.16.0/21,no-resolve"
+            }
+          ],
+          "added_rules": []
+        },
+        {
+          "source_rule": "IP-CIDR,91.108.4.0/22,no-resolve",
+          "reviewed_rules": [
+            "IP-CIDR,91.108.4.0/22,no-resolve"
+          ],
+          "status": "covered",
+          "covered": [
+            {
+              "rule": "IP-CIDR,91.108.4.0/22,no-resolve",
+              "by": "IP-CIDR,91.108.4.0/22,no-resolve"
+            }
+          ],
+          "added_rules": []
+        },
+        {
+          "source_rule": "IP-CIDR,91.108.56.0/22,no-resolve",
+          "reviewed_rules": [
+            "IP-CIDR,91.108.56.0/22,no-resolve"
+          ],
+          "status": "covered",
+          "covered": [
+            {
+              "rule": "IP-CIDR,91.108.56.0/22,no-resolve",
+              "by": "IP-CIDR,91.108.56.0/22,no-resolve"
+            }
+          ],
+          "added_rules": []
+        },
+        {
+          "source_rule": "IP-CIDR,91.108.56.0/23,no-resolve",
+          "reviewed_rules": [
+            "IP-CIDR,91.108.56.0/23,no-resolve"
+          ],
+          "status": "covered",
+          "covered": [
+            {
+              "rule": "IP-CIDR,91.108.56.0/23,no-resolve",
+              "by": "IP-CIDR,91.108.56.0/22,no-resolve"
+            }
+          ],
+          "added_rules": []
+        },
+        {
+          "source_rule": "IP-CIDR,91.108.8.0/21,no-resolve",
+          "reviewed_rules": [
+            "IP-CIDR,91.108.8.0/21,no-resolve"
+          ],
+          "status": "covered",
+          "covered": [
+            {
+              "rule": "IP-CIDR,91.108.8.0/21,no-resolve",
+              "by": "IP-CIDR,91.108.8.0/21,no-resolve"
+            }
+          ],
+          "added_rules": []
+        },
+        {
+          "source_rule": "IP-CIDR,91.108.8.0/22,no-resolve",
+          "reviewed_rules": [
+            "IP-CIDR,91.108.8.0/22,no-resolve"
+          ],
+          "status": "covered",
+          "covered": [
+            {
+              "rule": "IP-CIDR,91.108.8.0/22,no-resolve",
+              "by": "IP-CIDR,91.108.8.0/21,no-resolve"
+            }
+          ],
+          "added_rules": []
+        },
+        {
+          "source_rule": "IP-CIDR,95.161.64.0/20,no-resolve",
+          "reviewed_rules": [
+            "IP-CIDR,95.161.64.0/20,no-resolve"
+          ],
+          "status": "added",
+          "added_rules": [
+            "IP-CIDR,95.161.64.0/20,no-resolve"
+          ]
+        },
+        {
+          "source_rule": "IP-CIDR6,2001:67c:4e8::/48,no-resolve",
+          "reviewed_rules": [
+            "IP-CIDR6,2001:67c:4e8::/48,no-resolve"
+          ],
+          "status": "added",
+          "added_rules": [
+            "IP-CIDR6,2001:67c:4e8::/48,no-resolve"
+          ]
+        },
+        {
+          "source_rule": "IP-CIDR6,2001:b28:f23c::/47,no-resolve",
+          "reviewed_rules": [
+            "IP-CIDR6,2001:b28:f23c::/47,no-resolve"
+          ],
+          "status": "added",
+          "added_rules": [
+            "IP-CIDR6,2001:b28:f23c::/47,no-resolve"
+          ]
+        },
+        {
+          "source_rule": "IP-CIDR6,2001:b28:f23c::/48,no-resolve",
+          "reviewed_rules": [
+            "IP-CIDR6,2001:b28:f23c::/48,no-resolve"
+          ],
+          "status": "covered",
+          "covered": [
+            {
+              "rule": "IP-CIDR6,2001:b28:f23c::/48,no-resolve",
+              "by": "IP-CIDR6,2001:b28:f23c::/47,no-resolve"
+            }
+          ],
+          "added_rules": []
+        },
+        {
+          "source_rule": "IP-CIDR6,2001:b28:f23d::/48,no-resolve",
+          "reviewed_rules": [
+            "IP-CIDR6,2001:b28:f23d::/48,no-resolve"
+          ],
+          "status": "covered",
+          "covered": [
+            {
+              "rule": "IP-CIDR6,2001:b28:f23d::/48,no-resolve",
+              "by": "IP-CIDR6,2001:b28:f23c::/47,no-resolve"
+            }
+          ],
+          "added_rules": []
+        },
+        {
+          "source_rule": "IP-CIDR6,2001:b28:f23f::/48,no-resolve",
+          "reviewed_rules": [
+            "IP-CIDR6,2001:b28:f23f::/48,no-resolve"
+          ],
+          "status": "added",
+          "added_rules": [
+            "IP-CIDR6,2001:b28:f23f::/48,no-resolve"
+          ]
+        },
+        {
+          "source_rule": "IP-CIDR6,2a0a:f280:203::/48,no-resolve",
+          "reviewed_rules": [
+            "IP-CIDR6,2a0a:f280:203::/48,no-resolve"
+          ],
+          "status": "covered",
+          "covered": [
+            {
+              "rule": "IP-CIDR6,2a0a:f280:203::/48,no-resolve",
+              "by": "IP-CIDR6,2a0a:f280::/32,no-resolve"
+            }
+          ],
+          "added_rules": []
+        },
+        {
+          "source_rule": "IP-CIDR6,2a0a:f280::/32,no-resolve",
+          "reviewed_rules": [
+            "IP-CIDR6,2a0a:f280::/32,no-resolve"
+          ],
+          "status": "added",
+          "added_rules": [
+            "IP-CIDR6,2a0a:f280::/32,no-resolve"
+          ]
+        },
+        {
+          "source_rule": "IP-ASN,211157,no-resolve",
+          "reviewed_rules": [
+            "IP-ASN,211157,no-resolve"
+          ],
+          "status": "added",
+          "added_rules": [
+            "IP-ASN,211157,no-resolve"
+          ]
+        },
+        {
+          "source_rule": "IP-ASN,44907,no-resolve",
+          "reviewed_rules": [
+            "IP-ASN,44907,no-resolve"
+          ],
+          "status": "added",
+          "added_rules": [
+            "IP-ASN,44907,no-resolve"
+          ]
+        },
+        {
+          "source_rule": "IP-ASN,59930,no-resolve",
+          "reviewed_rules": [
+            "IP-ASN,59930,no-resolve"
+          ],
+          "status": "added",
+          "added_rules": [
+            "IP-ASN,59930,no-resolve"
+          ]
+        },
+        {
+          "source_rule": "IP-ASN,62014,no-resolve",
+          "reviewed_rules": [
+            "IP-ASN,62014,no-resolve"
+          ],
+          "status": "added",
+          "added_rules": [
+            "IP-ASN,62014,no-resolve"
+          ]
+        },
+        {
+          "source_rule": "IP-ASN,62041,no-resolve",
+          "reviewed_rules": [
+            "IP-ASN,62041,no-resolve"
+          ],
+          "status": "added",
+          "added_rules": [
+            "IP-ASN,62041,no-resolve"
+          ]
+        }
+      ]
+    }
+  }
+}
