@@ -78,11 +78,37 @@
       "url": "https://yfamilys.com/rule/Telegram.list",
       "target": "rules/JPProxy.list",
       "policy": "reviewed-supplement; semantic exact/suffix/keyword/CIDR dedup and cross-policy review; preserve existing owner rows; see ProxyServices.review.json"
+    },
+    {
+      "id": "v2fly_chatgpt",
+      "family": "proxy-services",
+      "service": "chatgpt",
+      "repo": "v2fly/domain-list-community",
+      "branch": "master",
+      "file": "data/openai",
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/master/data/openai",
+      "target": "rules/USProxy.list",
+      "lineage": "v2fly maintained source already used as evidence in msg2677, now explicitly scheduled; do not count it and derivative lists as independent votes.",
+      "policy": "reviewed supplemental comparison, never direct client attachment; preserve held decisions; pinned exact/suffix/regex semantic review",
+      "license": "MIT (retained notice)"
+    },
+    {
+      "id": "dler_telegram",
+      "family": "proxy-services",
+      "service": "telegram",
+      "repo": "dler-io/Rules",
+      "branch": "main",
+      "file": "Surge/Surge 3/Provider/Telegram.list",
+      "url": "https://raw.githubusercontent.com/dler-io/Rules/main/Surge/Surge%203/Provider/Telegram.list",
+      "target": "rules/JPProxy.list",
+      "lineage": "Contains shared legacy Telegram/official-CIDR lineage; not an independent ownership vote.",
+      "policy": "reviewed supplemental comparison, never direct client attachment; preserve held decisions; pinned exact/suffix/regex semantic review",
+      "license": "Not declared at repo root; candidate comparison only; no new rows imported from this source."
     }
   ],
   "receipt_contract": {
     "effective_business_date": "2026-11-09",
-    "checked_links": 10,
+    "checked_links": 12,
     "families": [
       "geoip",
       "domains",
@@ -90,7 +116,9 @@
     ],
     "proxy_sources": [
       "chatgpt",
-      "telegram"
+      "telegram",
+      "v2fly_chatgpt",
+      "dler_telegram"
     ]
   }
 }

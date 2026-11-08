@@ -50,6 +50,8 @@ DOMAIN,o207216.ingest.sentry.io
 DOMAIN,o33249.ingest.sentry.io
 DOMAIN,o33249.ingest.us.sentry.io
 DOMAIN-SUFFIX,turn.livekit.cloud
+# Reviewed v2fly OpenAI supplement: Ken Topic194 msg2681.
+DOMAIN,openai.qualtrics.com
 IP-CIDR,192.255.130.194/32,no-resolve
 IP-CIDR,192.255.149.171/32,no-resolve
 IP-ASN,401518,no-resolve

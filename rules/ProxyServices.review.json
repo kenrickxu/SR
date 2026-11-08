@@ -1209,5 +1209,338 @@
         }
       ]
     }
-  }
+  },
+  "supplemental_sources": {
+    "v2fly_chatgpt": {
+      "repo": "v2fly/domain-list-community",
+      "branch": "master",
+      "file": "data/openai",
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/master/data/openai",
+      "revision": "8ba15e5d51b3cbc44853f78bd2ff29162cc110ba",
+      "source_sha256": "25d53e9af3e04d926210d6436bd791594ef4b86f2dc3c108510ac8059d76d969",
+      "source_rows": 25,
+      "latest_file_change": "2026-10-26T10:01:51Z",
+      "latest_semantic_change": "2026-10-21T00:08:35Z",
+      "target": "rules/USProxy.list",
+      "decisions": [
+        {
+          "source_rule": "chat.com",
+          "status": "covered",
+          "covered_by": "DOMAIN-SUFFIX,chat.com"
+        },
+        {
+          "source_rule": "chatgpt.com",
+          "status": "covered",
+          "covered_by": "DOMAIN-SUFFIX,chatgpt.com"
+        },
+        {
+          "source_rule": "chatgpt.site",
+          "status": "covered",
+          "covered_by": "DOMAIN-SUFFIX,chatgpt.site"
+        },
+        {
+          "source_rule": "crixet.com",
+          "status": "covered",
+          "covered_by": "DOMAIN-SUFFIX,crixet.com"
+        },
+        {
+          "source_rule": "oaistatic.com",
+          "status": "covered",
+          "covered_by": "DOMAIN-SUFFIX,oaistatic.com"
+        },
+        {
+          "source_rule": "oaistatsig.com",
+          "status": "covered",
+          "covered_by": "DOMAIN-SUFFIX,oaistatsig.com"
+        },
+        {
+          "source_rule": "oaiusercontent.com",
+          "status": "covered",
+          "covered_by": "DOMAIN-SUFFIX,oaiusercontent.com"
+        },
+        {
+          "source_rule": "openai.com",
+          "status": "covered",
+          "covered_by": "DOMAIN-SUFFIX,openai.com"
+        },
+        {
+          "source_rule": "openai.org",
+          "status": "covered",
+          "covered_by": "DOMAIN-SUFFIX,openai.org"
+        },
+        {
+          "source_rule": "sora.com",
+          "status": "covered",
+          "covered_by": "DOMAIN-SUFFIX,sora.com"
+        },
+        {
+          "source_rule": "openai.com.cdn.cloudflare.net",
+          "status": "covered",
+          "covered_by": "DOMAIN-SUFFIX,openai.com.cdn.cloudflare.net"
+        },
+        {
+          "source_rule": "full:openaiapi-site.azureedge.net",
+          "status": "covered",
+          "covered_by": "DOMAIN,openaiapi-site.azureedge.net"
+        },
+        {
+          "source_rule": "full:openaiassets.blob.core.windows.net",
+          "status": "covered",
+          "covered_by": "DOMAIN,openaiassets.blob.core.windows.net"
+        },
+        {
+          "source_rule": "full:openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net",
+          "status": "covered",
+          "covered_by": "DOMAIN,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net"
+        },
+        {
+          "source_rule": "full:openaicom.imgix.net",
+          "status": "covered",
+          "covered_by": "DOMAIN,openaicom.imgix.net"
+        },
+        {
+          "source_rule": "full:openaicomproductionae4b.blob.core.windows.net",
+          "status": "covered",
+          "covered_by": "DOMAIN,openaicomproductionae4b.blob.core.windows.net"
+        },
+        {
+          "source_rule": "full:production-openaicom-storage.azureedge.net",
+          "status": "covered",
+          "covered_by": "DOMAIN,production-openaicom-storage.azureedge.net"
+        },
+        {
+          "source_rule": "regexp:^chatgpt-async-webps-prod-\\S+-\\d+\\.webpubsub\\.azure\\.com$",
+          "status": "covered",
+          "covered_by": "DOMAIN-KEYWORD,chatgpt-async-webps-prod",
+          "note": "Existing owner keyword covers entire regex; do not broaden by translating regex."
+        },
+        {
+          "source_rule": "full:browser-intake-datadoghq.com @ads @telemetry",
+          "status": "held",
+          "reason": "Shared telemetry endpoint; preserve previously narrowed rum.browser-intake-datadoghq.com instead."
+        },
+        {
+          "source_rule": "full:o33249.ingest.sentry.io @ads @telemetry",
+          "status": "covered",
+          "covered_by": "DOMAIN,o33249.ingest.sentry.io"
+        },
+        {
+          "source_rule": "full:o33249.ingest.us.sentry.io @ads @telemetry",
+          "status": "covered",
+          "covered_by": "DOMAIN,o33249.ingest.us.sentry.io"
+        },
+        {
+          "source_rule": "full:openai.qualtrics.com @ads",
+          "status": "added",
+          "rule": "DOMAIN,openai.qualtrics.com",
+          "reason": "Exact ChatGPT feedback/telemetry host classified by maintained v2fly OpenAI source; no shared qualtrics.com suffix."
+        },
+        {
+          "source_rule": "chatgpt.livekit.cloud",
+          "status": "covered",
+          "covered_by": "DOMAIN-SUFFIX,chatgpt.livekit.cloud"
+        },
+        {
+          "source_rule": "host.livekit.cloud",
+          "status": "covered",
+          "covered_by": "DOMAIN-SUFFIX,host.livekit.cloud"
+        },
+        {
+          "source_rule": "turn.livekit.cloud",
+          "status": "covered",
+          "covered_by": "DOMAIN-SUFFIX,turn.livekit.cloud"
+        }
+      ],
+      "status_counts": {
+        "covered": 23,
+        "held": 1,
+        "added": 1
+      },
+      "added_rules": [
+        "DOMAIN,openai.qualtrics.com"
+      ],
+      "source_dependency": "v2fly maintained source already used as evidence in msg2677, now explicitly scheduled; do not count it and derivative lists as independent votes."
+    },
+    "dler_telegram": {
+      "repo": "dler-io/Rules",
+      "branch": "main",
+      "file": "Surge/Surge 3/Provider/Telegram.list",
+      "url": "https://raw.githubusercontent.com/dler-io/Rules/main/Surge/Surge%203/Provider/Telegram.list",
+      "revision": "e51dc05e64b65afef5eac3712ab73df4ea2c3f41",
+      "source_sha256": "4b16068a69d1c0532197a7cb5e671e26d080b2e1d449af06d489d9b4e7de8836",
+      "source_rows": 32,
+      "latest_file_change": "2026-09-27T15:10:12Z",
+      "latest_semantic_change": "2026-09-27T14:58:19Z",
+      "target": "rules/JPProxy.list",
+      "decisions": [
+        {
+          "source_rule": "DOMAIN-SUFFIX,cdn-telegram.org",
+          "status": "covered",
+          "covered_by": "DOMAIN-KEYWORD,telegram"
+        },
+        {
+          "source_rule": "DOMAIN-SUFFIX,graph.org",
+          "status": "covered",
+          "covered_by": "DOMAIN-SUFFIX,graph.org"
+        },
+        {
+          "source_rule": "DOMAIN-SUFFIX,legra.ph",
+          "status": "held",
+          "reason": "Retain earlier attribution/legacy IP hold; another derivative list is not independent service evidence."
+        },
+        {
+          "source_rule": "DOMAIN-SUFFIX,t.me",
+          "status": "covered",
+          "covered_by": "DOMAIN-SUFFIX,t.me"
+        },
+        {
+          "source_rule": "DOMAIN-SUFFIX,tdesktop.com",
+          "status": "covered",
+          "covered_by": "DOMAIN-SUFFIX,tdesktop.com"
+        },
+        {
+          "source_rule": "DOMAIN-SUFFIX,telega.one",
+          "status": "covered",
+          "covered_by": "DOMAIN-SUFFIX,telega.one"
+        },
+        {
+          "source_rule": "DOMAIN-SUFFIX,telegra.ph",
+          "status": "covered",
+          "covered_by": "DOMAIN-SUFFIX,telegra.ph"
+        },
+        {
+          "source_rule": "DOMAIN-SUFFIX,telegram-cdn.org",
+          "status": "covered",
+          "covered_by": "DOMAIN-SUFFIX,telegram-cdn.org"
+        },
+        {
+          "source_rule": "DOMAIN-SUFFIX,telegram.dog",
+          "status": "covered",
+          "covered_by": "DOMAIN-KEYWORD,telegram"
+        },
+        {
+          "source_rule": "DOMAIN-SUFFIX,telegram.me",
+          "status": "covered",
+          "covered_by": "DOMAIN-SUFFIX,telegram.me"
+        },
+        {
+          "source_rule": "DOMAIN-SUFFIX,telegram.org",
+          "status": "covered",
+          "covered_by": "DOMAIN-SUFFIX,telegram.org"
+        },
+        {
+          "source_rule": "DOMAIN-SUFFIX,telegram.space",
+          "status": "covered",
+          "covered_by": "DOMAIN-KEYWORD,telegram"
+        },
+        {
+          "source_rule": "DOMAIN-SUFFIX,telesco.pe",
+          "status": "covered",
+          "covered_by": "DOMAIN-SUFFIX,telesco.pe"
+        },
+        {
+          "source_rule": "DOMAIN-SUFFIX,tg.dev",
+          "status": "covered",
+          "covered_by": "DOMAIN-SUFFIX,tg.dev"
+        },
+        {
+          "source_rule": "DOMAIN-SUFFIX,tx.me",
+          "status": "covered",
+          "covered_by": "DOMAIN-SUFFIX,tx.me"
+        },
+        {
+          "source_rule": "IP-CIDR,5.28.195.1/32,no-resolve",
+          "status": "held",
+          "reason": "Retain earlier attribution/legacy IP hold; another derivative list is not independent service evidence."
+        },
+        {
+          "source_rule": "IP-CIDR,5.28.195.2/32,no-resolve",
+          "status": "held",
+          "reason": "Retain earlier attribution/legacy IP hold; another derivative list is not independent service evidence."
+        },
+        {
+          "source_rule": "IP-CIDR,91.105.192.0/23,no-resolve",
+          "status": "covered",
+          "covered_by": "IP-CIDR,91.105.192.0/23,no-resolve"
+        },
+        {
+          "source_rule": "IP-CIDR,91.108.4.0/22,no-resolve",
+          "status": "covered",
+          "covered_by": "IP-CIDR,91.108.4.0/22,no-resolve"
+        },
+        {
+          "source_rule": "IP-CIDR,91.108.8.0/21,no-resolve",
+          "status": "covered",
+          "covered_by": "IP-CIDR,91.108.8.0/21,no-resolve"
+        },
+        {
+          "source_rule": "IP-CIDR,91.108.16.0/21,no-resolve",
+          "status": "covered",
+          "covered_by": "IP-CIDR,91.108.16.0/21,no-resolve"
+        },
+        {
+          "source_rule": "IP-CIDR,91.108.56.0/22,no-resolve",
+          "status": "covered",
+          "covered_by": "IP-CIDR,91.108.56.0/22,no-resolve"
+        },
+        {
+          "source_rule": "IP-CIDR,95.161.64.0/20,no-resolve",
+          "status": "covered",
+          "covered_by": "IP-CIDR,95.161.64.0/20,no-resolve"
+        },
+        {
+          "source_rule": "IP-CIDR,139.59.210.98/32,no-resolve",
+          "status": "held",
+          "reason": "Retain earlier attribution/legacy IP hold; another derivative list is not independent service evidence."
+        },
+        {
+          "source_rule": "IP-CIDR,149.154.160.0/20,no-resolve",
+          "status": "covered",
+          "covered_by": "IP-CIDR,149.154.160.0/20,no-resolve"
+        },
+        {
+          "source_rule": "IP-CIDR,185.76.151.0/24,no-resolve",
+          "status": "covered",
+          "covered_by": "IP-CIDR,185.76.151.0/24,no-resolve"
+        },
+        {
+          "source_rule": "IP-CIDR,196.55.216.167/32,no-resolve",
+          "status": "held",
+          "reason": "Retain earlier attribution/legacy IP hold; another derivative list is not independent service evidence."
+        },
+        {
+          "source_rule": "IP-CIDR6,2001:67c:4e8::/48,no-resolve",
+          "status": "covered",
+          "covered_by": "IP-CIDR6,2001:67c:4e8::/48,no-resolve"
+        },
+        {
+          "source_rule": "IP-CIDR6,2001:b28:f23c::/48,no-resolve",
+          "status": "covered",
+          "covered_by": "IP-CIDR6,2001:b28:f23c::/47,no-resolve"
+        },
+        {
+          "source_rule": "IP-CIDR6,2001:b28:f23d::/48,no-resolve",
+          "status": "covered",
+          "covered_by": "IP-CIDR6,2001:b28:f23c::/47,no-resolve"
+        },
+        {
+          "source_rule": "IP-CIDR6,2001:b28:f23f::/48,no-resolve",
+          "status": "covered",
+          "covered_by": "IP-CIDR6,2001:b28:f23f::/48,no-resolve"
+        },
+        {
+          "source_rule": "IP-CIDR6,2a0a:f280::/32,no-resolve",
+          "status": "covered",
+          "covered_by": "IP-CIDR6,2a0a:f280::/32,no-resolve"
+        }
+      ],
+      "status_counts": {
+        "covered": 27,
+        "held": 5
+      },
+      "added_rules": [],
+      "source_dependency": "Contains shared legacy Telegram/official-CIDR lineage; not an independent ownership vote."
+    }
+  },
+  "latest_owner_instruction": "Topic194 msg2681"
 }
