@@ -1,10 +1,11 @@
 {
   "schema": 1,
-  "rows": 31,
-  "sr_sha256": "f1e5c1d6808f4c02adac0ec787e2c97ba537a3562abc947aa332c5b0ea621c00",
-  "clash_sha256": "0844243b46eeadc7acc9c1c06dadd2fecacf4fcad5da380952b3b17290f202ca",
-  "origin": "Reviewed existing CN inline Apple/FaceTime block, Ken msg3453",
+  "rows": 221,
+  "sr_sha256": "816933bfad560d3f558965b13612e979eb23a24f71b02b73f2fe44b51940c58a",
+  "clash_sha256": "c572495f92442f71070ee6b0278d48da475c7032ad109a80df18a66cfbc70c4b",
+  "origin": "Apple official101555, pinnedV2Fly service/Apple country namespaces, IANA.apple, blackmatrix IP candidates + currentRIR corroboration",
   "policy": "DIRECT assigned by consumer; APNs proxy before provider",
   "syntax_translation": "PROTOCOL,UDP -> NETWORK,UDP only",
-  "no_routing_expansion": true
+  "no_routing_expansion": false,
+  "v2fly_revision": "e8d7a10a15bf662c927a40a3aa680bae86379608"
 }
