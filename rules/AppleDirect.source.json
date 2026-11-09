@@ -1,0 +1,10 @@
+{
+  "schema": 1,
+  "rows": 31,
+  "sr_sha256": "f1e5c1d6808f4c02adac0ec787e2c97ba537a3562abc947aa332c5b0ea621c00",
+  "clash_sha256": "0844243b46eeadc7acc9c1c06dadd2fecacf4fcad5da380952b3b17290f202ca",
+  "origin": "Reviewed existing CN inline Apple/FaceTime block, Ken msg3453",
+  "policy": "DIRECT assigned by consumer; APNs proxy before provider",
+  "syntax_translation": "PROTOCOL,UDP -> NETWORK,UDP only",
+  "no_routing_expansion": true
+}
