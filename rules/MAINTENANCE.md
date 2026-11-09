@@ -72,3 +72,6 @@ CURRENT OVERRIDE Ken Topic194 msg2995: CN280realIP/287SkipProxy/236TUN=15special
 
 
 CURRENT OVERRIDE Ken msg3008: CN221TUN/280realIP/287SkipProxy. Full prior236routecoverage retained;neighboring /23-/22 aggregationonly,>=2existingrowsand>=50%alreadycovered,wholeprefixCNverified,minimalexpansioncostperrowsaved. 14merge steps;+5114addresses. Noisolatednetworkmechanicalgrowth,/21orbroader held. Currentexactsets/provenance projects/sr-game-consolidate-3008/classified-targets.json. Existing15special/DNS/Skip/Rule/CNR/OS/nativeClash/nodes/MITM/IPv6/runtime/schedules unchanged;strictapprovedset+rollbackguards remain. Phonefullrefresh/reconnectpending,notlatencyproof.
+
+
+CURRENT OVERRIDE Ken msg3024: CN223TUN/280realIP/287SkipProxy=15special+11wholeCN/22+3wholeCN/23+112wholeCN/24+82/32. Prior221coverage preserved;7newCNtargets(5game+2unknownCN)→7wholeCN/24 absorbing3old/32;fulltableconsolidation merges2prior/23+2prior/32into2wholeCN/22. +2811addresses. All47observedgamedomainsrealDNShitandcovered,noDNS/Skipchange. Phone12:57loadedprior221echo220except127/8warnexplicit. WholeCNfullintervalverification+strictnewexactset/rollbackguard,otherprofiles/Rule/DNSupstreams/nodes/MITM/IPv6/Clash/runtime/schedules unchanged. Exactsets projects/sr-game-recheck-3024/classified-targets.json;phoneacceptancepending.
