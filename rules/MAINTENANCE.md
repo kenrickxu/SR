@@ -116,3 +116,29 @@ CURRENT OVERRIDE Ken Topic194 msg3292 2026-11-09: Preserve CN295TUN/284RealIP/29
 
 
 CURRENT OVERRIDE Ken Topic194 msg3311 + subsequent explicit request/clarification,2026-11-09: CN major-mainland IPv4 TUN bypass now authorized for all apps TCP/UDP, not limited to observed game/unknown/UDP targets. Preserve original designated US/JP proxy priority. Final 1068 TUN/284RealIP/293Skip; use current owned CN country intervals natural /16-or-broader prefixes plus all prior295 coverage, subtract all explicit proxy IPv4, current6 proxy-ASN announced IPv4 prefixes and current179 exact/root domain A snapshot addresses.13 fixed GoogleCN proxy IPs +5 current CN addresses of ascottchina.com/zajourney.com excluded. Exact sets, provenance, snapshot limitations and tests projects/sr-cdn-broader-3311/classified-targets.json. All final public prefixes wholly ownedCN; special14 unchanged; no127restore/noallTUNtoSkip. Added 339410854 public addresses; 95.4768% of owned CN IPv4 ADDRESS SPACE, not traffic/completeness/latency. Preserve explicit domain/keyword/ASN rules, RealIP/Skip and all other profiles/General/Rule/upstreamDNS/nodes/MITM/IPv6/nativeClash/runtime; noapply/restart. Normal FakeIP proxy paths remain; cached/customDNS bareIP paths cannot identify future proxy-domain addresses, so no absolute full-domain/full-app guarantee. Before future major-set refresh, re-read ordered proxy overrides and fresh country/source+DNS+ASN snapshots; subtract known exceptions, stop on priorcoverage conflict; verify whole-prefix CN and exact new-set compatibility, never silently restore old295 table or auto-union arbitrary foreign/unverified ranges. Existing13source03:00/03:35schedules/delivery unchanged. Phone fullCN refresh/reconnect and capacity/latency acceptance pending.
+
+
+CURRENT OVERRIDE Ken Topic194 msg3341 2026-11-09: Broader domestic app DNS/HTTP bypass authorized, superseding prior noTUN-to-Skip restriction ONLY for current reviewed public mainland IPv4 ranges with proxy exception holes. Current 1068TUN/716RealIP/1779Skip. Preserve prior284RealIP/293Skip and1068TUN exactly;new 216 root+wildcard families and0 precisehosts corroborated by pinned v2fly service lists and existing owned mainland suffixDIRECT source;new 1054 publicIPv4 exceptions mirror the already reviewed TUN public set. Keep special/private baseline only,do not copy14special/IPv6/FakeIP/reserved rows into Skip. always-real-ip takes domain patterns,NOT IP/CIDR; neverglobal* or blanketcn wildcard. Preserve exact182.254.116.117/.120 Skip despite CIDR coverage. Existing US/JP priority maintained;IP holes unchanged;hold proxy-overlap,sharedcloudroots,overseas-only tagged and uncorroborated entries. Real DNS/HTTP exceptions not universal app bypass;Apple/SR match behavior,capacity and phone acceptance unverified;future domainCDN addresses not exhausted. Exactsets/provenance projects/sr-domestic-bypass-3341/classified-targets.json. All otherprofiles/Rule/upstreamDNS/nodes/MITM/IPv6/nativeClash/runtime/13source03:00/03:35schedules/delivery unchanged,noapply/restart. V2flyMIT attribution: https://github.com/v2fly/domain-list-community/tree/e8d7a10a15bf662c927a40a3aa680bae86379608
+
+MIT License
+
+Copyright (c) 2018-2019 V2Ray
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
