@@ -142,3 +142,5 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
+
+Final same-task review: replace unneeded shared jdcloudcdn.com parent with official12306.cn root/wildcard (official www.12306.cn/index HTTP200 + owner ChinaDirectDomains cn-suffixDIRECT). Counts unchanged716/1779/1068. Keep both first-release and final audit receipts;only final source active.
