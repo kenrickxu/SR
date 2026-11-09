@@ -1,3 +1,8 @@
+
+## CURRENT CN-only Apple rollback trial — Ken Topic194 msg3553, 2026-11-10 HKT
+
+This latest owner instruction supersedes earlier CN Apple preservation clauses below. To investigate missing Telegram notifications, current CN removes the AppleDirect provider reference (all221 Apple/FaceTime selectors) and exactly the148 RealIP /147 Skip selectors added by msg3453. Current CN1075TUN/722RealIP/1792Skip; TUN and all later domestic coverage including101.50.8/21 remain unchanged. Keep JPProxy push.apple.com priority, US/JP/China sets, DNS/MITM/IPv6/nodes/system bypass settings unchanged. Do not restore this Apple batch automatically. This is a diagnostic rollback, not confirmed cause or notification repair. AppleDirect files remain for other consumers; CNR/OS/Windows/independent iOSClash and live managed output are not changed by this SR-only trial. Daily source review/publication remains authorized; do not apply/restart native consumers just to follow this CN-only experiment. Original03:00/03:35/13sources/report/alert schedule remains. Ken manually refreshes fullCN and tests locked-screen TG notifications; await explicit outcome before restoration.
+
 # Ken SR reviewed source maintenance and daily report
 
 Current owner scope: Ken Topic194 msg2705,2026-11-08. This replaces earlier LAN-maintenance, eight/ten/twelve-source totals and success-silent policies. Historical source snapshots/commits remain evidence, not active instructions.
