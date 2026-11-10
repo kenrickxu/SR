@@ -1,11 +1,12 @@
 {
   "schema": 1,
-  "rows": 221,
-  "sr_sha256": "816933bfad560d3f558965b13612e979eb23a24f71b02b73f2fe44b51940c58a",
-  "clash_sha256": "c572495f92442f71070ee6b0278d48da475c7032ad109a80df18a66cfbc70c4b",
-  "origin": "Apple official101555, pinnedV2Fly service/Apple country namespaces, IANA.apple, blackmatrix IP candidates + currentRIR corroboration",
+  "rows": 233,
+  "sr_sha256": "31e1acb109466ddfddb90c81c4a8c2bb9cbd8867d1582242c6e10b24d0110042",
+  "clash_sha256": "e2e3cec2a618904a67e9c45e8fdd1fb2232ff91b4a26e2e346f8c7a1537017a5",
+  "origin": "Apple official101555 dependencies; Markley Apple AS714 candidates with current RIPE/ARIN whole-range corroboration; retained reviewed service namespaces",
   "policy": "DIRECT assigned by consumer; APNs proxy before provider",
   "syntax_translation": "PROTOCOL,UDP -> NETWORK,UDP only",
   "no_routing_expansion": false,
-  "v2fly_revision": "e8d7a10a15bf662c927a40a3aa680bae86379608"
+  "v2fly_revision": "039a7e4a71bd967ee9af3f5aa1f9f2b17ade9cd4",
+  "review_project": "projects/sr-apple-audit-3567"
 }

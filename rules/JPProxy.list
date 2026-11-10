@@ -277,3 +277,10 @@ IP-CIDR6,2a0a:f280::/32,no-resolve
 IP-CIDR6,2001:b28:f23c::/47,no-resolve
 IP-CIDR6,2001:67c:4e8::/48,no-resolve
 IP-CIDR6,2001:b28:f23f::/48,no-resolve
+
+# Apple official APNs fallback ranges (102266); preserve Push JP before AppleDirect.
+# Ranges are not guaranteed Push-exclusive; other raw-IP traffic in them also uses JP.
+IP-CIDR6,2620:149:a44::/48,no-resolve
+IP-CIDR6,2403:300:a42::/48,no-resolve
+IP-CIDR6,2403:300:a51::/48,no-resolve
+IP-CIDR6,2a01:b740:a42::/48,no-resolve
