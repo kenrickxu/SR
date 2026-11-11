@@ -234,3 +234,4 @@ AND,((NETWORK,UDP),(DST-PORT,3478-3497))
 AND,((NETWORK,UDP),(DST-PORT,16384-16387))
 AND,((NETWORK,UDP),(DST-PORT,16393-16402))
 DOMAIN,gsa.idms-apple.com.akadns.net
+DOMAIN,imap.mail.me.com.akadns.net

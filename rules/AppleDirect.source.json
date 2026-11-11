@@ -1,12 +1,12 @@
 {
   "schema": 1,
-  "rows": 234,
-  "sr_sha256": "b4b4284f4adc2f751bf938c7bb8ee85b40fd65fdfa55ad3e4374e73a407b0131",
-  "clash_sha256": "453f2d7f5d1bce4eadb3b7b2c9ff1cc79deb06f6152450c2ee0db5737786b016",
+  "rows": 235,
+  "sr_sha256": "d269a150b253b9b63f4f4a9a42db08f489176b318e0dcfc9848279b7cd0ede2f",
+  "clash_sha256": "8d351263008ba29bd1c017877b3430f3740e0b2a089cbc72af287ef653aab93b",
   "origin": "Apple official101555 dependencies; Markley Apple AS714 candidates with current RIPE/ARIN whole-range corroboration; retained reviewed service namespaces",
   "policy": "DIRECT assigned by consumer; APNs proxy before provider",
   "syntax_translation": "PROTOCOL,UDP -> NETWORK,UDP only",
   "no_routing_expansion": false,
   "v2fly_revision": "039a7e4a71bd967ee9af3f5aa1f9f2b17ade9cd4",
-  "review_project": "projects/sr-log-six-4074"
+  "review_project": "/home/ken-oc/.openclaw/workspace/projects/sr-log-seven-4801"
 }

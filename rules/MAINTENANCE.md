@@ -200,3 +200,15 @@ CN 1080 TUN/870 RealIP/1944 Skip. Observed mainland targets 43.174.128.71,43.174
 
 ## Ken4771 MY regional provider (2026-11-12)
 Preserve MYProxy.list and provenance; Polymarket moved out of USProxy/OS inline overrides, MY before US/JP. CNR separate unchanged. Preserve sole MY REA→MY Reality and US primary. MY list has exact DNS IPv4/IPv6 host snapshots, not exclusive CDN addresses: do not expand Cloudflare/CloudFront/Vercel/S3 ASNs or ranges. Domain routing remains authoritative as addresses change; review IP replacements and shared-address risk before updating. Native manifest now5providers, independent iOS consumes same MY set. Existing external13source schedule unchanged; owned MY artifact not another external source.
+
+
+## 2026-11-12 HKT — reviewed seven-log CN repair
+
+- Complete private batch: 231,399 lines; observations dated Nov 11, before the Polymarket MY release. Logs are not public artifacts.
+- CN-only observed UDP media precedence: retain 17.188.171.30/32 and include seven newly observed exact Apple addresses, UDP only, before MY/US/JP providers. Push domains and TCP APNs stay JP; no blanket Apple tunnel bypass. Rule/source state does not prove a completed call or notification delivery.
+- AppleDirect + exact imap.mail.me.com.akadns.net; SR/native 235 rows with equivalent syntax and checksums. Never add the shared akadns.net root.
+- 22 actual mainland destinations gain compatible TUN/Skip coverage: 110.76.16.0/22, 117.51.128.0/23, 117.51.160.0/19, 140.205.128.0/17. Full old/new union retained; +42,496 IPv4 addresses. Whole owned-GeoIP CN coverage plus APNIC registration verified; current US/JP/MY IP/ASN/DNS proxy protections retained. 43.174.247.24 held due SG registration despite GeoIP CN; designated Google exceptions held.
+- General 1084 TUN / 870 domain-only RealIP / 1948 Skip. Fourteen special exclusions, no 127/8 restoration, precise preserved Skip entries and all old coverage retained.
+- CN publication only: CNR/OS/USProxy/JPProxy/MYProxy, nodes, DNS/MITM/IPv6 and scheduler unchanged. Shared Apple data is visible to existing consumers on refresh; no managed native policy apply. Exact importer and iPhone source-layout compatibility permit current/rollback sets; no arbitrary widening.
+- Five-provider cold load, strict positive/negative checks, immutable/main/download byte checks; phone full CN + AppleDirect refresh/reconnect and FaceTime/locked-screen push acceptance still manual.
+- Private provenance and exact-set evidence: projects/sr-log-seven-4801/.
