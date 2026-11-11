@@ -1,0 +1,34 @@
+# MYProxy — Ken Topic194 msg4771; Polymarket first assignment.
+# Exact DNS snapshots only; CDN addresses may be shared and can change.
+DOMAIN-SUFFIX,polymarket.com
+DOMAIN-SUFFIX,polymarket.us
+DOMAIN,polymarket-upload.s3.us-east-2.amazonaws.com
+IP-CIDR,3.175.86.56/32,no-resolve
+IP-CIDR,3.175.86.92/32,no-resolve
+IP-CIDR,3.175.86.116/32,no-resolve
+IP-CIDR,3.175.86.122/32,no-resolve
+IP-CIDR,52.85.118.21/32,no-resolve
+IP-CIDR,52.85.118.40/32,no-resolve
+IP-CIDR,52.85.118.75/32,no-resolve
+IP-CIDR,52.85.118.92/32,no-resolve
+IP-CIDR,104.18.34.205/32,no-resolve
+IP-CIDR,172.64.153.51/32,no-resolve
+IP-CIDR,216.150.1.1/32,no-resolve
+IP-CIDR6,2600:9000:21b3:2000:1:73d8:1840:93a1/128,no-resolve
+IP-CIDR6,2600:9000:21b3:3e00:1:73d8:1840:93a1/128,no-resolve
+IP-CIDR6,2600:9000:21b3:7400:1:73d8:1840:93a1/128,no-resolve
+IP-CIDR6,2600:9000:21b3:8200:1:73d8:1840:93a1/128,no-resolve
+IP-CIDR6,2600:9000:21b3:bc00:1:73d8:1840:93a1/128,no-resolve
+IP-CIDR6,2600:9000:21b3:f200:1:73d8:1840:93a1/128,no-resolve
+IP-CIDR6,2600:9000:21b3:f400:1:73d8:1840:93a1/128,no-resolve
+IP-CIDR6,2600:9000:21b3:f800:1:73d8:1840:93a1/128,no-resolve
+IP-CIDR6,2600:9000:2921:4600:6:1a42:a600:93a1/128,no-resolve
+IP-CIDR6,2600:9000:2921:7a00:6:1a42:a600:93a1/128,no-resolve
+IP-CIDR6,2600:9000:2921:a000:6:1a42:a600:93a1/128,no-resolve
+IP-CIDR6,2600:9000:2921:ce00:6:1a42:a600:93a1/128,no-resolve
+IP-CIDR6,2600:9000:2921:d000:6:1a42:a600:93a1/128,no-resolve
+IP-CIDR6,2600:9000:2921:d200:6:1a42:a600:93a1/128,no-resolve
+IP-CIDR6,2600:9000:2921:dc00:6:1a42:a600:93a1/128,no-resolve
+IP-CIDR6,2600:9000:2921:e200:6:1a42:a600:93a1/128,no-resolve
+IP-CIDR6,2606:4700:4408::ac40:9933/128,no-resolve
+IP-CIDR6,2606:4700:440d::6812:22cd/128,no-resolve

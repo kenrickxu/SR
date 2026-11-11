@@ -22,9 +22,7 @@ DOMAIN-SUFFIX,okex.com
 DOMAIN-SUFFIX,oklink.com
 DOMAIN-SUFFIX,okpool.top
 DOMAIN-SUFFIX,okx.com
-DOMAIN-SUFFIX,polymarket.com
 DOMAIN-SUFFIX,www.okx.com.cdn.cloudflare.net
-DOMAIN-KEYWORD,polymarket
 # Reviewed service additions: Ken Topic194 msg2677; see ProxyServices.review.json.
 DOMAIN-SUFFIX,chat.com
 DOMAIN-SUFFIX,chatgpt.livekit.cloud
