@@ -1,0 +1,12 @@
+{
+  "schema": 1,
+  "rows": 236,
+  "sr_sha256": "dd502fda2447c935406e423cce1cf38a02095f1e57a18e3dddf86204fe026a6b",
+  "clash_sha256": "013d7811827ce6f6263e8ad49012b6f00cd79575dca74769d8c22cacaecbeb5d",
+  "origin": "Apple official101555 dependencies; Markley Apple AS714 candidates with current RIPE/ARIN whole-range corroboration; retained reviewed service namespaces",
+  "policy": "DIRECT assigned by consumer; APNs proxy before provider",
+  "syntax_translation": "PROTOCOL,UDP -> NETWORK,UDP only",
+  "no_routing_expansion": false,
+  "v2fly_revision": "039a7e4a71bd967ee9af3f5aa1f9f2b17ade9cd4",
+  "review_project": "/home/ken-oc/.openclaw/workspace/projects/sr-log-four-5403"
+}

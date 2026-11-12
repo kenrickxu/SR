@@ -1,0 +1,17 @@
+{
+  "source_repository": "Loyalsoldier/clash-rules",
+  "source_revision": "9d654da5e1dfd7bc7e155072b6be85e13f831ecf",
+  "source_file": "direct.txt",
+  "source_sha256": "2ff0b806e1ba3f302ea14f2297230eb46bfb279412748db5c31cf6593013a5f3",
+  "generated_sha256": "f97ce2cfe7f8c17f6e81eb80f7e358229e022d57d571ebdb62166caa8de20aae",
+  "entries": 110190,
+  "exact": 558,
+  "suffix": 109631,
+  "license": "GPL-3.0",
+  "upstream_entries": 110189,
+  "local_entries": 1,
+  "local_file": "rules/ChinaDirectDomains.local.list",
+  "local_sha256": "c592c1632baa11647450aa3ae7cbc46e167fe00cb82385200bfe589c6c756a9a",
+  "ip_cidr": 1,
+  "refresh": "daily 03:00 Asia/Hong_Kong; reviewed changes only; see rules/MAINTENANCE.md"
+}

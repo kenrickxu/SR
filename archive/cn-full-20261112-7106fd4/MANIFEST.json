@@ -1,0 +1,76 @@
+{
+  "baseline_revision": "7106fd49b7b66aea73dafba17e2c3d699899a26f",
+  "purpose": "Exact pre-promotion full configuration and input data; immutable reference, not ongoing production authority.",
+  "files": [
+    {
+      "path": "CN.conf",
+      "bytes": 64623,
+      "sha256": "6a579582a0f35183c58261068693e0da113cff4d950d15977c10d2a4066575ee"
+    },
+    {
+      "path": "CN-Lite.conf",
+      "bytes": 74380,
+      "sha256": "bb6228f4d8ea1bedb48f7d0e06e48a988df57b73df7b277625c3b2fe53b82dc9"
+    },
+    {
+      "path": "CN-Lite.source.json",
+      "bytes": 1273,
+      "sha256": "94c91e91b130f0d8f4dd0794b87c77be4434b603001b7c8a75d21970709a7575"
+    },
+    {
+      "path": "CNR.conf",
+      "bytes": 2344,
+      "sha256": "4fd39e6b09ffc7e2e20ed5b728e041952b2cab0ed1f46e7204023cfe4b3b53d0"
+    },
+    {
+      "path": "OS.conf",
+      "bytes": 8255,
+      "sha256": "76f8eb41753578921fae17802b5137f764e9dd1bf4a6d4f89b363f36d4400830"
+    },
+    {
+      "path": "rules/AppleDirect.list",
+      "bytes": 7470,
+      "sha256": "dd502fda2447c935406e423cce1cf38a02095f1e57a18e3dddf86204fe026a6b"
+    },
+    {
+      "path": "rules/AppleDirectClash.list",
+      "bytes": 7467,
+      "sha256": "013d7811827ce6f6263e8ad49012b6f00cd79575dca74769d8c22cacaecbeb5d"
+    },
+    {
+      "path": "rules/AppleDirect.source.json",
+      "bytes": 680,
+      "sha256": "e86696e1e5f6472305666117a0998b113a4b7fac81881b4bc66939cdd04701e6"
+    },
+    {
+      "path": "rules/USProxy.list",
+      "bytes": 1861,
+      "sha256": "b136744c74be3afcf16e00afa5d0552872c49edad5d046a09ec62b75a6489d2c"
+    },
+    {
+      "path": "rules/JPProxy.list",
+      "bytes": 8782,
+      "sha256": "b3a9e3965f7bcbcb071071aa2bbd8cafbb6d45b49f88a0ec111856d204abae02"
+    },
+    {
+      "path": "rules/MYProxy.list",
+      "bytes": 1706,
+      "sha256": "4397e40abd944f6010d615c25abb7b85724f4d2570562c0a825ba23291529066"
+    },
+    {
+      "path": "rules/ChinaDirectDomains.list",
+      "bytes": 2935384,
+      "sha256": "f97ce2cfe7f8c17f6e81eb80f7e358229e022d57d571ebdb62166caa8de20aae"
+    },
+    {
+      "path": "rules/ChinaDirectDomains.source.json",
+      "bytes": 709,
+      "sha256": "72192354a33ef57491e58915e7165dc7ca1674233efad7e284cdd1eef73281d4"
+    },
+    {
+      "path": "geoip/Country.mmdb",
+      "bytes": 133022,
+      "sha256": "aaa073acfcfc62727a8aa7aad4def69849e948d5b07d472176cff83b47693753"
+    }
+  ]
+}

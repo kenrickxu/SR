@@ -1,0 +1,3 @@
+# Exact pre-promotion full version
+
+Source revision 7106fd49b7b66aea73dafba17e2c3d699899a26f. All14 original files in MANIFEST.json are byte-for-byte preserved with sizes/SHA256. This is frozen reference evidence, not active production authority. The exact CN.conf retains its historical update URL and main-list URLs; the data files in this folder preserve their capture-time values. For a convenient full reference with version-pinned rule URLs and a non-Lite update URL, use the repository root CN-Full.conf. Country.mmdb is the captured manual client database input, not an imported RULE-SET. No private runtime credentials are added to this public snapshot.
