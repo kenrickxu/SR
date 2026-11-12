@@ -1,26 +1,25 @@
 {
-  "schema": 1,
+  "schema": 2,
+  "mode": "canonical-sr-lite",
   "profile": "CN-Lite.conf",
+  "profile_sha256": "bb6228f4d8ea1bedb48f7d0e06e48a988df57b73df7b277625c3b2fe53b82dc9",
   "source_sha256": {
-    "CN.conf": "6a579582a0f35183c58261068693e0da113cff4d950d15977c10d2a4066575ee",
-    "rules/ChinaDirectDomains.list": "f97ce2cfe7f8c17f6e81eb80f7e358229e022d57d571ebdb62166caa8de20aae",
-    "rules/AppleDirect.list": "dd502fda2447c935406e423cce1cf38a02095f1e57a18e3dddf86204fe026a6b",
+    "CN.conf": "16d560c905af72e7bcd3bc75f03edc712c9d8ccdaab43338bacd9559527b782a",
+    "rules/MYProxy.list": "4397e40abd944f6010d615c25abb7b85724f4d2570562c0a825ba23291529066",
     "rules/USProxy.list": "b136744c74be3afcf16e00afa5d0552872c49edad5d046a09ec62b75a6489d2c",
     "rules/JPProxy.list": "b3a9e3965f7bcbcb071071aa2bbd8cafbb6d45b49f88a0ec111856d204abae02",
-    "rules/MYProxy.list": "4397e40abd944f6010d615c25abb7b85724f4d2570562c0a825ba23291529066"
+    "rules/AppleDirect.list": "dd502fda2447c935406e423cce1cf38a02095f1e57a18e3dddf86204fe026a6b"
   },
-  "profile_sha256": "bb6228f4d8ea1bedb48f7d0e06e48a988df57b73df7b277625c3b2fe53b82dc9",
   "direct_subset_rows": 275,
   "direct_domain_rows": 274,
-  "source_mainland_rows": 110190,
-  "held_real_ip_hosts": [
-    "xhsrcdn.com"
-  ],
-  "policy": "SR-only opted-in common-domain subset; preserve original TUN/RealIP/Skip, media and proxy order. Full CN retained separately.",
+  "full_reference": "CN-Full.conf",
+  "full_exact_archive": "archive/cn-full-20261112-7106fd4",
+  "policy": "Canonical SR is Lite; retain Game TUN/RealIP/Skip and media/Push priorities; full provider retained only for other consumers/reference.",
+  "native_runtime_applied": false,
   "limitations": [
-    "Unknown mainland-domain services on non-CN IPs may now proxy.",
-    "DIRECT media is not proof of TUN bypass.",
-    "Client module/runtime settings and future game IPs require phone verification."
+    "Unlisted domestic services on overseas IPs may proxy.",
+    "DIRECT media is not full TUN bypass.",
+    "Phone RAM, future game IPs and notification/call outcomes require client acceptance."
   ],
-  "native_consumers_changed": false
+  "canonical": "CN.conf"
 }

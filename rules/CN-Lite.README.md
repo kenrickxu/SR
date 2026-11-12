@@ -1,26 +1,28 @@
-# Independent Shadowrocket CN-Lite
+# Canonical Shadowrocket CN is Lite
 
-Ken opted into the independent Lite trial in Topic194 message5423, 2026-11-12 HKT. Full `CN.conf` remains the unchanged rollback profile. This file is SR-only; do not apply it to managed Clash, Windows or the independent iPhone Clash subscription.
+Ken promoted Lite to the existing main CN entry in Topic194 message5437, 2026-11-12 HKT, after the independent trial in message5423.
 
-Import `https://raw.githubusercontent.com/kenrickxu/SR/main/CN-Lite.conf` as a separate profile, select/apply it and reconnect. Keep the existing full CN entry. Existing node subscriptions and MY/US/JP/Apple rule-set URLs remain; no node credentials or DNS/MITM/IPv6 settings are changed by the derivation.
+Use the existing `https://sr-config.kt7766.org/CN.conf`; update the complete profile, apply and reconnect. No new node URL is required. `CN-Lite.conf` remains a compatibility alias, differing only in its self-update URL. Do not automatically switch any running client or apply this SR-only reduction to Windows/Clash.
 
-The whole ChinaDirectDomains provider is omitted. A reviewed common-domain subset is inserted at the same DIRECT stage, followed by the original GEOIP CN DIRECT and JP fallback. Unknown mainland services on overseas addresses may use proxy; this is an intentional opt-in coverage tradeoff, not lossless compression. The profile plus referenced text rules total roughly94KB instead of3MB; this excludes the unchanged MMDB and client modules, and is not a measured RAM reduction.
+The canonical profile omits the110190-rule ChinaDirectDomains provider, retaining274 reviewed common-domain selectors plus the original100.64/10 exception, GEOIP CN DIRECT and JP fallback. Current1093 TUN/871 real-IP/1958 Skip are unchanged, as are MY/US/JP/Apple ordering,13 observed UDP media targets and existing DNS/MITM/IPv6/node settings. Unlisted domestic services on overseas addresses may use proxy. Input text is roughly94KB including the four small providers, not a measured RAM reduction; unchanged MMDB/client modules are excluded from that size.
 
-All current TUN exclusions, real-IP and Skip strings are retained exactly. Previously reviewed domestic game IPs remain excluded from TUN, and known game DNS/HTTP exclusions remain. This cannot certify every future game address, application-specific proxy ingress, client override, or actual full-game behavior.
+Known domestic-game IP bypass/DNS/HTTP exclusions are retained, not a guarantee for every future IP or explicit proxy ingress. FaceTime media DIRECT avoids proxy nodes but is not full TUN bypass. Do not add shared Apple/APNs IPs to TUN to claim complete audio bypass: IP routes cannot distinguish UDP media from same-IP TCP Push. Preserve Push domain/TCP JP, and require actual phone calls/lock-screen notifications for runtime acceptance.
 
-Keep observed FaceTime media UDP exceptions DIRECT ahead of APNs shared-IP fallbacks, and keep TCP/domain Push on JP. DIRECT does not mean bypassing the SR TUN. TUN IP exclusions cannot distinguish UDP media from TCP Push on a shared address: do not add the shared Apple ranges or media addresses to TUN merely to claim full FaceTime bypass. Apple's documented APNs networks overlap the observed media addresses. Full FaceTime audio TUN bypass and all possible bare-IP Push JP cannot both be guaranteed by the current IP-only mechanism. Actual calls and lock-screen notifications require phone verification.
+## Full-version reference
 
-## Rebuild and consistency
+`CN-Full.conf` is a frozen-reference convenience profile: its five rule URLs are pinned to7106fd49b7b66aea73dafba17e2c3d699899a26f, and its update URL points to itself rather than canonical Lite. The exact unmodified old profile, source metadata, rule data and MMDB are retained under `archive/cn-full-20261112-7106fd4/` with MANIFEST.json size/SHA receipts. This archive is not an active source or daily-maintained full profile. The original archived CN.conf retains its historical update URL; do not auto-update that exact-evidence copy as if it were an independent full subscription.
 
-From a current candidate checkout containing the authoritative CN and rules:
+## Maintenance
+
+Edit current canonical `CN.conf` for authorized changes. Run:
 
 ```
 python3 tools/build_cn_lite.py
 python3 tools/build_cn_lite.py --check
 ```
 
-The generator is deterministic, does not fetch sources or apply runtimes, and emits `CN-Lite.conf` plus `CN-Lite.source.json`. Every admitted domain selector is a subset of current full-China domain-DIRECT coverage and originates from the approved General real-IP families, apart from the existing cn suffix and sole100.64/10 exception. Apple-covered domains are not duplicated. This is not a new external source or recurring task.
+The deterministic tool validates the canonical Lite layout and synchronizes CN-Lite alias/source sidecars. It does not rebuild canonical CN from the archived full profile or reattach the large China list. Keep General typed scopes, previous bypass coverage and proxy fences. New Lite DIRECT changes require a source review and the corresponding exact JP/iOS compatibility guard update/test before publication; never relax arbitrary-domain/widening guards to make maintenance pass.
 
-When an authorized source change affects CN General/rules or any referenced lists, regenerate against the same proposed source revision and include derived files in the same reviewed publication, then verify bytes. Do not restore the full China provider into Lite during daily maintenance, automatically switch full CN users to Lite, or expand domain/TUN scope to make a test pass. Keep current 13 external source checks,03:00/03:35 scheduling and delivery policies unchanged. Full CN/native importer policy and all excluded consumers remain separately guarded.
+The full ChinaDirectDomains data remains available and maintained for CNR/other native consumers. JP's strict source adapter projects only the exact approved275-row SR-Lite block back to the previous full-provider native layout, without runtime apply; its full-source rollback guards remain. The independent iPhone adapter accepts the same reviewed projection while retaining its existing full MRS/rules behavior. This compatibility is not permission to lighten native consumers or apply Windows policy.
 
-Rollback is selecting the retained full `CN.conf`; do not blindly replay an old repository or remove later owner changes. Phone memory/behavior comparison must use matching network and app activity, normal versus reproduction logging, and actual installed client version. No claim of preventing OOM without client evidence.
+Existing13 external source checks,03:00/03:35 HKT schedules, daily reports and failure alerts remain. Treat earlier independent-only CN-Full-preservation notes as historical; do not restore the full provider into canonical CN. Future rollback must be scoped and fresh-source aware, never a replay of an old repository.

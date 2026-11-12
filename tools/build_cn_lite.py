@@ -1,55 +1,40 @@
 #!/usr/bin/env python3
-"""Derive the opted-in SR-only Lite profile from current authoritative inputs.
-No fetch, native-runtime apply, secret output, new background producer or guessing.
-"""
+"""Check canonical SR Lite and synchronize its compatibility alias, not the archived full profile."""
 from pathlib import Path
-import argparse,hashlib,json,re
-URL='https://raw.githubusercontent.com/kenrickxu/SR/main/CN-Lite.conf'
+import argparse,hashlib,json,re,ipaddress
+CANONICAL='https://sr-config.kt7766.org/CN.conf'
+ALIAS='https://raw.githubusercontent.com/kenrickxu/SR/main/CN-Lite.conf'
+ARCHIVE='archive/cn-full-20261112-7106fd4'
 
 def derive(root):
-    raw=(root/'CN.conf').read_bytes();base=raw.decode();real=re.search(r'^always-real-ip = (.+)$',base,re.M)[1].split(',');realset=set(real)
-    files=['CN.conf']+['rules/'+n+'.list'for n in ['ChinaDirectDomains','AppleDirect','USProxy','JPProxy','MYProxy']]
-    rows=lambda name:[l.strip()for l in(root/('rules/'+name+'.list')).read_text().splitlines()if l.strip()and not l.lstrip().startswith('#')]
-    china=rows('ChinaDirectDomains');apple=rows('AppleDirect')
-    domains=lambda rr,kind:{l.split(',')[1]for l in rr if l.startswith(kind+',')}
-    cs,ce=domains(china,'DOMAIN-SUFFIX'),domains(china,'DOMAIN');aps,ape=domains(apple,'DOMAIN-SUFFIX'),domains(apple,'DOMAIN')
-    def covered(host,suffixes,exact=()):
-        return host in exact or any('.'.join(host.split('.')[i:])in suffixes for i in range(len(host.split('.'))))
-    candidates=['DOMAIN-SUFFIX,cn']if 'cn'in cs else[];held=[]
-    for host in real:
-        if host.startswith('*.'):continue
-        wildcard='*.'+host in realset
-        if covered(host,aps,ape)and (not wildcard or covered(host,aps)):continue
-        if covered(host,cs,ce)and(not wildcard or covered(host,cs)):
-            candidates.append(('DOMAIN-SUFFIX,'if wildcard else'DOMAIN,')+host)
-        else:held.append(host)
-    suffixes=domains(candidates,'DOMAIN-SUFFIX');small=[]
-    for row in candidates:
-        kind,host=row.split(',');start=0 if kind=='DOMAIN'else 1
-        if any('.'.join(host.split('.')[i:])in suffixes for i in range(start,len(host.split('.')))):continue
-        if row not in small:small.append(row)
-    ip='IP-CIDR,100.64.0.0/10,no-resolve';assert china.count(ip)==1;small.append(ip)
-    needle='RULE-SET,https://sr-config.kt7766.org/rules/ChinaDirectDomains.list,DIRECT';assert base.count(needle)==1
-    direct=lambda row:','.join(row.split(',')[:2]+['DIRECT']+row.split(',')[2:])
-    replacement='# SR Lite: reviewed common-domain subset; other destinations use GeoIP/fallback.\n'+'\n'.join(direct(row)for row in small)
-    out=base.replace(needle,replacement);assert len(re.findall(r'^update-url = .+$',out,re.M))==1
-    out=re.sub(r'^update-url = .+$',lambda _: 'update-url = '+URL,out,flags=re.M)
-    # All original proxy/media rules and route/RealIP/Skip strings stay intact.
-    for key in ['tun-excluded-routes','always-real-ip','skip-proxy']:
-        assert re.search('^'+key+' = .+$',out,re.M)[0]==re.search('^'+key+' = .+$',base,re.M)[0]
-    for row in small:
-        kind,host,*rest=row.split(',')
-        assert row==ip or (covered(host,cs)if kind=='DOMAIN-SUFFIX'else covered(host,cs,ce))
-    hashes={name:hashlib.sha256((root/name).read_bytes()).hexdigest()for name in files}
-    meta={'schema':1,'profile':'CN-Lite.conf','source_sha256':hashes,'profile_sha256':hashlib.sha256(out.encode()).hexdigest(),'direct_subset_rows':len(small),'direct_domain_rows':len(small)-1,'source_mainland_rows':len(china),'held_real_ip_hosts':held,'policy':'SR-only opted-in common-domain subset; preserve original TUN/RealIP/Skip, media and proxy order. Full CN retained separately.','limitations':['Unknown mainland-domain services on non-CN IPs may now proxy.','DIRECT media is not proof of TUN bypass.','Client module/runtime settings and future game IPs require phone verification.'],'native_consumers_changed':False}
-    return out.encode(),(json.dumps(meta,ensure_ascii=False,indent=2)+'\n').encode(),meta
+    raw=(root/'CN.conf').read_bytes();text=raw.decode();rules=[r.strip()for r in text.split('[Rule]',1)[1].split('[',1)[0].splitlines()if r.strip()and not r.lstrip().startswith('#')]
+    assert 'ChinaDirectDomains.list'not in '\n'.join(rules),'Canonical CN must remain Lite; full data lives in the reference archive'
+    assert rules[-2:]==['GEOIP,CN,DIRECT','FINAL,🇯🇵 JP REA']
+    prefix=['RULE-SET,https://sr-config.kt7766.org/rules/'+n+'.list,'+policy for n,policy in [('MYProxy','🇲🇾 MY REA'),('USProxy','🇺🇸 US REA'),('JPProxy','🇯🇵 JP REA'),('AppleDirect','DIRECT')]]
+    off=1 if rules[0].startswith('AND,')else 0
+    assert rules[off:off+4]==prefix
+    direct=rules[off+4:-2];assert direct and len(direct)==len(set(direct))
+    for row in direct:
+        a=row.split(',')
+        if a[0]in ['DOMAIN','DOMAIN-SUFFIX']:assert len(a)==3 and a[2]=='DIRECT'and re.fullmatch('[A-Za-z0-9_.-]+',a[1])
+        else:assert row=='IP-CIDR,100.64.0.0/10,DIRECT,no-resolve'
+    for key in ['tun-excluded-routes','always-real-ip','skip-proxy']:assert len(re.findall('^'+key+' = ',text,re.M))==1
+    routes=re.search('^tun-excluded-routes = (.+)$',text,re.M)[1].split(',');assert len(routes)==len(set(routes))
+    for route in routes:ipaddress.ip_network(route,strict=True)
+    assert '17.0.0.0/8'not in routes and '127.0.0.0/8'not in routes
+    assert re.search('^update-url = (.+)$',text,re.M)[1]==CANONICAL
+    alias=re.sub('^update-url = .+$',lambda _:'update-url = '+ALIAS,text,flags=re.M).encode()
+    sourcefiles=['CN.conf']+['rules/'+n+'.list'for n in ['MYProxy','USProxy','JPProxy','AppleDirect']]
+    hashes={f:hashlib.sha256((root/f).read_bytes()).hexdigest()for f in sourcefiles}
+    meta={'schema':2,'mode':'canonical-sr-lite','profile':'CN.conf','profile_sha256':hashlib.sha256(raw).hexdigest(),'source_sha256':hashes,'direct_subset_rows':len(direct),'direct_domain_rows':len(direct)-1,'full_reference':'CN-Full.conf','full_exact_archive':ARCHIVE,'policy':'Canonical SR is Lite; retain Game TUN/RealIP/Skip and media/Push priorities; full provider retained only for other consumers/reference.','native_runtime_applied':False,'limitations':['Unlisted domestic services on overseas IPs may proxy.','DIRECT media is not full TUN bypass.','Phone RAM, future game IPs and notification/call outcomes require client acceptance.']}
+    aliasmeta={**meta,'profile':'CN-Lite.conf','profile_sha256':hashlib.sha256(alias).hexdigest(),'canonical':'CN.conf'}
+    return {'CN-Lite.conf':alias,'CN.source.json':(json.dumps(meta,ensure_ascii=False,indent=2)+'\n').encode(),'CN-Lite.source.json':(json.dumps(aliasmeta,ensure_ascii=False,indent=2)+'\n').encode()}
 
 def main():
-    parser=argparse.ArgumentParser();parser.add_argument('--root',type=Path,default=Path(__file__).resolve().parent.parent);parser.add_argument('--check',action='store_true');args=parser.parse_args()
-    body,meta,summary=derive(args.root)
-    for name,data in [('CN-Lite.conf',body),('CN-Lite.source.json',meta)]:
-        target=args.root/name
-        if args.check:assert target.read_bytes()==data,'Stale '+name+'; run tools/build_cn_lite.py in the same source checkout'
-        else:target.write_bytes(data)
-    print(json.dumps({'check':args.check,'profile_bytes':len(body),'direct_rows':summary['direct_subset_rows'],'native_consumers_changed':False}))
+    ap=argparse.ArgumentParser();ap.add_argument('--root',type=Path,default=Path(__file__).resolve().parent.parent);ap.add_argument('--check',action='store_true');a=ap.parse_args();outputs=derive(a.root)
+    for name,body in outputs.items():
+        f=a.root/name
+        if a.check:assert f.read_bytes()==body,'Stale derived '+name
+        else:f.write_bytes(body)
+    print(json.dumps({'check':a.check,'canonical_mode':'sr-lite','alias_bytes':len(outputs['CN-Lite.conf']),'full_reference_modified':False}))
 if __name__=='__main__':main()
