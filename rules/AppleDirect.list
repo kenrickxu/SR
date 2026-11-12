@@ -235,3 +235,4 @@ AND,((PROTOCOL,UDP),(DST-PORT,16384-16387))
 AND,((PROTOCOL,UDP),(DST-PORT,16393-16402))
 DOMAIN,gsa.idms-apple.com.akadns.net
 DOMAIN,imap.mail.me.com.akadns.net
+DOMAIN,gspe1-ssl.ls.apple.com.edgesuite.net
