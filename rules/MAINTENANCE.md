@@ -212,3 +212,13 @@ Preserve MYProxy.list and provenance; Polymarket moved out of USProxy/OS inline 
 - CN publication only: CNR/OS/USProxy/JPProxy/MYProxy, nodes, DNS/MITM/IPv6 and scheduler unchanged. Shared Apple data is visible to existing consumers on refresh; no managed native policy apply. Exact importer and iPhone source-layout compatibility permit current/rollback sets; no arbitrary widening.
 - Five-provider cold load, strict positive/negative checks, immutable/main/download byte checks; phone full CN + AppleDirect refresh/reconnect and FaceTime/locked-screen push acceptance still manual.
 - Private provenance and exact-set evidence: projects/sr-log-seven-4801/.
+
+
+## 2026-11-12 HKT — three-log follow-up (Topic194 5208)
+
+- Private complete batch 73,570 lines, Nov12 12:20–15:50, rotation gap 14:53–14:55. Effective 1084-route reload exactly matches prior CN source. No game or Polymarket flows observed.
+- Preserve eight old media targets; add only UDP exact 17.188.143.135/32,17.188.143.26/32,17.188.143.27/32 before MY/US/JP to correct observed APNs shared-prefix media precedence. Four observed flows with bidirectional bytes do not prove complete FaceTime calls. Push TCP/domain JP unchanged. No blanket Apple bypass.
+- Two actual DIRECT destinations unpkg.zhihu.com 43.242.197.211 and tsis.jpush.cn 139.9.129.253: whole current country-union, APNIC CN registration containment and live proxy-IP/ASN/DNS protection checked; 43.242.196.0/22 and 139.9.128.0/17 jointly consolidated with existing TUN/Skip. Added address coverage 33,536; shared range is not app-exclusive. Google protected connectivitycheck address remains held.
+- CN 1085 TUN / 870 RealIP / 1949 Skip; all previous coverage preserved. AppleDirect235 and all five shared providers unchanged, as are CNR/OS, DNS/MITM/IPv6, credentials, Windows running policy and schedulers. Exact native/iPhone importer compatibility updated, only subscription API reload permitted; no VPN restart or managed apply.
+- Push10/10 selected JP and node-connected; one connection interrupted during interface switch, not a notification delivery proof. Prior precise mail alias4/4 DIRECT. Seven final DNS failures for token.safebrowsing.apple remain unresolved; no BAD_DECRYPT or memory warning observed in this capture. No global DNS changes from this alone.
+- Strict current/rollback and negative guards, isolated five-provider cold load and downloaded bytes verified separately from pending full CN refresh/reconnect and phone app acceptance. Private evidence: projects/sr-log-three-5208/.
