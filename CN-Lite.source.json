@@ -1,25 +1,27 @@
 {
-  "schema": 2,
-  "mode": "canonical-sr-lite",
+  "schema": 3,
+  "mode": "canonical-sr-explicit-proxy-default-direct",
   "profile": "CN-Lite.conf",
-  "profile_sha256": "67c0f336633a3203a98b74623069e558d2bb280d5f8d2e3d8b859db8d92ed7bc",
+  "profile_sha256": "bc7c7f2a92032131386bf8709346a9721e9fc8551edd2359fa1bc33e0a7f2f5e",
   "source_sha256": {
-    "CN.conf": "77f392d6c9d04f68726e6371e6c79fb18cdedf011f6d31bf4693c7193da2e3d5",
+    "CN.conf": "118d6efba0556e8d4c7891735584ed48e91bee804197c4a23e982c28fefa8194",
     "rules/MYProxy.list": "4397e40abd944f6010d615c25abb7b85724f4d2570562c0a825ba23291529066",
     "rules/USProxy.list": "b136744c74be3afcf16e00afa5d0552872c49edad5d046a09ec62b75a6489d2c",
     "rules/JPProxy.list": "b3a9e3965f7bcbcb071071aa2bbd8cafbb6d45b49f88a0ec111856d204abae02",
-    "rules/AppleDirect.list": "dd502fda2447c935406e423cce1cf38a02095f1e57a18e3dddf86204fe026a6b"
+    "rules/CNMediaDirect.list": "a8a4b7e527ba6861f97cbc6ad654390ecc7aea39f1708507e9def60a49658d03",
+    "rules/CNForeignProxy.list": "06da2801af43076daa5a559b394b488afe58b7fa56513276576c7ca4a09e5fe5"
   },
-  "direct_subset_rows": 275,
-  "direct_domain_rows": 274,
-  "full_reference": "CN-Full.conf",
-  "full_exact_archive": "archive/cn-full-20261112-7106fd4",
-  "policy": "Canonical SR is Lite; retain Game TUN/RealIP/Skip and media/Push priorities; full provider retained only for other consumers/reference.",
+  "real_ip_rows": 0,
+  "skip_rows": 12,
+  "tun_rows": 14,
+  "default": "DIRECT",
+  "reference": "CN-Lite-Reference.conf",
   "native_runtime_applied": false,
   "limitations": [
-    "Unlisted domestic services on overseas IPs may proxy.",
-    "DIRECT media is not full TUN bypass.",
-    "Phone RAM, future game IPs and notification/call outcomes require client acceptance."
+    "Unlisted foreign services and bare IPs default DIRECT.",
+    "DIRECT is not full SR bypass.",
+    "127/8 previously rejected by iOS; owner requested it in5678.",
+    "Phone RAM and actual app outcomes require client testing."
   ],
   "canonical": "CN.conf"
 }
