@@ -2,9 +2,9 @@
   "schema": 2,
   "mode": "canonical-sr-lite",
   "profile": "CN.conf",
-  "profile_sha256": "10e91687010714e450219018e140d82c1c83b7b2568e217cca774814d995e908",
+  "profile_sha256": "77f392d6c9d04f68726e6371e6c79fb18cdedf011f6d31bf4693c7193da2e3d5",
   "source_sha256": {
-    "CN.conf": "10e91687010714e450219018e140d82c1c83b7b2568e217cca774814d995e908",
+    "CN.conf": "77f392d6c9d04f68726e6371e6c79fb18cdedf011f6d31bf4693c7193da2e3d5",
     "rules/MYProxy.list": "4397e40abd944f6010d615c25abb7b85724f4d2570562c0a825ba23291529066",
     "rules/USProxy.list": "b136744c74be3afcf16e00afa5d0552872c49edad5d046a09ec62b75a6489d2c",
     "rules/JPProxy.list": "b3a9e3965f7bcbcb071071aa2bbd8cafbb6d45b49f88a0ec111856d204abae02",
