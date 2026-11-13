@@ -34,7 +34,7 @@ def derive(root):
     raw=(root/'CN.conf').read_bytes();text=raw.decode()
     if not text.startswith('# CN-MODE: explicit-proxy-default-direct-v1'):return derive_legacy(root)
     rules=[l.strip() for l in text.split('[Rule]',1)[1].split('[',1)[0].splitlines()if l.strip()and not l.startswith('#')]
-    assert rules==['RULE-SET,https://raw.githubusercontent.com/kenrickxu/SR/main/rules/CNMediaDirect.list,DIRECT', 'RULE-SET,https://sr-config.kt7766.org/rules/MYProxy.list,🇲🇾 MY REA', 'RULE-SET,https://sr-config.kt7766.org/rules/USProxy.list,🇺🇸 US REA', 'RULE-SET,https://sr-config.kt7766.org/rules/JPProxy.list,🇯🇵 JP REA', 'RULE-SET,https://raw.githubusercontent.com/kenrickxu/SR/main/rules/CNForeignProxy.list,🇯🇵 JP REA', 'FINAL,DIRECT']
+    assert rules==['RULE-SET,https://raw.githubusercontent.com/kenrickxu/SR/main/rules/CNMediaDirect.list,DIRECT', 'RULE-SET,https://sr-config.kt7766.org/rules/MYProxy.list,🇲🇾 MY REA', 'RULE-SET,https://sr-config.kt7766.org/rules/USProxy.list,🇺🇸 US REA', 'RULE-SET,https://sr-config.kt7766.org/rules/JPProxy.list,🇯🇵 JP REA', 'RULE-SET,https://raw.githubusercontent.com/kenrickxu/SR/main/rules/CNForeignProxy.list,🇯🇵 JP REA', 'GEOIP,CN,DIRECT', 'FINAL,DIRECT']
     assert not re.search(r'^always-real-ip\s*=',text,re.M)
     assert re.search('^tun-excluded-routes = (.+)$',text,re.M)[1]=='10.0.0.0/8,127.0.0.0/8,169.254.0.0/16,172.16.0.0/12,192.0.0.0/24,192.0.2.0/24,192.88.99.0/24,192.168.0.0/16,198.51.100.0/24,203.0.113.0/24,224.0.0.0/4,255.255.255.255/32,239.255.255.250/32,ff02::fb/128'
     assert re.search('^skip-proxy = (.+)$',text,re.M)[1]=='192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,localhost,*.local,captive.apple.com,*.ccb.com,*.abchina.com.cn,*.psbc.com,www.baidu.com,www.163.com,tplogin.cn'

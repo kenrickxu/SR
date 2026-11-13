@@ -2,9 +2,9 @@
   "schema": 3,
   "mode": "canonical-sr-explicit-proxy-default-direct",
   "profile": "CN.conf",
-  "profile_sha256": "118d6efba0556e8d4c7891735584ed48e91bee804197c4a23e982c28fefa8194",
+  "profile_sha256": "169f1f7c7342fcc07759ffd199fd3e7bdf3b44f55643895ba9235a17631a1e15",
   "source_sha256": {
-    "CN.conf": "118d6efba0556e8d4c7891735584ed48e91bee804197c4a23e982c28fefa8194",
+    "CN.conf": "169f1f7c7342fcc07759ffd199fd3e7bdf3b44f55643895ba9235a17631a1e15",
     "rules/MYProxy.list": "4397e40abd944f6010d615c25abb7b85724f4d2570562c0a825ba23291529066",
     "rules/USProxy.list": "b136744c74be3afcf16e00afa5d0552872c49edad5d046a09ec62b75a6489d2c",
     "rules/JPProxy.list": "b3a9e3965f7bcbcb071071aa2bbd8cafbb6d45b49f88a0ec111856d204abae02",
