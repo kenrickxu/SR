@@ -1,3 +1,11 @@
+## Apple/default-DIRECT and history supplement — Ken5718,2026-11-13 HKT
+
+MainCN6rules/4sets andGeneralremainunchanged. JP342→343 adds onlyobserved api-production.8-lives-cat.io, officiallyRevenueCatbackup.29 ownhistoricalanalysisfiles/1234connectionhosts reviewed; no blindforeign/ads/sharedCDNunion. RevenueCatprimaryalreadyJP, thisprecisebackupwasmissing.
+
+CNMediaDirect now5compactrules: exactapple-relay.cloudflare.com/cp4.cloudflare.com DIRECT beforebroadcloudflareJP; knownnonPushapple.com (explicitNOTpush.apple.com) andicloud.com DIRECT beforerawAPNsIPfallthrough; UDP-only9existingAPNsprefixesDIRECT preservesall17previousmediahosts andfutureUDPinthoseprefixes. No17/8bypass/General/TUN/Skip/IPv6change. PushdomainandTCPIPfallbackJP stay;unknownrawTCPinthesharedprefixes cannotbeprovenPush-exclusive, so do notpromiseonlyPushJP/allfutureAppleDIRECT. DIRECTisnotfullSRbypass orcall/notificationacceptance. OtherunmatchedAppleusesFINALDIRECT; do notrestore236rowAppleDirecttable, independentforeignset orlargeChinadataintoSR.
+
+This isCN-onlyApple/media data, whileJPbackupdataissharedonconsumerrefresh. Native/iPhone/Windowsrules intentionallynotapplied; source layoutunchanged/strictformalreview/actualsubscribersstillrequired. Oldexact17-onlymediaclauses supersededonlybyUDPprefixcoverage;TCPPush/nativeprivacy/13sources03:00/03:35/5487quarantine androllbackfencesremain.
+
 ## JP supplement consolidation — Ken5715,2026-11-13 HKT
 
 CurrentCN has6rules/4sets: CNMediaDirect→MYProxy→USProxy→JPProxy→GEOIP,CN,DIRECT→FINAL,DIRECT. The previously61-row CNForeignProxy supplement is now merged intoJPProxy (281→342), with alloldselectors/options preserved and domainrows beforeIProws. No newforeign coverage beyond the alreadyapproved61; MY/US remainearlier. CNForeignProxy URL retained as comment-onlydeprecatedstub, notloaded; do notrecreateseparateCNForeignProxy set or importit atmaintenance. JPServices19/otherownerinputs keptuntouched. Review/provenance inProxyServices.review.json owner_jp_supplement_5715; futuredaily sourceupdatesmustpreserve theselocalownerrows andcurrentJPdata, not old281literalcount. ExistingYfamilyquarantine/thirteenfeeds remain.

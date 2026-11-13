@@ -7,8 +7,8 @@
     "CN.conf": "b83f74a4d341cb0a0d4a18c4d65df0170d8e5a76bda1b68f505f433db0f205de",
     "rules/MYProxy.list": "4397e40abd944f6010d615c25abb7b85724f4d2570562c0a825ba23291529066",
     "rules/USProxy.list": "b136744c74be3afcf16e00afa5d0552872c49edad5d046a09ec62b75a6489d2c",
-    "rules/JPProxy.list": "57db44df94a5502e8960b304e3a68997ca9e957d6ebb85ef04b763be6d9806ba",
-    "rules/CNMediaDirect.list": "a8a4b7e527ba6861f97cbc6ad654390ecc7aea39f1708507e9def60a49658d03"
+    "rules/JPProxy.list": "bde389202bd0c353f77794ea8d7cbd919ad5c490052522361fcf234799bb2ca5",
+    "rules/CNMediaDirect.list": "7fcaae1fdd6392bc8d1ae2daf3df6c83c45c72aea0b6b9b89f32bc100f0ce134"
   },
   "real_ip_rows": 0,
   "skip_rows": 12,

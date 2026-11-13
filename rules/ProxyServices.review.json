@@ -1542,7 +1542,7 @@
       "source_dependency": "Contains shared legacy Telegram/official-CIDR lineage; not an independent ownership vote."
     }
   },
-  "latest_owner_instruction": "Topic194 msg5715",
+  "latest_owner_instruction": "Topic194 msg5718",
   "owner_jp_supplement_5715": {
     "date": "2026-11-13",
     "source": "Ken Topic194 msgs5678/5715: merge previously reviewed foreign-service supplement into JPProxy",
@@ -1616,5 +1616,20 @@
       "DOMAIN,wspri.okx.com.cdn.cloudflare.net"
     ],
     "scope": "SharedJP data change on consumer refresh; no native/Windows runtime apply; MY/US order unchanged"
+  },
+  "owner_history_supplement_5718": {
+    "date": "2026-11-13",
+    "basis": "29 own saved SR analyses,1234 connection hosts; reviewed commonforeign routing, not raw private chats",
+    "added_to_jp": [
+      "DOMAIN,api-production.8-lives-cat.io"
+    ],
+    "sources": [
+      "https://8-lives-cat.io/",
+      "https://github.com/RevenueCat/purchases-ios"
+    ],
+    "new_JP_entries": 343,
+    "apple_rule_source": "https://support.apple.com/en-us/101555",
+    "udp_basis": "APNs usesTCP;UDP in alreadylistedAppleAPNsprefixesDIRECT, all17oldhosts covered",
+    "shared_effect": "JPdata updatesonconsumerrefresh; CN-onlyApple/media rulechange doesnotapply othernativeclientpolicy"
   }
 }

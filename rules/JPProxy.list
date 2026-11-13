@@ -224,6 +224,9 @@ DOMAIN,universal-nav-registry-production.cfapi.workers.dev
 DOMAIN,wsdexpri.okx.com.cdn.cloudflare.net
 DOMAIN,wspri.okx.com.cdn.cloudflare.net
 
+# Ken5718: observed RevenueCat backup endpoint; official 8-lives-cat.io provenance.
+DOMAIN,api-production.8-lives-cat.io
+
 IP-CIDR,17.57.144.0/22,no-resolve
 IP-CIDR,17.188.20.0/23,no-resolve
 IP-CIDR,17.188.128.0/18,no-resolve
