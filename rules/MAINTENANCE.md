@@ -1,3 +1,9 @@
+## Owner removes unnecessary backup exception — Ken5735,2026-11-13 HKT
+
+Remove DOMAIN,api-production.8-lives-cat.io fromJP343→342. Do notauto-readd thisfamily orparentselector aspreviouslyvisitedforeignwebsite: itisautomaticSDKbackend andownerdeclinesitsproxyexception. Original5718evidence remains historical, notcurrentauthority. PrimaryRevenueCatexistingrows unchanged.
+
+Keep CNMediaDirect5rules andmain6/4structure: conditionalrequesttoomit onlyifdefaultDIRECTwouldbesame isnottrue. WithoutthisearlyDIRECTset, apple-relay.cloudflare.com/cp4.cloudflare.com hitcloudflare.com JP, and17.188.171.27UDP3482hits17.188.128/18 JP. JP-before-GEOIP/FINAL defeatsdefaultDIRECT. NoCN/alias/General/media/MYUS/native/runtimechange orAPIreload. Fullstrictreview/download/consumercompatstillrequired;13sources/schedules/alerts/quarantineotherfencesremain.
+
 ## Apple/default-DIRECT and history supplement — Ken5718,2026-11-13 HKT
 
 MainCN6rules/4sets andGeneralremainunchanged. JP342→343 adds onlyobserved api-production.8-lives-cat.io, officiallyRevenueCatbackup.29 ownhistoricalanalysisfiles/1234connectionhosts reviewed; no blindforeign/ads/sharedCDNunion. RevenueCatprimaryalreadyJP, thisprecisebackupwasmissing.

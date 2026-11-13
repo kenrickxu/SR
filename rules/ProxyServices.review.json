@@ -1542,7 +1542,7 @@
       "source_dependency": "Contains shared legacy Telegram/official-CIDR lineage; not an independent ownership vote."
     }
   },
-  "latest_owner_instruction": "Topic194 msg5718",
+  "latest_owner_instruction": "Topic194 msg5735",
   "owner_jp_supplement_5715": {
     "date": "2026-11-13",
     "source": "Ken Topic194 msgs5678/5715: merge previously reviewed foreign-service supplement into JPProxy",
@@ -1631,5 +1631,14 @@
     "apple_rule_source": "https://support.apple.com/en-us/101555",
     "udp_basis": "APNs usesTCP;UDP in alreadylistedAppleAPNsprefixesDIRECT, all17oldhosts covered",
     "shared_effect": "JPdata updatesonconsumerrefresh; CN-onlyApple/media rulechange doesnotapply othernativeclientpolicy"
+  },
+  "owner_declined_supplements_5735": {
+    "date": "2026-11-13",
+    "removed_from_JP": [
+      "DOMAIN,api-production.8-lives-cat.io"
+    ],
+    "family": "8-lives-cat.io",
+    "reason": "Ken explicitly says this automatic App backend is not needed in the proxy supplement; do not auto-readd exactorparent rule from historyfeed. Not a block: normal fallback routing remains.",
+    "CNMediaDirect_decision": "Conditional removal notapplicable: removing it makes Apple PCCCloudflare and APNsUDP hitJPbeforeFINAL; keep current5rules unchanged."
   }
 }
