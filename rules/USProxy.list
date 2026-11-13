@@ -1,4 +1,4 @@
-# Explicit owner US proxy selectors; domain rules precede IPv4.
+# Ken5750: reviewed DOMAIN-SUFFIX families; no generic keyword matching. Shared tenants stay scoped.
 DOMAIN-SUFFIX,anaconda.com
 DOMAIN-SUFFIX,anaconda.org
 DOMAIN-SUFFIX,anthropic.com
@@ -23,20 +23,18 @@ DOMAIN-SUFFIX,oklink.com
 DOMAIN-SUFFIX,okpool.top
 DOMAIN-SUFFIX,okx.com
 DOMAIN-SUFFIX,www.okx.com.cdn.cloudflare.net
-# Reviewed service additions: Ken Topic194 msg2677; see ProxyServices.review.json.
 DOMAIN-SUFFIX,chat.com
 DOMAIN-SUFFIX,chatgpt.livekit.cloud
 DOMAIN-SUFFIX,crixet.com
-DOMAIN,openaiapi-site.azureedge.net
-DOMAIN,openaicom.imgix.net
+DOMAIN-SUFFIX,openaiapi-site.azureedge.net
+DOMAIN-SUFFIX,openaicom.imgix.net
 DOMAIN-SUFFIX,sora.com
-DOMAIN-KEYWORD,chatgpt-async-webps-prod
-DOMAIN,rum.browser-intake-datadoghq.com
-DOMAIN,openai-api.arkoselabs.com
-DOMAIN,openaiassets.blob.core.windows.net
-DOMAIN,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net
-DOMAIN,openaicomproductionae4b.blob.core.windows.net
-DOMAIN,production-openaicom-storage.azureedge.net
+DOMAIN-SUFFIX,rum.browser-intake-datadoghq.com
+DOMAIN-SUFFIX,openai-api.arkoselabs.com
+DOMAIN-SUFFIX,openaiassets.blob.core.windows.net
+DOMAIN-SUFFIX,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net
+DOMAIN-SUFFIX,openaicomproductionae4b.blob.core.windows.net
+DOMAIN-SUFFIX,production-openaicom-storage.azureedge.net
 DOMAIN-SUFFIX,chatgpt.site
 DOMAIN-SUFFIX,host.livekit.cloud
 DOMAIN-SUFFIX,intercom.io
@@ -44,12 +42,11 @@ DOMAIN-SUFFIX,intercomcdn.com
 DOMAIN-SUFFIX,oaistatsig.com
 DOMAIN-SUFFIX,openai.com.cdn.cloudflare.net
 DOMAIN-SUFFIX,openai.org
-DOMAIN,o207216.ingest.sentry.io
-DOMAIN,o33249.ingest.sentry.io
-DOMAIN,o33249.ingest.us.sentry.io
+DOMAIN-SUFFIX,o207216.ingest.sentry.io
+DOMAIN-SUFFIX,o33249.ingest.sentry.io
+DOMAIN-SUFFIX,o33249.ingest.us.sentry.io
 DOMAIN-SUFFIX,turn.livekit.cloud
-# Reviewed v2fly OpenAI supplement: Ken Topic194 msg2681.
-DOMAIN,openai.qualtrics.com
+DOMAIN-SUFFIX,openai.qualtrics.com
 IP-CIDR,192.255.130.194/32,no-resolve
 IP-CIDR,192.255.149.171/32,no-resolve
 IP-ASN,401518,no-resolve

@@ -6,7 +6,7 @@
   ],
   "observed_hkt": "2026-11-12",
   "entries": 32,
-  "sha256": "4397e40abd944f6010d615c25abb7b85724f4d2570562c0a825ba23291529066",
+  "sha256": "33081d536e2616de7650ef585820d0d4ffce528a54e061f6751a8882b1d9d26c",
   "dns": {
     "clob.polymarket.com": [
       "104.18.34.205",
@@ -80,5 +80,10 @@
       "2606:4700:440d::6812:22cd"
     ]
   },
-  "shared_IP_warning": "Exact Cloudflare/CloudFront/Vercel IP rules can affect unrelated services on those IPs. No ASN or parent-CDN ranges admitted. S3 regional IPs omitted because bucket-specific hostname routing is safer."
+  "shared_IP_warning": "Exact Cloudflare/CloudFront/Vercel IP rules can affect unrelated services on those IPs. No ASN or parent-CDN ranges admitted. S3 regional IPs omitted because bucket-specific hostname routing is safer.",
+  "owner_domain_suffix_5750": {
+    "date": "2026-11-13",
+    "change": "Exact bucket hostname becomes DOMAIN-SUFFIX at same tenant hostname only; original DNS observations not refreshed",
+    "no_parent_cloud_expansion": true
+  }
 }

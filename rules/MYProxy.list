@@ -1,8 +1,7 @@
-# MYProxy — Ken Topic194 msg4771; Polymarket first assignment.
-# Exact DNS snapshots only; CDN addresses may be shared and can change.
+# Ken5750: reviewed DOMAIN-SUFFIX families; no generic keyword matching. Shared tenants stay scoped.
 DOMAIN-SUFFIX,polymarket.com
 DOMAIN-SUFFIX,polymarket.us
-DOMAIN,polymarket-upload.s3.us-east-2.amazonaws.com
+DOMAIN-SUFFIX,polymarket-upload.s3.us-east-2.amazonaws.com
 IP-CIDR,3.175.86.56/32,no-resolve
 IP-CIDR,3.175.86.92/32,no-resolve
 IP-CIDR,3.175.86.116/32,no-resolve

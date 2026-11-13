@@ -1542,7 +1542,7 @@
       "source_dependency": "Contains shared legacy Telegram/official-CIDR lineage; not an independent ownership vote."
     }
   },
-  "latest_owner_instruction": "Topic194 msg5735",
+  "latest_owner_instruction": "Topic194 msgs5746/5748/5750/5751",
   "owner_jp_supplement_5715": {
     "date": "2026-11-13",
     "source": "Ken Topic194 msgs5678/5715: merge previously reviewed foreign-service supplement into JPProxy",
@@ -1640,5 +1640,323 @@
     "family": "8-lives-cat.io",
     "reason": "Ken explicitly says this automatic App backend is not needed in the proxy supplement; do not auto-readd exactorparent rule from historyfeed. Not a block: normal fallback routing remains.",
     "CNMediaDirect_decision": "Conditional removal notapplicable: removing it makes Apple PCCCloudflare and APNsUDP hitJPbeforeFINAL; keep current5rules unchanged."
+  },
+  "owner_direct_first_5748": {
+    "date": "2026-11-13",
+    "source": "Ken5746 prefer direct if usable; Ken5748 explicitly Push direct",
+    "removed_JP_rules": [
+      "DOMAIN-SUFFIX,push.apple.com",
+      "DOMAIN-SUFFIX,cloudflare.com",
+      "IP-CIDR,17.57.144.0/22,no-resolve",
+      "IP-CIDR,17.188.20.0/23,no-resolve",
+      "IP-CIDR,17.188.128.0/18,no-resolve",
+      "IP-CIDR,17.249.0.0/16,no-resolve",
+      "IP-CIDR,17.252.0.0/16,no-resolve",
+      "IP-CIDR6,2620:149:a44::/48,no-resolve",
+      "IP-CIDR6,2403:300:a42::/48,no-resolve",
+      "IP-CIDR6,2403:300:a51::/48,no-resolve",
+      "IP-CIDR6,2a01:b740:a42::/48,no-resolve"
+    ],
+    "removed_CN_rules": [
+      "DOMAIN,apple-relay.cloudflare.com,DIRECT",
+      "DOMAIN,cp4.cloudflare.com,DIRECT",
+      "AND,((DOMAIN-SUFFIX,apple.com),(NOT,((DOMAIN-SUFFIX,push.apple.com)))),DIRECT",
+      "DOMAIN-SUFFIX,icloud.com,DIRECT",
+      "AND,((PROTOCOL,UDP),(OR,((IP-CIDR,17.57.144.0/22),(IP-CIDR,17.188.20.0/23),(IP-CIDR,17.188.128.0/18),(IP-CIDR,17.249.0.0/16),(IP-CIDR,17.252.0.0/16),(IP-CIDR6,2620:149:a44::/48),(IP-CIDR6,2403:300:a42::/48),(IP-CIDR6,2403:300:a51::/48),(IP-CIDR6,2a01:b740:a42::/48)))),DIRECT"
+    ],
+    "policy": "No automatic re-add of these conflicting Push/APNs/cloudflare.com proxy selectors. Apple/Push/media default DIRECT; retain all other JP331, MY/US, no broad auto-direct conversion. Actual China-phone reachability and notification delivery pending user test; not proved by overseas server probes. Existing primary RevenueCat rows and declined8-lives-cat.io family policy unchanged. Shared JP provider data changes on consumer refresh; no native runtime apply."
+  },
+  "owner_domain_suffix_5750": {
+    "date": "2026-11-13",
+    "tables": {
+      "MYProxy": {
+        "before": 32,
+        "after": 32,
+        "keyword_fallbacks_removed": [],
+        "selectors_converted": [
+          {
+            "before": "DOMAIN,polymarket-upload.s3.us-east-2.amazonaws.com",
+            "after": "DOMAIN-SUFFIX,polymarket-upload.s3.us-east-2.amazonaws.com",
+            "scope": "same tenant/hostname with descendants"
+          }
+        ]
+      },
+      "USProxy": {
+        "before": 53,
+        "after": 52,
+        "keyword_fallbacks_removed": [
+          "DOMAIN-KEYWORD,chatgpt-async-webps-prod"
+        ],
+        "selectors_converted": [
+          {
+            "before": "DOMAIN,openaiapi-site.azureedge.net",
+            "after": "DOMAIN-SUFFIX,openaiapi-site.azureedge.net",
+            "scope": "same tenant/hostname with descendants"
+          },
+          {
+            "before": "DOMAIN,openaicom.imgix.net",
+            "after": "DOMAIN-SUFFIX,openaicom.imgix.net",
+            "scope": "same tenant/hostname with descendants"
+          },
+          {
+            "before": "DOMAIN,rum.browser-intake-datadoghq.com",
+            "after": "DOMAIN-SUFFIX,rum.browser-intake-datadoghq.com",
+            "scope": "same tenant/hostname with descendants"
+          },
+          {
+            "before": "DOMAIN,openai-api.arkoselabs.com",
+            "after": "DOMAIN-SUFFIX,openai-api.arkoselabs.com",
+            "scope": "same tenant/hostname with descendants"
+          },
+          {
+            "before": "DOMAIN,openaiassets.blob.core.windows.net",
+            "after": "DOMAIN-SUFFIX,openaiassets.blob.core.windows.net",
+            "scope": "same tenant/hostname with descendants"
+          },
+          {
+            "before": "DOMAIN,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net",
+            "after": "DOMAIN-SUFFIX,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net",
+            "scope": "same tenant/hostname with descendants"
+          },
+          {
+            "before": "DOMAIN,openaicomproductionae4b.blob.core.windows.net",
+            "after": "DOMAIN-SUFFIX,openaicomproductionae4b.blob.core.windows.net",
+            "scope": "same tenant/hostname with descendants"
+          },
+          {
+            "before": "DOMAIN,production-openaicom-storage.azureedge.net",
+            "after": "DOMAIN-SUFFIX,production-openaicom-storage.azureedge.net",
+            "scope": "same tenant/hostname with descendants"
+          },
+          {
+            "before": "DOMAIN,o207216.ingest.sentry.io",
+            "after": "DOMAIN-SUFFIX,o207216.ingest.sentry.io",
+            "scope": "same tenant/hostname with descendants"
+          },
+          {
+            "before": "DOMAIN,o33249.ingest.sentry.io",
+            "after": "DOMAIN-SUFFIX,o33249.ingest.sentry.io",
+            "scope": "same tenant/hostname with descendants"
+          },
+          {
+            "before": "DOMAIN,o33249.ingest.us.sentry.io",
+            "after": "DOMAIN-SUFFIX,o33249.ingest.us.sentry.io",
+            "scope": "same tenant/hostname with descendants"
+          },
+          {
+            "before": "DOMAIN,openai.qualtrics.com",
+            "after": "DOMAIN-SUFFIX,openai.qualtrics.com",
+            "scope": "same tenant/hostname with descendants"
+          }
+        ]
+      },
+      "JPProxy": {
+        "before": 331,
+        "after": 302,
+        "keyword_fallbacks_removed": [
+          "DOMAIN-KEYWORD,musical.ly",
+          "DOMAIN-KEYWORD,tiktok",
+          "DOMAIN-KEYWORD,binance",
+          "DOMAIN-KEYWORD,discord",
+          "DOMAIN-KEYWORD,nflx",
+          "DOMAIN-KEYWORD,1drv",
+          "DOMAIN-KEYWORD,1e100",
+          "DOMAIN-KEYWORD,abema",
+          "DOMAIN-KEYWORD,appledaily",
+          "DOMAIN-KEYWORD,avtb",
+          "DOMAIN-KEYWORD,beetalk",
+          "DOMAIN-KEYWORD,blogspot",
+          "DOMAIN-KEYWORD,dlercloud",
+          "DOMAIN-KEYWORD,dropbox",
+          "DOMAIN-KEYWORD,facebook",
+          "DOMAIN-KEYWORD,fbcdn",
+          "DOMAIN-KEYWORD,gmail",
+          "DOMAIN-KEYWORD,google",
+          "DOMAIN-KEYWORD,instagram",
+          "DOMAIN-KEYWORD,onedrive",
+          "DOMAIN-KEYWORD,paypal",
+          "DOMAIN-KEYWORD,porn",
+          "DOMAIN-KEYWORD,sci-hub",
+          "DOMAIN-KEYWORD,skydrive",
+          "DOMAIN-KEYWORD,spotify",
+          "DOMAIN-KEYWORD,telegram",
+          "DOMAIN-KEYWORD,ttvnw",
+          "DOMAIN-KEYWORD,twitter",
+          "DOMAIN-KEYWORD,uk-live",
+          "DOMAIN-KEYWORD,whatsapp",
+          "DOMAIN-KEYWORD,youtube"
+        ],
+        "selectors_converted": [
+          {
+            "before": "DOMAIN-SUFFIX,api-testnet.manepa.jp",
+            "after": "DOMAIN-SUFFIX,manepa.jp",
+            "scope": "existing first-party family"
+          },
+          {
+            "before": "DOMAIN-SUFFIX,api-testnet.spark-fintech.com",
+            "after": "DOMAIN-SUFFIX,spark-fintech.com",
+            "scope": "existing first-party family"
+          },
+          {
+            "before": "DOMAIN-SUFFIX,api.manepa.jp",
+            "after": "DOMAIN-SUFFIX,manepa.jp",
+            "scope": "existing first-party family"
+          },
+          {
+            "before": "DOMAIN-SUFFIX,api.spark-fintech.com",
+            "after": "DOMAIN-SUFFIX,spark-fintech.com",
+            "scope": "existing first-party family"
+          },
+          {
+            "before": "DOMAIN-SUFFIX,stream.manepa.jp",
+            "after": "DOMAIN-SUFFIX,manepa.jp",
+            "scope": "existing first-party family"
+          },
+          {
+            "before": "DOMAIN-SUFFIX,stream.spark-fintech.com",
+            "after": "DOMAIN-SUFFIX,spark-fintech.com",
+            "scope": "existing first-party family"
+          },
+          {
+            "before": "DOMAIN-SUFFIX,www.turingfraud.net",
+            "after": "DOMAIN-SUFFIX,turingfraud.net",
+            "scope": "existing first-party family"
+          },
+          {
+            "before": "DOMAIN,checkip.amazonaws.com",
+            "after": "DOMAIN-SUFFIX,checkip.amazonaws.com",
+            "scope": "same tenant/hostname with descendants"
+          },
+          {
+            "before": "DOMAIN,checkip.global.api.aws",
+            "after": "DOMAIN-SUFFIX,checkip.global.api.aws",
+            "scope": "same tenant/hostname with descendants"
+          },
+          {
+            "before": "DOMAIN,notifications.prod.ap-east-1.vam-hk.cloud1.vv1865.com",
+            "after": "DOMAIN-SUFFIX,notifications.prod.ap-east-1.vam-hk.cloud1.vv1865.com",
+            "scope": "same tenant/hostname with descendants"
+          },
+          {
+            "before": "DOMAIN,prod-chatwoot-assets.s3.amazonaws.com",
+            "after": "DOMAIN-SUFFIX,prod-chatwoot-assets.s3.amazonaws.com",
+            "scope": "same tenant/hostname with descendants"
+          },
+          {
+            "before": "DOMAIN,universal-nav-registry-production.cfapi.workers.dev",
+            "after": "DOMAIN-SUFFIX,universal-nav-registry-production.cfapi.workers.dev",
+            "scope": "same tenant/hostname with descendants"
+          },
+          {
+            "before": "DOMAIN,wsdexpri.okx.com.cdn.cloudflare.net",
+            "after": "DOMAIN-SUFFIX,okx.com.cdn.cloudflare.net",
+            "scope": "existing first-party family"
+          },
+          {
+            "before": "DOMAIN,wspri.okx.com.cdn.cloudflare.net",
+            "after": "DOMAIN-SUFFIX,okx.com.cdn.cloudflare.net",
+            "scope": "existing first-party family"
+          }
+        ]
+      }
+    },
+    "historical_hosts_checked": 1234,
+    "observed_keyword_dependencies_preserved": [
+      {
+        "host": "www.binance.info",
+        "parent": "binance.info",
+        "policy": "JPProxy",
+        "reason": "existing observed service family replaces broad keyword"
+      },
+      {
+        "host": "scontent.cdninstagram.com",
+        "parent": "cdninstagram.com",
+        "policy": "JPProxy",
+        "reason": "existing observed service family replaces broad keyword"
+      },
+      {
+        "host": "1110655503-cache.tiktokedgenode.com",
+        "parent": "tiktokedgenode.com",
+        "policy": "JPProxy",
+        "reason": "existing observed service family replaces broad keyword"
+      },
+      {
+        "host": "oec-im-tt-sg.tiktokglobalshopv.com",
+        "parent": "tiktokglobalshopv.com",
+        "policy": "JPProxy",
+        "reason": "existing observed service family replaces broad keyword"
+      },
+      {
+        "host": "2fio72ng.sg-fn.tiktok-row.net",
+        "parent": "tiktok-row.net",
+        "policy": "JPProxy",
+        "reason": "existing observed service family replaces broad keyword"
+      },
+      {
+        "host": "connect.facebook.net",
+        "parent": "facebook.net",
+        "policy": "JPProxy",
+        "reason": "existing observed service family replaces broad keyword"
+      },
+      {
+        "host": "tiktok.tps.dv.tech",
+        "parent": "tiktok.tps.dv.tech",
+        "policy": "JPProxy",
+        "reason": "existing observed service family replaces broad keyword"
+      }
+    ],
+    "keyword_only_hosts_now_DIRECT": [
+      {
+        "host": "googleads.g.doubleclick.net",
+        "old": "JPProxy",
+        "new": "DIRECT"
+      },
+      {
+        "host": "www.googletagmanager.com",
+        "old": "JPProxy",
+        "new": "DIRECT"
+      },
+      {
+        "host": "www.google-analytics.com",
+        "old": "JPProxy",
+        "new": "DIRECT"
+      },
+      {
+        "host": "pagead2.googlesyndication.com",
+        "old": "JPProxy",
+        "new": "DIRECT"
+      },
+      {
+        "host": "ep2.adtrafficquality.google",
+        "old": "JPProxy",
+        "new": "DIRECT"
+      },
+      {
+        "host": "tpc.googlesyndication.com",
+        "old": "JPProxy",
+        "new": "DIRECT"
+      },
+      {
+        "host": "ep1.adtrafficquality.google",
+        "old": "JPProxy",
+        "new": "DIRECT"
+      },
+      {
+        "host": "www.googleadservices.com",
+        "old": "JPProxy",
+        "new": "DIRECT"
+      },
+      {
+        "host": "csp.withgoogle.com",
+        "old": "JPProxy",
+        "new": "DIRECT"
+      },
+      {
+        "host": "analytics-ipv6.tiktokw.us",
+        "old": "JPProxy",
+        "new": "DIRECT"
+      }
+    ],
+    "limitations": "DOMAIN-KEYWORD has unlimited substring/TLD scope and cannot be losslessly represented by a finite parent-domain suffix list. Replaced by reviewed existing domain families plus observed dependencies; unseen keyword-only domains now follow ordinary fallback. IP/ASN rows retained; parent-domain suffix can include new same-family children, not proven same business use. No broad amazonaws.com/azureedge.net/azure.com/cloudflare.net/workers.dev/imgix.net/sentry.io added in US/MY; existing JP sentry.io preserved."
   }
 }

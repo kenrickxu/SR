@@ -1,4 +1,11 @@
-# Explicit owner JP proxy selectors; domain rules precede IPv4.
+# Ken5750: reviewed DOMAIN-SUFFIX families; no generic keyword matching. Shared tenants stay scoped.
+DOMAIN-SUFFIX,tiktok.tps.dv.tech
+DOMAIN-SUFFIX,facebook.net
+DOMAIN-SUFFIX,tiktok-row.net
+DOMAIN-SUFFIX,tiktokglobalshopv.com
+DOMAIN-SUFFIX,tiktokedgenode.com
+DOMAIN-SUFFIX,cdninstagram.com
+DOMAIN-SUFFIX,binance.info
 DOMAIN-SUFFIX,marscode.com
 DOMAIN-SUFFIX,trae-api-sg.mchost.guru
 DOMAIN-SUFFIX,trae.ai
@@ -7,10 +14,8 @@ DOMAIN-SUFFIX,bnbstatic.com
 DOMAIN-SUFFIX,coinmarketcap.com
 DOMAIN-SUFFIX,tradingview-widget.com
 DOMAIN-SUFFIX,tradingview.com
-DOMAIN-SUFFIX,api-testnet.manepa.jp
-DOMAIN-SUFFIX,api-testnet.spark-fintech.com
-DOMAIN-SUFFIX,api.manepa.jp
-DOMAIN-SUFFIX,api.spark-fintech.com
+DOMAIN-SUFFIX,manepa.jp
+DOMAIN-SUFFIX,spark-fintech.com
 DOMAIN-SUFFIX,bybit.ae
 DOMAIN-SUFFIX,bybit.com
 DOMAIN-SUFFIX,bybit.eu
@@ -21,11 +26,9 @@ DOMAIN-SUFFIX,bybitgeorgia.ge
 DOMAIN-SUFFIX,bybitglobal.com
 DOMAIN-SUFFIX,bycsi.com
 DOMAIN-SUFFIX,bytick.com
-DOMAIN-SUFFIX,stream.manepa.jp
-DOMAIN-SUFFIX,stream.spark-fintech.com
 DOMAIN-SUFFIX,bybit-global.com
 DOMAIN-SUFFIX,ffbbbdc6d3c353211fe2ba39c9f744cd.com
-DOMAIN-SUFFIX,www.turingfraud.net
+DOMAIN-SUFFIX,turingfraud.net
 DOMAIN-SUFFIX,bybit.biz
 DOMAIN-SUFFIX,ng-dex.com
 DOMAIN-SUFFIX,bybitx.global
@@ -39,7 +42,6 @@ DOMAIN-SUFFIX,googlevideo.com
 DOMAIN-SUFFIX,youtu.be
 DOMAIN-SUFFIX,youtube.com
 DOMAIN-SUFFIX,ytimg.com
-DOMAIN-SUFFIX,push.apple.com
 DOMAIN-SUFFIX,discord.com
 DOMAIN-SUFFIX,discord.gg
 DOMAIN-SUFFIX,discordapp.com
@@ -115,38 +117,6 @@ DOMAIN-SUFFIX,tiktokv.com
 DOMAIN-SUFFIX,tiktokv.us
 DOMAIN-SUFFIX,ttwebview.com
 DOMAIN-SUFFIX,jumpdesktop.com
-DOMAIN-KEYWORD,musical.ly
-DOMAIN-KEYWORD,tiktok
-DOMAIN-KEYWORD,binance
-DOMAIN-KEYWORD,discord
-DOMAIN-KEYWORD,nflx
-DOMAIN-KEYWORD,1drv
-DOMAIN-KEYWORD,1e100
-DOMAIN-KEYWORD,abema
-DOMAIN-KEYWORD,appledaily
-DOMAIN-KEYWORD,avtb
-DOMAIN-KEYWORD,beetalk
-DOMAIN-KEYWORD,blogspot
-DOMAIN-KEYWORD,dlercloud
-DOMAIN-KEYWORD,dropbox
-DOMAIN-KEYWORD,facebook
-DOMAIN-KEYWORD,fbcdn
-DOMAIN-KEYWORD,gmail
-DOMAIN-KEYWORD,google
-DOMAIN-KEYWORD,instagram
-DOMAIN-KEYWORD,onedrive
-DOMAIN-KEYWORD,paypal
-DOMAIN-KEYWORD,porn
-DOMAIN-KEYWORD,sci-hub
-DOMAIN-KEYWORD,skydrive
-DOMAIN-KEYWORD,spotify
-DOMAIN-KEYWORD,telegram
-DOMAIN-KEYWORD,ttvnw
-DOMAIN-KEYWORD,twitter
-DOMAIN-KEYWORD,uk-live
-DOMAIN-KEYWORD,whatsapp
-DOMAIN-KEYWORD,youtube
-# Reviewed service additions: Ken Topic194 msg2677; see ProxyServices.review.json.
 DOMAIN-SUFFIX,comments.app
 DOMAIN-SUFFIX,contest.com
 DOMAIN-SUFFIX,fragment.com
@@ -161,7 +131,6 @@ DOMAIN-SUFFIX,ton.org
 DOMAIN-SUFFIX,toncenter.com
 DOMAIN-SUFFIX,tx.me
 DOMAIN-SUFFIX,usercontent.dev
-# Ken5715: reviewed foreign supplement merged here; retain MY/US-first profile order.
 DOMAIN-SUFFIX,aicodingdaily.com
 DOMAIN-SUFFIX,applybolt.com
 DOMAIN-SUFFIX,bunny.net
@@ -170,7 +139,6 @@ DOMAIN-SUFFIX,cg-mapi.com
 DOMAIN-SUFFIX,chatwoot.com
 DOMAIN-SUFFIX,clash.md
 DOMAIN-SUFFIX,cloudflare-dns.com
-DOMAIN-SUFFIX,cloudflare.com
 DOMAIN-SUFFIX,coinbase.com
 DOMAIN-SUFFIX,coingecko.com
 DOMAIN-SUFFIX,contabo.net
@@ -216,19 +184,12 @@ DOMAIN-SUFFIX,walletconnect.org
 DOMAIN-SUFFIX,web3modal.org
 DOMAIN-SUFFIX,xe.com
 DOMAIN-SUFFIX,yfamilys.com
-DOMAIN,checkip.amazonaws.com
-DOMAIN,checkip.global.api.aws
-DOMAIN,notifications.prod.ap-east-1.vam-hk.cloud1.vv1865.com
-DOMAIN,prod-chatwoot-assets.s3.amazonaws.com
-DOMAIN,universal-nav-registry-production.cfapi.workers.dev
-DOMAIN,wsdexpri.okx.com.cdn.cloudflare.net
-DOMAIN,wspri.okx.com.cdn.cloudflare.net
-
-IP-CIDR,17.57.144.0/22,no-resolve
-IP-CIDR,17.188.20.0/23,no-resolve
-IP-CIDR,17.188.128.0/18,no-resolve
-IP-CIDR,17.249.0.0/16,no-resolve
-IP-CIDR,17.252.0.0/16,no-resolve
+DOMAIN-SUFFIX,checkip.amazonaws.com
+DOMAIN-SUFFIX,checkip.global.api.aws
+DOMAIN-SUFFIX,notifications.prod.ap-east-1.vam-hk.cloud1.vv1865.com
+DOMAIN-SUFFIX,prod-chatwoot-assets.s3.amazonaws.com
+DOMAIN-SUFFIX,universal-nav-registry-production.cfapi.workers.dev
+DOMAIN-SUFFIX,okx.com.cdn.cloudflare.net
 IP-CIDR,91.105.192.0/23,no-resolve
 IP-CIDR,91.108.4.0/22,no-resolve
 IP-CIDR,91.108.8.0/21,no-resolve
@@ -340,10 +301,3 @@ IP-CIDR6,2a0a:f280::/32,no-resolve
 IP-CIDR6,2001:b28:f23c::/47,no-resolve
 IP-CIDR6,2001:67c:4e8::/48,no-resolve
 IP-CIDR6,2001:b28:f23f::/48,no-resolve
-
-# Apple official APNs fallback ranges (102266); preserve Push JP before AppleDirect.
-# Ranges are not guaranteed Push-exclusive; other raw-IP traffic in them also uses JP.
-IP-CIDR6,2620:149:a44::/48,no-resolve
-IP-CIDR6,2403:300:a42::/48,no-resolve
-IP-CIDR6,2403:300:a51::/48,no-resolve
-IP-CIDR6,2a01:b740:a42::/48,no-resolve
