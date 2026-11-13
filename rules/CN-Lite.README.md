@@ -1,3 +1,9 @@
+## JP supplement consolidation — Ken5715,2026-11-13 HKT
+
+CurrentCN has6rules/4sets: CNMediaDirect→MYProxy→USProxy→JPProxy→GEOIP,CN,DIRECT→FINAL,DIRECT. The previously61-row CNForeignProxy supplement is now merged intoJPProxy (281→342), with alloldselectors/options preserved and domainrows beforeIProws. No newforeign coverage beyond the alreadyapproved61; MY/US remainearlier. CNForeignProxy URL retained as comment-onlydeprecatedstub, notloaded; do notrecreateseparateCNForeignProxy set or importit atmaintenance. JPServices19/otherownerinputs keptuntouched. Review/provenance inProxyServices.review.json owner_jp_supplement_5715; futuredaily sourceupdatesmustpreserve theselocalownerrows andcurrentJPdata, not old281literalcount. ExistingYfamilyquarantine/thirteenfeeds remain.
+
+SharedJPprovider data changes for consumers onrefresh, includingnative/iPhone/CNRaccordingtoexistinggroupmapping; this isnot a runtimeapply orautomatic clientrefresh. Preserve strictold6/old7/newmerged6 sourcecompatibility and GeneralRealIP0/Skip12/TUN14,17media/PushJP,US/MY,nodes/DNS/MITM/IPv6 and defaultDIRECT. OriginalCNURL/GeoIPCNorder/rollbackarchives/03:00+03:35deliveryalerts stay. Older5678/5701separatesupplement/fiveproviderwording below is supersededonlyonthisgrouping.
+
 # Canonical CN: explicit proxy lists, default DIRECT
 
 ## GeoIP CN ordering amendment — Ken5701,2026-11-13 HKT
