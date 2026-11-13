@@ -2,13 +2,12 @@
   "schema": 3,
   "mode": "canonical-sr-explicit-proxy-default-direct",
   "profile": "CN.conf",
-  "profile_sha256": "b83f74a4d341cb0a0d4a18c4d65df0170d8e5a76bda1b68f505f433db0f205de",
+  "profile_sha256": "ecfd715b0aaf2a2657001b9cf5910fd580ce33d627a9b540a9f3f72650b4c631",
   "source_sha256": {
-    "CN.conf": "b83f74a4d341cb0a0d4a18c4d65df0170d8e5a76bda1b68f505f433db0f205de",
+    "CN.conf": "ecfd715b0aaf2a2657001b9cf5910fd580ce33d627a9b540a9f3f72650b4c631",
     "rules/MYProxy.list": "4397e40abd944f6010d615c25abb7b85724f4d2570562c0a825ba23291529066",
     "rules/USProxy.list": "b136744c74be3afcf16e00afa5d0552872c49edad5d046a09ec62b75a6489d2c",
-    "rules/JPProxy.list": "57db44df94a5502e8960b304e3a68997ca9e957d6ebb85ef04b763be6d9806ba",
-    "rules/CNMediaDirect.list": "7fcaae1fdd6392bc8d1ae2daf3df6c83c45c72aea0b6b9b89f32bc100f0ce134"
+    "rules/JPProxy.list": "57db44df94a5502e8960b304e3a68997ca9e957d6ebb85ef04b763be6d9806ba"
   },
   "real_ip_rows": 0,
   "skip_rows": 12,

@@ -34,12 +34,12 @@ def derive(root):
     raw=(root/'CN.conf').read_bytes();text=raw.decode()
     if not text.startswith('# CN-MODE: explicit-proxy-default-direct-v1'):return derive_legacy(root)
     rules=[l.strip() for l in text.split('[Rule]',1)[1].split('[',1)[0].splitlines()if l.strip()and not l.startswith('#')]
-    assert rules==['RULE-SET,https://raw.githubusercontent.com/kenrickxu/SR/main/rules/CNMediaDirect.list,DIRECT', 'RULE-SET,https://sr-config.kt7766.org/rules/MYProxy.list,🇲🇾 MY REA', 'RULE-SET,https://sr-config.kt7766.org/rules/USProxy.list,🇺🇸 US REA', 'RULE-SET,https://sr-config.kt7766.org/rules/JPProxy.list,🇯🇵 JP REA', 'GEOIP,CN,DIRECT', 'FINAL,DIRECT']
+    assert rules==['DOMAIN,apple-relay.cloudflare.com,DIRECT', 'DOMAIN,cp4.cloudflare.com,DIRECT', 'AND,((DOMAIN-SUFFIX,apple.com),(NOT,((DOMAIN-SUFFIX,push.apple.com)))),DIRECT', 'DOMAIN-SUFFIX,icloud.com,DIRECT', 'AND,((PROTOCOL,UDP),(OR,((IP-CIDR,17.57.144.0/22),(IP-CIDR,17.188.20.0/23),(IP-CIDR,17.188.128.0/18),(IP-CIDR,17.249.0.0/16),(IP-CIDR,17.252.0.0/16),(IP-CIDR6,2620:149:a44::/48),(IP-CIDR6,2403:300:a42::/48),(IP-CIDR6,2403:300:a51::/48),(IP-CIDR6,2a01:b740:a42::/48)))),DIRECT', 'RULE-SET,https://sr-config.kt7766.org/rules/MYProxy.list,🇲🇾 MY REA', 'RULE-SET,https://sr-config.kt7766.org/rules/USProxy.list,🇺🇸 US REA', 'RULE-SET,https://sr-config.kt7766.org/rules/JPProxy.list,🇯🇵 JP REA', 'GEOIP,CN,DIRECT', 'FINAL,DIRECT']
     assert not re.search(r'^always-real-ip\s*=',text,re.M)
     assert re.search('^tun-excluded-routes = (.+)$',text,re.M)[1]=='10.0.0.0/8,127.0.0.0/8,169.254.0.0/16,172.16.0.0/12,192.0.0.0/24,192.0.2.0/24,192.88.99.0/24,192.168.0.0/16,198.51.100.0/24,203.0.113.0/24,224.0.0.0/4,255.255.255.255/32,239.255.255.250/32,ff02::fb/128'
     assert re.search('^skip-proxy = (.+)$',text,re.M)[1]=='192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,localhost,*.local,captive.apple.com,*.ccb.com,*.abchina.com.cn,*.psbc.com,www.baidu.com,www.163.com,tplogin.cn'
     alias=re.sub('^update-url = .+$',lambda _:'update-url = '+ALIAS,text,flags=re.M).encode()
-    files=['CN.conf']+['rules/'+n+'.list'for n in ['MYProxy','USProxy','JPProxy','CNMediaDirect']]
+    files=['CN.conf']+['rules/'+n+'.list'for n in ['MYProxy','USProxy','JPProxy']]
     hashes={f:hashlib.sha256((root/f).read_bytes()).hexdigest()for f in files}
     meta={'schema':3,'mode':'canonical-sr-explicit-proxy-default-direct','profile':'CN.conf','profile_sha256':hashlib.sha256(raw).hexdigest(),'source_sha256':hashes,'real_ip_rows':0,'skip_rows':12,'tun_rows':14,'default':'DIRECT','reference':'CN-Lite-Reference.conf','native_runtime_applied':False,'limitations':['Unlisted foreign services and bare IPs default DIRECT.','DIRECT is not full SR bypass.','127/8 previously rejected by iOS; owner requested it in5678.','Phone RAM and actual app outcomes require client testing.']}
     am={**meta,'profile':'CN-Lite.conf','profile_sha256':hashlib.sha256(alias).hexdigest(),'canonical':'CN.conf'}

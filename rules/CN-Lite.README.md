@@ -1,3 +1,9 @@
+## Current CN: inline Apple/media guards — Ken5740, 2026-11-13 HKT
+
+Current SR CN uses ten executable rules and only three downloaded sets: five unchanged Apple/media DIRECT selectors inline, then MYProxy → USProxy → JPProxy → GEOIP,CN,DIRECT → FINAL,DIRECT. No CNMediaDirect.list URL or runtime dependency in CN/CN-Lite/source hashes. Its file remains unchanged for historical reference/rollback, not an active maintenance target. Future necessary evidence-backed Apple/media changes belong in these inline rules, not a restored standalone set. This supersedes earlier 5735/5718/5715 wording ONLY on storage/grouping; none of their effective matching is removed.
+
+Keep exact PCC hosts, apple.com AND NOT push.apple.com, icloud.com, and UDP-only nine APNs prefixes in the same order before the three proxy sets. Push domains/TCP fallback remain JP; unknown bare TCP in APNs space can still be JP, not proven exclusively Push. DIRECT is not full SR bypass or phone business acceptance. General remains RealIP omitted / Skip12 / TUN14; no nodes/DNS/MITM/IPv6, game bypass, full China table or foreign-service expansion. JP342 unchanged; declined 8-lives-cat.io family must not be re-added. Preserve other clients' native projection/policies; accept only exact reviewed inline layout and exact General, retain old layouts for rollback, no weakening of negative checks. Only necessary subscription API reload; no VPN/Windows native apply. GitHub sole authority, original CN URL/alias/reference archives,13 sources/quarantine/03:00 and03:35 schedules/delivery/alerts retained.
+
 ## Owner removes unnecessary backup exception — Ken5735,2026-11-13 HKT
 
 Remove DOMAIN,api-production.8-lives-cat.io fromJP343→342. Do notauto-readd thisfamily orparentselector aspreviouslyvisitedforeignwebsite: itisautomaticSDKbackend andownerdeclinesitsproxyexception. Original5718evidence remains historical, notcurrentauthority. PrimaryRevenueCatexistingrows unchanged.
