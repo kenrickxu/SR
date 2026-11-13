@@ -1542,7 +1542,7 @@
       "source_dependency": "Contains shared legacy Telegram/official-CIDR lineage; not an independent ownership vote."
     }
   },
-  "latest_owner_instruction": "Topic194 msgs5746/5748/5750/5751",
+  "latest_owner_instruction": "Topic194 msgs5764/5765",
   "owner_jp_supplement_5715": {
     "date": "2026-11-13",
     "source": "Ken Topic194 msgs5678/5715: merge previously reviewed foreign-service supplement into JPProxy",
@@ -1958,5 +1958,59 @@
       }
     ],
     "limitations": "DOMAIN-KEYWORD has unlimited substring/TLD scope and cannot be losslessly represented by a finite parent-domain suffix list. Replaced by reviewed existing domain families plus observed dependencies; unseen keyword-only domains now follow ordinary fallback. IP/ASN rows retained; parent-domain suffix can include new same-family children, not proven same business use. No broad amazonaws.com/azureedge.net/azure.com/cloudflare.net/workers.dev/imgix.net/sentry.io added in US/MY; existing JP sentry.io preserved."
+  },
+  "owner_wallets_jp_5764": {
+    "date": "2026-11-13",
+    "owner_source": "Ken5760 named Ether.fi/Crypto.com/ZA/TrustWallet/HSBCHK;5764 add missing;5765 alsoMetaMask",
+    "added_rules": [
+      "DOMAIN-SUFFIX,ether.fi",
+      "DOMAIN-SUFFIX,crypto.com",
+      "DOMAIN-SUFFIX,trustwallet.com",
+      "DOMAIN-SUFFIX,trustwalletapp.com",
+      "DOMAIN-SUFFIX,metamask.io",
+      "DOMAIN-SUFFIX,metamask.com"
+    ],
+    "old_count": 302,
+    "new_count": 308,
+    "already_covered": [
+      "za.group",
+      "hsbc.com.hk"
+    ],
+    "regional_exceptions_retained": [
+      "OKX/OKEx US",
+      "Polymarket MY"
+    ],
+    "sources": [
+      {
+        "domain": "ether.fi",
+        "url": "https://www.ether.fi/",
+        "verification": "Current official website incl app/help links under ether.fi"
+      },
+      {
+        "domain": "crypto.com",
+        "url": "https://crypto.com/exchange",
+        "verification": "Current official exchange at crypto.com/exchange-pro/en-US"
+      },
+      {
+        "domain": "trustwallet.com",
+        "url": "https://trustwallet.com/",
+        "verification": "Current official wallet main domain"
+      },
+      {
+        "domain": "trustwalletapp.com",
+        "url": "https://github.com/trustwallet/trust-wallet-android-source/blob/master/README.md",
+        "verification": "TrustWallet-owned archived source documents legacy domain; current apex not accessible by web tool, no claim current ownership/use newly proven"
+      },
+      {
+        "domain": "metamask.io / metamask.com",
+        "url": "https://metamask.io/",
+        "verification": "Current official io redirects to metamask.com; official page links back to io support/docs/app"
+      }
+    ],
+    "limitations": [
+      "Domain families only, not all wallet RPC/dApp/third-party API coverage or transaction success.",
+      "No broad Infura/AWS/Azure/Cloudflare/CDN domain or unrequested exchange family added.",
+      "SharedJP data changes for all consumers on refresh per their current groupmapping; no native runtimeapply/API reload."
+    ]
   }
 }

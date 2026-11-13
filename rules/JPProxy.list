@@ -190,6 +190,14 @@ DOMAIN-SUFFIX,notifications.prod.ap-east-1.vam-hk.cloud1.vv1865.com
 DOMAIN-SUFFIX,prod-chatwoot-assets.s3.amazonaws.com
 DOMAIN-SUFFIX,universal-nav-registry-production.cfapi.workers.dev
 DOMAIN-SUFFIX,okx.com.cdn.cloudflare.net
+# Ken5764/5765: explicitly requested wallet/exchange service parents; preserve existing regional exceptions.
+DOMAIN-SUFFIX,ether.fi
+DOMAIN-SUFFIX,crypto.com
+DOMAIN-SUFFIX,trustwallet.com
+DOMAIN-SUFFIX,trustwalletapp.com
+DOMAIN-SUFFIX,metamask.io
+DOMAIN-SUFFIX,metamask.com
+
 IP-CIDR,91.105.192.0/23,no-resolve
 IP-CIDR,91.108.4.0/22,no-resolve
 IP-CIDR,91.108.8.0/21,no-resolve
