@@ -1,3 +1,7 @@
+## Requested JP parents — Ken5923, 2026-11-14 HKT
+
+Explicit owner request: add DOMAIN-SUFFIX parents ymkizv84.work, withgoogle.com, jw5cqzrc.work to JPProxy (310→313; 202 domain suffixes +111 IP/ASN). All three absent from all current sets before addition. Preserve prior rows/order/options, CN five-rule/three-set layout, MY/US priority, Apple/Push/FaceTime default DIRECT and JP node 45.153.247.160/32. Only JP data, derived source hashes and review/docs change. No runtime apply/restart or daily-task restoration; both maintenance tasks stay paused per Ken5784. Manual JP refresh required. Domain routing does not verify website identity/content, all third-party dependencies or business success.
+
 ## BOLT parent domains — Ken5914, 2026-11-14 HKT
 
 Explicit owner request: add DOMAIN-SUFFIX,boltqrcode.com and DOMAIN-SUFFIX,boltpowerbank.com to JPProxy (308→310; 199 domain suffixes +111 IP/ASN). Both absent from all three current sets before addition. Preserve all existing rows/options/order, CN five-rule/three-set layout, MY/US priority, Apple/Push/FaceTime default DIRECT and JP node 45.153.247.160/32. Only JP data, derived source hashes and review/docs change. No runtime apply/restart or daily-task restoration; 03:00/03:35 tasks remain paused per Ken5784. Refresh JP manually. Domain coverage is not full App/dependency or business-success verification.

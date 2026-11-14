@@ -1542,7 +1542,7 @@
       "source_dependency": "Contains shared legacy Telegram/official-CIDR lineage; not an independent ownership vote."
     }
   },
-  "latest_owner_instruction": "Topic194 msg5914",
+  "latest_owner_instruction": "Topic194 msg5923",
   "owner_jp_supplement_5715": {
     "date": "2026-11-13",
     "source": "Ken Topic194 msgs5678/5715: merge previously reviewed foreign-service supplement into JPProxy",
@@ -2022,6 +2022,18 @@
     ],
     "old_count": 308,
     "new_count": 310,
+    "preserve": "MY/US priority; Apple/Push/FaceTime default DIRECT; 45.153.247.160/32 JP; daily maintenance remains paused; no runtime apply/restart"
+  },
+  "owner_domains_jp_5923": {
+    "date": "2026-11-14",
+    "source": "Ken Topic194 msg5923 explicitly requests three parent domains JP",
+    "added_rules": [
+      "DOMAIN-SUFFIX,ymkizv84.work",
+      "DOMAIN-SUFFIX,withgoogle.com",
+      "DOMAIN-SUFFIX,jw5cqzrc.work"
+    ],
+    "old_count": 310,
+    "new_count": 313,
     "preserve": "MY/US priority; Apple/Push/FaceTime default DIRECT; 45.153.247.160/32 JP; daily maintenance remains paused; no runtime apply/restart"
   }
 }
