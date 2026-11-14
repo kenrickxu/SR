@@ -1542,7 +1542,7 @@
       "source_dependency": "Contains shared legacy Telegram/official-CIDR lineage; not an independent ownership vote."
     }
   },
-  "latest_owner_instruction": "Topic194 msgs5764/5765",
+  "latest_owner_instruction": "Topic194 msg5914",
   "owner_jp_supplement_5715": {
     "date": "2026-11-13",
     "source": "Ken Topic194 msgs5678/5715: merge previously reviewed foreign-service supplement into JPProxy",
@@ -2012,5 +2012,16 @@
       "No broad Infura/AWS/Azure/Cloudflare/CDN domain or unrequested exchange family added.",
       "SharedJP data changes for all consumers on refresh per their current groupmapping; no native runtimeapply/API reload."
     ]
+  },
+  "owner_bolt_jp_5914": {
+    "date": "2026-11-14",
+    "source": "Ken Topic194 msg5914 explicitly requests both domains JP",
+    "added_rules": [
+      "DOMAIN-SUFFIX,boltqrcode.com",
+      "DOMAIN-SUFFIX,boltpowerbank.com"
+    ],
+    "old_count": 308,
+    "new_count": 310,
+    "preserve": "MY/US priority; Apple/Push/FaceTime default DIRECT; 45.153.247.160/32 JP; daily maintenance remains paused; no runtime apply/restart"
   }
 }

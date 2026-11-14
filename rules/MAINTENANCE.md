@@ -1,3 +1,7 @@
+## BOLT parent domains — Ken5914, 2026-11-14 HKT
+
+Explicit owner request: add DOMAIN-SUFFIX,boltqrcode.com and DOMAIN-SUFFIX,boltpowerbank.com to JPProxy (308→310; 199 domain suffixes +111 IP/ASN). Both absent from all three current sets before addition. Preserve all existing rows/options/order, CN five-rule/three-set layout, MY/US priority, Apple/Push/FaceTime default DIRECT and JP node 45.153.247.160/32. Only JP data, derived source hashes and review/docs change. No runtime apply/restart or daily-task restoration; 03:00/03:35 tasks remain paused per Ken5784. Refresh JP manually. Domain coverage is not full App/dependency or business-success verification.
+
 ## Explicit wallet/exchange domain supplement — Ken5764/5765, 2026-11-13 HKT
 
 Add only six parent DOMAIN-SUFFIX rows into JPProxy302→308: ether.fi, crypto.com, trustwallet.com, trustwalletapp.com, metamask.io, metamask.com. MetaMask official io currently redirects to com, so preserve both. Trustwalletapp.com is sourced to TrustWallet-owned archived code as legacy compatibility; current apex fetch unavailable, do not claim a new live service/ownership verification. Current trustwallet.com verified. Provenance in ProxyServices.review.json owner_wallets_jp_5764. ZA Bank za.group and HSBC HK hsbc.com.hk already covered: no duplicates. OKX/OKEx staysUS, Polymarket staysMY; no mass import of unrequested exchanges/RPC/shared clouds. Wallet custom RPC/dApps/third-party APIs are not proven fully covered by main domains; no phone/call/trade/application success claim.
