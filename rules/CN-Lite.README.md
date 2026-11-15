@@ -1,3 +1,7 @@
+## Z.ai owner-requested parent — Ken6291, 2026-11-16 HKT
+
+Add only DOMAIN-SUFFIX,z.ai to JP392→393 (282suffix+111IP/ASN). This explicit owner request covers z.ai apexes and subdomains only. Preserve all previous rows/options/order, MY/US priority, Apple/Push/FaceTime defaultDIRECT, JP45.153.247.160/32, CN five-rule layout/General/DNS/MITM/IPv6/nodes and other consumers' structural policies. Shared JP data changes on manual consumer refresh; no live apply/restart or maintenance/monitor restoration. Original URLs unchanged; phone/application acceptance remains manual.
+
 ## OpenRouter / Meta owner-requested parents — Ken6285/6288, 2026-11-16 HKT
 
 Add only DOMAIN-SUFFIX,openrouter.ai and DOMAIN-SUFFIX,meta.com to JP390→392 (281suffix+111IP/ASN). This explicit owner request covers openrouter.ai and meta.com apexes and subdomains only. Preserve all previous rows/options/order, MY/US priority, Apple/Push/FaceTime defaultDIRECT, JP45.153.247.160/32, CN five-rule layout/General/DNS/MITM/IPv6/nodes and other consumers' structural policies. Shared JP data changes on manual consumer refresh; no live apply/restart or maintenance/monitor restoration. Original URLs unchanged; phone/application acceptance remains manual.
