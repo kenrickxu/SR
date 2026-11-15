@@ -1,5 +1,5 @@
-#!name=APP去广告 UltraPlus Ken v1
-#!desc=基于Yfamily融合模块；移除Temu整域及Apple安全浏览阻断，补美团带尺寸前缀bizad广告图片及开屏接口。非轻量模块；替换原ultra+，不要叠加。YouTube继续独立v6。外部脚本沿用原来源，手机效果待验。
+#!name=APP去广告 UltraPlus Ken v2
+#!desc=基于Yfamily融合模块；Ken v2修正appstatus参数前缀误拦，已知开屏字段定向清理。其余融合主体保留；YouTube独立v6。非轻量模块，手机效果待验。
 #!author=Mixed; Ken scoped adaptation
 #!homepage=https://github.com/kenrickxu/SR/tree/main/modules/adultraplus
 # Source: https://yfamilys.com/module/adultraplus.module
@@ -2780,7 +2780,7 @@ http:\/\/ad\.myfriday\.cn\/d\/json\/1\.1 reject
 ^https?:\/\/www1.elecfans.com\/www\/delivery\/ reject-200
 ^https?:\/\/www.icourse163.org\/.*?(Advertisement) reject-img
 ^https?:\/\/www.baidu.com\/?action=static&ms=1&version=css_page_2@0.*? reject
-^https?:\/\/wmapi\.meituan\.com\/api\/v7\/(loadInfo|openscreen|startpicture)\? reject-dict
+^https?:\/\/wmapi\.meituan\.com\/api\/v7\/(openscreen|startpicture)\? reject-dict
 ^https?:\/\/wemallh5\.usmile\.com\/api\/sp-portal\/store\/usmile\/activity\/dayCheck\?pop reject-dict
 ^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php\?a=hot_search_users reject-dict
 ^https?:\/\/wechat\.tf\.cn\/mini-financial\/model\/queryPopup reject-dict
@@ -4240,7 +4240,7 @@ http:\/\/ad\.myfriday\.cn\/d\/json\/1\.1 reject
 ^https?:\/\/.*\.xima.*\.com/mobile-user/minorProtection/pop reject
 ^https?:\/\/.*\.townmalls\.cn:1890\/mossapi\/mossp\.BannerManager\/activityList.* reject
 ^https?:\/\/.*\.pglstatp-toutiao\.com\/.*ad.* reject
-^https?:\/\/.*\.meituan\.com\/api\/v\d\/(openscreen\?ad|appstatus\?ad|loadInfo\?|startpicture) reject-200
+^https?:\/\/.*\.meituan\.com\/api\/v\d\/(openscreen\?ad|startpicture) reject-200
 ^https?:\/\/.*\.i18n-pglstatp\.com\/obj\/ad-pattern-sg reject
 ^https?:\/\/.*\.amap\.com\/ws\/valueadded\/weather reject-dict
 ^https?:\/\/.*\.amap\.com\/ws\/shield\/scene\/recommend reject-dict
@@ -5006,6 +5006,9 @@ http-response-jq ^https:\/\/(apissl|az2-api(-js|-idc)?)\.(gifshow|ksapisrv)\.com
 http-response-jq ^https:\/\/(apissl|az2-api(-js|-idc)?)\.(gifshow|ksapisrv)\.com\/rest\/system\/startup\? '.sidebarExSquareStyle.commonlyUsedList |= map(select(.title == "设置" or .title == "历史记录" or .title == "草稿箱" or .title == "我的钱包" or .title == "小程序" or .title == "未成年人模式" or .title == "官方客服" or .title == "内容偏好" or .title == "离线模式" or .title == "稍后再看" or .title == "举报中心" or .title == "挂件"))'
 
 [Script]
+
+# Ken v2: preserve configuration; clear only documented splash ad/mk arrays
+KenMeituanV2=type=http-response,pattern=^https?:\/\/(?:www|wmapi)\.meituan\.com\/api\/v\d+\/(?:appstatus|loadInfo)(?:\?|$),requires-body=true,max-size=1048576,script-path=https://raw.githubusercontent.com/kenrickxu/SR/bd80345019b217ef51c88392de2d3bcd66f78ce9/modules/adultraplus/meituan.response.v2.js
 
 wyres=type=http-response,pattern=https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/user\/follow\/users\/mixed\/get,requires-body=true,script-path=https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js
 wyres2=type=http-response,pattern=https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/song\/play\/more\/list\/v\d,requires-body=true,script-path=https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js
