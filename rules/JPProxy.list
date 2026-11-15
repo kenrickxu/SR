@@ -210,6 +210,91 @@ DOMAIN-SUFFIX,jw5cqzrc.work
 # Ken6033: explicitly requested parent domains.
 DOMAIN-SUFFIX,pump.fun
 
+# Ken6039: verified crypto service parents; existing regional assignments unchanged.
+# 交易所
+DOMAIN-SUFFIX,kraken.com
+DOMAIN-SUFFIX,bitget.com
+DOMAIN-SUFFIX,gate.com
+DOMAIN-SUFFIX,kucoin.com
+DOMAIN-SUFFIX,mexc.com
+DOMAIN-SUFFIX,gemini.com
+DOMAIN-SUFFIX,bitstamp.net
+DOMAIN-SUFFIX,gate.io
+DOMAIN-SUFFIX,backpack.exchange
+
+# 钱包
+DOMAIN-SUFFIX,phantom.com
+DOMAIN-SUFFIX,rabby.io
+DOMAIN-SUFFIX,safe.global
+DOMAIN-SUFFIX,ledger.com
+DOMAIN-SUFFIX,trezor.io
+DOMAIN-SUFFIX,backpack.app
+DOMAIN-SUFFIX,exodus.com
+DOMAIN-SUFFIX,solflare.com
+DOMAIN-SUFFIX,phantom.app
+
+# DeFi/交易
+DOMAIN-SUFFIX,aave.com
+DOMAIN-SUFFIX,morpho.org
+DOMAIN-SUFFIX,lido.fi
+DOMAIN-SUFFIX,uniswap.org
+DOMAIN-SUFFIX,pancakeswap.finance
+DOMAIN-SUFFIX,curve.fi
+DOMAIN-SUFFIX,compound.finance
+DOMAIN-SUFFIX,pendle.finance
+DOMAIN-SUFFIX,ethena.fi
+DOMAIN-SUFFIX,spark.fi
+DOMAIN-SUFFIX,sky.money
+DOMAIN-SUFFIX,jup.ag
+DOMAIN-SUFFIX,raydium.io
+DOMAIN-SUFFIX,orca.so
+DOMAIN-SUFFIX,dydx.trade
+DOMAIN-SUFFIX,gmx.io
+DOMAIN-SUFFIX,aerodrome.finance
+DOMAIN-SUFFIX,curve.finance
+DOMAIN-SUFFIX,compound.xyz
+DOMAIN-SUFFIX,spark.finance
+
+# 数据/分析
+DOMAIN-SUFFIX,defillama.com
+DOMAIN-SUFFIX,arkm.com
+DOMAIN-SUFFIX,debank.com
+DOMAIN-SUFFIX,dune.com
+DOMAIN-SUFFIX,nansen.ai
+DOMAIN-SUFFIX,dappradar.com
+DOMAIN-SUFFIX,dexscreener.com
+DOMAIN-SUFFIX,dextools.io
+DOMAIN-SUFFIX,birdeye.so
+DOMAIN-SUFFIX,coinglass.com
+DOMAIN-SUFFIX,sosovalue.com
+
+# 公链官网
+DOMAIN-SUFFIX,bitcoin.org
+DOMAIN-SUFFIX,ethereum.org
+DOMAIN-SUFFIX,solana.com
+DOMAIN-SUFFIX,bnbchain.org
+DOMAIN-SUFFIX,arbitrum.io
+DOMAIN-SUFFIX,optimism.io
+DOMAIN-SUFFIX,base.org
+DOMAIN-SUFFIX,polygon.technology
+DOMAIN-SUFFIX,avax.network
+DOMAIN-SUFFIX,sui.io
+DOMAIN-SUFFIX,aptosfoundation.org
+DOMAIN-SUFFIX,tron.network
+DOMAIN-SUFFIX,near.org
+DOMAIN-SUFFIX,cosmos.network
+DOMAIN-SUFFIX,avalanche.com
+DOMAIN-SUFFIX,aptosnetwork.com
+
+# 链浏览器
+DOMAIN-SUFFIX,etherscan.io
+DOMAIN-SUFFIX,bscscan.com
+DOMAIN-SUFFIX,arbiscan.io
+DOMAIN-SUFFIX,basescan.org
+DOMAIN-SUFFIX,polygonscan.com
+DOMAIN-SUFFIX,solscan.io
+DOMAIN-SUFFIX,tronscan.org
+
 IP-CIDR,91.105.192.0/23,no-resolve
 IP-CIDR,91.108.4.0/22,no-resolve
 IP-CIDR,91.108.8.0/21,no-resolve

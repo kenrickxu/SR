@@ -1542,7 +1542,7 @@
       "source_dependency": "Contains shared legacy Telegram/official-CIDR lineage; not an independent ownership vote."
     }
   },
-  "latest_owner_instruction": "Topic194 msg6033",
+  "latest_owner_instruction": "Topic194 msg6039",
   "owner_jp_supplement_5715": {
     "date": "2026-11-13",
     "source": "Ken Topic194 msgs5678/5715: merge previously reviewed foreign-service supplement into JPProxy",
@@ -2045,5 +2045,575 @@
     "old_count": 313,
     "new_count": 314,
     "preserve": "MY/US priority; Apple/Push/FaceTime default DIRECT; 45.153.247.160/32 JP; daily maintenance remains paused; no runtime apply/restart"
+  },
+  "owner_crypto_jp_6039": {
+    "date": "2026-11-15",
+    "source": "Ken6039 broad major crypto exchange/wallet/DeFi/analytics/chain audit and missing JP supplement; preserve existing chosen regional routes",
+    "added_rules": [
+      "DOMAIN-SUFFIX,kraken.com",
+      "DOMAIN-SUFFIX,bitget.com",
+      "DOMAIN-SUFFIX,gate.com",
+      "DOMAIN-SUFFIX,kucoin.com",
+      "DOMAIN-SUFFIX,mexc.com",
+      "DOMAIN-SUFFIX,gemini.com",
+      "DOMAIN-SUFFIX,bitstamp.net",
+      "DOMAIN-SUFFIX,phantom.com",
+      "DOMAIN-SUFFIX,rabby.io",
+      "DOMAIN-SUFFIX,safe.global",
+      "DOMAIN-SUFFIX,ledger.com",
+      "DOMAIN-SUFFIX,trezor.io",
+      "DOMAIN-SUFFIX,backpack.app",
+      "DOMAIN-SUFFIX,exodus.com",
+      "DOMAIN-SUFFIX,solflare.com",
+      "DOMAIN-SUFFIX,aave.com",
+      "DOMAIN-SUFFIX,morpho.org",
+      "DOMAIN-SUFFIX,lido.fi",
+      "DOMAIN-SUFFIX,uniswap.org",
+      "DOMAIN-SUFFIX,pancakeswap.finance",
+      "DOMAIN-SUFFIX,curve.fi",
+      "DOMAIN-SUFFIX,compound.finance",
+      "DOMAIN-SUFFIX,pendle.finance",
+      "DOMAIN-SUFFIX,ethena.fi",
+      "DOMAIN-SUFFIX,spark.fi",
+      "DOMAIN-SUFFIX,sky.money",
+      "DOMAIN-SUFFIX,jup.ag",
+      "DOMAIN-SUFFIX,raydium.io",
+      "DOMAIN-SUFFIX,orca.so",
+      "DOMAIN-SUFFIX,dydx.trade",
+      "DOMAIN-SUFFIX,gmx.io",
+      "DOMAIN-SUFFIX,aerodrome.finance",
+      "DOMAIN-SUFFIX,defillama.com",
+      "DOMAIN-SUFFIX,arkm.com",
+      "DOMAIN-SUFFIX,debank.com",
+      "DOMAIN-SUFFIX,dune.com",
+      "DOMAIN-SUFFIX,nansen.ai",
+      "DOMAIN-SUFFIX,dappradar.com",
+      "DOMAIN-SUFFIX,dexscreener.com",
+      "DOMAIN-SUFFIX,dextools.io",
+      "DOMAIN-SUFFIX,birdeye.so",
+      "DOMAIN-SUFFIX,coinglass.com",
+      "DOMAIN-SUFFIX,sosovalue.com",
+      "DOMAIN-SUFFIX,bitcoin.org",
+      "DOMAIN-SUFFIX,ethereum.org",
+      "DOMAIN-SUFFIX,solana.com",
+      "DOMAIN-SUFFIX,bnbchain.org",
+      "DOMAIN-SUFFIX,arbitrum.io",
+      "DOMAIN-SUFFIX,optimism.io",
+      "DOMAIN-SUFFIX,base.org",
+      "DOMAIN-SUFFIX,polygon.technology",
+      "DOMAIN-SUFFIX,avax.network",
+      "DOMAIN-SUFFIX,sui.io",
+      "DOMAIN-SUFFIX,aptosfoundation.org",
+      "DOMAIN-SUFFIX,tron.network",
+      "DOMAIN-SUFFIX,near.org",
+      "DOMAIN-SUFFIX,cosmos.network",
+      "DOMAIN-SUFFIX,etherscan.io",
+      "DOMAIN-SUFFIX,bscscan.com",
+      "DOMAIN-SUFFIX,arbiscan.io",
+      "DOMAIN-SUFFIX,basescan.org",
+      "DOMAIN-SUFFIX,polygonscan.com",
+      "DOMAIN-SUFFIX,solscan.io",
+      "DOMAIN-SUFFIX,tronscan.org",
+      "DOMAIN-SUFFIX,curve.finance",
+      "DOMAIN-SUFFIX,compound.xyz",
+      "DOMAIN-SUFFIX,spark.finance",
+      "DOMAIN-SUFFIX,avalanche.com",
+      "DOMAIN-SUFFIX,aptosnetwork.com",
+      "DOMAIN-SUFFIX,phantom.app",
+      "DOMAIN-SUFFIX,gate.io",
+      "DOMAIN-SUFFIX,backpack.exchange"
+    ],
+    "old_count": 314,
+    "new_count": 386,
+    "existing_retained": [
+      {
+        "name": "Binance",
+        "domain": "binance.com",
+        "prior_policy": "JP"
+      },
+      {
+        "name": "Bybit",
+        "domain": "bybit.com",
+        "prior_policy": "JP"
+      },
+      {
+        "name": "Coinbase",
+        "domain": "coinbase.com",
+        "prior_policy": "JP"
+      },
+      {
+        "name": "Crypto.com",
+        "domain": "crypto.com",
+        "prior_policy": "JP"
+      },
+      {
+        "name": "OKX",
+        "domain": "okx.com",
+        "prior_policy": "US"
+      },
+      {
+        "name": "Polymarket",
+        "domain": "polymarket.com",
+        "prior_policy": "MY"
+      },
+      {
+        "name": "MetaMask",
+        "domain": "metamask.com",
+        "prior_policy": "JP"
+      },
+      {
+        "name": "Trust Wallet",
+        "domain": "trustwallet.com",
+        "prior_policy": "JP"
+      },
+      {
+        "name": "Ether.fi",
+        "domain": "ether.fi",
+        "prior_policy": "JP"
+      },
+      {
+        "name": "Hyperliquid",
+        "domain": "hyperliquid.xyz",
+        "prior_policy": "JP"
+      },
+      {
+        "name": "Pump.fun",
+        "domain": "pump.fun",
+        "prior_policy": "JP"
+      },
+      {
+        "name": "CoinGecko",
+        "domain": "coingecko.com",
+        "prior_policy": "JP"
+      },
+      {
+        "name": "CoinMarketCap",
+        "domain": "coinmarketcap.com",
+        "prior_policy": "JP"
+      },
+      {
+        "name": "TradingView",
+        "domain": "tradingview.com",
+        "prior_policy": "JP"
+      },
+      {
+        "name": "TON",
+        "domain": "ton.org",
+        "prior_policy": "JP"
+      }
+    ],
+    "verified_sources": [
+      {
+        "name": "Kraken",
+        "domain": "kraken.com",
+        "source_url": "https://kraken.com/"
+      },
+      {
+        "name": "Bitget",
+        "domain": "bitget.com",
+        "source_url": "https://bitget.com/"
+      },
+      {
+        "name": "Gate",
+        "domain": "gate.com",
+        "source_url": "https://gate.com/"
+      },
+      {
+        "name": "KuCoin",
+        "domain": "kucoin.com",
+        "source_url": "https://kucoin.com/"
+      },
+      {
+        "name": "MEXC",
+        "domain": "mexc.com",
+        "source_url": "https://mexc.com/"
+      },
+      {
+        "name": "Gemini",
+        "domain": "gemini.com",
+        "source_url": "https://gemini.com/"
+      },
+      {
+        "name": "Bitstamp",
+        "domain": "bitstamp.net",
+        "source_url": "https://bitstamp.net/"
+      },
+      {
+        "name": "Phantom",
+        "domain": "phantom.com",
+        "source_url": "https://phantom.com/"
+      },
+      {
+        "name": "Rabby",
+        "domain": "rabby.io",
+        "source_url": "https://rabby.io/"
+      },
+      {
+        "name": "Safe",
+        "domain": "safe.global",
+        "source_url": "https://safe.global/"
+      },
+      {
+        "name": "Ledger",
+        "domain": "ledger.com",
+        "source_url": "https://ledger.com/"
+      },
+      {
+        "name": "Trezor",
+        "domain": "trezor.io",
+        "source_url": "https://trezor.io/"
+      },
+      {
+        "name": "Backpack",
+        "domain": "backpack.app",
+        "source_url": "https://backpack.app/"
+      },
+      {
+        "name": "Exodus",
+        "domain": "exodus.com",
+        "source_url": "https://exodus.com/"
+      },
+      {
+        "name": "Solflare",
+        "domain": "solflare.com",
+        "source_url": "https://solflare.com/"
+      },
+      {
+        "name": "Aave",
+        "domain": "aave.com",
+        "source_url": "https://aave.com/"
+      },
+      {
+        "name": "Morpho",
+        "domain": "morpho.org",
+        "source_url": "https://morpho.org/"
+      },
+      {
+        "name": "Lido",
+        "domain": "lido.fi",
+        "source_url": "https://lido.fi/"
+      },
+      {
+        "name": "Uniswap",
+        "domain": "uniswap.org",
+        "source_url": "https://uniswap.org/"
+      },
+      {
+        "name": "PancakeSwap",
+        "domain": "pancakeswap.finance",
+        "source_url": "https://pancakeswap.finance/"
+      },
+      {
+        "name": "Curve",
+        "domain": "curve.fi",
+        "source_url": "https://curve.fi/"
+      },
+      {
+        "name": "Compound",
+        "domain": "compound.finance",
+        "source_url": "https://compound.finance/"
+      },
+      {
+        "name": "Pendle",
+        "domain": "pendle.finance",
+        "source_url": "https://pendle.finance/"
+      },
+      {
+        "name": "Ethena",
+        "domain": "ethena.fi",
+        "source_url": "https://ethena.fi/"
+      },
+      {
+        "name": "Spark",
+        "domain": "spark.fi",
+        "source_url": "https://spark.fi/"
+      },
+      {
+        "name": "Sky",
+        "domain": "sky.money",
+        "source_url": "https://sky.money/"
+      },
+      {
+        "name": "Jupiter",
+        "domain": "jup.ag",
+        "source_url": "https://jup.ag/"
+      },
+      {
+        "name": "Raydium",
+        "domain": "raydium.io",
+        "source_url": "https://raydium.io/"
+      },
+      {
+        "name": "Orca",
+        "domain": "orca.so",
+        "source_url": "https://orca.so/"
+      },
+      {
+        "name": "dYdX",
+        "domain": "dydx.trade",
+        "source_url": "https://dydx.trade/"
+      },
+      {
+        "name": "GMX",
+        "domain": "gmx.io",
+        "source_url": "https://gmx.io/"
+      },
+      {
+        "name": "Aerodrome",
+        "domain": "aerodrome.finance",
+        "source_url": "https://aerodrome.finance/"
+      },
+      {
+        "name": "DefiLlama",
+        "domain": "defillama.com",
+        "source_url": "https://defillama.com/"
+      },
+      {
+        "name": "Arkham",
+        "domain": "arkm.com",
+        "source_url": "https://arkm.com/"
+      },
+      {
+        "name": "DeBank",
+        "domain": "debank.com",
+        "source_url": "https://debank.com/"
+      },
+      {
+        "name": "Dune",
+        "domain": "dune.com",
+        "source_url": "https://dune.com/"
+      },
+      {
+        "name": "Nansen",
+        "domain": "nansen.ai",
+        "source_url": "https://nansen.ai/"
+      },
+      {
+        "name": "DappRadar",
+        "domain": "dappradar.com",
+        "source_url": "https://dappradar.com/"
+      },
+      {
+        "name": "DEX Screener",
+        "domain": "dexscreener.com",
+        "source_url": "https://dexscreener.com/"
+      },
+      {
+        "name": "DEXTools",
+        "domain": "dextools.io",
+        "source_url": "https://dextools.io/"
+      },
+      {
+        "name": "Birdeye",
+        "domain": "birdeye.so",
+        "source_url": "https://birdeye.so/"
+      },
+      {
+        "name": "CoinGlass",
+        "domain": "coinglass.com",
+        "source_url": "https://coinglass.com/"
+      },
+      {
+        "name": "SoSoValue",
+        "domain": "sosovalue.com",
+        "source_url": "https://sosovalue.com/"
+      },
+      {
+        "name": "Bitcoin",
+        "domain": "bitcoin.org",
+        "source_url": "https://bitcoin.org/"
+      },
+      {
+        "name": "Ethereum",
+        "domain": "ethereum.org",
+        "source_url": "https://ethereum.org/"
+      },
+      {
+        "name": "Solana",
+        "domain": "solana.com",
+        "source_url": "https://solana.com/"
+      },
+      {
+        "name": "BNB Chain",
+        "domain": "bnbchain.org",
+        "source_url": "https://bnbchain.org/"
+      },
+      {
+        "name": "Arbitrum",
+        "domain": "arbitrum.io",
+        "source_url": "https://arbitrum.io/"
+      },
+      {
+        "name": "Optimism",
+        "domain": "optimism.io",
+        "source_url": "https://optimism.io/"
+      },
+      {
+        "name": "Base",
+        "domain": "base.org",
+        "source_url": "https://base.org/"
+      },
+      {
+        "name": "Polygon",
+        "domain": "polygon.technology",
+        "source_url": "https://polygon.technology/"
+      },
+      {
+        "name": "Avalanche",
+        "domain": "avax.network",
+        "source_url": "https://avax.network/"
+      },
+      {
+        "name": "Sui",
+        "domain": "sui.io",
+        "source_url": "https://sui.io/"
+      },
+      {
+        "name": "Aptos",
+        "domain": "aptosfoundation.org",
+        "source_url": "https://aptosfoundation.org/"
+      },
+      {
+        "name": "TRON",
+        "domain": "tron.network",
+        "source_url": "https://tron.network/"
+      },
+      {
+        "name": "NEAR",
+        "domain": "near.org",
+        "source_url": "https://near.org/"
+      },
+      {
+        "name": "Cosmos",
+        "domain": "cosmos.network",
+        "source_url": "https://cosmos.network/"
+      },
+      {
+        "name": "Etherscan",
+        "domain": "etherscan.io",
+        "source_url": "https://etherscan.io/"
+      },
+      {
+        "name": "BscScan",
+        "domain": "bscscan.com",
+        "source_url": "https://bscscan.com/"
+      },
+      {
+        "name": "Arbiscan",
+        "domain": "arbiscan.io",
+        "source_url": "https://arbiscan.io/"
+      },
+      {
+        "name": "BaseScan",
+        "domain": "basescan.org",
+        "source_url": "https://basescan.org/"
+      },
+      {
+        "name": "PolygonScan",
+        "domain": "polygonscan.com",
+        "source_url": "https://polygonscan.com/"
+      },
+      {
+        "name": "Solscan",
+        "domain": "solscan.io",
+        "source_url": "https://solscan.io/"
+      },
+      {
+        "name": "TRONSCAN",
+        "domain": "tronscan.org",
+        "source_url": "https://tronscan.org/"
+      },
+      {
+        "name": "Curve current",
+        "domain": "curve.finance",
+        "source_url": "https://curve.fi/"
+      },
+      {
+        "name": "Compound current",
+        "domain": "compound.xyz",
+        "source_url": "https://compound.finance/"
+      },
+      {
+        "name": "Spark current",
+        "domain": "spark.finance",
+        "source_url": "https://spark.fi/"
+      },
+      {
+        "name": "Avalanche current",
+        "domain": "avalanche.com",
+        "source_url": "https://avax.network/"
+      },
+      {
+        "name": "Aptos current",
+        "domain": "aptosnetwork.com",
+        "source_url": "https://aptosfoundation.org/"
+      },
+      {
+        "name": "Phantom legacy",
+        "domain": "phantom.app",
+        "source_url": "https://phantom.app/"
+      },
+      {
+        "name": "Gate legacy",
+        "domain": "gate.io",
+        "source_url": "https://gate.io/"
+      },
+      {
+        "name": "Backpack exchange",
+        "domain": "backpack.exchange",
+        "source_url": "https://backpack.exchange/"
+      }
+    ],
+    "redirect_notes": [
+      {
+        "domain": "curve.finance",
+        "source": "https://curve.fi/",
+        "reason": "Observed official redirect to www.curve.finance"
+      },
+      {
+        "domain": "compound.xyz",
+        "source": "https://compound.finance/",
+        "reason": "Observed official redirect to www.compound.xyz/redirect; local HTTP200 Compound Finance title; web reader target inaccessible"
+      },
+      {
+        "domain": "spark.finance",
+        "source": "https://spark.fi/",
+        "reason": "Official redirect to spark.finance"
+      },
+      {
+        "domain": "avalanche.com",
+        "source": "https://avax.network/",
+        "reason": "Official redirect to www.avalanche.com"
+      },
+      {
+        "domain": "aptosnetwork.com",
+        "source": "https://aptosfoundation.org/",
+        "reason": "Official web reader redirect to aptosnetwork.com"
+      },
+      {
+        "domain": "phantom.app",
+        "source": "https://phantom.app/",
+        "reason": "Official web reader redirect to phantom.com"
+      },
+      {
+        "domain": "gate.io",
+        "source": "https://gate.io/",
+        "reason": "Official web reader redirect to www.gate.com"
+      },
+      {
+        "domain": "backpack.exchange",
+        "source": "https://backpack.exchange/",
+        "reason": "Official current homepage verified via web reader"
+      }
+    ],
+    "held": [
+      "dabpstab.com: spelling/identity unverified; no guessed substitute"
+    ],
+    "limitations": [
+      "Domains and subdomains only; no claim all RPC/custom DApp/CDN/P2P/IP traffic or service access covered.",
+      "No new shared cloud root, IP or ASN; old MY/US/JP decisions preserved including OKX US and Polymarket MY.",
+      "No website safety/investment advice or mainland accessibility/phone business test claimed.",
+      "Daily automation remains paused; no runtime apply/restart."
+    ]
   }
 }
