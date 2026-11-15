@@ -4,20 +4,18 @@
   "upstream_script_source": "https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.response.js",
   "upstream_script_sha256": "f98483d5f5017514f82502253c0db5ce2d4ffb7839887aa2cadc22666f5a7f12",
   "upstream_script_build": "// Build: 2026/7/19 16:16:39",
-  "bundled_script_sha256": "93b060ae590973bf932a31bc45998cb4f953dec87e18f38e79532447dd959c86",
-  "scope": "Add one exact iOS c=IOS googlevideo /initplayback empty-200 URL rewrite before the existing five rewrites; retain original Rule, MITM, all three response script lines and immutable v3 script bytes. No new response-body parsing, Worker forwarding, endpoint replay, route or node changes.",
+  "bundled_script_sha256": "0c429cc2b4d715be142f6eb9a18c644220bb0deee62dd74cd442b74b5a5becf6",
+  "scope": "Restore exact original Yfamily2UDP rules/5rewrites/MITM. Keep v3 filtering and finite endpoint limits; add read-only entry/pass/known-schema structure counters. Normalize HTTP status strings so error responses pass unchanged. No new ad-block selectors, cap increases, Worker or forwarding.",
   "body_limits_bytes": {
     "browse/next/search": 1048576,
     "player/get_watch": 524288,
     "reel/guide/account": 131072
   },
-  "phone_acceptance": "v3 phone retest still contains advertising; v4 native fallback/playback/advertising acceptance not tested. Not a permanent-ad-removal claim.",
-  "version": "original-optimized-v4-fallback",
-  "fix_evidence": "Native v3 execution is confirmed: feed removal counters sum to 7, four observed get_watch wire-player counters are zero, advertising progress remains. Existing rewrite matches only initplayback with oad; other iOS initplayback requests pass. Upstream request implementation has a local empty-200 fallback branch, but native client fallback is not proved by that source or this captured log.",
-  "diagnostics": "Bounded console counters: version, endpoint, byte length, stage, number removed, format; no URLs, video IDs, query strings, keys, account headers or payloads.",
-  "bundled_script_commit": "c0fa342d0508c028990243d922da758432d2e994",
-  "bundled_script_url": "https://raw.githubusercontent.com/kenrickxu/SR/c0fa342d0508c028990243d922da758432d2e994/modules/youtube-original/youtube.response.v3.js",
-  "transport_fallback_source": "https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.request.js",
-  "transport_fallback_limitations": "initplayback is a playback transport, not an advertising-only endpoint. Returning empty 200 can affect normal playback on clients that do not fall back. Existing /videoplayback and SABR URLs are not blocked by this added rule. Roll back the module if playback fails.",
-  "rollback_module_url": "https://raw.githubusercontent.com/kenrickxu/SR/b1fdae45c991248360e1b2db2f4578f46288cb45/modules/YouTubeAd.sgmodule"
+  "phone_acceptance": "v4 actual rewrite hit observed but owner still reports advertising. v5 diagnostic is not an ad-removal repair or permanent-effect claim; native log delivery and business results pending.",
+  "version": "original-diagnostic-v5",
+  "fix_evidence": "Current original Yfamily module and its Maasea response script are byte-identical to archived sources. New capture confirms v4 fallback hits but ad playback remains. One get_watch produces zero known-ad removals; three other completed get_watch executions have no stage counter, leaving silent entry-guard bypass reasons unknown.",
+  "diagnostics": "Only whitelisted endpoint/version/stage/body representation, byte length, normalized status, constant pass reason and aggregate known-schema counts. No unknown field numbers/lengths, payload strings, URLs, query values, video IDs, account data, keys or raw exceptions. Probe capped at2048headers/32known-message expansions and does not mutate body/state or access network.",
+  "rollback_module_url": "https://raw.githubusercontent.com/kenrickxu/SR/b1fdae45c991248360e1b2db2f4578f46288cb45/modules/YouTubeAd.sgmodule",
+  "bundled_script_commit": "38c3a2c4ea9d27699e60f5e8a87e53a7c87aa5b3",
+  "bundled_script_url": "https://raw.githubusercontent.com/kenrickxu/SR/38c3a2c4ea9d27699e60f5e8a87e53a7c87aa5b3/modules/youtube-original/youtube.response.v5.js"
 }

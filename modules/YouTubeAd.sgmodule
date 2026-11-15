@@ -1,6 +1,6 @@
-#!name = YouTube去广告 Original Optimized v4 Fallback
+#!name = YouTube去广告 Original Diagnostic v5
 
-#!desc = 原版兼容修订 v4：iOS initplayback本地空响应回退验证，沿用v3列表/播放器脚本。可能影响播放；未承诺永久去广告。仅启用一份。
+#!desc = 原版范围诊断 v5：撤掉无效额外回退，记录播放器入口放行原因与匿名结构计数；并非已验收去广告修复版。仅启用一份。
 
 #!author = Maasea; Ken SR bounded-entry adaptation
 
@@ -14,9 +14,6 @@ AND,((DOMAIN-SUFFIX,googlevideo.com), (PROTOCOL,UDP)),REJECT
 AND,((DOMAIN,youtubei.googleapis.com), (PROTOCOL,UDP)),REJECT
 
 [URL Rewrite]
-# iOS playback transport compatibility fallback (not an ad-only URL).
-# Empty 200 is intended to request the app fallback; native acceptance is required.
-^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback\?(?:[^#\s]*&)?c=IOS(?:&[^#\s]*)?$ _ reject-200
 (^https?:\/\/[\w-]+\.googlevideo\.com\/(?!dclk_video_ads).+?)&ctier=L(&.+?),ctier,(.+) $1$2$3 302
 ^https?:\/\/[\w-]+\.googlevideo\.com\/(?!(dclk_video_ads|videoplayback\?)).+&oad _ reject-200
 ^https?:\/\/(www|s)\.youtube\.com\/api\/stats\/ads _ reject-200
@@ -24,9 +21,9 @@ AND,((DOMAIN,youtubei.googleapis.com), (PROTOCOL,UDP)),REJECT
 ^https?:\/\/s\.youtube\.com\/api\/stats\/qoe\?adcontext _ reject-200
 
 [Script]
-youtube.response.playback = type=http-response,pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(player|get_watch)(\?.*)?$,requires-body=1,max-size=524288,binary-body-mode=1,script-path=https://raw.githubusercontent.com/kenrickxu/SR/c0fa342d0508c028990243d922da758432d2e994/modules/youtube-original/youtube.response.v3.js,argument="{"lyricLang":"off","captionLang":"off","blockUpload":true,"blockImmersive":true,"blockShorts":false,"debug":false}"
-youtube.response.feeds = type=http-response,pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|search)(\?.*)?$,requires-body=1,max-size=1048576,binary-body-mode=1,script-path=https://raw.githubusercontent.com/kenrickxu/SR/c0fa342d0508c028990243d922da758432d2e994/modules/youtube-original/youtube.response.v3.js,argument="{"lyricLang":"off","captionLang":"off","blockUpload":true,"blockImmersive":true,"blockShorts":false,"debug":false}"
-youtube.response.controls = type=http-response,pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(reel\/reel_watch_sequence|guide|account\/get_setting)(\?.*)?$,requires-body=1,max-size=131072,binary-body-mode=1,script-path=https://raw.githubusercontent.com/kenrickxu/SR/c0fa342d0508c028990243d922da758432d2e994/modules/youtube-original/youtube.response.v3.js,argument="{"lyricLang":"off","captionLang":"off","blockUpload":true,"blockImmersive":true,"blockShorts":false,"debug":false}"
+youtube.response.playback = type=http-response,pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(player|get_watch)(\?.*)?$,requires-body=1,max-size=524288,binary-body-mode=1,script-path=https://raw.githubusercontent.com/kenrickxu/SR/38c3a2c4ea9d27699e60f5e8a87e53a7c87aa5b3/modules/youtube-original/youtube.response.v5.js,argument="{"lyricLang":"off","captionLang":"off","blockUpload":true,"blockImmersive":true,"blockShorts":false,"debug":false}"
+youtube.response.feeds = type=http-response,pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|search)(\?.*)?$,requires-body=1,max-size=1048576,binary-body-mode=1,script-path=https://raw.githubusercontent.com/kenrickxu/SR/38c3a2c4ea9d27699e60f5e8a87e53a7c87aa5b3/modules/youtube-original/youtube.response.v5.js,argument="{"lyricLang":"off","captionLang":"off","blockUpload":true,"blockImmersive":true,"blockShorts":false,"debug":false}"
+youtube.response.controls = type=http-response,pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(reel\/reel_watch_sequence|guide|account\/get_setting)(\?.*)?$,requires-body=1,max-size=131072,binary-body-mode=1,script-path=https://raw.githubusercontent.com/kenrickxu/SR/38c3a2c4ea9d27699e60f5e8a87e53a7c87aa5b3/modules/youtube-original/youtube.response.v5.js,argument="{"lyricLang":"off","captionLang":"off","blockUpload":true,"blockImmersive":true,"blockShorts":false,"debug":false}"
 
 [MITM]
 hostname = %APPEND% -redirector*.googlevideo.com,*.googlevideo.com,www.youtube.com,s.youtube.com,youtubei.googleapis.com
