@@ -1,3 +1,7 @@
+## Pump.fun addition and Grok check — Ken6033, 2026-11-15 HKT
+
+Explicit owner request: add DOMAIN-SUFFIX,pump.fun to JPProxy (313→314;203suffix+111IP/ASN). Pump.fun absent in MY/US/JP. Existing DOMAIN-SUFFIX,grok.com already routes Grok parent/subdomains JP; preserve once. Do not infer every Grok external dependency is covered. Preserve all previous rows/order/options, MY/US priority, five-rule CN, defaultDIRECT/Apple/Push/FaceTime, JP45.153.247.160/32, General/DNS/MITM/nodes and all runtime consumers. Data-only update with sourcehash sidecars/review/docs; no runtime apply/restart or daily-task restoration. Manual JP refresh required; no website/trade/AI-service business acceptance claimed.
+
 ## Requested JP parents — Ken5923, 2026-11-14 HKT
 
 Explicit owner request: add DOMAIN-SUFFIX parents ymkizv84.work, withgoogle.com, jw5cqzrc.work to JPProxy (310→313; 202 domain suffixes +111 IP/ASN). All three absent from all current sets before addition. Preserve prior rows/order/options, CN five-rule/three-set layout, MY/US priority, Apple/Push/FaceTime default DIRECT and JP node 45.153.247.160/32. Only JP data, derived source hashes and review/docs change. No runtime apply/restart or daily-task restoration; both maintenance tasks stay paused per Ken5784. Manual JP refresh required. Domain routing does not verify website identity/content, all third-party dependencies or business success.
