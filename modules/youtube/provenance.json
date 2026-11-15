@@ -1,0 +1,12 @@
+{
+  "module_source": "https://yfamilys.com/module/YouTubeAd.sgmodule",
+  "module_sha256": "0afef6ff0b966b94f7dea11d07a580e70383393bc1f4ac47b28258ce1afb717b",
+  "upstream_script_url": "https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.response.js",
+  "upstream_script_sha256": "f98483d5f5017514f82502253c0db5ce2d4ffb7839887aa2cadc22666f5a7f12",
+  "upstream_script_build": "// Build: 2026/7/19 16:16:39",
+  "bundled_script_sha256": "b2ee459f247869fbf0e5ee15f3a061c55b16304ef2b292953c577764d6ba00c7",
+  "upstream_script_preserved_verbatim_inside_wrapper": true,
+  "scope": "Opt-in standalone Shadowrocket module; no CN/rules/subscription/runtime changes; phone playback/PiP/background/ad-blocking unverified.",
+  "bundled_script_commit": "93850175057573dd9316ac9126122d6507a2a7b1",
+  "bundled_script_url": "https://raw.githubusercontent.com/kenrickxu/SR/93850175057573dd9316ac9126122d6507a2a7b1/modules/youtube/youtube.response.js"
+}

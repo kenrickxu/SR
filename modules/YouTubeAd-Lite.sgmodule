@@ -1,0 +1,19 @@
+#!name = YouTube Playback Lite
+#!desc = 播放优先试用版：只处理 player/get_watch，跳过首页/搜索大响应，不解密视频CDN。可能保留部分广告；手机播放/PiP/后台效果待实测。先停用旧YouTube模块，仅启用本模块。
+#!author = Maasea; Ken SR playback-first adaptation
+#!homepage = https://github.com/kenrickxu/SR/tree/main/modules/youtube
+
+[Rule]
+AND,((DOMAIN-SUFFIX,googlevideo.com),(PROTOCOL,UDP)),REJECT
+AND,((DOMAIN,youtubei.googleapis.com),(PROTOCOL,UDP)),REJECT
+
+[URL Rewrite]
+^https?:\/\/(www|s)\.youtube\.com\/api\/stats\/ads _ reject-200
+^https?:\/\/(www|s)\.youtube\.com\/(pagead|ptracking) _ reject-200
+^https?:\/\/s\.youtube\.com\/api\/stats\/qoe\?adcontext _ reject-200
+
+[Script]
+youtube.response.lite = type=http-response,pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(player|get_watch)(\?.*)?$,requires-body=1,max-size=1048576,binary-body-mode=1,script-path=https://raw.githubusercontent.com/kenrickxu/SR/93850175057573dd9316ac9126122d6507a2a7b1/modules/youtube/youtube.response.js,argument="{"lyricLang":"off","captionLang":"off","blockUpload":false,"blockImmersive":false,"blockShorts":false,"debug":false}"
+
+[MITM]
+hostname = %APPEND% www.youtube.com,s.youtube.com,youtubei.googleapis.com
