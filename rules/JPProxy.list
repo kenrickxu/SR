@@ -298,6 +298,9 @@ DOMAIN-SUFFIX,tronscan.org
 # Ken6055: explicitly requested parent domains.
 DOMAIN-SUFFIX,dropstab.com
 
+# Ken6106: explicitly requested DuckDNS parent and all subdomains.
+DOMAIN-SUFFIX,duckdns.org
+
 IP-CIDR,91.105.192.0/23,no-resolve
 IP-CIDR,91.108.4.0/22,no-resolve
 IP-CIDR,91.108.8.0/21,no-resolve

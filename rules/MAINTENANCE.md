@@ -1,3 +1,7 @@
+## DuckDNS owner-requested parent — Ken6106, 2026-11-15 HKT
+
+Add only DOMAIN-SUFFIX,duckdns.org to JP387→388 (277suffix+111IP/ASN). This explicitly requested parent covers apex and all DuckDNS subdomains, including hosted tenant names; not an inferred shared-platform expansion from one observed hostname. Preserve all previous rows/options/order, MY/US priority, Apple/Push/FaceTime defaultDIRECT, JP45.153.247.160/32, CN five-rule layout/General/DNS/MITM/IPv6/nodes and other consumers' structural policies. Shared JP data changes on manual consumer refresh; no live apply/restart or maintenance/monitor restoration. Original URLs unchanged; phone/application acceptance remains manual.
+
 ## DropsTab correction — Ken6055, 2026-11-15 HKT
 
 Owner corrects6039 dabpstab.com to dropstab.com. Verified DropsTab official homepage/about/mobile pages via official indexed sources; direct web homepage fetch timed out, not proof of outage or mainland reachability. Add only DOMAIN-SUFFIX,dropstab.com to JP386→387(276suffix+111IP/ASN). Prior6039 hold is resolved by this correction, but original typo dabpstab.com is NOT added and old audit remains historical. No guessed substitute: DappRadar is a separately covered site. Preserve all prior crypto/BOLT/wallet/other domain rows/order/options, MY/US priority, CN five-rule layout, Apple/Push/FaceTime defaultDIRECT, JP45.153.247.160/32, General/DNS/MITM/nodes/consumers. Data-only sourcehash/review/docs update, no runtime apply/restart/daily-task restoration. Domain coverage only, no allApp or financial-success claim.
