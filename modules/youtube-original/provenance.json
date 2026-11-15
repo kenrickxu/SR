@@ -4,16 +4,17 @@
   "upstream_script_source": "https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.response.js",
   "upstream_script_sha256": "f98483d5f5017514f82502253c0db5ce2d4ffb7839887aa2cadc22666f5a7f12",
   "upstream_script_build": "// Build: 2026/7/19 16:16:39",
-  "bundled_script_sha256": "d5ae03beecbc647f0ce34f55cbf1ea474b7ec5838a3ebcab676fbf4150a27395",
-  "scope": "Original rule/rewrite/MITM and all eight endpoint families retained. Browse/next/search use selective wire editing derived from upstream feed schema and pagead/layout markers, without full protobuf object decoding or global safe-field cache. Other endpoints retain verbatim upstream algorithm.",
+  "bundled_script_sha256": "93b060ae590973bf932a31bc45998cb4f953dec87e18f38e79532447dd959c86",
+  "scope": "v2 feed filtering retained; selective wire precleaner extended to player and get_watch nested player/next. Original enhancement entrypoint consumes precleaned bytes, preserving sanitation when enhancement fails. Format-gated JSON player ad fields also supported. No new endpoints, external forwarding or route changes.",
   "body_limits_bytes": {
     "browse/next/search": 1048576,
     "player/get_watch": 524288,
     "reel/guide/account": 131072
   },
   "phone_acceptance": "pending; no memory ceiling, complete advertising removal or playback success claim",
-  "version": "original-optimized-v2",
-  "fix_evidence": "Owner retest reported Sponsored video ad. Native log records browse133067>131072 bypass. v2 processes that size via low-allocation selective wire traversal. Actual phone ad removal remains pending.",
-  "bundled_script_commit": "6169b39034cfec4261b497471dd077874a5594d2",
-  "bundled_script_url": "https://raw.githubusercontent.com/kenrickxu/SR/6169b39034cfec4261b497471dd077874a5594d2/modules/youtube-original/youtube.response.js"
+  "version": "original-optimized-v3",
+  "fix_evidence": "v2 capture has native3scripts and immutable v2 pin, no size skip/critical event. is_ad=1 playback persists. get_watch processing followed by SABR media/ad telemetry is observed, but raw response payload is not captured; nested/format corrections are implementation gaps, not a proven exclusive cause.",
+  "diagnostics": "Bounded console counters: version, endpoint, byte length, stage, number removed, format; no URLs, video IDs, query strings, keys, account headers or payloads.",
+  "bundled_script_commit": "c0fa342d0508c028990243d922da758432d2e994",
+  "bundled_script_url": "https://raw.githubusercontent.com/kenrickxu/SR/c0fa342d0508c028990243d922da758432d2e994/modules/youtube-original/youtube.response.v3.js"
 }
