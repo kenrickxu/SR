@@ -1542,7 +1542,7 @@
       "source_dependency": "Contains shared legacy Telegram/official-CIDR lineage; not an independent ownership vote."
     }
   },
-  "latest_owner_instruction": "Topic194 msg6106",
+  "latest_owner_instruction": "Topic194 msg6276",
   "owner_jp_supplement_5715": {
     "date": "2026-11-13",
     "source": "Ken Topic194 msgs5678/5715: merge previously reviewed foreign-service supplement into JPProxy",
@@ -2635,5 +2635,15 @@
     "old_count": 387,
     "new_count": 388,
     "scope": "Explicit owner parent-domain request covers DuckDNS apex and all hosted subdomains, not merely a guessed individual tenant. Preserve existing MY/US priority; no IP/ASN/DNS/nodes/runtime or scheduler change."
+  },
+  "owner_opencode_jp_6276": {
+    "date": "2026-11-16",
+    "source": "Ken Topic194 msg6276 explicitly requests opencode.ai parent to JP in CN",
+    "added_rules": [
+      "DOMAIN-SUFFIX,opencode.ai"
+    ],
+    "old_count": 388,
+    "new_count": 389,
+    "scope": "Explicit owner request covers opencode.ai apex and subdomains only. Preserve existing MY/US priority; no IP/ASN/DNS/nodes/runtime or scheduler change."
   }
 }

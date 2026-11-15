@@ -1,3 +1,7 @@
+## OpenCode owner-requested parent — Ken6276, 2026-11-16 HKT
+
+Add only DOMAIN-SUFFIX,opencode.ai to JP388→389 (278suffix+111IP/ASN). This explicit owner request covers opencode.ai apex and subdomains only. Preserve all previous rows/options/order, MY/US priority, Apple/Push/FaceTime defaultDIRECT, JP45.153.247.160/32, CN five-rule layout/General/DNS/MITM/IPv6/nodes and other consumers' structural policies. Shared JP data changes on manual consumer refresh; no live apply/restart or maintenance/monitor restoration. Original URLs unchanged; phone/application acceptance remains manual.
+
 ## DuckDNS owner-requested parent — Ken6106, 2026-11-15 HKT
 
 Add only DOMAIN-SUFFIX,duckdns.org to JP387→388 (277suffix+111IP/ASN). This explicitly requested parent covers apex and all DuckDNS subdomains, including hosted tenant names; not an inferred shared-platform expansion from one observed hostname. Preserve all previous rows/options/order, MY/US priority, Apple/Push/FaceTime defaultDIRECT, JP45.153.247.160/32, CN five-rule layout/General/DNS/MITM/IPv6/nodes and other consumers' structural policies. Shared JP data changes on manual consumer refresh; no live apply/restart or maintenance/monitor restoration. Original URLs unchanged; phone/application acceptance remains manual.
