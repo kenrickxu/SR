@@ -1,0 +1,16 @@
+{
+  "module_source": "https://yfamilys.com/module/YouTubeAd.sgmodule",
+  "original_module_sha256": "0afef6ff0b966b94f7dea11d07a580e70383393bc1f4ac47b28258ce1afb717b",
+  "upstream_script_source": "https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.response.js",
+  "upstream_script_sha256": "f98483d5f5017514f82502253c0db5ce2d4ffb7839887aa2cadc22666f5a7f12",
+  "upstream_script_build": "// Build: 2026/7/19 16:16:39",
+  "bundled_script_sha256": "6c6f7bd89f42281f4a9bba8e5bf4504e6fe311cab40bd2f5bbc4ccaa2f766e1f",
+  "scope": "Original module variant; exact original rule/rewrite/MITM scope retained. All eight original API endpoint families retained. Source-body guards only, original Maasea implementation verbatim.",
+  "body_limits_bytes": {
+    "player/get_watch": 524288,
+    "browse/next/search/reel/guide/account": 131072
+  },
+  "phone_acceptance": "pending; no memory ceiling, complete advertising removal or playback success claim",
+  "bundled_script_commit": "e7c654bab9883623e3b0c6ac89f78c51d22ff10e",
+  "bundled_script_url": "https://raw.githubusercontent.com/kenrickxu/SR/e7c654bab9883623e3b0c6ac89f78c51d22ff10e/modules/youtube-original/youtube.response.js"
+}
