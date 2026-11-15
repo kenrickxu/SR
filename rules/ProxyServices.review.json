@@ -1542,7 +1542,7 @@
       "source_dependency": "Contains shared legacy Telegram/official-CIDR lineage; not an independent ownership vote."
     }
   },
-  "latest_owner_instruction": "Topic194 msg6039",
+  "latest_owner_instruction": "Topic194 msg6055",
   "owner_jp_supplement_5715": {
     "date": "2026-11-13",
     "source": "Ken Topic194 msgs5678/5715: merge previously reviewed foreign-service supplement into JPProxy",
@@ -2615,5 +2615,15 @@
       "No website safety/investment advice or mainland accessibility/phone business test claimed.",
       "Daily automation remains paused; no runtime apply/restart."
     ]
+  },
+  "owner_dropstab_jp_6055": {
+    "date": "2026-11-15",
+    "source": "Ken Topic194 msg6055 explicitly corrects dabpstab.com to dropstab.com, supplement JP",
+    "added_rules": [
+      "DOMAIN-SUFFIX,dropstab.com"
+    ],
+    "old_count": 386,
+    "new_count": 387,
+    "preserve": "MY/US priority; Apple/Push/FaceTime default DIRECT; 45.153.247.160/32 JP; daily maintenance remains paused; no runtime apply/restart"
   }
 }

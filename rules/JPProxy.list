@@ -295,6 +295,9 @@ DOMAIN-SUFFIX,polygonscan.com
 DOMAIN-SUFFIX,solscan.io
 DOMAIN-SUFFIX,tronscan.org
 
+# Ken6055: explicitly requested parent domains.
+DOMAIN-SUFFIX,dropstab.com
+
 IP-CIDR,91.105.192.0/23,no-resolve
 IP-CIDR,91.108.4.0/22,no-resolve
 IP-CIDR,91.108.8.0/21,no-resolve
