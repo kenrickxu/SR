@@ -1,23 +1,23 @@
-# YouTube Original Optimized — Shadowrocket
+# YouTube Original Optimized v2 — Shadowrocket
 
-Owner-requested optimization of https://yfamilys.com/module/YouTubeAd.sgmodule, not the separate Lite variant. Maasea attribution retained; upstream snapshot/hash recorded in provenance.json.
+Owner-requested repair of https://yfamilys.com/module/YouTubeAd.sgmodule, retaining Maasea attribution and original playback enhancement. This updates the original-scope module, not the separate historical Lite variant. Exact source hashes/build are in provenance.json.
 
-## Preserve the original behavior surface
+## Evidence and correction
 
-Keep the original two UDP-reject rules, all five URL rewrite lines (including both googlevideo rewrites), and the complete MITM hostname line byte-for-byte. Keep every original API endpoint family: browse, next, player, search, reel/reel_watch_sequence, guide, account/get_setting and get_watch. Keep the original Maasea implementation verbatim inside an entry guard; do not invent a new ad algorithm or silently upgrade to a different module's additional request scripts.
+A phone retest showed Sponsored video advertising. Its native capture recorded a browse response skipped at 133067 > 131072 bytes. The v1 128 KiB feed threshold therefore bypassed a real response. This proves a concrete ad-filter coverage gap, not that it alone accounts for every advertisement. The short retest contained no critical-memory/close-all event; it does not establish long-run memory stability or complete ad removal.
 
-The old unresolved argument placeholders caused the current upstream parser to retain its defaults. Set known equivalent defaults explicitly: caption translation off, blockUpload=true, blockImmersive=true, blockShorts=false, debug=false; lyric translation off for legacy compatibility. Use the client default engine instead of an unresolved engine placeholder. PiP/background and ad handling logic are retained, not verified business outcomes.
+## Changes in v2
 
-## Bound body processing
+Preserve the original two UDP rules, five URL rewrites and full MITM hostname line unchanged. Preserve all eight endpoint families. Split handlers into browse/next/search (1 MiB), player/get_watch (512 KiB), and reel/guide/account controls (128 KiB). All are finite; oversize, unsupported, error and malformed inputs pass unchanged. Limits are input-body thresholds, not a measured RAM ceiling.
 
-Split the original endpoint coverage into disjoint playback and list-response handlers. Limit player/get_watch to524288bytes and browse/next/search/reel/guide/account responses to131072bytes in both module max-size and JavaScript checks. Pass empty, oversized, unrelated or non-success responses unchanged; do not return an empty forged response or truncate protobuf. Small supported payloads execute the exact upstream algorithm. The guard does not prevent all client buffering, script-engine overhead or aggregate memory pressure, and these limits are not a measured RAM ceiling. Oversized responses can retain advertisements/enhancements because stability takes precedence over rewriting every payload.
+For browse/next/search, use selective protobuf wire traversal derived from the copied upstream schema. Follow only known feed/container paths to repeated rich-item cards. Remove cards matching upstream pagead or EML-layout signatures; preserve the upstream Shorts-layout rule. Do not decode the whole feed into a JavaScript object graph. Retained normal/unknown wire fields remain byte-identical, including opaque payloads; changed parent lengths are recomputed. Small matching ad cards no longer have the upstream 1000-byte scan exemption. Do not persist or trust a global safe-field-number cache: the same field can contain both normal and advertising cards. Keep depth/field budgets and fail open on malformed wire data. Unknown future feed shapes/signatures and uninspected endpoint payloads are not claimed covered.
 
-Pin the copied script to an immutable commit in this repository. Updating this module URL does not silently follow upstream master. No CN/routing/subscription/service/scheduler changes.
+For all other supported endpoints, keep the full upstream implementation verbatim inside the bounded guard, including player ad fields and PiP/background logic. Explicit argument values retain the original effective defaults. No new request redirect/Worker, third-party playback forwarding, broad advertiser-domain block, CN/route/node/subscription service/scheduler change is introduced.
 
-## Import, accept, roll back
+## Accept and roll back
 
-Disable both the old Yfamily YouTube module and any Lite/duplicate YouTube module. Import the raw modules/YouTubeAd.sgmodule URL and enable only this variant. Keep CN/JP unchanged. Close YouTube, reconnect Shadowrocket once, reopen and play the same video for at least60seconds, seek and check picture/sound. Check homepage/search ad behavior, PiP/background separately. Avoid full HTTP/body recording during normal playback; collect only a bounded reproduction if still failing.
+Update/reimport the modules/YouTubeAd.sgmodule subscription, enable only this variant, and disable old Yfamily/Lite/duplicate YouTube modules. Do not reset CN or change JP. Completely close YouTube, apply the module and reconnect SR once, then revisit the previously advertising feed/video and play/seek a normal video for at least 60 seconds. Check PiP/background separately. Phone-native loading, real advertising outcomes, continuous playback and actual RAM remain owner retest items.
 
-Roll back by disabling this module and re-enabling the preserved original URL. Do not delete or reset CN. Tests prove static scope, guards and synthetic upstream-equivalent execution only; actual Shadowrocket parsing, memory and playback remain unverified until the phone test.
+Rollback module version: repository commit 7bed51c1ebedde229699f941c1b52da9018e1ff7, modules/YouTubeAd.sgmodule. Rollback does not require changing CN or routing.
 
-Raw logs, bearer URLs, account headers and certificates must never be copied into this public directory.
+Tests use synthetic ads/normal cards and original upstream protobuf types as an independent decoder, including an exact 133067-byte regression fixture. These do not reproduce actual account response payloads or prove all advertising gone. Private screenshots, logs, bearer URLs, cookies and certificates are never included in public files.
