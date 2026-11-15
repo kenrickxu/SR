@@ -1542,7 +1542,7 @@
       "source_dependency": "Contains shared legacy Telegram/official-CIDR lineage; not an independent ownership vote."
     }
   },
-  "latest_owner_instruction": "Topic194 msg6279",
+  "latest_owner_instruction": "Topic194 msgs6285/6288",
   "owner_jp_supplement_5715": {
     "date": "2026-11-13",
     "source": "Ken Topic194 msgs5678/5715: merge previously reviewed foreign-service supplement into JPProxy",
@@ -2655,5 +2655,16 @@
     "old_count": 389,
     "new_count": 390,
     "scope": "Explicit owner request covers meta.ai apex and subdomains only. Preserve existing MY/US priority; no IP/ASN/DNS/nodes/runtime or scheduler change."
+  },
+  "owner_openrouter_meta_jp_6285": {
+    "date": "2026-11-16",
+    "source": "Ken Topic194 msgs6285/6288 explicitly requests openrouter.ai and meta.com parents to JP in CN",
+    "added_rules": [
+      "DOMAIN-SUFFIX,openrouter.ai",
+      "DOMAIN-SUFFIX,meta.com"
+    ],
+    "old_count": 390,
+    "new_count": 392,
+    "scope": "Explicit owner request covers openrouter.ai and meta.com apexes and subdomains only. Preserve existing MY/US priority; no IP/ASN/DNS/nodes/runtime or scheduler change."
   }
 }

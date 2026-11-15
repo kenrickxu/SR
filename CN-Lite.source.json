@@ -7,7 +7,7 @@
     "CN.conf": "4a26442654c11cd66cc9a7f39b6e4dec6c2793de83ec6a045e86d1cd5731554f",
     "rules/MYProxy.list": "33081d536e2616de7650ef585820d0d4ffce528a54e061f6751a8882b1d9d26c",
     "rules/USProxy.list": "35ee9c15cd879d56639fc7f9d5123a0d30639f86c817562d5202eb785f6a0e63",
-    "rules/JPProxy.list": "4d059614b00e84c2dbe4731ef5c1a9b7087e43d588920f8c35caf0256d36637f"
+    "rules/JPProxy.list": "2431bd735b4e7a003c5ae36509b2d53a96a6668966f89f72a0250afef3aa3886"
   },
   "real_ip_rows": 0,
   "skip_rows": 12,
