@@ -1,4 +1,4 @@
-#!name=APP去广告 UltraPlus Ken v2
+#!name=APP去广告 UltraPlus Ken v3 Diagnostic
 #!desc=基于Yfamily融合模块；Ken v2修正appstatus参数前缀误拦，已知开屏字段定向清理。其余融合主体保留；YouTube独立v6。非轻量模块，手机效果待验。
 #!author=Mixed; Ken scoped adaptation
 #!homepage=https://github.com/kenrickxu/SR/tree/main/modules/adultraplus
@@ -5008,7 +5008,7 @@ http-response-jq ^https:\/\/(apissl|az2-api(-js|-idc)?)\.(gifshow|ksapisrv)\.com
 [Script]
 
 # Ken v2: preserve configuration; clear only documented splash ad/mk arrays
-KenMeituanV2=type=http-response,pattern=^https?:\/\/(?:www|wmapi)\.meituan\.com\/api\/v\d+\/(?:appstatus|loadInfo)(?:\?|$),requires-body=true,max-size=1048576,script-path=https://raw.githubusercontent.com/kenrickxu/SR/bd80345019b217ef51c88392de2d3bcd66f78ce9/modules/adultraplus/meituan.response.v2.js
+KenMeituanV3=type=http-response,pattern=^https?:\/\/(?:www|wmapi)\.meituan\.com\/api\/v\d+\/(?:appstatus|loadInfo)(?:\?|$),requires-body=true,max-size=1048576,script-path=https://raw.githubusercontent.com/kenrickxu/SR/65494ab01c51b73f620192bffe6f6cc29a625257/modules/adultraplus/meituan.response.v3.js
 
 wyres=type=http-response,pattern=https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/user\/follow\/users\/mixed\/get,requires-body=true,script-path=https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js
 wyres2=type=http-response,pattern=https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/song\/play\/more\/list\/v\d,requires-body=true,script-path=https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js
