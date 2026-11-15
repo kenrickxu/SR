@@ -1,6 +1,6 @@
-#!name = YouTube去广告 Original Optimized v3
+#!name = YouTube去广告 Original Optimized v4 Fallback
 
-#!desc = 原版优化 v3：补齐get_watch嵌套播放器/推荐清理，出错保留已清理结果；有限大小与匿名处理计数。仅启用一份。
+#!desc = 原版兼容修订 v4：iOS initplayback本地空响应回退验证，沿用v3列表/播放器脚本。可能影响播放；未承诺永久去广告。仅启用一份。
 
 #!author = Maasea; Ken SR bounded-entry adaptation
 
@@ -14,6 +14,9 @@ AND,((DOMAIN-SUFFIX,googlevideo.com), (PROTOCOL,UDP)),REJECT
 AND,((DOMAIN,youtubei.googleapis.com), (PROTOCOL,UDP)),REJECT
 
 [URL Rewrite]
+# iOS playback transport compatibility fallback (not an ad-only URL).
+# Empty 200 is intended to request the app fallback; native acceptance is required.
+^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback\?(?:[^#\s]*&)?c=IOS(?:&[^#\s]*)?$ _ reject-200
 (^https?:\/\/[\w-]+\.googlevideo\.com\/(?!dclk_video_ads).+?)&ctier=L(&.+?),ctier,(.+) $1$2$3 302
 ^https?:\/\/[\w-]+\.googlevideo\.com\/(?!(dclk_video_ads|videoplayback\?)).+&oad _ reject-200
 ^https?:\/\/(www|s)\.youtube\.com\/api\/stats\/ads _ reject-200

@@ -5,16 +5,19 @@
   "upstream_script_sha256": "f98483d5f5017514f82502253c0db5ce2d4ffb7839887aa2cadc22666f5a7f12",
   "upstream_script_build": "// Build: 2026/7/19 16:16:39",
   "bundled_script_sha256": "93b060ae590973bf932a31bc45998cb4f953dec87e18f38e79532447dd959c86",
-  "scope": "v2 feed filtering retained; selective wire precleaner extended to player and get_watch nested player/next. Original enhancement entrypoint consumes precleaned bytes, preserving sanitation when enhancement fails. Format-gated JSON player ad fields also supported. No new endpoints, external forwarding or route changes.",
+  "scope": "Add one exact iOS c=IOS googlevideo /initplayback empty-200 URL rewrite before the existing five rewrites; retain original Rule, MITM, all three response script lines and immutable v3 script bytes. No new response-body parsing, Worker forwarding, endpoint replay, route or node changes.",
   "body_limits_bytes": {
     "browse/next/search": 1048576,
     "player/get_watch": 524288,
     "reel/guide/account": 131072
   },
-  "phone_acceptance": "pending; no memory ceiling, complete advertising removal or playback success claim",
-  "version": "original-optimized-v3",
-  "fix_evidence": "v2 capture has native3scripts and immutable v2 pin, no size skip/critical event. is_ad=1 playback persists. get_watch processing followed by SABR media/ad telemetry is observed, but raw response payload is not captured; nested/format corrections are implementation gaps, not a proven exclusive cause.",
+  "phone_acceptance": "v3 phone retest still contains advertising; v4 native fallback/playback/advertising acceptance not tested. Not a permanent-ad-removal claim.",
+  "version": "original-optimized-v4-fallback",
+  "fix_evidence": "Native v3 execution is confirmed: feed removal counters sum to 7, four observed get_watch wire-player counters are zero, advertising progress remains. Existing rewrite matches only initplayback with oad; other iOS initplayback requests pass. Upstream request implementation has a local empty-200 fallback branch, but native client fallback is not proved by that source or this captured log.",
   "diagnostics": "Bounded console counters: version, endpoint, byte length, stage, number removed, format; no URLs, video IDs, query strings, keys, account headers or payloads.",
   "bundled_script_commit": "c0fa342d0508c028990243d922da758432d2e994",
-  "bundled_script_url": "https://raw.githubusercontent.com/kenrickxu/SR/c0fa342d0508c028990243d922da758432d2e994/modules/youtube-original/youtube.response.v3.js"
+  "bundled_script_url": "https://raw.githubusercontent.com/kenrickxu/SR/c0fa342d0508c028990243d922da758432d2e994/modules/youtube-original/youtube.response.v3.js",
+  "transport_fallback_source": "https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.request.js",
+  "transport_fallback_limitations": "initplayback is a playback transport, not an advertising-only endpoint. Returning empty 200 can affect normal playback on clients that do not fall back. Existing /videoplayback and SABR URLs are not blocked by this added rule. Roll back the module if playback fails.",
+  "rollback_module_url": "https://raw.githubusercontent.com/kenrickxu/SR/b1fdae45c991248360e1b2db2f4578f46288cb45/modules/YouTubeAd.sgmodule"
 }

@@ -1,3 +1,27 @@
+# YouTube Original Optimized v4 — local transport fallback candidate
+
+## Current acceptance status
+
+v3 executed on the native client and reported feed-card removals, but playback advertising remained. Static/synthetic test success did not establish successful native ad removal. v4 is a compatibility candidate, not a permanent fix or a verified native playback result.
+
+## One scoped change
+
+Add one URL rewrite returning empty HTTP 200 only for `http(s)://<single-label>.googlevideo.com/initplayback?...c=IOS...`. The existing five rewrites, two UDP rules, MITM scope and three v3 response scripts are unchanged, including the immutable script pin. This rule intentionally targets an iOS playback transport, **not an ad-only endpoint**. It is intended to make the app use its fallback path and then existing player filters; whether this app version does so must be checked on-device. It does not block `/videoplayback`, SABR media URLs, all CDN traffic, Android or WEB clients.
+
+The upstream [request script](https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.request.js) contains an empty-200 fallback branch for initplayback. Its separate remote Worker redirect is **not** included. No request body, key, account header or playback URL is forwarded or replayed. No new body-buffering script or limit increase is introduced.
+
+## Install and rollback
+
+Update the same module, enable only this copy, fully close YouTube, reconnect SR once, then test a new video for normal playback/seek and advertising separately. The module title ends with `v4 Fallback`; response script diagnostics remain `v3` because those script bytes were deliberately not changed. There is no new script to download.
+
+If loading stalls or a playback error appears, disable this module or restore the [previous v3 module](https://raw.githubusercontent.com/kenrickxu/SR/b1fdae45c991248360e1b2db2f4578f46288cb45/modules/YouTubeAd.sgmodule). Normal playback is not assumed from selector tests. If advertising persists after confirmed fallback, the next repair needs actual player structure evidence, not an invented schema or larger memory limit.
+
+CN, routing sets, node settings, certificates and scheduled tasks are unchanged. Client updates or delivery changes can invalidate any such filtering; no permanent coverage guarantee is made.
+
+---
+
+## Historical v3 implementation notes (native advertising acceptance subsequently failed)
+
 # YouTube Original Optimized v3 — Shadowrocket
 
 Owner-requested repair of the original Yfamily/Maasea module. Preserve original two UDP rules, five rewrites, complete MITM hostname scope and all eight endpoint families. No CN, routing, node, service or scheduler changes. Historical Lite/v1/v2 scripts remain preserved, not enabled in parallel. See provenance.json for source hashes, scope and immutable script pin.
