@@ -325,6 +325,18 @@ DOMAIN-SUFFIX,hcaptcha.com
 DOMAIN-SUFFIX,turns.goog
 DOMAIN-SUFFIX,cookielaw.org
 
+# Ken6457: explicitly requested ten requested missing parents and subdomains.
+DOMAIN-SUFFIX,apata.io
+DOMAIN-SUFFIX,stripe.com
+DOMAIN-SUFFIX,online-metrix.net
+DOMAIN-SUFFIX,deepseek.com
+DOMAIN-SUFFIX,kimi.ai
+DOMAIN-SUFFIX,qwencloud.com
+DOMAIN-SUFFIX,stripecdn.com
+DOMAIN-SUFFIX,cloudflareinsights.com
+DOMAIN-SUFFIX,ollama.com
+DOMAIN-SUFFIX,muse.ai
+
 IP-CIDR,91.105.192.0/23,no-resolve
 IP-CIDR,91.108.4.0/22,no-resolve
 IP-CIDR,91.108.8.0/21,no-resolve

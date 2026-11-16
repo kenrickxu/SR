@@ -1542,7 +1542,7 @@
       "source_dependency": "Contains shared legacy Telegram/official-CIDR lineage; not an independent ownership vote."
     }
   },
-  "latest_owner_instruction": "Topic194 msg6401",
+  "latest_owner_instruction": "Topic194 msgs6457/6461/6463",
   "owner_jp_supplement_5715": {
     "date": "2026-11-13",
     "source": "Ken Topic194 msgs5678/5715: merge previously reviewed foreign-service supplement into JPProxy",
@@ -2725,5 +2725,50 @@
     "old_count": 401,
     "new_count": 400,
     "scope": "Explicit owner request covers explicitly requested turns.goog and cookielaw.org parents/all subdomains; replace three narrower suffixes only. Preserve existing MY/US priority; no IP/ASN/DNS/nodes/runtime or scheduler change."
+  },
+  "owner_domains_jp_6457": {
+    "date": "2026-11-16",
+    "source": "Ken Topic194 msgs6457/6461/6463",
+    "added_rules": [
+      "DOMAIN-SUFFIX,apata.io",
+      "DOMAIN-SUFFIX,stripe.com",
+      "DOMAIN-SUFFIX,online-metrix.net",
+      "DOMAIN-SUFFIX,deepseek.com",
+      "DOMAIN-SUFFIX,kimi.ai",
+      "DOMAIN-SUFFIX,qwencloud.com",
+      "DOMAIN-SUFFIX,stripecdn.com",
+      "DOMAIN-SUFFIX,cloudflareinsights.com",
+      "DOMAIN-SUFFIX,ollama.com",
+      "DOMAIN-SUFFIX,muse.ai"
+    ],
+    "old_count": 400,
+    "new_count": 410,
+    "scope": "Add only ten missing requested parent suffixes; retain six already-JP parents once, including openrouter.ai and opencode.ai. Preserve all other rows, priorities and runtime.",
+    "all_requested_parents": [
+      "apata.io",
+      "stripe.com",
+      "twilio.com",
+      "sms2pro.com",
+      "online-metrix.net",
+      "hcaptcha.com",
+      "deepseek.com",
+      "z.ai",
+      "kimi.ai",
+      "qwencloud.com",
+      "stripecdn.com",
+      "cloudflareinsights.com",
+      "ollama.com",
+      "muse.ai",
+      "openrouter.ai",
+      "opencode.ai"
+    ],
+    "already_present_retained_once": [
+      "twilio.com",
+      "sms2pro.com",
+      "hcaptcha.com",
+      "z.ai",
+      "openrouter.ai",
+      "opencode.ai"
+    ]
   }
 }
