@@ -1,3 +1,7 @@
+## MiniMax parent supplement — Ken6562, 2026-11-17 HKT
+
+Add explicitly requested DOMAIN-SUFFIX,minimax.io exactly once to JP418→419 (308 suffix +111 IP/ASN), covering apex and all subdomains. Preserve every old row/option/order, MY/US precedence, CN layout/General/DNS/MITM/IPv6/nodes, YouTube v6 and paused UltraPlus work. Shared JP data updates consumers on manual refresh; no live apply/restart, URL changes or scheduler restoration. Phone/application acceptance remains manual.
+
 ## Visa Mastercard and 3DS official-parent supplement — Ken6467, 2026-11-16 HKT
 
 Add eight verified scheme/payment-authentication service parents to JP410→418 (307suffix+111IP/ASN). Domain sources in owner_card_3ds_jp_6467; not all-bank or all-3DS coverage, no guessed domains or payment/security changes. This explicit owner request covers eight verified card-scheme/payment-authentication service parents and subdomains only; not an exhaustive issuer ACS list. Preserve all previous rows/options/order, MY/US priority, Apple/Push/FaceTime defaultDIRECT, JP45.153.247.160/32, CN five-rule layout/General/DNS/MITM/IPv6/nodes and other consumers' structural policies. Shared JP data changes on manual consumer refresh; no live apply/restart or maintenance/monitor restoration. Original URLs unchanged; phone/application acceptance remains manual.

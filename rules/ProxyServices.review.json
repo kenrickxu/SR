@@ -1542,7 +1542,7 @@
       "source_dependency": "Contains shared legacy Telegram/official-CIDR lineage; not an independent ownership vote."
     }
   },
-  "latest_owner_instruction": "Topic194 msg6467",
+  "latest_owner_instruction": "Topic194 msg6562",
   "owner_jp_supplement_5715": {
     "date": "2026-11-13",
     "source": "Ken Topic194 msgs5678/5715: merge previously reviewed foreign-service supplement into JPProxy",
@@ -2799,5 +2799,15 @@
       "arcot.com": "https://knowledge.broadcom.com/external/article/249939/certificate-management-for-signing-and-e.html",
       "limitation": "Issuer ACS/Method URLs vary; no exhaustive all-bank/all-3DS coverage. No guessed securecode/verifiedbyvisa/identitycheck domains, no unrelated bank/cloud roots/IPs. No payment test or security bypass/MITM change."
     }
+  },
+  "owner_minimax_jp_6562": {
+    "date": "2026-11-17",
+    "source": "Ken Topic194 msg6562: 再加一个minimax.io",
+    "added_rules": [
+      "DOMAIN-SUFFIX,minimax.io"
+    ],
+    "old_count": 418,
+    "new_count": 419,
+    "scope": "Only explicitly requested minimax.io parent suffix; preserve existing MY/US priority and all unrelated data/runtime."
   }
 }
