@@ -1,3 +1,7 @@
+## Meet/Zoom parent consolidation — Ken6401, 2026-11-16 HKT
+
+Replace workspace.turns.goog and meet.turns.goog with turns.goog; cdn.cookielaw.org with cookielaw.org per explicit Ken6401. JP401→400 (289suffix+111IP/ASN); no goog public-TLD root or unrelated domains. This explicit owner request covers explicitly requested turns.goog and cookielaw.org parents/all subdomains; replace three narrower suffixes only. Preserve all other previous rows/options/order, MY/US priority, Apple/Push/FaceTime defaultDIRECT, JP45.153.247.160/32, CN five-rule layout/General/DNS/MITM/IPv6/nodes and other consumers' structural policies. Shared JP data changes on manual consumer refresh; no live apply/restart or maintenance/monitor restoration. Original URLs unchanged; phone/application acceptance remains manual.
+
 ## Meet / Zoom official domain supplement — Ken6396, 2026-11-16 HKT
 
 Add eight missing official Meet/Zoom domain suffixes to JP393→401 (290suffix+111IP/ASN). See owner_meet_zoom_jp_6396 provenance for exact domains; existing Google web/API/static parents already JP. No IP/ASN additions. This explicit owner request covers only eight officially documented Meet/Zoom domain suffixes. Preserve all previous rows/options/order, MY/US priority, Apple/Push/FaceTime defaultDIRECT, JP45.153.247.160/32, CN five-rule layout/General/DNS/MITM/IPv6/nodes and other consumers' structural policies. Shared JP data changes on manual consumer refresh; no live apply/restart or maintenance/monitor restoration. Original URLs unchanged; phone/application acceptance remains manual.

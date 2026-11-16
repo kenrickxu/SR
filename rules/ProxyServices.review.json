@@ -1542,7 +1542,7 @@
       "source_dependency": "Contains shared legacy Telegram/official-CIDR lineage; not an independent ownership vote."
     }
   },
-  "latest_owner_instruction": "Topic194 msg6396",
+  "latest_owner_instruction": "Topic194 msg6401",
   "owner_jp_supplement_5715": {
     "date": "2026-11-13",
     "source": "Ken Topic194 msgs5678/5715: merge previously reviewed foreign-service supplement into JPProxy",
@@ -2709,5 +2709,21 @@
       ],
       "omitted": "No IP/ASN additions; no sharedcloud/CA roots; optional googletagmanager analytics not required for core meeting routing. Cookie consent restricted to cdn.cookielaw.org. Google firstparty API/static parents alreadyJP. Domainrouting does not guarantee all rawIP/UDP meetingmedia viaJP."
     }
+  },
+  "owner_meet_zoom_parents_6401": {
+    "date": "2026-11-16",
+    "source": "Ken Topic194 msg6401 explicitly requests turns.goog and cookielaw.org parents to JP in CN",
+    "added_rules": [
+      "DOMAIN-SUFFIX,turns.goog",
+      "DOMAIN-SUFFIX,cookielaw.org"
+    ],
+    "removed_rules": [
+      "DOMAIN-SUFFIX,workspace.turns.goog",
+      "DOMAIN-SUFFIX,meet.turns.goog",
+      "DOMAIN-SUFFIX,cdn.cookielaw.org"
+    ],
+    "old_count": 401,
+    "new_count": 400,
+    "scope": "Explicit owner request covers explicitly requested turns.goog and cookielaw.org parents/all subdomains; replace three narrower suffixes only. Preserve existing MY/US priority; no IP/ASN/DNS/nodes/runtime or scheduler change."
   }
 }
