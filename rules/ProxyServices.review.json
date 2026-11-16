@@ -1542,7 +1542,7 @@
       "source_dependency": "Contains shared legacy Telegram/official-CIDR lineage; not an independent ownership vote."
     }
   },
-  "latest_owner_instruction": "Topic194 msgs6457/6461/6463",
+  "latest_owner_instruction": "Topic194 msg6467",
   "owner_jp_supplement_5715": {
     "date": "2026-11-13",
     "source": "Ken Topic194 msgs5678/5715: merge previously reviewed foreign-service supplement into JPProxy",
@@ -2770,5 +2770,34 @@
       "openrouter.ai",
       "opencode.ai"
     ]
+  },
+  "owner_card_3ds_jp_6467": {
+    "date": "2026-11-16",
+    "source": "Ken Topic194 msg6467 explicitly requests eight verified Visa/Mastercard/3DS parents to JP in CN",
+    "added_rules": [
+      "DOMAIN-SUFFIX,visa.com",
+      "DOMAIN-SUFFIX,mastercard.com",
+      "DOMAIN-SUFFIX,visasecureservices.com",
+      "DOMAIN-SUFFIX,visaacceptance.com",
+      "DOMAIN-SUFFIX,cybersource.com",
+      "DOMAIN-SUFFIX,cardinalcommerce.com",
+      "DOMAIN-SUFFIX,cardinaltrusted.com",
+      "DOMAIN-SUFFIX,arcot.com"
+    ],
+    "old_count": 410,
+    "new_count": 418,
+    "scope": "Explicit owner request covers eight verified card-scheme/payment-authentication service parents and subdomains only; not an exhaustive issuer ACS list. Preserve existing MY/US priority; no IP/ASN/DNS/nodes/runtime or scheduler change.",
+    "references": {
+      "checked": "2026-11-16 HKT",
+      "visa.com": "https://www.visa.com/en-us/products/visa-secure",
+      "mastercard.com": "https://www.mastercard.com/hu/hu/personal/ways-to-pay/netes-vasarlas/identity-check.html",
+      "visasecureservices.com": "Visa Secure official vendor-list link from https://www.visa.com/en-us/products/visa-secure to https://www.visasecureservices.com/; vendor portal, not asserted a browser challenge endpoint",
+      "visaacceptance.com": "https://developer.visaacceptance.com/technology-partners/SAP_CommerceCloud.html",
+      "cybersource.com": "https://developer.cybersource.com/docs/cybs/en-us/payer-authentication/developer/all/so/payer-auth.html",
+      "cardinalcommerce.com": "https://braintree.github.io/braintree-web/current/ 3D Secure Specific Directives + Visa Acceptance Songbird configuration",
+      "cardinaltrusted.com": "https://braintree.github.io/braintree-web/current/ 3D Secure Specific Directives",
+      "arcot.com": "https://knowledge.broadcom.com/external/article/249939/certificate-management-for-signing-and-e.html",
+      "limitation": "Issuer ACS/Method URLs vary; no exhaustive all-bank/all-3DS coverage. No guessed securecode/verifiedbyvisa/identitycheck domains, no unrelated bank/cloud roots/IPs. No payment test or security bypass/MITM change."
+    }
   }
 }

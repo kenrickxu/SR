@@ -337,6 +337,16 @@ DOMAIN-SUFFIX,cloudflareinsights.com
 DOMAIN-SUFFIX,ollama.com
 DOMAIN-SUFFIX,muse.ai
 
+# Ken6467: explicitly requested eight verified Visa/Mastercard/3DS parents and subdomains.
+DOMAIN-SUFFIX,visa.com
+DOMAIN-SUFFIX,mastercard.com
+DOMAIN-SUFFIX,visasecureservices.com
+DOMAIN-SUFFIX,visaacceptance.com
+DOMAIN-SUFFIX,cybersource.com
+DOMAIN-SUFFIX,cardinalcommerce.com
+DOMAIN-SUFFIX,cardinaltrusted.com
+DOMAIN-SUFFIX,arcot.com
+
 IP-CIDR,91.105.192.0/23,no-resolve
 IP-CIDR,91.108.4.0/22,no-resolve
 IP-CIDR,91.108.8.0/21,no-resolve
