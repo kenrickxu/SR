@@ -1,3 +1,7 @@
+## Meet / Zoom official domain supplement — Ken6396, 2026-11-16 HKT
+
+Add eight missing official Meet/Zoom domain suffixes to JP393→401 (290suffix+111IP/ASN). See owner_meet_zoom_jp_6396 provenance for exact domains; existing Google web/API/static parents already JP. No IP/ASN additions. This explicit owner request covers only eight officially documented Meet/Zoom domain suffixes. Preserve all previous rows/options/order, MY/US priority, Apple/Push/FaceTime defaultDIRECT, JP45.153.247.160/32, CN five-rule layout/General/DNS/MITM/IPv6/nodes and other consumers' structural policies. Shared JP data changes on manual consumer refresh; no live apply/restart or maintenance/monitor restoration. Original URLs unchanged; phone/application acceptance remains manual.
+
 ## Z.ai owner-requested parent — Ken6291, 2026-11-16 HKT
 
 Add only DOMAIN-SUFFIX,z.ai to JP392→393 (282suffix+111IP/ASN). This explicit owner request covers z.ai apexes and subdomains only. Preserve all previous rows/options/order, MY/US priority, Apple/Push/FaceTime defaultDIRECT, JP45.153.247.160/32, CN five-rule layout/General/DNS/MITM/IPv6/nodes and other consumers' structural policies. Shared JP data changes on manual consumer refresh; no live apply/restart or maintenance/monitor restoration. Original URLs unchanged; phone/application acceptance remains manual.

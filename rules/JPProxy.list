@@ -314,6 +314,16 @@ DOMAIN-SUFFIX,meta.com
 # Ken6291: explicitly requested z.ai parents and subdomains.
 DOMAIN-SUFFIX,z.ai
 
+# Ken6396: explicitly requested Meet/Zoom missing domains and subdomains.
+DOMAIN-SUFFIX,workspace.turns.goog
+DOMAIN-SUFFIX,meet.turns.goog
+DOMAIN-SUFFIX,zoom.us
+DOMAIN-SUFFIX,zoom.com
+DOMAIN-SUFFIX,zoomstatus.com
+DOMAIN-SUFFIX,zoomapp.cloud
+DOMAIN-SUFFIX,hcaptcha.com
+DOMAIN-SUFFIX,cdn.cookielaw.org
+
 IP-CIDR,91.105.192.0/23,no-resolve
 IP-CIDR,91.108.4.0/22,no-resolve
 IP-CIDR,91.108.8.0/21,no-resolve

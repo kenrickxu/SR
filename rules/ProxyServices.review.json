@@ -1542,7 +1542,7 @@
       "source_dependency": "Contains shared legacy Telegram/official-CIDR lineage; not an independent ownership vote."
     }
   },
-  "latest_owner_instruction": "Topic194 msg6291",
+  "latest_owner_instruction": "Topic194 msg6396",
   "owner_jp_supplement_5715": {
     "date": "2026-11-13",
     "source": "Ken Topic194 msgs5678/5715: merge previously reviewed foreign-service supplement into JPProxy",
@@ -2676,5 +2676,38 @@
     "old_count": 392,
     "new_count": 393,
     "scope": "Explicit owner request covers z.ai apexes and subdomains only. Preserve existing MY/US priority; no IP/ASN/DNS/nodes/runtime or scheduler change."
+  },
+  "owner_meet_zoom_jp_6396": {
+    "date": "2026-11-16",
+    "source": "Ken Topic194 msg6396 explicitly requests Meet/Zoom missing domains to JP in CN",
+    "added_rules": [
+      "DOMAIN-SUFFIX,workspace.turns.goog",
+      "DOMAIN-SUFFIX,meet.turns.goog",
+      "DOMAIN-SUFFIX,zoom.us",
+      "DOMAIN-SUFFIX,zoom.com",
+      "DOMAIN-SUFFIX,zoomstatus.com",
+      "DOMAIN-SUFFIX,zoomapp.cloud",
+      "DOMAIN-SUFFIX,hcaptcha.com",
+      "DOMAIN-SUFFIX,cdn.cookielaw.org"
+    ],
+    "old_count": 393,
+    "new_count": 401,
+    "scope": "Explicit owner request covers only eight officially documented Meet/Zoom domain suffixes. Preserve existing MY/US priority; no IP/ASN/DNS/nodes/runtime or scheduler change.",
+    "references": {
+      "google": "https://knowledge.workspace.google.com/admin/meet/prepare-your-network-for-meet-meetings-and-live-streams?hl=en",
+      "zoom": "https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0060548",
+      "checked": "2026-11-16 HKT",
+      "added_domain_scope": [
+        "workspace.turns.goog",
+        "meet.turns.goog",
+        "zoom.us",
+        "zoom.com",
+        "zoomstatus.com",
+        "zoomapp.cloud",
+        "hcaptcha.com",
+        "cdn.cookielaw.org"
+      ],
+      "omitted": "No IP/ASN additions; no sharedcloud/CA roots; optional googletagmanager analytics not required for core meeting routing. Cookie consent restricted to cdn.cookielaw.org. Google firstparty API/static parents alreadyJP. Domainrouting does not guarantee all rawIP/UDP meetingmedia viaJP."
+    }
   }
 }
