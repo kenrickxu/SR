@@ -1542,7 +1542,7 @@
       "source_dependency": "Contains shared legacy Telegram/official-CIDR lineage; not an independent ownership vote."
     }
   },
-  "latest_owner_instruction": "Topic194 msg6562",
+  "latest_owner_instruction": "Topic194 msg6894",
   "owner_jp_supplement_5715": {
     "date": "2026-11-13",
     "source": "Ken Topic194 msgs5678/5715: merge previously reviewed foreign-service supplement into JPProxy",
@@ -2809,5 +2809,28 @@
     "old_count": 418,
     "new_count": 419,
     "scope": "Only explicitly requested minimax.io parent suffix; preserve existing MY/US priority and all unrelated data/runtime."
+  },
+  "owner_agents_jp_6894": {
+    "date": "2026-11-17",
+    "source": "Ken Topic194 msg6894: clawhub.ai，openclaw，hermes agent帮我加入cn用jp，记得查重复。",
+    "added_rules": [
+      "DOMAIN-SUFFIX,clawhub.ai",
+      "DOMAIN-SUFFIX,openclaw.ai",
+      "DOMAIN-SUFFIX,nousresearch.com"
+    ],
+    "old_count": 419,
+    "new_count": 422,
+    "scope": "Official first-party parents only; preserve MY/US priority, defaultDIRECT, v6 rollback, paused UltraPlus and all unrelated runtime.",
+    "official_references": [
+      "https://openclaw.ai/",
+      "https://docs.openclaw.ai/clawhub",
+      "https://hermes-agent.nousresearch.com/docs/getting-started/official-domains"
+    ],
+    "mapping": {
+      "ClawHub": "clawhub.ai",
+      "OpenClaw": "openclaw.ai",
+      "Hermes Agent": "nousresearch.com"
+    },
+    "duplicate_check": "No exact,parent or narrower matches in current MY/US/JP for these three parents."
   }
 }

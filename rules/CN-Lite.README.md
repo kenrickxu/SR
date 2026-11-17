@@ -1,3 +1,7 @@
+## ClawHub/OpenClaw/Hermes official parents — Ken6894, 2026-11-17 HKT
+
+Add clawhub.ai, openclaw.ai and nousresearch.com as DOMAIN-SUFFIX parents exactly once to JP419→422 (311suffix+111IP/ASN). Official OpenClaw homepage/docs identify OpenClaw and ClawHub; Hermes official domains page identifies nousresearch.com and Hermes installer/artifact/Portal/inference subdomains. No similarly named unofficial domains or shared cloud root added. Current three-table exact/parent/child coverage has no duplicates. Preserve all previous rules/order/options and MY/US precedence, currentCN5rules/General/DNS/MITM/IPv6/nodes. YouTube remains restoredv6; UltraPlus remains paused. No API/VPN/native apply/restart, Worker/URL/scheduler changes. SharedJPdata on manualrefresh; phone application access not verified.
+
 ## MiniMax parent supplement — Ken6562, 2026-11-17 HKT
 
 Add explicitly requested DOMAIN-SUFFIX,minimax.io exactly once to JP418→419 (308 suffix +111 IP/ASN), covering apex and all subdomains. Preserve every old row/option/order, MY/US precedence, CN layout/General/DNS/MITM/IPv6/nodes, YouTube v6 and paused UltraPlus work. Shared JP data updates consumers on manual refresh; no live apply/restart, URL changes or scheduler restoration. Phone/application acceptance remains manual.
