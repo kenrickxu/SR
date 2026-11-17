@@ -1,17 +1,3 @@
-# YouTube Original v7 Feed Lean — feed-only source split
-
-This is a **feed-script lightweight update, not a confirmed playback-stall fix**. Module URL stays https://sr-config.kt7766.org/modules/YouTubeAd.sgmodule .
-
-- browse / next / search now use the independent version-frozen `youtube.feed.v7.js`, with exactly the previous v6 wire filter,1MiB cap and fail-open behavior. Their source bundle is about6KB instead of loading the146848-byte shared script containing unused upstream codec/enhancement code.
-- player / get_watch and all controls keep the exact `youtube.response.v6.js` bytes and previous4MiB/128KiB limits, diagnostics and enhancement behavior. No tighter playback cap or new blocking.
-- Original two UDP rules, five URL rewrites, all MITM hosts, CN/proxy sets, nodes and DNS remain unchanged. No client signed media URLs, credentials or body forwarding to a third-party service.
-- Source-size reduction is **not a measured iPhone memory reduction**. Prior capture showed SR critical pressure/connection recycling before some get_watch JS-entry counters. This release cannot promise to prevent that buffering or repair initial playback compatibility.
--271 feed-output parity/independent-schema/real-size synthetic ad-normal/boundary/malformed/status/scope/privacy checks pass. No native phone RAM/playback acceptance is claimed.
-
-Update the module itself and external scripts, wait for both script downloads, then apply/reconnect manually and enable only this one YouTube module. Title identifies v7 Feed Lean; feed logs identify `KenYT v7-feed`, while playback logs intentionally remain `KenYT v6`. Do not interpret mixed counters as stale cache. Test normal play/seek, ads and memory separately. If unplayable, disable this module; the preceding v6 module is pinned in provenance for rollback. Do not reset CN, app data or nodes.
-
-## Retained v6 implementation history (not current v7 feed delivery)
-
 # YouTube Original Optimized v6 — observed large-player bypass corrected
 
 Based on the original [Yfamily module](https://yfamilys.com/module/YouTubeAd.sgmodule) and [Maasea response script](https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.response.js). Keep the original two UDP rules, five URL rewrites, MITM scope and all eight response endpoint families. Do not enable this alongside Yfamily/Lite/other copies.

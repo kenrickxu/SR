@@ -5,31 +5,20 @@
   "upstream_script_sha256": "f98483d5f5017514f82502253c0db5ce2d4ffb7839887aa2cadc22666f5a7f12",
   "upstream_script_build": "// Build: 2026/7/19 16:16:39",
   "bundled_script_sha256": "05cbc59bf4ee54d2cb11473f8d8e9095c2ea347da8c736c1309a95a5b646d0f1",
-  "scope": "Feed-only source split: same v6 selective wire algorithm/status/1MiB guards for browse,next,search in independent lean script. Player/get_watch and controls keep exact version-frozen v6 script,4MiB/128KiB limits, enhancements, original UDP rules/rewrites/MITM unchanged. No playback forwarding or proxy-policy edits.",
+  "scope": "Preserve exact original2UDP rules/5rewrites/MITM/8endpointfamilies. Correct observed playback size bypass: selective wire filtering up to4MiB; above512KiB do not invoke full upstream object decode/enhancement or JSON.parse. Retain normal/unknown wire bytes. Small playback responses retain existing enhancements. Module/script delivery via fixed kt7766 public paths; no proxy-policy changes.",
   "body_limits_bytes": {
     "browse/next/search": 1048576,
     "player/get_watch": 4194304,
     "reel/guide/account": 131072
   },
-  "phone_acceptance": "v6 ad-removal accepted in prior user test; later playback stall/critical-pressure report remains unresolved. v7 feed source split has fixture parity only; iOS RAM/ads/playback acceptance pending. No measured RAM-savings percentage.",
-  "version": "original-v7-feed-lean",
+  "phone_acceptance": "Pending actual v6 playback/advertising/PiP/background/memory observation; prior v5 test failed. Do not claim permanent repair.",
+  "version": "original-optimized-v6",
   "fix_evidence": "Native v5 logs explicitly report get_watch pass reason=size at2096259,1676277,2552457bytes. Earlier512KiB JS guard passed these through unfiltered; originalYfamily has unlimited max-size and no added entry cap. This is a confirmed filtering bypass, not proof of complete future-ad coverage or measured iOS RAM ceiling.",
-  "diagnostics": "v7-feed emits only endpoint/version/stage/bytes/normalized status/aggregate removed/constant fail-open reasons. Unchanged v6 playback/control counters retain previous restrictions. No payload/header/query/video/account values.",
-  "rollback_module_url": "https://raw.githubusercontent.com/kenrickxu/SR/8f671b44b44bd7bc1ed33ac3df6277497f7ebafa/modules/YouTubeAd.sgmodule",
+  "diagnostics": "Only whitelisted endpoint/version/stage/body representation, byte length, normalized status, constant pass reason and aggregate known-schema counts. No unknown field numbers/lengths, payload strings, URLs, query values, video IDs, account data, keys or raw exceptions. Probe capped at2048headers/32known-message expansions and does not mutate body/state or access network.",
+  "rollback_module_url": "https://raw.githubusercontent.com/kenrickxu/SR/ddcc0955b07edf0c2c565e219c293cc6a39b299e/modules/YouTubeAd.sgmodule",
   "bundled_script_delivery_url": "https://sr-config.kt7766.org/modules/youtube-original/youtube.response.v6.js",
   "module_delivery_url": "https://sr-config.kt7766.org/modules/YouTubeAd.sgmodule",
   "large_response_limitations": "Binary wire sanitation only above512KiB; do not newly enable PiP/background via full decoder for large responses. Large JSON or above4MiB pass unchanged with diagnostics. Unknown/new ad schemas remain outside confirmed coverage.",
   "bundled_script_commit": "25bac20069eca319d60f510c4539ab68d006c6e2",
-  "bundled_script_origin_pinned_url": "https://raw.githubusercontent.com/kenrickxu/SR/25bac20069eca319d60f510c4539ab68d006c6e2/modules/youtube-original/youtube.response.v6.js",
-  "feed_bundle": {
-    "delivery_url": "https://sr-config.kt7766.org/modules/youtube-original/youtube.feed.v7.js",
-    "sha256": "793d768267ab32c79c3de08bffe00fd147ce08e742e8b06d7fd5aa1dc8feae26",
-    "bytes": 6072,
-    "previous_shared_bundle_bytes": 146848,
-    "fixture_checks": 271,
-    "algorithm": "Exact kenFeedFilter bytes extracted from v6, same finite1MiB/status/host/path guards; irrelevant upstream codec/enhancement code excluded.",
-    "memory_claim": "Reduced source loaded for each feed invocation only; no measured JSC heap/RSS savings and no prevention of pre-JS get_watch buffering/critical recycling.",
-    "origin_pinned_url": "https://raw.githubusercontent.com/kenrickxu/SR/fe7dcacccc406c4f80a8c921ab40bc7c103ac884/modules/youtube-original/youtube.feed.v7.js",
-    "origin_commit": "fe7dcacccc406c4f80a8c921ab40bc7c103ac884"
-  }
+  "bundled_script_origin_pinned_url": "https://raw.githubusercontent.com/kenrickxu/SR/25bac20069eca319d60f510c4539ab68d006c6e2/modules/youtube-original/youtube.response.v6.js"
 }
