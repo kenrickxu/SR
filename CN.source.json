@@ -2,12 +2,12 @@
   "schema": 3,
   "mode": "canonical-sr-explicit-proxy-default-direct",
   "profile": "CN.conf",
-  "profile_sha256": "cd6b1ccdffe962fa565d3c1396f09e92e414f852bed2964176520f792dc1299d",
+  "profile_sha256": "4a26442654c11cd66cc9a7f39b6e4dec6c2793de83ec6a045e86d1cd5731554f",
   "source_sha256": {
-    "CN.conf": "cd6b1ccdffe962fa565d3c1396f09e92e414f852bed2964176520f792dc1299d",
+    "CN.conf": "4a26442654c11cd66cc9a7f39b6e4dec6c2793de83ec6a045e86d1cd5731554f",
     "rules/MYProxy.list": "33081d536e2616de7650ef585820d0d4ffce528a54e061f6751a8882b1d9d26c",
     "rules/USProxy.list": "35ee9c15cd879d56639fc7f9d5123a0d30639f86c817562d5202eb785f6a0e63",
-    "rules/JPProxy.list": "89cb848c6d20fa2c73d0d5b01c8cac2be0154a4a23581a3043ff3eaa613df69e"
+    "rules/JPProxy.list": "b5d5e0b548901bb9c8a5c192aef3e32dcc9935f262929c4961c45fe17cd4fb9e"
   },
   "real_ip_rows": 0,
   "skip_rows": 12,

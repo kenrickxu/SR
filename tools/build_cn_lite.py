@@ -34,7 +34,7 @@ def derive(root):
     raw=(root/'CN.conf').read_bytes();text=raw.decode()
     if not text.startswith('# CN-MODE: explicit-proxy-default-direct-v1'):return derive_legacy(root)
     rules=[l.strip() for l in text.split('[Rule]',1)[1].split('[',1)[0].splitlines()if l.strip()and not l.startswith('#')]
-    assert rules==['RULE-SET,https://sr-config.kt7766.org/rules/MYProxy.list,🇲🇾 MY REA', 'RULE-SET,https://sr-config.kt7766.org/rules/USProxy.list,🇺🇸 US REA', 'RULE-SET,https://sr-config.kt7766.org/rules/JPProxy.list,🇯🇵 JP REA', 'IP-CIDR,187.7.17.52/32,🇯🇵 JP REA,no-resolve', 'GEOIP,CN,DIRECT', 'FINAL,DIRECT']
+    assert rules==['RULE-SET,https://sr-config.kt7766.org/rules/MYProxy.list,🇲🇾 MY REA', 'RULE-SET,https://sr-config.kt7766.org/rules/USProxy.list,🇺🇸 US REA', 'RULE-SET,https://sr-config.kt7766.org/rules/JPProxy.list,🇯🇵 JP REA', 'GEOIP,CN,DIRECT', 'FINAL,DIRECT']
     assert not re.search(r'^always-real-ip\s*=',text,re.M)
     assert re.search('^tun-excluded-routes = (.+)$',text,re.M)[1]=='10.0.0.0/8,127.0.0.0/8,169.254.0.0/16,172.16.0.0/12,192.0.0.0/24,192.0.2.0/24,192.88.99.0/24,192.168.0.0/16,198.51.100.0/24,203.0.113.0/24,224.0.0.0/4,255.255.255.255/32,239.255.255.250/32,ff02::fb/128'
     assert re.search('^skip-proxy = (.+)$',text,re.M)[1]=='192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,localhost,*.local,captive.apple.com,*.ccb.com,*.abchina.com.cn,*.psbc.com,www.baidu.com,www.163.com,tplogin.cn'
@@ -47,6 +47,12 @@ def derive(root):
 
 def main():
     ap=argparse.ArgumentParser();ap.add_argument('--root',type=Path,default=Path(__file__).resolve().parent.parent);ap.add_argument('--check',action='store_true');a=ap.parse_args();outputs=derive(a.root)
+    # CNR shares future common JP entries, but not this personal-only UK destination.
+    jp=(a.root/'rules/JPProxy.list').read_bytes().splitlines(keepends=True)
+    personal_uk=b'IP-CIDR,187.7.17.52/32,no-resolve'
+    if sum(line.rstrip(b'\r\n') == personal_uk for line in jp) != 1:
+        raise ValueError('Personal UK destination must appear once in JPProxy')
+    outputs['rules/cnr/JPProxy.list']=b''.join(line for line in jp if line.rstrip(b'\r\n') != personal_uk)
     for name,body in outputs.items():
         f=a.root/name
         if a.check:assert f.read_bytes()==body,'Stale derived '+name
