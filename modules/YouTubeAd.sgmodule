@@ -1,6 +1,6 @@
-#!name = YouTube去广告 Original Optimized v8
+#!name = YouTube去广告 Original Optimized v9
 
-#!desc = 播放器 5 MiB、列表 3 MiB 内选择性清理已知广告字段，大二进制响应原缓冲区压缩。
+#!desc = 对首页和播放器的大二进制响应按字段过滤，限制扫描工作量，保留正常视频字段。
 
 #!author = Maasea; Ken SR bounded-entry adaptation
 
@@ -21,9 +21,9 @@ AND,((DOMAIN,youtubei.googleapis.com), (PROTOCOL,UDP)),REJECT
 ^https?:\/\/s\.youtube\.com\/api\/stats\/qoe\?adcontext _ reject-200
 
 [Script]
-youtube.response.playback = type=http-response,pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(player|get_watch)(\?.*)?$,requires-body=1,max-size=5242880,binary-body-mode=1,script-path=https://sr-config.kt7766.org/modules/youtube-original/youtube.response.v8.js,argument="{"lyricLang":"off","captionLang":"off","blockUpload":true,"blockImmersive":true,"blockShorts":false,"debug":false}"
-youtube.response.feeds = type=http-response,pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|search)(\?.*)?$,requires-body=1,max-size=3145728,binary-body-mode=1,script-path=https://sr-config.kt7766.org/modules/youtube-original/youtube.response.v8.js,argument="{"lyricLang":"off","captionLang":"off","blockUpload":true,"blockImmersive":true,"blockShorts":false,"debug":false}"
-youtube.response.controls = type=http-response,pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(reel\/reel_watch_sequence|guide|account\/get_setting)(\?.*)?$,requires-body=1,max-size=131072,binary-body-mode=1,script-path=https://sr-config.kt7766.org/modules/youtube-original/youtube.response.v8.js,argument="{"lyricLang":"off","captionLang":"off","blockUpload":true,"blockImmersive":true,"blockShorts":false,"debug":false}"
+youtube.response.playback = type=http-response,pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(player|get_watch)(\?.*)?$,requires-body=1,max-size=8388608,binary-body-mode=1,script-path=https://sr-config.kt7766.org/modules/youtube-original/youtube.response.v9.js,argument="{"lyricLang":"off","captionLang":"off","blockUpload":true,"blockImmersive":true,"blockShorts":false,"debug":false}"
+youtube.response.feeds = type=http-response,pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|search)(\?.*)?$,requires-body=1,max-size=8388608,binary-body-mode=1,script-path=https://sr-config.kt7766.org/modules/youtube-original/youtube.response.v9.js,argument="{"lyricLang":"off","captionLang":"off","blockUpload":true,"blockImmersive":true,"blockShorts":false,"debug":false}"
+youtube.response.controls = type=http-response,pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(reel\/reel_watch_sequence|guide|account\/get_setting)(\?.*)?$,requires-body=1,max-size=131072,binary-body-mode=1,script-path=https://sr-config.kt7766.org/modules/youtube-original/youtube.response.v9.js,argument="{"lyricLang":"off","captionLang":"off","blockUpload":true,"blockImmersive":true,"blockShorts":false,"debug":false}"
 
 [MITM]
 hostname = %APPEND% -redirector*.googlevideo.com,*.googlevideo.com,www.youtube.com,s.youtube.com,youtubei.googleapis.com
