@@ -3213,5 +3213,13 @@
       "wundertrading.com",
       "zerion.io"
     ]
+  },
+  "owner_jasper_jp_7990": {
+    "date": "2026-11-19",
+    "added_rules": [
+      "DOMAIN-SUFFIX,jasper.com"
+    ],
+    "old_count": 534,
+    "new_count": 535
   }
 }
