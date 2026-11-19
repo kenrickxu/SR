@@ -3247,5 +3247,14 @@
     ],
     "old_count": 539,
     "new_count": 540
+  },
+  "owner_pccw_jp_8206": {
+    "added_suffixes": [
+      "netvigator.com",
+      "pccw.com"
+    ],
+    "superseded_rule": "DOMAIN-SUFFIX,customerservice.pccw.com",
+    "old_count": 540,
+    "new_count": 541
   }
 }
