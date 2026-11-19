@@ -2861,5 +2861,357 @@
       "audio_tenants": "The Spotify-specific audio and audio4 hostnames currently resolve to Akamai; observed in https://raw.githubusercontent.com/v2fly/domain-list-community/master/data/spotify and https://community.spotify.com/forum/en/discussion/comment/6416227."
     },
     "scope": "Preserve existing MY/US precedence and domain-suffix-only rules. No generic Akamai or Branch suffixes, guessed domains or IP/ASN additions. Regenerate ordinary CNR projection without personal UK destination."
+  },
+  "owner_jp_services_7981": {
+    "date": "2026-11-19",
+    "scope": "CN JP service domains; DN suffixes only, no shared cloud provider roots or IP changes. Nomad is the travel eSIM, XChat is X messaging, Bolt is ride hailing.",
+    "services": {
+      "LinkedIn": [
+        "linkedin.com",
+        "licdn.com",
+        "lnkd.in"
+      ],
+      "Threads": [
+        "threads.com",
+        "threads.net",
+        "instagram.com",
+        "cdninstagram.com"
+      ],
+      "TruthSocial": [
+        "truthsocial.com"
+      ],
+      "XChat": [
+        "x.com",
+        "twitter.com",
+        "twimg.com"
+      ],
+      "MyHKT": [
+        "hkt.com",
+        "customerservice.pccw.com"
+      ],
+      "True-Mobile": [
+        "true.th",
+        "trueid.net",
+        "truecorp.co.th"
+      ],
+      "Zerion": [
+        "zerion.io"
+      ],
+      "Wirex": [
+        "wirexapp.com"
+      ],
+      "Wise": [
+        "wise.com",
+        "transferwise.com"
+      ],
+      "CapCut": [
+        "capcut.com",
+        "capcutstatic.com"
+      ],
+      "Twitch": [
+        "twitch.tv",
+        "twitchcdn.net",
+        "ttvnw.net",
+        "jtvnw.net"
+      ],
+      "Shazam": [
+        "shazam.com"
+      ],
+      "Chope": [
+        "chope.co"
+      ],
+      "Eatigo": [
+        "eatigo.com"
+      ],
+      "Hungry-Hub": [
+        "hungryhub.com"
+      ],
+      "OpenRice": [
+        "openrice.com"
+      ],
+      "Stripe": [
+        "stripe.com",
+        "stripecdn.com",
+        "stripe.network"
+      ],
+      "Teams": [
+        "teams.microsoft.com",
+        "teams.live.com",
+        "teams.cloud.microsoft",
+        "teams.events",
+        "skype.com"
+      ],
+      "Microsoft": [
+        "microsoft.com",
+        "microsoftonline.com",
+        "microsoft365.com",
+        "office.com",
+        "office365.com",
+        "office.net",
+        "microsoftonline-p.com",
+        "msftauth.net",
+        "msftauthimages.net",
+        "msauth.net",
+        "msauthimages.net",
+        "msidentity.com"
+      ],
+      "Hotmail": [
+        "outlook.cloud.microsoft",
+        "hotmail.com",
+        "outlook.com",
+        "outlook.office.com",
+        "live.com",
+        "live.net",
+        "outlook.office365.com"
+      ],
+      "Zoom": [
+        "zoom.us",
+        "zoom.com",
+        "zoomstatus.com",
+        "zoomapp.cloud"
+      ],
+      "GigSky": [
+        "gigsky.com"
+      ],
+      "GoMoWorld": [
+        "gomoworld.com"
+      ],
+      "Hyatt": [
+        "hyatt.com"
+      ],
+      "IHG": [
+        "ihg.com"
+      ],
+      "Hilton": [
+        "hilton.com"
+      ],
+      "Marriott": [
+        "marriott.com",
+        "marriottbonvoy.com"
+      ],
+      "Klook": [
+        "klook.com"
+      ],
+      "Nomad": [
+        "nomadesim.com",
+        "getnomad.app"
+      ],
+      "Priority-Pass": [
+        "prioritypass.com"
+      ],
+      "RedteaGO": [
+        "redteago.com"
+      ],
+      "MoneyBack-HK": [
+        "moneyback.com.hk"
+      ],
+      "Shopee": [
+        "shopee.com",
+        "shopee.co.th",
+        "shopee.com.my",
+        "shopee.sg",
+        "shopee.tw",
+        "shopee.ph",
+        "shopee.vn",
+        "shopee.co.id",
+        "shopee.com.br",
+        "susercontent.com"
+      ],
+      "Amazon-Shopping": [
+        "amazon.com",
+        "amazon.co.jp",
+        "amazon.sg",
+        "amazon.co.uk",
+        "amazon.de",
+        "amazon.ca",
+        "amazon.com.au",
+        "amazon.fr",
+        "amazon.it",
+        "amazon.es",
+        "amazon.in",
+        "amazon.com.mx",
+        "amazon.com.br",
+        "amazon.ae",
+        "amazon.sa",
+        "media-amazon.com",
+        "ssl-images-amazon.com"
+      ],
+      "White-House": [
+        "whitehouse.gov"
+      ],
+      "TruthPlus": [
+        "truthplus.tv"
+      ],
+      "Mondly": [
+        "mondly.com"
+      ],
+      "sHome-Doorlock": [
+        "smarthome.zigbang.com",
+        "homeiot.zigbang.com"
+      ],
+      "LINE-MAN": [
+        "lineman.line.me",
+        "lmwn.com",
+        "wongnai.com"
+      ],
+      "ChargeSPOT": [
+        "chargespot.hk",
+        "chargespot.com.hk",
+        "chargespot.co.th",
+        "chargespot.cn"
+      ],
+      "Broadcom": [
+        "broadcom.com"
+      ],
+      "WunderTrading": [
+        "wundertrading.com"
+      ],
+      "Oyunfor": [
+        "oyunfor.com"
+      ],
+      "DigitalOcean": [
+        "digitalocean.com"
+      ],
+      "Vultr": [
+        "vultr.com"
+      ],
+      "GamsGo": [
+        "gamsgo.com"
+      ],
+      "Webshare": [
+        "webshare.io"
+      ],
+      "NodeMach": [
+        "nodemach.com"
+      ],
+      "Bolt-Rides": [
+        "bolt.eu",
+        "taxify.eu"
+      ]
+    },
+    "already_covered": {
+      "capcut.com": "capcut.com",
+      "cdninstagram.com": "cdninstagram.com",
+      "instagram.com": "instagram.com",
+      "lineman.line.me": "line.me",
+      "openrice.com": "openrice.com",
+      "stripe.com": "stripe.com",
+      "stripecdn.com": "stripecdn.com",
+      "twimg.com": "twimg.com",
+      "twitter.com": "twitter.com",
+      "x.com": "x.com",
+      "zoom.com": "zoom.com",
+      "zoom.us": "zoom.us",
+      "zoomapp.cloud": "zoomapp.cloud",
+      "zoomstatus.com": "zoomstatus.com"
+    },
+    "added_domains": [
+      "amazon.ae",
+      "amazon.ca",
+      "amazon.co.jp",
+      "amazon.co.uk",
+      "amazon.com",
+      "amazon.com.au",
+      "amazon.com.br",
+      "amazon.com.mx",
+      "amazon.de",
+      "amazon.es",
+      "amazon.fr",
+      "amazon.in",
+      "amazon.it",
+      "amazon.sa",
+      "amazon.sg",
+      "bolt.eu",
+      "broadcom.com",
+      "capcutstatic.com",
+      "chargespot.cn",
+      "chargespot.co.th",
+      "chargespot.com.hk",
+      "chargespot.hk",
+      "chope.co",
+      "customerservice.pccw.com",
+      "digitalocean.com",
+      "eatigo.com",
+      "gamsgo.com",
+      "getnomad.app",
+      "gigsky.com",
+      "gomoworld.com",
+      "hilton.com",
+      "hkt.com",
+      "homeiot.zigbang.com",
+      "hotmail.com",
+      "hungryhub.com",
+      "hyatt.com",
+      "ihg.com",
+      "jtvnw.net",
+      "klook.com",
+      "licdn.com",
+      "linkedin.com",
+      "live.com",
+      "live.net",
+      "lmwn.com",
+      "lnkd.in",
+      "marriott.com",
+      "marriottbonvoy.com",
+      "media-amazon.com",
+      "microsoft.com",
+      "microsoft365.com",
+      "microsoftonline-p.com",
+      "microsoftonline.com",
+      "mondly.com",
+      "moneyback.com.hk",
+      "msauth.net",
+      "msauthimages.net",
+      "msftauth.net",
+      "msftauthimages.net",
+      "msidentity.com",
+      "nodemach.com",
+      "nomadesim.com",
+      "office.com",
+      "office.net",
+      "office365.com",
+      "outlook.cloud.microsoft",
+      "outlook.com",
+      "oyunfor.com",
+      "prioritypass.com",
+      "redteago.com",
+      "shazam.com",
+      "shopee.co.id",
+      "shopee.co.th",
+      "shopee.com",
+      "shopee.com.br",
+      "shopee.com.my",
+      "shopee.ph",
+      "shopee.sg",
+      "shopee.tw",
+      "shopee.vn",
+      "skype.com",
+      "smarthome.zigbang.com",
+      "ssl-images-amazon.com",
+      "stripe.network",
+      "susercontent.com",
+      "taxify.eu",
+      "teams.cloud.microsoft",
+      "teams.events",
+      "threads.com",
+      "threads.net",
+      "transferwise.com",
+      "true.th",
+      "truecorp.co.th",
+      "trueid.net",
+      "truthplus.tv",
+      "truthsocial.com",
+      "ttvnw.net",
+      "twitch.tv",
+      "twitchcdn.net",
+      "vultr.com",
+      "webshare.io",
+      "whitehouse.gov",
+      "wirexapp.com",
+      "wise.com",
+      "wongnai.com",
+      "wundertrading.com",
+      "zerion.io"
+    ]
   }
 }
