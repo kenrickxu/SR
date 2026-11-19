@@ -3221,5 +3221,14 @@
     ],
     "old_count": 534,
     "new_count": 535
+  },
+  "owner_true_th_jp_7993": {
+    "date": "2026-11-19",
+    "added_rules": [
+      "DOMAIN-SUFFIX,dtac.co.th",
+      "DOMAIN-SUFFIX,dmpcdn.com"
+    ],
+    "old_count": 535,
+    "new_count": 537
   }
 }

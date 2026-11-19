@@ -467,6 +467,8 @@ DOMAIN-SUFFIX,wongnai.com
 DOMAIN-SUFFIX,wundertrading.com
 DOMAIN-SUFFIX,zerion.io
 DOMAIN-SUFFIX,jasper.com
+DOMAIN-SUFFIX,dtac.co.th
+DOMAIN-SUFFIX,dmpcdn.com
 IP-CIDR,91.105.192.0/23,no-resolve
 IP-CIDR,91.108.4.0/22,no-resolve
 IP-CIDR,91.108.8.0/21,no-resolve
