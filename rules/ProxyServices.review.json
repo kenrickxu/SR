@@ -3230,5 +3230,14 @@
     ],
     "old_count": 535,
     "new_count": 537
+  },
+  "owner_kbank_jp_8083": {
+    "date": "2026-11-19",
+    "added_rules": [
+      "DOMAIN-SUFFIX,kasikornbank.com",
+      "DOMAIN,kasikornbankpubliccompany.sc.omtrdc.net"
+    ],
+    "old_count": 537,
+    "new_count": 539
   }
 }
