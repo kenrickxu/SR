@@ -2837,5 +2837,29 @@
     "scope": "Personal CN and Clash only; keep destination in existing JP provider, not the top-level rules. Do not add the UK node or this destination to CNR.",
     "rule": "IP-CIDR,187.7.17.52/32,no-resolve",
     "cnr_derived_provider": "rules/cnr/JPProxy.list"
+  },
+  "owner_spotify_jp_7883": {
+    "date": "2026-11-19",
+    "source": "Ken Topic194 msg7883: 帮我看一下Spotify加入cn的jp rule set",
+    "added_rules": [
+      "DOMAIN-SUFFIX,spotifycdn.com",
+      "DOMAIN-SUFFIX,spotify.link",
+      "DOMAIN-SUFFIX,spoti.fi",
+      "DOMAIN-SUFFIX,audio-ak-spotify-com.akamaized.net",
+      "DOMAIN-SUFFIX,audio4-ak-spotify-com.akamaized.net"
+    ],
+    "already_covered": [
+      "spotify.com",
+      "scdn.co"
+    ],
+    "old_count": 423,
+    "new_count": 428,
+    "evidence": {
+      "spotifycdn.com": "Live Spotify Web Player HTML references open.spotifycdn.com, pickasso.spotifycdn.com and other assets: https://open.spotify.com/",
+      "spotify.link": "Live short link https://spotify.link/c1PSOk0RtXb redirects to open.spotify.com; https://community.spotify.com/forum/en/discussion/comment/5964558",
+      "spoti.fi": "Live https://spoti.fi/ serves Spotify Activation metadata and open.spotify.com targets (legacy share domain).",
+      "audio_tenants": "The Spotify-specific audio and audio4 hostnames currently resolve to Akamai; observed in https://raw.githubusercontent.com/v2fly/domain-list-community/master/data/spotify and https://community.spotify.com/forum/en/discussion/comment/6416227."
+    },
+    "scope": "Preserve existing MY/US precedence and domain-suffix-only rules. No generic Akamai or Branch suffixes, guessed domains or IP/ASN additions. Regenerate ordinary CNR projection without personal UK destination."
   }
 }

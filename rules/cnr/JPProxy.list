@@ -354,6 +354,11 @@ DOMAIN-SUFFIX,minimax.io
 DOMAIN-SUFFIX,clawhub.ai
 DOMAIN-SUFFIX,openclaw.ai
 DOMAIN-SUFFIX,nousresearch.com
+DOMAIN-SUFFIX,spotifycdn.com
+DOMAIN-SUFFIX,spotify.link
+DOMAIN-SUFFIX,spoti.fi
+DOMAIN-SUFFIX,audio-ak-spotify-com.akamaized.net
+DOMAIN-SUFFIX,audio4-ak-spotify-com.akamaized.net
 
 IP-CIDR,91.105.192.0/23,no-resolve
 IP-CIDR,91.108.4.0/22,no-resolve
