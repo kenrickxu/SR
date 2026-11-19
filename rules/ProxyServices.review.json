@@ -3239,5 +3239,13 @@
     ],
     "old_count": 537,
     "new_count": 539
+  },
+  "owner_artificialanalysis_jp_8085": {
+    "date": "2026-11-19",
+    "added_rules": [
+      "DOMAIN-SUFFIX,artificialanalysis.ai"
+    ],
+    "old_count": 539,
+    "new_count": 540
   }
 }
