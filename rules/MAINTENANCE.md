@@ -1,3 +1,7 @@
+## Personal UK destination in JPProxy (Ken 7785)
+
+Keep 187.7.17.52/32 in the personal JPProxy provider, not as a top-level CN or Clash rule. CNR consumes rules/cnr/JPProxy.list; regenerate and commit that filtered provider along with the CN source sidecars whenever shared JP entries change. Run tools/build_cn_lite.py and --check. Do not copy the UK destination or UK nodes into CNR.
+
 ## ClawHub/OpenClaw/Hermes official parents — Ken6894, 2026-11-17 HKT
 
 Add clawhub.ai, openclaw.ai and nousresearch.com as DOMAIN-SUFFIX parents exactly once to JP419→422 (311suffix+111IP/ASN). Official OpenClaw homepage/docs identify OpenClaw and ClawHub; Hermes official domains page identifies nousresearch.com and Hermes installer/artifact/Portal/inference subdomains. No similarly named unofficial domains or shared cloud root added. Current three-table exact/parent/child coverage has no duplicates. Preserve all previous rules/order/options and MY/US precedence, currentCN5rules/General/DNS/MITM/IPv6/nodes. YouTube remains restoredv6; UltraPlus remains paused. No API/VPN/native apply/restart, Worker/URL/scheduler changes. SharedJPdata on manualrefresh; phone application access not verified.

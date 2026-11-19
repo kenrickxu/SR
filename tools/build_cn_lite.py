@@ -43,16 +43,18 @@ def derive(root):
     hashes={f:hashlib.sha256((root/f).read_bytes()).hexdigest()for f in files}
     meta={'schema':3,'mode':'canonical-sr-explicit-proxy-default-direct','profile':'CN.conf','profile_sha256':hashlib.sha256(raw).hexdigest(),'source_sha256':hashes,'real_ip_rows':0,'skip_rows':12,'tun_rows':14,'default':'DIRECT','reference':'CN-Lite-Reference.conf','native_runtime_applied':False,'limitations':['Unlisted foreign services and bare IPs default DIRECT.','DIRECT is not full SR bypass.','127/8 previously rejected by iOS; owner requested it in5678.','Phone RAM and actual app outcomes require client testing.']}
     am={**meta,'profile':'CN-Lite.conf','profile_sha256':hashlib.sha256(alias).hexdigest(),'canonical':'CN.conf'}
-    return {'CN-Lite.conf':alias,'CN.source.json':(json.dumps(meta,ensure_ascii=False,indent=2)+'\n').encode(),'CN-Lite.source.json':(json.dumps(am,ensure_ascii=False,indent=2)+'\n').encode()}
+    return {'rules/cnr/JPProxy.list':build_cnr_jp_projection(root), 'CN-Lite.conf':alias,'CN.source.json':(json.dumps(meta,ensure_ascii=False,indent=2)+'\n').encode(),'CN-Lite.source.json':(json.dumps(am,ensure_ascii=False,indent=2)+'\n').encode()}
 
-def main():
-    ap=argparse.ArgumentParser();ap.add_argument('--root',type=Path,default=Path(__file__).resolve().parent.parent);ap.add_argument('--check',action='store_true');a=ap.parse_args();outputs=derive(a.root)
-    # CNR shares future common JP entries, but not this personal-only UK destination.
-    jp=(a.root/'rules/JPProxy.list').read_bytes().splitlines(keepends=True)
+def build_cnr_jp_projection(root):
+    """Keep shared JP updates in CNR without publishing the personal UK destination."""
+    jp=(root/'rules/JPProxy.list').read_bytes().splitlines(keepends=True)
     personal_uk=b'IP-CIDR,187.7.17.52/32,no-resolve'
     if sum(line.rstrip(b'\r\n') == personal_uk for line in jp) != 1:
         raise ValueError('Personal UK destination must appear once in JPProxy')
-    outputs['rules/cnr/JPProxy.list']=b''.join(line for line in jp if line.rstrip(b'\r\n') != personal_uk)
+    return b''.join(line for line in jp if line.rstrip(b'\r\n') != personal_uk)
+
+def main():
+    ap=argparse.ArgumentParser();ap.add_argument('--root',type=Path,default=Path(__file__).resolve().parent.parent);ap.add_argument('--check',action='store_true');a=ap.parse_args();outputs=derive(a.root)
     for name,body in outputs.items():
         f=a.root/name
         if a.check:assert f.read_bytes()==body,'Stale derived '+name
