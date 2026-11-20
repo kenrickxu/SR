@@ -3263,5 +3263,12 @@
     ],
     "old_count": 541,
     "new_count": 542
+  },
+  "owner_npm_jp_8523": {
+    "added_suffixes": [
+      "npmjs.org"
+    ],
+    "old_count": 542,
+    "new_count": 543
   }
 }
