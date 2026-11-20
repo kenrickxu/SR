@@ -3256,5 +3256,12 @@
     "superseded_rule": "DOMAIN-SUFFIX,customerservice.pccw.com",
     "old_count": 540,
     "new_count": 541
+  },
+  "owner_altare_jp_8386": {
+    "added_suffixes": [
+      "altare.gg"
+    ],
+    "old_count": 541,
+    "new_count": 542
   }
 }
