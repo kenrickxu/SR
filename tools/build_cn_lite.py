@@ -54,7 +54,14 @@ def build_cnr_jp_projection(root):
     return b''.join(line for line in jp if line.rstrip(b'\r\n') != personal_uk)
 
 def main():
-    ap=argparse.ArgumentParser();ap.add_argument('--root',type=Path,default=Path(__file__).resolve().parent.parent);ap.add_argument('--check',action='store_true');a=ap.parse_args();outputs=derive(a.root)
+    ap=argparse.ArgumentParser();ap.add_argument('--root',type=Path,default=Path(__file__).resolve().parent.parent);ap.add_argument('--check',action='store_true');a=ap.parse_args()
+    from split_dns import render
+    cn=a.root/'CN.conf';old=cn.read_text()
+    if '# BEGIN GENERATED PROXY DNS' in old:
+        new=render(a.root,old)
+        if a.check:assert old==new,'Stale split DNS; run tools/build_cn_lite.py'
+        elif old!=new:cn.write_text(new)
+    outputs=derive(a.root)
     for name,body in outputs.items():
         f=a.root/name
         if a.check:assert f.read_bytes()==body,'Stale derived '+name
