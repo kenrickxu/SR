@@ -603,6 +603,11 @@ DOMAIN-SUFFIX,chutes.ai
 DOMAIN-SUFFIX,uncensoredllm.ai
 DOMAIN-SUFFIX,featherless.ai
 DOMAIN-SUFFIX,android.com
+DOMAIN-SUFFIX,chromiumdash.appspot.com
+DOMAIN-SUFFIX,ota.googlezip.net
+DOMAIN-SUFFIX,ota-cache1.googlezip.net
+DOMAIN-SUFFIX,ota-cache3.googlezip.net
+DOMAIN-SUFFIX,pki.goog
 DOMAIN-SUFFIX,googleplay.com
 DOMAIN-SUFFIX,gvt1.com
 DOMAIN-SUFFIX,gvt2.com
